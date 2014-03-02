@@ -10,7 +10,7 @@
     "grunt-contrib-sass": "~0.6.0",
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-autoprefixer": "~0.6.4",
-    "grunt-typescript": "~0.2.8"
-
+    "grunt-typescript": "~0.2.8",
+    "grunt-shell": "~0.6.4"
   }
 }

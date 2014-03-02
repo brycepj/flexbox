@@ -6,30 +6,12 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
 
-
-                jshint: {
-              files: ['js/*.js'],
-              options: {
-                curly: true,
-                eqeqeq: true,
-                immed: true,
-                latedef: true,
-                newcap: true,
-                noarg: true,
-                globals: {
-                  jQuery: true,
-                  console: true,
-                  module: true,
-                  document: true
-                }
-              }
-        },
             shell: {
 
                 build: {
                     command: [
                     'git add .',
-                    'git commit -m "<%= timestamp %>"',
+                    'git commit -m "blank commit"',
                     'git push origin master'
                     ].join('&&')
                 }
@@ -39,8 +21,8 @@ module.exports = function(grunt) {
 
         watch: {
             scripts:    {
-                files: ['ts/*.ts'],
-                tasks: ['typescript','jshint'],
+                files: ['ts/**/*.ts'],
+                tasks: ['typescript'],
                 options: {
                     livereload:true,
                     spawn: false,
@@ -100,10 +82,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-typescript');
+    grunt.loadNpmTasks('grunt-shell');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-  grunt.registerTask('dev', ['typescript','jshint','sass','autoprefixer','watch']);
+  grunt.registerTask('dev', ['typescript','sass','autoprefixer','watch']);
 
-  grunt.registerTask('build', ['typescript','jshint','sass','autoprefixer','shell']);
+  grunt.registerTask('build', ['typescript','sass','autoprefixer','shell']);
 
 };

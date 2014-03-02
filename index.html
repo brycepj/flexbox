@@ -3,31 +3,31 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Site title</title>
+        <title>Flexbox Dev</title>
         <meta name="description" content="meta description is this">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
-
+        <script type="text/javascript" charset="utf-8" src="js/lib/jquery.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/lib/knockout.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
         <link rel="stylesheet" href="css/build/style.css">
+
+        <script type="text/javascript" charset="utf-8">
+            $(function() {
+
+              var flexboxApp = new flexbox.view.FlexContainer();
+              console.log(flexboxApp);
+              ko.applyBindings(flexboxApp);
+            });
+        </script>
+
     </head>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
-        <!-- Add your site or application content here -->
-       
-        <p>this is a new project. hellow world!</p>
+        <input data-bind="value:name"/>
+        <p data-bind="text:name"></p>
+        <button data-bind="click:newItem">new item</button>
 
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        
-        <script src="js/build/production.min.js"></script>
-        
-       
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        
     </body>
 </html>
