@@ -18,15 +18,49 @@
               var flexboxApp = new flexbox.view.FlexContainer();
               console.log(flexboxApp);
               ko.applyBindings(flexboxApp);
+
+
             });
         </script>
 
     </head>
     <body>
 
-        <input data-bind="value:name"/>
-        <p data-bind="text:name"></p>
-        <button data-bind="click:newItem">new item</button>
+<div class="container" data-bind="template: { name: 'flex-list', foreach: items },
+  style:{
+    display:cPropsCurrent.display,
+    flexWrap:cPropsCurrent.flexWrap
+}">
+
+
+
+
+
+</div>
+
+<div class="admin">
+<button data-bind="click:newItem">new item</button>
+</div>
+
+<script type="template/knockout" id="flex-list">
+    <div data-bind="style:{
+      backgroundColor:iPropsCurrent.backgroundColor,
+      height:iPropsCurrent.height,
+      margin:iPropsCurrent.margin,
+      flexGrow:iPropsCurrent.flexGrow,
+      flexShrink:iPropsCurrent.flexShrink,
+      flexBasis:iPropsCurrent.flexBasis,
+      alignSelf:iPropsCurrent.alignSelf
+}">
+
+    </div>
+</script>
+
+
+
+
+
+
 
 
     </body>
