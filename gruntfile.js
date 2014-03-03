@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 		shell : {
 
 			build : {
-				command : [ 'git add .', 'git commit -m "<%= grunt.template.today("yyyy-mm-dd") %>"',
+				command : [ 'git add .', 'git commit -m "last commit: <%= grunt.template.today("yyyy-mm-dd") %>"',
 						'git push origin master' ].join('&&')
 			}
 
