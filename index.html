@@ -29,17 +29,23 @@
 <div class="container" data-bind="template: { name: 'flex-list', foreach: items },
   style:{
     display:cPropsCurrent.display,
-    flexWrap:cPropsCurrent.flexWrap
+    flexWrap:cPropsCurrent.flexWrap,
+    flexDirection:cPropsCurrent.flexDirection,
+    justifyContent:cPropsCurrent.justifyContent,
+    alignContent:cPropsCurrent.alignContent,
+    alignItems:cPropsCurrent.alignItems,
+    backgroundColor:cPropsDefault.backgroundColor,
+    width:cPropsCurrent.width
 }">
-
-
-
-
 
 </div>
 
 <div class="admin">
 <button data-bind="click:newItem">new item</button>
+<button data-bind="click:oneLessItem">one less item</button>
+<button data-bind="click:getItemIndex">getItemIndex</button>
+<label for="">width: <input type="text" data-bind="value:cPropsCurrent.width"></label>
+
 </div>
 
 <script type="template/knockout" id="flex-list">
@@ -52,6 +58,12 @@
       flexBasis:iPropsCurrent.flexBasis,
       alignSelf:iPropsCurrent.alignSelf
 }">
+<p>Item index:<span data-bind="text:index"></span></p>
+<label>flex-grow: <input type="text" data-bind="value:iPropsCurrent.flexGrow"></label>
+<label for="">flex-shrink: <input type="text" data-bind="value:iPropsCurrent.flexShrink"></label>
+<label for="">flex-basis: <input type="text" data-bind="value:iPropsCurrent.flexBasis"></label>
+<label for="">align-self: <input type="text" data-bind="value:iPropsCurrent.alignSelf"></label>
+
 
     </div>
 </script>

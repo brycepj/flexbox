@@ -5,10 +5,13 @@ module flexbox {
     export class FlexItem {
 
       model:any;
+      index:number;
       iPropsDefault:{};
       iPropsCurrent:{};
 
-      constructor(model:any) {
+      constructor(model:any,index:number) {
+
+          this.index = index;
 
           this.iPropsDefault = {
             order:"1",
@@ -35,10 +38,7 @@ module flexbox {
           };
 
 
-        //flex item properties
-        //width and height properties
-        //default properties object
-        //reference to the model
+        //flexbox within a flexbox?
 
 
 
