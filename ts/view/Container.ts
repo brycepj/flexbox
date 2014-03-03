@@ -3,8 +3,6 @@ module flexbox {
     export module view {
 
         export class FlexContainer {
-
-
             items: any;
             cPropsDefault: any;
             cPropsCurrent: any;
@@ -76,9 +74,7 @@ module flexbox {
 
 
             resetContainerProps(): void { }
-            //setIndividualContainer props (this is several methods)
-            //print out code samples for group and individual styles
-            //
+            
         } //end class
 
 

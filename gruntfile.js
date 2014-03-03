@@ -1,5 +1,5 @@
 module.exports = function(grunt) {
-
+	
 	// 1. All configuration goes here
 	grunt.initConfig({
 		pkg : grunt.file.readJSON('package.json'),
@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 		shell : {
 
 			build : {
-				command : [ 'git add .', 'git commit -m "blank commit"',
+				command : [ 'git add .', 'git commit -m "<%= grunt.template.today("yyyy-mm-dd") %>"',
 						'git push origin master' ].join('&&')
 			}
 
