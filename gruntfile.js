@@ -1,5 +1,4 @@
 module.exports = function(grunt) {
-	var timestamp = new Date().getTime();
 
 	// 1. All configuration goes here
 	grunt.initConfig({
