@@ -11,7 +11,7 @@ module flexbox {
             justifyContentOptions: any;
             alignItemsOptions: any;
             alignContentOptions: any;
-
+            codeBox:any;
             constructor() {
 
                 this.items = ko.observableArray([
@@ -20,6 +20,11 @@ module flexbox {
                     new flexbox.model.FlexItem(this, 2)
 
                 ]);
+                
+                this.codeBox = ko.observableArray ([
+                    new flexbox.view.CodeBox(this,1)
+                    
+                ]);   
                 //add all of the flexbox container properties
 
                 this.cPropsDefault = {

@@ -45,6 +45,10 @@ var flexbox;
                     new flexbox.model.FlexItem(this, 2)
                 ]);
 
+                this.codeBox = ko.observableArray([
+                    new flexbox.view.CodeBox(this, 1)
+                ]);
+
                 this.cPropsDefault = {
                     display: "flex",
                     flexDirection: "row",
@@ -93,6 +97,20 @@ var flexbox;
             return FlexContainer;
         })();
         view.FlexContainer = FlexContainer;
+    })(flexbox.view || (flexbox.view = {}));
+    var view = flexbox.view;
+})(flexbox || (flexbox = {}));
+var flexbox;
+(function (flexbox) {
+    (function (view) {
+        var CodeBox = (function () {
+            function CodeBox(model, index) {
+                this.model = model;
+                this.index = index;
+            }
+            return CodeBox;
+        })();
+        view.CodeBox = CodeBox;
     })(flexbox.view || (flexbox.view = {}));
     var view = flexbox.view;
 })(flexbox || (flexbox = {}));

@@ -45,6 +45,43 @@
 <button data-bind="click:oneLessItem">one less item</button>
 <button data-bind="click:getItemIndex">getItemIndex</button>
 <label for="">width: <input type="text" data-bind="value:cPropsCurrent.width"></label>
+<label for="">flex-direction: <select data-bind="options:flexDirectionOptions, value:cPropsCurrent.flexDirection"></select> </label>
+<label for="">flex-wrap: <select data-bind="options:flexWrapOptions, value:cPropsCurrent.flexWrap"></select> </label>
+<label for="">justify-content: <select data-bind="options:justifyContentOptions, value:cPropsCurrent.justifyContent"></select> </label>
+<label for="">align content: <select data-bind="options:alignContentOptions, value:cPropsCurrent.alignContent"></select> </label>
+<label for="">align items: <select data-bind="options:alignItemsOptions, value:cPropsCurrent.alignItems"></select> </label>
+
+</div>
+
+
+<div class="code-box">
+	<code>
+		<pre>
+.flex-container {
+	display:flex;
+	flex-direction: <span data-bind="text:cPropsCurrent.flexDirection"></span>
+	flex-wrap: <span data-bind="text:cPropsCurrent.flexWrap"></span>
+	justify-content: <span data-bind="text:cPropsCurrent.justifyContent"></span>
+	align-content: <span data-bind="text:cPropsCurrent.alignContent"></span>
+	align-items: <span data-bind="text:cPropsCurrent.alignItems"></span>
+
+}
+		</pre>
+	</code>
+	
+		<code>
+		<pre>
+.flex-items-default {
+	flex-grow: <span data-bind="text:iPropsCurrent.flexGrow"></span>
+	flex-shrink: <span data-bind="text:iPropsCurrent.flexShrink"></span>
+	flex-basis: <span data-bind="text:iPropsCurrent.flexBasis"></span>
+	order: <span data-bind="text:iPropsCurrent.order"></span>
+	align-self: <span data-bind="text:iPropsCurrent.alignSelf"></span>
+
+}
+		</pre>
+	</code>
+
 
 </div>
 
@@ -67,6 +104,8 @@
 
     </div>
 </script>
+
+
 
 
 
