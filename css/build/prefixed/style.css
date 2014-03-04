@@ -350,6 +350,9 @@ table {
   min-height: 500px;
   float: right; }
 
+.message-box {
+  float: right; }
+
 label {
   display: block; }
 

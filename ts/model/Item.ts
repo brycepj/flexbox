@@ -8,20 +8,19 @@ module flexbox {
             index: any;
             iPropsCurrent: any;
 
-            constructor(model: any, index: any) {
+            constructor(model: any, index: any,flexGrow:string = "1",flexShrink:string="1",flexBasis:string = "100px",alignSelf:string = "center",backgroundColor:string = "tomato") {
 
                 this.index = ko.observable(index);
                 this.model = model;
                 console.log(model);
                 this.iPropsCurrent = {
                     order: ko.observable("1"),
-                    flexGrow: ko.observable("1"),
-                    flexShrink: ko.observable("0"),
-                    flexBasis: ko.observable("100px"),
-                    alignSelf: ko.observable("center"),
-                    width: ko.observable("300px"),
+                    flexGrow: ko.observable(flexGrow),
+                    flexShrink: ko.observable(flexShrink),
+                    flexBasis: ko.observable(flexBasis),
+                    alignSelf: ko.observable(alignSelf),
                     height: ko.observable("300px"),
-                    backgroundColor: ko.observable("tomato"),
+                    backgroundColor: ko.observable(backgroundColor),
                     margin: ko.observable("10px")
                 };
 
@@ -40,7 +39,6 @@ module flexbox {
 
             destroySelf(): void {
                 var index = parseInt(this.index(),10);
-                console.log(index);
                 this.model.destroyItem(index);
                 
             }

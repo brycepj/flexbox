@@ -14,12 +14,21 @@ module flexbox {
             alignSelfOptions: any;
             iPropsDefault: any;
             defaultBtnText: any;
+            noItems:any;
+            
             constructor() {
 
                 this.items = ko.observableArray([
 
                 ]);
 
+                this.noItems = ko.computed(function(){
+                    var array = this.items();
+                    console.log(array);
+                    if (array.length) {return false;}
+                    else {return true;}
+                
+                },this);
                 //add all of the flexbox container properties
 
                 this.iPropsDefault = {
@@ -117,7 +126,21 @@ module flexbox {
                 })();
             }
 
-            resetContainerProps(): void { }
+            makeHolyGrail():void {
+                var index = this.getItemIndex();
+                this.items([]);
+                console.log('cleared the array completely');
+                
+                this.items.push(
+                    new flexbox.model.FlexItem(this,index++,"0","1","100%","center","green"),
+                    new flexbox.model.FlexItem(this,index++),
+                    new flexbox.model.FlexItem(this,index++),
+                    new flexbox.model.FlexItem(this,index++),
+                    new flexbox.model.FlexItem(this,index++, "0","1","100%","center","green")
+                    );
+                
+            
+            }
 
         } //end class
 

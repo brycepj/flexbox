@@ -2,19 +2,23 @@ var flexbox;
 (function (flexbox) {
     (function (_model) {
         var FlexItem = (function () {
-            function FlexItem(model, index) {
+            function FlexItem(model, index, flexGrow, flexShrink, flexBasis, alignSelf, backgroundColor) {
+                if (typeof flexGrow === "undefined") { flexGrow = "1"; }
+                if (typeof flexShrink === "undefined") { flexShrink = "1"; }
+                if (typeof flexBasis === "undefined") { flexBasis = "100px"; }
+                if (typeof alignSelf === "undefined") { alignSelf = "center"; }
+                if (typeof backgroundColor === "undefined") { backgroundColor = "tomato"; }
                 this.index = ko.observable(index);
                 this.model = model;
                 console.log(model);
                 this.iPropsCurrent = {
                     order: ko.observable("1"),
-                    flexGrow: ko.observable("1"),
-                    flexShrink: ko.observable("0"),
-                    flexBasis: ko.observable("100px"),
-                    alignSelf: ko.observable("center"),
-                    width: ko.observable("300px"),
+                    flexGrow: ko.observable(flexGrow),
+                    flexShrink: ko.observable(flexShrink),
+                    flexBasis: ko.observable(flexBasis),
+                    alignSelf: ko.observable(alignSelf),
                     height: ko.observable("300px"),
-                    backgroundColor: ko.observable("tomato"),
+                    backgroundColor: ko.observable(backgroundColor),
                     margin: ko.observable("10px")
                 };
             }
@@ -29,7 +33,6 @@ var flexbox;
 
             FlexItem.prototype.destroySelf = function () {
                 var index = parseInt(this.index(), 10);
-                console.log(index);
                 this.model.destroyItem(index);
             };
             return FlexItem;
@@ -44,6 +47,16 @@ var flexbox;
         var FlexContainer = (function () {
             function FlexContainer() {
                 this.items = ko.observableArray([]);
+
+                this.noItems = ko.computed(function () {
+                    var array = this.items();
+                    console.log(array);
+                    if (array.length) {
+                        return false;
+                    } else {
+                        return true;
+                    }
+                }, this);
 
                 this.iPropsDefault = {
                     order: ko.observable("1"),
@@ -128,25 +141,16 @@ var flexbox;
                 })();
             };
 
-            FlexContainer.prototype.resetContainerProps = function () {
+            FlexContainer.prototype.makeHolyGrail = function () {
+                var index = this.getItemIndex();
+                this.items([]);
+                console.log('cleared the array completely');
+
+                this.items.push(new flexbox.model.FlexItem(this, index++, "0", "1", "100%", "center", "green"), new flexbox.model.FlexItem(this, index++), new flexbox.model.FlexItem(this, index++), new flexbox.model.FlexItem(this, index++), new flexbox.model.FlexItem(this, index++, "0", "1", "100%", "center", "green"));
             };
             return FlexContainer;
         })();
         view.FlexContainer = FlexContainer;
-    })(flexbox.view || (flexbox.view = {}));
-    var view = flexbox.view;
-})(flexbox || (flexbox = {}));
-var flexbox;
-(function (flexbox) {
-    (function (view) {
-        var CodeBox = (function () {
-            function CodeBox(model, index) {
-                this.model = model;
-                this.index = index;
-            }
-            return CodeBox;
-        })();
-        view.CodeBox = CodeBox;
     })(flexbox.view || (flexbox.view = {}));
     var view = flexbox.view;
 })(flexbox || (flexbox = {}));

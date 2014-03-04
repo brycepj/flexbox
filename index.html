@@ -26,7 +26,9 @@
 
     </head>
     <body>
-
+<div class="message-box">
+	<p data-bind="visible:noItems">this is your flexbox container. go ahead and start adding new flex items with the 'new item' button at your left</p>
+</div>
 <div class="container" data-bind="template: { name: 'flex-list', foreach: items },
   style:{
     display:cPropsCurrent.display,
@@ -42,6 +44,7 @@
 </div>
 
 <div class="admin">
+<h2>container settings</h2>
 <button data-bind="click:newItem">new item</button>
 <button data-bind="click:oneLessItem">one less item</button>
 <button data-bind="click:getItemIndex">getItemIndex</button>
@@ -62,11 +65,15 @@
 <label for="">flex-basis<input type="text" data-bind="value:iPropsDefault.flexBasis"></label>
 <label for="">align-self: <select type="text" data-bind="options:alignSelfOptions, value:iPropsDefault.alignSelf"></select></label>
 
+</div>
 
-
+<div class="template-options">
+<h2>template options</h2>
+<button data-bind="click:makeHolyGrail">Make Holy Grail</button>
 </div>
 
 <div class="code-box">
+<h2>code samples</h2>
 	<code>
 		<pre>
 .flex-container {
