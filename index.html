@@ -16,11 +16,12 @@
             $(function() {
 
               var flexboxApp = new flexbox.view.FlexContainer();
-              console.log(flexboxApp);
               ko.applyBindings(flexboxApp);
-
-
+				console.log(flexboxApp);
+ 				
             });
+            
+           
         </script>
 
     </head>
@@ -53,6 +54,17 @@
 
 </div>
 
+<div data-bind="visible:true"class="item-defaults">
+<h2>item defaults</h2>
+<button data-bind="click:resetItemProps, text:defaultBtnText">reset item defaults</button>
+<label for="">flex-grow: <input type="text" data-bind="value:iPropsDefault.flexGrow"></label>
+<label for="">flex-shrink: <input type="text" data-bind="value:iPropsDefault.flexShrink"></label>
+<label for="">flex-basis<input type="text" data-bind="value:iPropsDefault.flexBasis"></label>
+<label for="">align-self: <select type="text" data-bind="options:alignSelfOptions, value:iPropsDefault.alignSelf"></select></label>
+
+
+
+</div>
 
 <div class="code-box">
 	<code>
@@ -72,11 +84,11 @@
 		<code>
 		<pre>
 .flex-items-default {
-	flex-grow: <span data-bind="text:iPropsCurrent.flexGrow"></span>
-	flex-shrink: <span data-bind="text:iPropsCurrent.flexShrink"></span>
-	flex-basis: <span data-bind="text:iPropsCurrent.flexBasis"></span>
-	order: <span data-bind="text:iPropsCurrent.order"></span>
-	align-self: <span data-bind="text:iPropsCurrent.alignSelf"></span>
+	flex-grow: <span data-bind="text:iPropsDefault.flexGrow"></span>
+	flex-shrink: <span data-bind="text:iPropsDefault.flexShrink"></span>
+	flex-basis: <span data-bind="text:iPropsDefault.flexBasis"></span>
+	order: <span data-bind="text:iPropsDefault.order"></span>
+	align-self: <span data-bind="text:iPropsDefault.alignSelf"></span>
 
 }
 		</pre>
@@ -86,7 +98,7 @@
 </div>
 
 <script type="template/knockout" id="flex-list">
-    <div data-bind="style:{
+    <div class="flex-item" data-bind="style:{
       backgroundColor:iPropsCurrent.backgroundColor,
       height:iPropsCurrent.height,
       margin:iPropsCurrent.margin,
@@ -100,13 +112,10 @@
 <label for="">flex-shrink: <input type="text" data-bind="value:iPropsCurrent.flexShrink"></label>
 <label for="">flex-basis: <input type="text" data-bind="value:iPropsCurrent.flexBasis"></label>
 <label for="">align-self: <input type="text" data-bind="value:iPropsCurrent.alignSelf"></label>
-
+<a href="#" data-bind="click:destroySelf">destroy self</a>
 
     </div>
 </script>
-
-
-
 
 
 

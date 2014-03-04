@@ -11,21 +11,41 @@ module flexbox {
             justifyContentOptions: any;
             alignItemsOptions: any;
             alignContentOptions: any;
-            codeBox:any;
+            alignSelfOptions: any;
+            iPropsDefault: any;
+            defaultBtnText: any;
             constructor() {
 
                 this.items = ko.observableArray([
 
-                    new flexbox.model.FlexItem(this, 1),
-                    new flexbox.model.FlexItem(this, 2)
-
                 ]);
-                
-                this.codeBox = ko.observableArray ([
-                    new flexbox.view.CodeBox(this,1)
-                    
-                ]);   
+
                 //add all of the flexbox container properties
+
+                this.iPropsDefault = {
+                    order: ko.observable("1"),
+                    flexGrow: ko.observable("1"),
+                    flexShrink: ko.observable("1"),
+                    flexBasis: ko.observable("300px"),
+                    alignSelf: ko.observable("center"),
+                    width: ko.observable("300px"),
+                    height: ko.observable("300px"),
+                    backgroundColor: "blue",
+                    margin: "10px"
+                };
+
+                this.defaultBtnText = ko.computed(function() {
+                    var def = this.iPropsDefault;
+
+                    if (def.flexGrow() === '1' && def.flexShrink() === '1' && def.flexBasis() === "300px" && def.alignSelf() === "center") {
+                    return "reset all items"
+                    } else {
+                        return "update item defaults";
+                    }
+
+                }, this);
+
+                //UI edits default props in 
 
                 this.cPropsDefault = {
                     display: "flex",
@@ -53,7 +73,7 @@ module flexbox {
                 this.justifyContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around'];
                 this.alignItemsOptions = ['flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
                 this.alignContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch'];
-
+                this.alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch', 'inherit'];
             } //end constructor
 
 
@@ -61,14 +81,14 @@ module flexbox {
                 var index = this.getItemIndex();
                 var newItem = new flexbox.model.FlexItem(this, index);
                 this.items.push(newItem);
-                console.log('new item added');
+
 
             }
 
             oneLessItem(): void {
 
                 this.items.pop();
-                console.log('newest item removed');
+
 
             }
 
@@ -77,9 +97,28 @@ module flexbox {
                 return currentLength + 1;
             }
 
+            resetItemProps(): void {
+                var array = this.items();
+                for (var i = 0; i < array.length; i++) {
+                    array[i].resetProps();
+
+                }
+            }
+            destroyItem(index): void {
+                var self = this;
+                self.items.splice((index - 1), 1);
+                (function() {
+                    var array = self.items();
+                    for (var i = 0; i < array.length; i++) {
+                        var newIndex = i + 1;
+                        var stringIndex = newIndex.toString();
+                        array[i].index(stringIndex);
+                    }
+                })();
+            }
 
             resetContainerProps(): void { }
-            
+
         } //end class
 
 

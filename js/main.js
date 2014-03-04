@@ -3,20 +3,9 @@ var flexbox;
     (function (_model) {
         var FlexItem = (function () {
             function FlexItem(model, index) {
-                this.index = index;
-
-                this.iPropsDefault = {
-                    order: "1",
-                    flexGrow: "1",
-                    flexShrink: "0",
-                    flexBasis: "300px",
-                    alignSelf: "center",
-                    width: "300px",
-                    height: "300px",
-                    backgroundColor: "tomato",
-                    margin: "10px"
-                };
-
+                this.index = ko.observable(index);
+                this.model = model;
+                console.log(model);
                 this.iPropsCurrent = {
                     order: ko.observable("1"),
                     flexGrow: ko.observable("1"),
@@ -29,6 +18,20 @@ var flexbox;
                     margin: ko.observable("10px")
                 };
             }
+            FlexItem.prototype.resetProps = function () {
+                var currentProps = this.iPropsCurrent;
+                var newProps = this.model.iPropsDefault;
+                currentProps.flexGrow(newProps.flexGrow());
+                currentProps.flexShrink(newProps.flexShrink());
+                currentProps.flexBasis(newProps.flexBasis());
+                currentProps.alignSelf(newProps.alignSelf());
+            };
+
+            FlexItem.prototype.destroySelf = function () {
+                var index = parseInt(this.index(), 10);
+                console.log(index);
+                this.model.destroyItem(index);
+            };
             return FlexItem;
         })();
         _model.FlexItem = FlexItem;
@@ -40,14 +43,29 @@ var flexbox;
     (function (view) {
         var FlexContainer = (function () {
             function FlexContainer() {
-                this.items = ko.observableArray([
-                    new flexbox.model.FlexItem(this, 1),
-                    new flexbox.model.FlexItem(this, 2)
-                ]);
+                this.items = ko.observableArray([]);
 
-                this.codeBox = ko.observableArray([
-                    new flexbox.view.CodeBox(this, 1)
-                ]);
+                this.iPropsDefault = {
+                    order: ko.observable("1"),
+                    flexGrow: ko.observable("1"),
+                    flexShrink: ko.observable("1"),
+                    flexBasis: ko.observable("300px"),
+                    alignSelf: ko.observable("center"),
+                    width: ko.observable("300px"),
+                    height: ko.observable("300px"),
+                    backgroundColor: "blue",
+                    margin: "10px"
+                };
+
+                this.defaultBtnText = ko.computed(function () {
+                    var def = this.iPropsDefault;
+
+                    if (def.flexGrow() === '1' && def.flexShrink() === '1' && def.flexBasis() === "300px" && def.alignSelf() === "center") {
+                        return "reset all items";
+                    } else {
+                        return "update item defaults";
+                    }
+                }, this);
 
                 this.cPropsDefault = {
                     display: "flex",
@@ -74,22 +92,40 @@ var flexbox;
                 this.justifyContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around'];
                 this.alignItemsOptions = ['flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
                 this.alignContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch'];
+                this.alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch', 'inherit'];
             }
             FlexContainer.prototype.newItem = function () {
                 var index = this.getItemIndex();
                 var newItem = new flexbox.model.FlexItem(this, index);
                 this.items.push(newItem);
-                console.log('new item added');
             };
 
             FlexContainer.prototype.oneLessItem = function () {
                 this.items.pop();
-                console.log('newest item removed');
             };
 
             FlexContainer.prototype.getItemIndex = function () {
                 var currentLength = this.items().length;
                 return currentLength + 1;
+            };
+
+            FlexContainer.prototype.resetItemProps = function () {
+                var array = this.items();
+                for (var i = 0; i < array.length; i++) {
+                    array[i].resetProps();
+                }
+            };
+            FlexContainer.prototype.destroyItem = function (index) {
+                var self = this;
+                self.items.splice((index - 1), 1);
+                (function () {
+                    var array = self.items();
+                    for (var i = 0; i < array.length; i++) {
+                        var newIndex = i + 1;
+                        var stringIndex = newIndex.toString();
+                        array[i].index(stringIndex);
+                    }
+                })();
             };
 
             FlexContainer.prototype.resetContainerProps = function () {

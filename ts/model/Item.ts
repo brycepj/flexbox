@@ -5,26 +5,14 @@ module flexbox {
         export class FlexItem {
 
             model: any;
-            index: number;
-            iPropsDefault: {};
-            iPropsCurrent: {};
+            index: any;
+            iPropsCurrent: any;
 
-            constructor(model: any, index: number) {
+            constructor(model: any, index: any) {
 
-                this.index = index;
-
-                this.iPropsDefault = {
-                    order: "1",
-                    flexGrow: "1",
-                    flexShrink: "0",
-                    flexBasis: "300px",
-                    alignSelf: "center",
-                    width: "300px",
-                    height: "300px",
-                    backgroundColor: "tomato",
-                    margin: "10px"
-                };
-
+                this.index = ko.observable(index);
+                this.model = model;
+                console.log(model);
                 this.iPropsCurrent = {
                     order: ko.observable("1"),
                     flexGrow: ko.observable("1"),
@@ -38,11 +26,25 @@ module flexbox {
                 };
 
 
-                //flexbox within a flexbox?
-
-
 
             }
+
+            resetProps(): void {
+                var currentProps = this.iPropsCurrent;
+                var newProps = this.model.iPropsDefault;
+                currentProps.flexGrow(newProps.flexGrow());
+                currentProps.flexShrink(newProps.flexShrink());
+                currentProps.flexBasis(newProps.flexBasis());
+                currentProps.alignSelf(newProps.alignSelf());
+            }
+
+            destroySelf(): void {
+                var index = parseInt(this.index(),10);
+                console.log(index);
+                this.model.destroyItem(index);
+                
+            }
+
         }
 
     }
