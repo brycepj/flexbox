@@ -35,10 +35,10 @@ module flexbox {
                     order: ko.observable("1"),
                     flexGrow: ko.observable("1"),
                     flexShrink: ko.observable("1"),
-                    flexBasis: ko.observable("300px"),
+                    flexBasis: ko.observable("100px"),
                     alignSelf: ko.observable("center"),
                     width: ko.observable("300px"),
-                    height: ko.observable("300px"),
+                    height: ko.observable("200px"),
                     backgroundColor: "blue",
                     margin: "10px"
                 };
@@ -128,9 +128,7 @@ module flexbox {
 
             makeHolyGrail():void {
                 var index = this.getItemIndex();
-                this.items([]);
-                console.log('cleared the array completely');
-                
+                this.items([]); 
                 this.items.push(
                     new flexbox.model.FlexItem(this,index++,"0","1","100%","center","green"),
                     new flexbox.model.FlexItem(this,index++),
