@@ -8,7 +8,7 @@ module flexbox {
             index: any;
             iPropsCurrent: any;
 
-            constructor(model: any, index: any,flexGrow:string = "1",flexShrink:string="1",flexBasis:string = "100px",alignSelf:string = "center",backgroundColor:string = "tomato") {
+            constructor(model: any, index: any, flexGrow: string = "1", flexShrink: string= "1", flexBasis: string = "100px", alignSelf: string = "center", backgroundColor: string = "tomato") {
 
                 this.index = ko.observable(index);
                 this.model = model;
@@ -38,9 +38,9 @@ module flexbox {
             }
 
             destroySelf(): void {
-                var index = parseInt(this.index(),10);
+                var index = parseInt(this.index(), 10);
                 this.model.destroyItem(index);
-                
+
             }
 
         }

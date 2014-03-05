@@ -16,6 +16,7 @@ $baseLineHeight:100%;
 
 * {
 	box-sizing:border-box;
+	
 }
 
 /*make images responsive by default*/
@@ -29,6 +30,7 @@ img{
 a {
 	text-decoration:none;
 }
+
 
 body {
 	font-size:$baseFontSize;

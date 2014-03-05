@@ -1,8 +1,12 @@
 /* Modules are reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on. Generally, stick to class names, while avoiding ID's and element selectors. For modules used differently in different sections, use extra classes (sub-module classes) to specify. */ 
 
 
-/* HEADER */
-@import "_header";
 
-/* FOOTER */
-@import "_footer";
+@import "_code-box";
+@import "_container-settings";
+@import "_control-panel";
+@import "_flex-container";
+@import "_item-defaults";
+@import "_masthead";
+@import "_message-box";
+@import "_template-options";
