@@ -10,6 +10,7 @@
         <script type="text/javascript" charset="utf-8" src="js/lib/knockout.js"></script>
         <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
         <link rel="stylesheet" href="css/build/style.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         <script type="text/javascript" charset="utf-8">
             $(function() {
             
@@ -112,12 +113,17 @@
               flexBasis:iPropsCurrent.flexBasis,
               alignSelf:iPropsCurrent.alignSelf
             }">
-            <p>Item index:<span data-bind="text:index"></span></p>
-            <label>flex-grow: <input type="text" data-bind="value:iPropsCurrent.flexGrow"></label>
+            <span class="fi-index"data-bind="text:index"></span>
+            <a href="#" class="fi-destroy-btn" data-bind="click:destroySelf"><i class="fa fa-times"></i></a>
+            <div class="fi-options">
+            <span><a href="#" data-bind="click:makeFixedWidth">fixed</a> or <a href="#" data-bind="click:makeFlexyWidth">flexy</a></span>
+            <label>flex-grow: <input type="text" data-bind="enable:isFlexyWidth, value:iPropsCurrent.flexGrow"></label>
+            <label>width: <input type="text" data-bind="enable:isFixedWidth, value:iPropsCurrent.width"></label>
             <label for="">flex-shrink: <input type="text" data-bind="value:iPropsCurrent.flexShrink"></label>
             <label for="">flex-basis: <input type="text" data-bind="value:iPropsCurrent.flexBasis"></label>
-            <label for="">align-self: <input type="text" data-bind="value:iPropsCurrent.alignSelf"></label>
-            <a href="#" data-bind="click:destroySelf">destroy self</a>
+           
+            </div>
+            
             
             </div>
         </script>

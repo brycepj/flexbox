@@ -7,8 +7,10 @@ module flexbox {
             model: any;
             index: any;
             iPropsCurrent: any;
+            isFixedWidth:any;
+            isFlexyWidth:any;
 
-            constructor(model: any, index: any, flexGrow: string = "1", flexShrink: string= "1", flexBasis: string = "100px", alignSelf: string = "center", backgroundColor: string = "tomato") {
+            constructor(model: any, index: any, flexGrow: string = "1", flexShrink: string= "1", flexBasis: string = "100px", alignSelf: string = "center", backgroundColor: string = "#01ff70") {
 
                 this.index = ko.observable(index);
                 this.model = model;
@@ -19,15 +21,30 @@ module flexbox {
                     flexShrink: ko.observable(flexShrink),
                     flexBasis: ko.observable(flexBasis),
                     alignSelf: ko.observable(alignSelf),
-                    height: ko.observable("300px"),
+                    height: ko.observable("230px"),
+                    width:ko.observable("200px"),
                     backgroundColor: ko.observable(backgroundColor),
                     margin: ko.observable("10px")
                 };
-
-
-
+                
+                this.isFixedWidth = ko.observable(true);
+                this.isFlexyWidth = ko.observable(false);
             }
 
+            
+            
+            makeFixedWidth():void {
+                this.isFixedWidth(true);
+                this.iPropsCurrent.flexGrow("0");
+                this.isFlexyWidth(false);
+                
+            }
+            makeFlexyWidth():void {
+                this.isFixedWidth(false);
+                this.isFlexyWidth(true);
+                this.iPropsCurrent.flexGrow("1");
+            }
+            
             resetProps(): void {
                 var currentProps = this.iPropsCurrent;
                 var newProps = this.model.iPropsDefault;

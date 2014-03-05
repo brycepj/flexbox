@@ -48,19 +48,52 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* SWATCH */
+/* Defaults */
 /*** CUSTOM BREAKPOINTS ***/
 /*** REM FONT-SIZE AND LINE HEIGHT ***/
 /*** CLEARFIX***/
+.control-panel:after {
+  content: " ";
+  display: block;
+  clear: both; }
+
 /*** PRESET BREAKPOINTS ***/
 /*** FLEXBOX ****/
+body, html {
+  width: 100%;
+  height: 100%; }
+
 label {
   display: block; }
 
 input {
   width: 50px; }
 
-.flex-item {
-  border-radius: 5px; }
+.playground-ui {
+  width: 80%;
+  height: 100%;
+  float: left;
+  background-color: #aaaaaa; }
+
+.sidebar {
+  float: left;
+  width: 20%; }
+
+.control-panel {
+  width: 98%;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: #848484; }
+
+.container-settings, .item-defaults, .template-options {
+  float: left;
+  margin: 0 1em 0 0; }
+
+.flex-container {
+  width: 98%;
+  min-height: 75%;
+  margin: 0 auto; }
 
 /*  
 
@@ -100,8 +133,6 @@ input {
 } 
 
 */
-/* SWATCH */
-/* Defaults */
 /* State rules are ways to describe how our modules or layouts will look when in a particlar state. Hidden or expanded? Active or inactive? State styles indicate a JavaScript dependency */
 /* BASE STYLES */
 * {
@@ -125,5 +156,37 @@ p {
   color: black; }
 
 /******MODULES*******/
-/* Modules are reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on. Generally, stick to class names, while avoiding ID's and element selectors. For modules used differently in different sections, use extra classes (sub-module classes) to specify. */
+.flex-item {
+  position: relative;
+  padding: 1em;
+  min-width: 68px !important; }
+
+.fi-index {
+  color: #b10dc9;
+  font-size: 2em;
+  font-weight: bold; }
+
+.fi-destroy-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px; }
+  .fi-destroy-btn i {
+    color: #ff4136; }
+
+.fi-options {
+  position: absolute;
+  bottom: 15px;
+  left: 15px; }
+  .fi-options label {
+    display: block;
+    width: 80px;
+    font-size: .75em; }
+    .fi-options label input {
+      width: 40px;
+      display: block;
+      border: 0;
+      background-color: fade(#aaaaaa, 25%); }
+      .fi-options label input:focus {
+        border: 0; }
+
 /*BROWSER SUPPORT*/

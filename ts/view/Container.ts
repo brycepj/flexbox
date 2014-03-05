@@ -38,7 +38,7 @@ module flexbox {
                     flexBasis: ko.observable("100px"),
                     alignSelf: ko.observable("center"),
                     width: ko.observable("300px"),
-                    height: ko.observable("200px"),
+                    height: ko.observable("30%"),
                     backgroundColor: "blue",
                     margin: "10px"
                 };
@@ -63,7 +63,7 @@ module flexbox {
                     justifyContent: "center",
                     alignItems: "center",
                     alignContent: "center",
-                    backgroundColor: "yellow"
+                    backgroundColor: "#0074d9"
                 };
 
                 this.cPropsCurrent = {
@@ -73,7 +73,7 @@ module flexbox {
                     justifyContent: ko.observable("center"),
                     alignItems: ko.observable("center"),
                     alignContent: ko.observable("center"),
-                    width: ko.observable("75%")
+                    width: ko.observable("98%")
 
                 };
 
