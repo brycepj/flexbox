@@ -78,7 +78,35 @@ input {
 
 .sidebar {
   float: left;
-  width: 20%; }
+  width: 20%;
+  padding: 1em;
+  background-color: #f012be; }
+
+.masthead {
+  background-color: #aaaaaa;
+  color: white; }
+
+.message-box {
+  margin-top: 1em;
+  background-color: #aaaaaa;
+  color: white; }
+  .message-box p {
+    font-size: 21.6px;
+    font-size: 1.35rem;
+    line-height: 25.6px;
+    line-height: 1.6rem; }
+
+.code-box {
+  margin-top: 1em;
+  color: white;
+  background-color: #aaaaaa; }
+
+.console {
+  height: 300px;
+  width: 100%;
+  background-color: #111111; }
+  .console p {
+    color: white; }
 
 .control-panel {
   width: 98%;
@@ -155,6 +183,18 @@ p {
   color: black; }
 
 /******MODULES*******/
+.site-logo {
+  font-size: 40px;
+  font-size: 2.5rem;
+  line-height: 48px;
+  line-height: 3rem; }
+
+.site-des {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 25.6px;
+  line-height: 1.6rem; }
+
 .flex-item {
   position: relative;
   padding: 1em;

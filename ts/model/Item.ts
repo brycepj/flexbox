@@ -10,7 +10,7 @@ module flexbox {
             isFixedWidth:any;
             isFlexyWidth:any;
 
-            constructor(model: any, index: any, flexGrow: string = "1", flexShrink: string= "1", flexBasis: string = "100px", alignSelf: string = "center", backgroundColor: string = "#01ff70") {
+            constructor(model: any, index: any, flexGrow: string = "0", flexShrink: string= "1", flexBasis: string = "100px", alignSelf: string = "center", backgroundColor: string = "#01ff70") {
 
                 this.index = ko.observable(index);
                 this.model = model;

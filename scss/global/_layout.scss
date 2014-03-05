@@ -24,8 +24,39 @@ input {
 .sidebar {
 	float:left;
 	width:20%;
+	padding:1em;
+	background-color:$fuchsia;
 }
 
+.masthead {
+	background-color:$gray;
+	color:$white;
+	
+}
+
+.message-box {
+	margin-top:1em;
+	background-color:$gray;
+	color:$white;
+	& p {
+		@include font-size(1.35,1.6);
+	}
+}
+
+.code-box {
+	margin-top:1em;
+	color:$white;	
+	background-color:$gray;
+}
+
+
+.console {
+	height:300px; width:100%;
+	background-color:$black;
+	& p {
+		color:$white;
+	}
+}
 .control-panel {
 	width:98%;
 	margin:0 auto;

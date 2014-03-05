@@ -3,7 +3,7 @@ var flexbox;
     (function (_model) {
         var FlexItem = (function () {
             function FlexItem(model, index, flexGrow, flexShrink, flexBasis, alignSelf, backgroundColor) {
-                if (typeof flexGrow === "undefined") { flexGrow = "1"; }
+                if (typeof flexGrow === "undefined") { flexGrow = "0"; }
                 if (typeof flexShrink === "undefined") { flexShrink = "1"; }
                 if (typeof flexBasis === "undefined") { flexBasis = "100px"; }
                 if (typeof alignSelf === "undefined") { alignSelf = "center"; }
