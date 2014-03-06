@@ -1,35 +1,21 @@
-module flexbox {
+var flexbox;
+(function (flexbox) {
+    (function (view) {
+        var FlexContainer = (function () {
+            function FlexContainer() {
+                this.items = ko.observableArray([]);
 
-    export module view {
-        export class FlexContainer {
-            items: any;
-            cPropsDefault: any;
-            cPropsCurrent: any;
-            flexDirectionOptions: any;
-            flexWrapOptions: any;
-            justifyContentOptions: any;
-            alignItemsOptions: any;
-            alignContentOptions: any;
-            alignSelfOptions: any;
-            iPropsDefault: any;
-            defaultBtnText: any;
-            noItems: any;
-
-            constructor() {
-
-                this.items = ko.observableArray([
-
-                ]);
-
-                this.noItems = ko.computed(function() {
+                this.noItems = ko.computed(function () {
                     var array = this.items();
                     console.log(array);
-                    if (array.length) { return false; }
-                    else { return true; }
-
+                    if (array.length) {
+                        return false;
+                    } else {
+                        return true;
+                    }
                 }, this);
-                //add all of the flexbox container properties
 
+                //add all of the flexbox container properties
                 this.iPropsDefault = {
                     order: ko.observable("1"),
                     flexGrow: ko.observable("1"),
@@ -37,24 +23,22 @@ module flexbox {
                     flexBasis: ko.observable("100px"),
                     alignSelf: ko.observable("center"),
                     width: ko.observable("300px"),
-                    height: ko.observable("30%"),
+                    height: ko.observable("200px"),
                     backgroundColor: "blue",
                     margin: "10px"
                 };
 
-                this.defaultBtnText = ko.computed(function() {
+                this.defaultBtnText = ko.computed(function () {
                     var def = this.iPropsDefault;
 
                     if (def.flexGrow() === '1' && def.flexShrink() === '1' && def.flexBasis() === "300px" && def.alignSelf() === "center") {
-                    return "reset all items"
+                        return "reset all items";
                     } else {
                         return "update item defaults";
                     }
-
                 }, this);
 
-                //UI edits default props in 
-
+                //UI edits default props in
                 this.cPropsDefault = {
                     display: "flex",
                     flexDirection: "row",
@@ -62,7 +46,7 @@ module flexbox {
                     justifyContent: "center",
                     alignItems: "center",
                     alignContent: "center",
-                    backgroundColor: "#0074d9"
+                    backgroundColor: "yellow"
                 };
 
                 this.cPropsCurrent = {
@@ -72,8 +56,7 @@ module flexbox {
                     justifyContent: ko.observable("center"),
                     alignItems: ko.observable("center"),
                     alignContent: ko.observable("center"),
-                    width: ko.observable("98%")
-
+                    width: ko.observable("75%")
                 };
 
                 this.flexDirectionOptions = ['row', 'column'];
@@ -82,39 +65,32 @@ module flexbox {
                 this.alignItemsOptions = ['flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
                 this.alignContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch'];
                 this.alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch', 'inherit'];
-            } //end constructor
-
-
-            newItem(): void {
+            }
+            FlexContainer.prototype.newItem = function () {
                 var index = this.getItemIndex();
                 var newItem = new flexbox.model.FlexItem(this, index);
                 this.items.push(newItem);
+            };
 
-
-            }
-
-            oneLessItem(): void {
-
+            FlexContainer.prototype.oneLessItem = function () {
                 this.items.pop();
+            };
 
-            }
-
-            getItemIndex(): number {
+            FlexContainer.prototype.getItemIndex = function () {
                 var currentLength = this.items().length;
                 return currentLength + 1;
-            }
+            };
 
-            resetItemProps(): void {
+            FlexContainer.prototype.resetItemProps = function () {
                 var array = this.items();
                 for (var i = 0; i < array.length; i++) {
                     array[i].resetProps();
-
                 }
-            }
-            destroyItem(index): void {
+            };
+            FlexContainer.prototype.destroyItem = function (index) {
                 var self = this;
                 self.items.splice((index - 1), 1);
-                (function() {
+                (function () {
                     var array = self.items();
                     for (var i = 0; i < array.length; i++) {
                         var newIndex = i + 1;
@@ -122,26 +98,20 @@ module flexbox {
                         array[i].index(stringIndex);
                     }
                 })();
-            }
+            };
 
-            makeHolyGrail(): void {
+            FlexContainer.prototype.makeHolyGrail = function () {
                 var index = this.getItemIndex();
                 this.items([]);
-                this.items.push(
-                    new flexbox.model.FlexItem(this, index++, "0", "1", "100%", "center", "green"),
-                    new flexbox.model.FlexItem(this, index++),
-                    new flexbox.model.FlexItem(this, index++),
-                    new flexbox.model.FlexItem(this, index++),
-                    new flexbox.model.FlexItem(this, index++, "0", "1", "100%", "center", "green")
-                    );
+                this.items.push(new flexbox.model.FlexItem(this, index++, "0", "1", "100%", "center", "green"), new flexbox.model.FlexItem(this, index++), new flexbox.model.FlexItem(this, index++), new flexbox.model.FlexItem(this, index++), new flexbox.model.FlexItem(this, index++, "0", "1", "100%", "center", "green"));
+            };
 
-
-            }
-
-        } //end class
-
-
-
-    }
-
-}
+            FlexContainer.prototype.newTask = function () {
+            };
+            return FlexContainer;
+        })();
+        view.FlexContainer = FlexContainer;
+    })(flexbox.view || (flexbox.view = {}));
+    var view = flexbox.view;
+})(flexbox || (flexbox = {}));
+//# sourceMappingURL=Container.js.map
