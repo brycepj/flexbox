@@ -1,0 +1,40 @@
+.container-settings {
+	position:relative;
+
+	& label {
+		display:inline-block;
+	}
+	& select {
+		display:block;
+}
+
+}
+
+
+
+
+.cs-add-remove {
+	float:right;
+}
+.cs-add, .cs-remove {
+	display:inline-block;
+	
+	& i {
+		@include font-size(3,1);
+		color:$white;
+		text-shadow:1px 1px 1px darken($gray,50%);
+		transition:color .2s ease;
+		
+		&:hover {
+			color:darken($white,10%);
+		}
+		
+		&:active {
+			color:darken($white,15%);
+		}
+	}
+}
+
+.cs-remove {
+	margin-left:10px;
+}

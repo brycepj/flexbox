@@ -2,12 +2,16 @@
 	position:relative;
 	padding:1em;
 	min-width:68px!important;
+	border-radius:5px;
+	box-shadow:1px 1px 8px 1px darken($gray,20%);
 }
 
 .fi-index {
-	color:$purple;
+	color:$blue;
 	font-size:2em;
 	font-weight:bold;
+	text-shadow:0 0 2px 0 $gray;
+	
 }
 
 .fi-destroy-btn {
@@ -25,17 +29,18 @@
 	position:absolute;bottom:15px;left:15px;
 	
 	& label {
-		display:block;
-		width:80px;
+		display:inline-block;
+		width:55px;
 		font-size:.75em;
+		margin-top:.5em;
 		& input {
-			width:40px;
+			width:50px;
 			display:block;
 			border:0;
 			background-color:fade($gray,25%);
-			
+			padding:.25em;
 			&:focus {
-				border:0;
+				outline:3px;
 			}
 		}
 	}

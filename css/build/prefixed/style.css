@@ -73,33 +73,16 @@ input {
 .playground-ui {
   width: 80%;
   height: 100%;
+  overflow: hidden;
   float: left;
   background-color: #aaaaaa; }
 
 .sidebar {
   float: left;
   width: 20%;
+  height: 100%;
   padding: 1em;
-  background-color: #f012be; }
-
-.masthead {
-  background-color: #aaaaaa;
-  color: white; }
-
-.message-box {
-  margin-top: 1em;
-  background-color: #aaaaaa;
-  color: white; }
-  .message-box p {
-    font-size: 21.6px;
-    font-size: 1.35rem;
-    line-height: 25.6px;
-    line-height: 1.6rem; }
-
-.code-box {
-  margin-top: 1em;
-  color: white;
-  background-color: #aaaaaa; }
+  background-color: #111111; }
 
 .console {
   height: 300px;
@@ -109,19 +92,11 @@ input {
     color: white; }
 
 .control-panel {
-  width: 98%;
-  margin: 0 auto;
-  border-radius: 5px;
-  background-color: #848484; }
+  width: 100%; }
 
 .container-settings, .item-defaults, .template-options {
-  float: left;
-  margin: 0 1em 0 0; }
-
-.flex-container {
-  width: 98%;
-  min-height: 75%;
-  margin: 0 auto; }
+  display: inline-block;
+  margin: 0 3em 0 0; }
 
 /*  
 
@@ -184,6 +159,58 @@ p {
   color: black; }
 
 /******MODULES*******/
+.code-box {
+  margin-top: 1em;
+  padding: 1em;
+  color: white;
+  background-color: #aaaaaa; }
+
+.container-settings {
+  position: relative; }
+  .container-settings label {
+    display: inline-block; }
+  .container-settings select {
+    display: block; }
+
+.cs-add-remove {
+  float: right; }
+
+.cs-add, .cs-remove {
+  display: inline-block; }
+  .cs-add i, .cs-remove i {
+    font-size: 48px;
+    font-size: 3rem;
+    line-height: 16px;
+    line-height: 1rem;
+    color: white;
+    text-shadow: 1px 1px 1px #2a2a2a;
+    -webkit-transition: color .2s ease;
+    transition: color .2s ease; }
+    .cs-add i:hover, .cs-remove i:hover {
+      color: #e6e6e6; }
+    .cs-add i:active, .cs-remove i:active {
+      color: #d9d9d9; }
+
+.cs-remove {
+  margin-left: 10px; }
+
+.control-panel {
+  display: block;
+  position: relative;
+  padding: 1.25em;
+  margin: 0 auto;
+  background-color: #848484; }
+
+.flex-container {
+  width: 100%;
+  height: 100%;
+  overflow: auto; }
+
+.masthead {
+  padding: 1em;
+  background-color: #aaaaaa;
+  color: white; }
+
 .site-logo {
   font-size: 40px;
   font-size: 2.5rem;
@@ -196,15 +223,47 @@ p {
   line-height: 25.6px;
   line-height: 1.6rem; }
 
+.message-box {
+  position: relative;
+  margin: 1em 0;
+  height: 200px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1em 1.5em;
+  background-color: #aaaaaa;
+  color: white; }
+  .message-box .title {
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 8px;
+    line-height: 0.5rem;
+    position: absolute;
+    top: 10px;
+    left: 10px; }
+  .message-box p {
+    font-size: 21.6px;
+    font-size: 1.35rem;
+    line-height: 25.6px;
+    line-height: 1.6rem; }
+
 .flex-item {
   position: relative;
   padding: 1em;
-  min-width: 68px !important; }
+  min-width: 68px !important;
+  border-radius: 5px;
+  box-shadow: 1px 1px 8px 1px #777777; }
 
 .fi-index {
-  color: #b10dc9;
+  color: #0074d9;
   font-size: 2em;
-  font-weight: bold; }
+  font-weight: bold;
+  text-shadow: 0 0 2px 0 #aaaaaa; }
 
 .fi-destroy-btn {
   position: absolute;
@@ -218,15 +277,17 @@ p {
   bottom: 15px;
   left: 15px; }
   .fi-options label {
-    display: block;
-    width: 80px;
-    font-size: .75em; }
+    display: inline-block;
+    width: 55px;
+    font-size: .75em;
+    margin-top: .5em; }
     .fi-options label input {
-      width: 40px;
+      width: 50px;
       display: block;
       border: 0;
-      background-color: fade(#aaaaaa, 25%); }
+      background-color: fade(#aaaaaa, 25%);
+      padding: .25em; }
       .fi-options label input:focus {
-        border: 0; }
+        outline: 3px; }
 
 /*BROWSER SUPPORT*/

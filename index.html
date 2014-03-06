@@ -25,41 +25,7 @@
 </head>
 <body>
 <div class="playground-ui">
-    <div class="control-panel">
-        <div class="container-settings">
-            <h2>container settings</h2>
-            <button data-bind="click:newItem">new item</button>
-            <button data-bind="click:oneLessItem">one less item</button>
-            <button data-bind="click:getItemIndex">getItemIndex</button>
-            <label for="">width: <input type="text" data-bind="value:cPropsCurrent.width"></label>
-            <label for="">flex-direction: <select
-                    data-bind="options:flexDirectionOptions, value:cPropsCurrent.flexDirection"></select> </label>
-            <label for="">flex-wrap: <select data-bind="options:flexWrapOptions, value:cPropsCurrent.flexWrap"></select>
-            </label>
-            <label for="">justify-content: <select
-                    data-bind="options:justifyContentOptions, value:cPropsCurrent.justifyContent"></select> </label>
-            <label for="">align content: <select
-                    data-bind="options:alignContentOptions, value:cPropsCurrent.alignContent"></select> </label>
-            <label for="">align items: <select
-                    data-bind="options:alignItemsOptions, value:cPropsCurrent.alignItems"></select> </label>
-        </div>
-        <div data-bind="visible:true" class="item-defaults">
-            <h2>item defaults</h2>
-            <button data-bind="click:resetItemProps, text:defaultBtnText">reset item defaults</button>
-            <label for="">flex-grow: <input type="text" data-bind="value:iPropsDefault.flexGrow"></label>
-            <label for="">flex-shrink: <input type="text" data-bind="value:iPropsDefault.flexShrink"></label>
-            <label for="">flex-basis<input type="text" data-bind="value:iPropsDefault.flexBasis"></label>
-            <label for="">align-self: <select type="text"
-                                              data-bind="options:alignSelfOptions, value:iPropsDefault.alignSelf"></select></label>
 
-        </div>
-
-        <div class="template-options">
-            <h2>template options</h2>
-            <button data-bind="click:makeHolyGrail">Make Holy Grail</button>
-            <button>Make Perfect Nav</button>
-        </div>
-    </div>
     <div class="flex-container" data-bind="template: { name: 'flex-list', foreach: items },
                 style:{
                 display:cPropsCurrent.display,
@@ -75,16 +41,56 @@
 </div>
 <aside class="sidebar">
     <div class="masthead">
-        <h1 class="site-logo">flexploring</h1>
+        <h1 class="site-logo">flexbox in five minutes</h1>
 
-        <p class="site-desc">this is a site for playing with flexbox</p>
+        <p class="site-desc">take an interactive tour through all the major features of the language.</p>
+        
     </div>
+    
+        
     <div class="message-box">
-        <p data-bind="visible:noItems">this is your flexbox container. go ahead and start adding new flex items with the
-            'new item' button at your left</p>
-
-        <p>This should not be the only message in this box. This is a place for console.logs and information about the
-            flexbox. </p>
+    <span class="title">console</span>
+        <p data-bind="visible:noItems">Hi. Would you like to take a quick, interactive tour through the one, the only, the AMAAAAZING flexbox property? </p>
+    </div>
+    
+    <div class="control-panel">
+    <div class="cs-add-remove">
+            <a class="cs-add" data-bind="click:newItem"><i class="fa fa-plus"></i></a>
+            <a class="cs-remove"data-bind="click:oneLessItem"><i class="fa fa-minus"></i></a>
+</div>
+        <div class="container-settings">
+            <label for="">flex-direction: <select
+                    data-bind="options:flexDirectionOptions, value:cPropsCurrent.flexDirection"></select> </label>
+            <label for="">flex-wrap: <select data-bind="options:flexWrapOptions, value:cPropsCurrent.flexWrap"></select>
+            </label>
+            <label for="">justify-content: <select
+                    data-bind="options:justifyContentOptions, value:cPropsCurrent.justifyContent"></select> </label>
+            <label for="">align-content: <select
+                    data-bind="options:alignContentOptions, value:cPropsCurrent.alignContent"></select> </label>
+            <label for="">align-items: <select
+                    data-bind="options:alignItemsOptions, value:cPropsCurrent.alignItems"></select> </label>
+        </div>
+        <div data-bind="visible:true" class="item-defaults">
+            <h2>item width:</h2>
+<button data-bind="click:makeAllFixed">Make All Fixed</button>
+<button data-bind="click:makeAllFlexy">Make All Flexy</button>
+           <!--
+            <label for="">flex-grow: <input type="text" data-bind="value:iPropsDefault.flexGrow"></label>
+            <label for="">flex-shrink: <input type="text" data-bind="value:iPropsDefault.flexShrink"></label>
+            <label for="">flex-basis<input type="text" data-bind="value:iPropsDefault.flexBasis"></label>
+            <label for="">align-self: <select type="text"
+                                              data-bind="options:alignSelfOptions, value:iPropsDefault.alignSelf"></select></label>
+			<label for="">width: <input type="text" data-bind="value:iPropsDefault.width"></label>
+			
+			            <button data-bind="click:resetItemProps, text:defaultBtnText">reset item defaults</button>
+        
+-->
+</div>
+        <div class="template-options">
+            <h2>template options</h2>
+            <button data-bind="click:makeHolyGrail">Make Holy Grail</button>
+            <button>Make Perfect Nav</button>
+        </div>
     </div>
     <div class="code-box">
         <h2>code samples</h2>
@@ -121,32 +127,35 @@
 
     </div>
 
-    <div class="console">
-
-
-    </div>
 </aside>
 <script type="template/knockout" id="flex-list">
     <div class="flex-item" data-bind="style:{
               backgroundColor:iPropsCurrent.backgroundColor,
               height:iPropsCurrent.height,
+              width:iPropsCurrent.width,
               margin:iPropsCurrent.margin,
               flexGrow:iPropsCurrent.flexGrow,
               flexShrink:iPropsCurrent.flexShrink,
               flexBasis:iPropsCurrent.flexBasis,
               alignSelf:iPropsCurrent.alignSelf
+              
             }">
         <span class="fi-index" data-bind="text:index"></span>
         <a href="#" class="fi-destroy-btn" data-bind="click:destroySelf"><i class="fa fa-times"></i></a>
 
         <div class="fi-options">
-            <span><a href="#" data-bind="click:makeFixedWidth">fixed</a> or <a href="#"
-                                                                               data-bind="click:makeFlexyWidth">flexy</a></span>
+            <span><a href="#" data-bind="click:makeFixedWidth, style:{fontSize:highlightFixed}">fixed</a> or <a href="#" data-bind="click:makeFlexyWidth, style:{fontSize:highlightFlexy}">flexy</a> width?</span>
+<div class="fi-options-fixed" data-bind="visible:isFixedWidth">                                                                                          <label>width: <input type="text" data-bind="enable:isFixedWidth, value:iPropsCurrent.width"></label>
+                                                                                           <label>height: <input type="text" data-bind="enable:isFixedWidth, value:iPropsCurrent.height"></label>
+                                                                                           
+                                                                                           </div> 
+                                                                                           
+                                                                                           <div class="fi-options-flexy" data-bind="visible:isFlexyWidth">
             <label>flex-grow: <input type="text" data-bind="enable:isFlexyWidth, value:iPropsCurrent.flexGrow"></label>
-            <label>width: <input type="text" data-bind="enable:isFixedWidth, value:iPropsCurrent.width"></label>
+
             <label for="">flex-shrink: <input type="text" data-bind="value:iPropsCurrent.flexShrink"></label>
             <label for="">flex-basis: <input type="text" data-bind="value:iPropsCurrent.flexBasis"></label>
-
+</div>
         </div>
 
 

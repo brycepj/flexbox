@@ -14,12 +14,12 @@ module flexbox {
             iPropsDefault: any;
             defaultBtnText: any;
             noItems: any;
+            allAreFixed: any;
+            allAreFlexy: any;
 
             constructor() {
 
-                this.items = ko.observableArray([
-
-                ]);
+                this.items = ko.observableArray([]);
 
                 this.noItems = ko.computed(function() {
                     var array = this.items();
@@ -32,26 +32,17 @@ module flexbox {
 
                 this.iPropsDefault = {
                     order: ko.observable("1"),
-                    flexGrow: ko.observable("1"),
-                    flexShrink: ko.observable("1"),
-                    flexBasis: ko.observable("100px"),
+                    flexGrow: ko.observable("0"),
+                    flexShrink: ko.observable("0"),
+                    flexBasis: ko.observable("0"),
                     alignSelf: ko.observable("center"),
                     width: ko.observable("300px"),
-                    height: ko.observable("30%"),
+                    height: ko.observable("250px"),
                     backgroundColor: "blue",
                     margin: "10px"
                 };
 
-                this.defaultBtnText = ko.computed(function() {
-                    var def = this.iPropsDefault;
-
-                    if (def.flexGrow() === '1' && def.flexShrink() === '1' && def.flexBasis() === "300px" && def.alignSelf() === "center") {
-                    return "reset all items"
-                    } else {
-                        return "update item defaults";
-                    }
-
-                }, this);
+                this.defaultBtnText = "Sync Items with Defaults"
 
                 //UI edits default props in 
 
@@ -72,7 +63,7 @@ module flexbox {
                     justifyContent: ko.observable("center"),
                     alignItems: ko.observable("center"),
                     alignContent: ko.observable("center"),
-                    width: ko.observable("98%")
+                    width: ko.observable("100%")
 
                 };
 
@@ -82,14 +73,21 @@ module flexbox {
                 this.alignItemsOptions = ['flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
                 this.alignContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch'];
                 this.alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch', 'inherit'];
+
+                this.allAreFixed = ko.observable(true);
+                this.allAreFlexy = ko.observable(false);
+
             } //end constructor
 
 
             newItem(): void {
                 var index = this.getItemIndex();
                 var newItem = new flexbox.model.FlexItem(this, index);
-                this.items.push(newItem);
 
+                this.items.push(newItem);
+                //set up new param to be flexy or fixed
+                //figure out a better way to be passing these parameters to the new item
+                //maybe just pass the one value, maybe consolidate the props in Container too
 
             }
 
@@ -104,6 +102,29 @@ module flexbox {
                 return currentLength + 1;
             }
 
+            makeAllFixed(): void {
+
+                this.allAreFixed(true);
+                this.allAreFlexy(false);
+                var array = this.items();
+                for (var i = 0; i < array.length; i++) {
+                    array[i].makeFixedWidth();
+
+                }
+
+            }
+
+            makeAllFlexy(): void {
+
+                this.allAreFixed(false);
+                this.allAreFlexy(true);
+                var array = this.items();
+                for (var i = 0; i < array.length; i++) {
+                    array[i].makeFlexyWidth();
+
+                }
+
+            }
             resetItemProps(): void {
                 var array = this.items();
                 for (var i = 0; i < array.length; i++) {

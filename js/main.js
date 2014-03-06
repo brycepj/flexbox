@@ -2,10 +2,12 @@ var flexbox;
 (function (flexbox) {
     (function (_model) {
         var FlexItem = (function () {
-            function FlexItem(model, index, flexGrow, flexShrink, flexBasis, alignSelf, backgroundColor) {
-                if (typeof flexGrow === "undefined") { flexGrow = "0"; }
-                if (typeof flexShrink === "undefined") { flexShrink = "1"; }
-                if (typeof flexBasis === "undefined") { flexBasis = "100px"; }
+            function FlexItem(model, index, height, width, flexGrow, flexShrink, flexBasis, alignSelf, backgroundColor) {
+                if (typeof height === "undefined") { height = "250px"; }
+                if (typeof width === "undefined") { width = "300px"; }
+                if (typeof flexGrow === "undefined") { flexGrow = null; }
+                if (typeof flexShrink === "undefined") { flexShrink = null; }
+                if (typeof flexBasis === "undefined") { flexBasis = null; }
                 if (typeof alignSelf === "undefined") { alignSelf = "center"; }
                 if (typeof backgroundColor === "undefined") { backgroundColor = "#01ff70"; }
                 this.index = ko.observable(index);
@@ -17,29 +19,51 @@ var flexbox;
                     flexShrink: ko.observable(flexShrink),
                     flexBasis: ko.observable(flexBasis),
                     alignSelf: ko.observable(alignSelf),
-                    height: ko.observable("230px"),
-                    width: ko.observable("200px"),
+                    height: ko.observable(height),
+                    width: ko.observable(width),
                     backgroundColor: ko.observable(backgroundColor),
                     margin: ko.observable("10px")
                 };
 
                 this.isFixedWidth = ko.observable(true);
                 this.isFlexyWidth = ko.observable(false);
+
+                this.highlightFixed = ko.computed(function () {
+                    if (this.isFixedWidth()) {
+                        return "1.6em";
+                    } else {
+                        return "inherit";
+                    }
+                }, this);
+
+                this.highlightFlexy = ko.computed(function () {
+                    if (this.isFlexyWidth()) {
+                        return "1.6em";
+                    } else {
+                        return "inherit";
+                    }
+                }, this);
             }
             FlexItem.prototype.makeFixedWidth = function () {
+                console.log('it fired');
                 this.isFixedWidth(true);
-                this.iPropsCurrent.flexGrow("0");
+                this.iPropsCurrent.flexGrow(null);
+                this.iPropsCurrent.flexBasis(null);
+                this.iPropsCurrent.flexShrink(null);
                 this.isFlexyWidth(false);
             };
             FlexItem.prototype.makeFlexyWidth = function () {
                 this.isFixedWidth(false);
                 this.isFlexyWidth(true);
                 this.iPropsCurrent.flexGrow("1");
+                this.iPropsCurrent.flexBasis("200px");
+                this.iPropsCurrent.flexShrink("0");
             };
 
             FlexItem.prototype.resetProps = function () {
                 var currentProps = this.iPropsCurrent;
                 var newProps = this.model.iPropsDefault;
+                currentProps.width(newProps.width());
                 currentProps.flexGrow(newProps.flexGrow());
                 currentProps.flexShrink(newProps.flexShrink());
                 currentProps.flexBasis(newProps.flexBasis());
@@ -75,25 +99,17 @@ var flexbox;
 
                 this.iPropsDefault = {
                     order: ko.observable("1"),
-                    flexGrow: ko.observable("1"),
-                    flexShrink: ko.observable("1"),
-                    flexBasis: ko.observable("100px"),
+                    flexGrow: ko.observable("0"),
+                    flexShrink: ko.observable("0"),
+                    flexBasis: ko.observable("0"),
                     alignSelf: ko.observable("center"),
                     width: ko.observable("300px"),
-                    height: ko.observable("30%"),
+                    height: ko.observable("250px"),
                     backgroundColor: "blue",
                     margin: "10px"
                 };
 
-                this.defaultBtnText = ko.computed(function () {
-                    var def = this.iPropsDefault;
-
-                    if (def.flexGrow() === '1' && def.flexShrink() === '1' && def.flexBasis() === "300px" && def.alignSelf() === "center") {
-                        return "reset all items";
-                    } else {
-                        return "update item defaults";
-                    }
-                }, this);
+                this.defaultBtnText = "Sync Items with Defaults";
 
                 this.cPropsDefault = {
                     display: "flex",
@@ -112,7 +128,7 @@ var flexbox;
                     justifyContent: ko.observable("center"),
                     alignItems: ko.observable("center"),
                     alignContent: ko.observable("center"),
-                    width: ko.observable("98%")
+                    width: ko.observable("100%")
                 };
 
                 this.flexDirectionOptions = ['row', 'column'];
@@ -121,10 +137,14 @@ var flexbox;
                 this.alignItemsOptions = ['flex-start', 'flex-end', 'center', 'baseline', 'stretch'];
                 this.alignContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch'];
                 this.alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch', 'inherit'];
+
+                this.allAreFixed = ko.observable(true);
+                this.allAreFlexy = ko.observable(false);
             }
             FlexContainer.prototype.newItem = function () {
                 var index = this.getItemIndex();
                 var newItem = new flexbox.model.FlexItem(this, index);
+
                 this.items.push(newItem);
             };
 
@@ -137,6 +157,23 @@ var flexbox;
                 return currentLength + 1;
             };
 
+            FlexContainer.prototype.makeAllFixed = function () {
+                this.allAreFixed(true);
+                this.allAreFlexy(false);
+                var array = this.items();
+                for (var i = 0; i < array.length; i++) {
+                    array[i].makeFixedWidth();
+                }
+            };
+
+            FlexContainer.prototype.makeAllFlexy = function () {
+                this.allAreFixed(false);
+                this.allAreFlexy(true);
+                var array = this.items();
+                for (var i = 0; i < array.length; i++) {
+                    array[i].makeFlexyWidth();
+                }
+            };
             FlexContainer.prototype.resetItemProps = function () {
                 var array = this.items();
                 for (var i = 0; i < array.length; i++) {

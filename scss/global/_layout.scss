@@ -16,38 +16,20 @@ input {
 
 .playground-ui {
 	width:80%; height:100%;
-	
+	overflow:hidden;
 	float:left;
 	background-color:$gray;
 }
 
 .sidebar {
 	float:left;
-	width:20%;
+	width:20%; height:100%;
 	padding:1em;
-	background-color:$fuchsia;
+	background-color:$black;
 }
 
-.masthead {
-	background-color:$gray;
-	color:$white;
-	
-}
 
-.message-box {
-	margin-top:1em;
-	background-color:$gray;
-	color:$white;
-	& p {
-		@include font-size(1.35,1.6);
-	}
-}
 
-.code-box {
-	margin-top:1em;
-	color:$white;	
-	background-color:$gray;
-}
 
 
 .console {
@@ -58,24 +40,19 @@ input {
 	}
 }
 .control-panel {
-	width:98%;
-	margin:0 auto;
-	border-radius:5px;
-	background-color:darken($gray,15%);
+	width:100%;
+	
 	@extend %clearfix;
 }
 
 .container-settings,.item-defaults,.template-options {
 	
-	float:left;
-	margin:0 1em 0 0;
+	display:inline-block;
+	margin:0 3em 0 0;
 	
 }
 
-.flex-container {
-	width:98%; min-height:75%;
-	margin:0 auto;
-}
+
 
 .flex-item {
 	;
