@@ -1,0 +1,43 @@
+.flex-item {
+	position:relative;
+	padding:1em;
+	min-width:68px!important;
+}
+
+.fi-index {
+	color:$purple;
+	font-size:2em;
+	font-weight:bold;
+}
+
+.fi-destroy-btn {
+	position:absolute;
+	top:5px; right:5px;
+	
+	
+	& i {
+		color:$red;
+	
+	}
+}
+
+.fi-options {
+	position:absolute;bottom:15px;left:15px;
+	
+	& label {
+		display:block;
+		width:80px;
+		font-size:.75em;
+		& input {
+			width:40px;
+			display:block;
+			border:0;
+			background-color:fade($gray,25%);
+			
+			&:focus {
+				border:0;
+			}
+		}
+	}
+	
+}

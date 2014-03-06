@@ -14,21 +14,21 @@ module flexbox {
             alignSelfOptions: any;
             iPropsDefault: any;
             defaultBtnText: any;
-            noItems:any;
-            
+            noItems: any;
+
             constructor() {
 
                 this.items = ko.observableArray([
 
                 ]);
 
-                this.noItems = ko.computed(function(){
+                this.noItems = ko.computed(function() {
                     var array = this.items();
                     console.log(array);
-                    if (array.length) {return false;}
-                    else {return true;}
-                
-                },this);
+                    if (array.length) { return false; }
+                    else { return true; }
+
+                }, this);
                 //add all of the flexbox container properties
 
                 this.iPropsDefault = {
@@ -38,7 +38,7 @@ module flexbox {
                     flexBasis: ko.observable("100px"),
                     alignSelf: ko.observable("center"),
                     width: ko.observable("300px"),
-                    height: ko.observable("200px"),
+                    height: ko.observable("30%"),
                     backgroundColor: "blue",
                     margin: "10px"
                 };
@@ -63,7 +63,7 @@ module flexbox {
                     justifyContent: "center",
                     alignItems: "center",
                     alignContent: "center",
-                    backgroundColor: "yellow"
+                    backgroundColor: "#0074d9"
                 };
 
                 this.cPropsCurrent = {
@@ -73,7 +73,7 @@ module flexbox {
                     justifyContent: ko.observable("center"),
                     alignItems: ko.observable("center"),
                     alignContent: ko.observable("center"),
-                    width: ko.observable("75%")
+                    width: ko.observable("98%")
 
                 };
 
@@ -126,18 +126,18 @@ module flexbox {
                 })();
             }
 
-            makeHolyGrail():void {
+            makeHolyGrail(): void {
                 var index = this.getItemIndex();
-                this.items([]); 
+                this.items([]);
                 this.items.push(
-                    new flexbox.model.FlexItem(this,index++,"0","1","100%","center","green"),
-                    new flexbox.model.FlexItem(this,index++),
-                    new flexbox.model.FlexItem(this,index++),
-                    new flexbox.model.FlexItem(this,index++),
-                    new flexbox.model.FlexItem(this,index++, "0","1","100%","center","green")
+                    new flexbox.model.FlexItem(this, index++, "0", "1", "100%", "center", "green"),
+                    new flexbox.model.FlexItem(this, index++),
+                    new flexbox.model.FlexItem(this, index++),
+                    new flexbox.model.FlexItem(this, index++),
+                    new flexbox.model.FlexItem(this, index++, "0", "1", "100%", "center", "green")
                     );
-                
-            
+
+
             }
 
         } //end class

@@ -1,90 +1,88 @@
 <!DOCTYPE html>
 <html class="no-js">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Flexbox Dev</title>
-    <meta name="description" content="meta description is this">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script type="text/javascript" charset="utf-8" src="js/lib/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/lib/knockout.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
-    <link rel="stylesheet" href="css/build/style.css">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Flexbox Dev</title>
+        <meta name="description" content="meta description is this">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" charset="utf-8" src="js/lib/jquery.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/lib/knockout.js"></script>
+        <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+        <link rel="stylesheet" href="css/build/style.css">
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+        <script type="text/javascript" charset="utf-8">
+            $(function() {
 
-    <script type="text/javascript" charset="utf-8">
-        $(function () {
-
-            var flexboxApp = new flexbox.view.FlexContainer();
-            ko.applyBindings(flexboxApp);
+              var flexboxApp = new flexbox.view.FlexContainer();
+              ko.applyBindings(flexboxApp);
             console.log(flexboxApp);
 
-        });
+            });
 
 
-    </script>
+        </script>
+    </head>
+    <body>
+        <div class="playground-ui">
+            <div class="control-panel">
+                <div class="container-settings">
+                    <h2>container settings</h2>
+                    <button data-bind="click:newItem">new item</button>
+                    <button data-bind="click:oneLessItem">one less item</button>
+                    <button data-bind="click:getItemIndex">getItemIndex</button>
+                    <label for="">width: <input type="text" data-bind="value:cPropsCurrent.width"></label>
+                    <label for="">flex-direction: <select data-bind="options:flexDirectionOptions, value:cPropsCurrent.flexDirection"></select> </label>
+                    <label for="">flex-wrap: <select data-bind="options:flexWrapOptions, value:cPropsCurrent.flexWrap"></select> </label>
+                    <label for="">justify-content: <select data-bind="options:justifyContentOptions, value:cPropsCurrent.justifyContent"></select> </label>
+                    <label for="">align content: <select data-bind="options:alignContentOptions, value:cPropsCurrent.alignContent"></select> </label>
+                    <label for="">align items: <select data-bind="options:alignItemsOptions, value:cPropsCurrent.alignItems"></select> </label>
+                </div>
+                <div data-bind="visible:true"class="item-defaults">
+                    <h2>item defaults</h2>
+                    <button data-bind="click:resetItemProps, text:defaultBtnText">reset item defaults</button>
+                    <label for="">flex-grow: <input type="text" data-bind="value:iPropsDefault.flexGrow"></label>
+                    <label for="">flex-shrink: <input type="text" data-bind="value:iPropsDefault.flexShrink"></label>
+                    <label for="">flex-basis<input type="text" data-bind="value:iPropsDefault.flexBasis"></label>
+                    <label for="">align-self: <select type="text" data-bind="options:alignSelfOptions, value:iPropsDefault.alignSelf"></select></label>
+                
+                </div>
+                
+                
+                <div class="template-options">
+                    <h2>template options</h2>
+                    <button data-bind="click:makeHolyGrail">Make Holy Grail</button>
+                    <button >Make Perfect Nav</button>
+                </div>
+            </div>
+            <div class="flex-container" data-bind="template: { name: 'flex-list', foreach: items },
+                style:{
+                display:cPropsCurrent.display,
+                flexWrap:cPropsCurrent.flexWrap,
+                flexDirection:cPropsCurrent.flexDirection,
+                justifyContent:cPropsCurrent.justifyContent,
+                alignContent:cPropsCurrent.alignContent,
+                alignItems:cPropsCurrent.alignItems,
+                backgroundColor:cPropsDefault.backgroundColor,
+                width:cPropsCurrent.width
+                }">
+            </div>
+        </div>
+        <aside class="sidebar">
+            <div class="masthead">
+                <h1 class="site-logo">flexploring</h1>
+                <p class="site-desc">this is a site for playing with flexbox</p>
+            </div>
+            <div class="message-box">
+                <p data-bind="visible:noItems">this is your flexbox container. go ahead and start adding new flex items with the 'new item' button at your left</p>
+                <p>This should not be the only message in this box. This is a place for console.logs and information about the flexbox. </p>
+            </div>
+            <div class="code-box">
+                <h2>code samples</h2>
+                <code>
+                    <pre>
 
-</head>
-<body>
-<div class="message-box">
-    <p data-bind="visible:noItems">this is your flexbox container. go ahead and start adding new flex items with the
-        'new item' button at your left</p>
-</div>
-<div class="container" data-bind="template: { name: 'flex-list', foreach: items },
-  style:{
-    display:cPropsCurrent.display,
-    flexWrap:cPropsCurrent.flexWrap,
-    flexDirection:cPropsCurrent.flexDirection,
-    justifyContent:cPropsCurrent.justifyContent,
-    alignContent:cPropsCurrent.alignContent,
-    alignItems:cPropsCurrent.alignItems,
-    backgroundColor:cPropsDefault.backgroundColor,
-    width:cPropsCurrent.width
-}">
-
-</div>
-
-<div class="admin">
-    <h2>container settings</h2>
-    <button data-bind="click:newItem">new item</button>
-    <button data-bind="click:oneLessItem">one less item</button>
-    <button data-bind="click:getItemIndex">getItemIndex</button>
-    <label for="">width: <input type="text" data-bind="value:cPropsCurrent.width"></label>
-    <label for="">flex-direction: <select
-            data-bind="options:flexDirectionOptions, value:cPropsCurrent.flexDirection"></select> </label>
-    <label for="">flex-wrap: <select data-bind="options:flexWrapOptions, value:cPropsCurrent.flexWrap"></select>
-    </label>
-    <label for="">justify-content: <select
-            data-bind="options:justifyContentOptions, value:cPropsCurrent.justifyContent"></select> </label>
-    <label for="">align content: <select
-            data-bind="options:alignContentOptions, value:cPropsCurrent.alignContent"></select> </label>
-    <label for="">align items: <select data-bind="options:alignItemsOptions, value:cPropsCurrent.alignItems"></select>
-    </label>
-
-</div>
-
-<div data-bind="visible:true" class="item-defaults">
-    <h2>item defaults</h2>
-    <button data-bind="click:resetItemProps, text:defaultBtnText">reset item defaults</button>
-    <label for="">flex-grow: <input type="text" data-bind="value:iPropsDefault.flexGrow"></label>
-    <label for="">flex-shrink: <input type="text" data-bind="value:iPropsDefault.flexShrink"></label>
-    <label for="">flex-basis<input type="text" data-bind="value:iPropsDefault.flexBasis"></label>
-    <label for="">align-self: <select type="text"
-                                      data-bind="options:alignSelfOptions, value:iPropsDefault.alignSelf"></select></label>
-
-</div>
-
-<div class="template-options">
-    <h2>template options</h2>
-    <button data-bind="click:makeHolyGrail">Make Holy Grail</button>
-    <button>Make Perfect Nav</button>
-
-</div>
-
-<div class="code-box">
-    <h2>code samples</h2>
-    <code>
-		<pre>
 .flex-container {
 	display:flex;
 	flex-direction: <span data-bind="text:cPropsCurrent.flexDirection"></span>
@@ -95,10 +93,12 @@
 
 }
 		</pre>
+
     </code>
 
     <code>
 		<pre>
+
 .flex-items-default {
 	flex-grow: <span data-bind="text:iPropsDefault.flexGrow"></span>
 	flex-shrink: <span data-bind="text:iPropsDefault.flexShrink"></span>
@@ -113,26 +113,35 @@
 
 </div>
 
-<script type="template/knockout" id="flex-list">
-    <div class="flex-item" data-bind="style:{
-      backgroundColor:iPropsCurrent.backgroundColor,
-      height:iPropsCurrent.height,
-      margin:iPropsCurrent.margin,
-      flexGrow:iPropsCurrent.flexGrow,
-      flexShrink:iPropsCurrent.flexShrink,
-      flexBasis:iPropsCurrent.flexBasis,
-      alignSelf:iPropsCurrent.alignSelf
-}">
-        <p>Item index:<span data-bind="text:index"></span></p>
-        <label>flex-grow: <input type="text" data-bind="value:iPropsCurrent.flexGrow"></label>
-        <label for="">flex-shrink: <input type="text" data-bind="value:iPropsCurrent.flexShrink"></label>
-        <label for="">flex-basis: <input type="text" data-bind="value:iPropsCurrent.flexBasis"></label>
-        <label for="">align-self: <input type="text" data-bind="value:iPropsCurrent.alignSelf"></label>
-        <a href="#" data-bind="click:destroySelf">destroy self</a>
-
-    </div>
-</script>
-
-
-</body>
+<div class="console">
+            
+            
+            
+</div>
+</aside>
+        <script type="template/knockout" id="flex-list">
+            <div class="flex-item" data-bind="style:{
+              backgroundColor:iPropsCurrent.backgroundColor,
+              height:iPropsCurrent.height,
+              margin:iPropsCurrent.margin,
+              flexGrow:iPropsCurrent.flexGrow,
+              flexShrink:iPropsCurrent.flexShrink,
+              flexBasis:iPropsCurrent.flexBasis,
+              alignSelf:iPropsCurrent.alignSelf
+            }">
+            <span class="fi-index"data-bind="text:index"></span>
+            <a href="#" class="fi-destroy-btn" data-bind="click:destroySelf"><i class="fa fa-times"></i></a>
+            <div class="fi-options">
+            <span><a href="#" data-bind="click:makeFixedWidth">fixed</a> or <a href="#" data-bind="click:makeFlexyWidth">flexy</a></span>
+            <label>flex-grow: <input type="text" data-bind="enable:isFlexyWidth, value:iPropsCurrent.flexGrow"></label>
+            <label>width: <input type="text" data-bind="enable:isFixedWidth, value:iPropsCurrent.width"></label>
+            <label for="">flex-shrink: <input type="text" data-bind="value:iPropsCurrent.flexShrink"></label>
+            <label for="">flex-basis: <input type="text" data-bind="value:iPropsCurrent.flexBasis"></label>
+           
+            </div>
+            
+            
+            </div>
+        </script>
+    </body>
 </html>

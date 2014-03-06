@@ -1,16 +1,8 @@
-/* Layout rules divide the page into sections, such as 'header', 'footer', 'sidebar' and 'main content'. Layouts hold one or more modules together. This is the time to use ID's and to set width, float, and height properties. Generally, a layout style only has a single selector: a single ID or class name.  */
-
-.container {
-min-height:500px;
-float:right;
-
+body,html {
+	width:100%;
+	height:100%;
 }
 
-.message-box {
-float:right;
-
-
-}
 
 label {
 display:block;
@@ -22,8 +14,70 @@ input {
 
 }
 
-.flex-item {
+.playground-ui {
+	width:80%; height:100%;
+	
+	float:left;
+	background-color:$gray;
+}
 
+.sidebar {
+	float:left;
+	width:20%;
+	padding:1em;
+	background-color:$fuchsia;
+}
+
+.masthead {
+	background-color:$gray;
+	color:$white;
+	
+}
+
+.message-box {
+	margin-top:1em;
+	background-color:$gray;
+	color:$white;
+	& p {
+		@include font-size(1.35,1.6);
+	}
+}
+
+.code-box {
+	margin-top:1em;
+	color:$white;	
+	background-color:$gray;
+}
+
+
+.console {
+	height:300px; width:100%;
+	background-color:$black;
+	& p {
+		color:$white;
+	}
+}
+.control-panel {
+	width:98%;
+	margin:0 auto;
 	border-radius:5px;
+	background-color:darken($gray,15%);
+	@extend %clearfix;
+}
 
+.container-settings,.item-defaults,.template-options {
+	
+	float:left;
+	margin:0 1em 0 0;
+	
+}
+
+.flex-container {
+	width:98%; min-height:75%;
+	margin:0 auto;
+}
+
+.flex-item {
+	;
+	
 }

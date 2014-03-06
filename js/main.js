@@ -3,11 +3,11 @@ var flexbox;
     (function (_model) {
         var FlexItem = (function () {
             function FlexItem(model, index, flexGrow, flexShrink, flexBasis, alignSelf, backgroundColor) {
-                if (typeof flexGrow === "undefined") { flexGrow = "1"; }
+                if (typeof flexGrow === "undefined") { flexGrow = "0"; }
                 if (typeof flexShrink === "undefined") { flexShrink = "1"; }
                 if (typeof flexBasis === "undefined") { flexBasis = "100px"; }
                 if (typeof alignSelf === "undefined") { alignSelf = "center"; }
-                if (typeof backgroundColor === "undefined") { backgroundColor = "tomato"; }
+                if (typeof backgroundColor === "undefined") { backgroundColor = "#01ff70"; }
                 this.index = ko.observable(index);
                 this.model = model;
                 console.log(model);
@@ -17,11 +17,26 @@ var flexbox;
                     flexShrink: ko.observable(flexShrink),
                     flexBasis: ko.observable(flexBasis),
                     alignSelf: ko.observable(alignSelf),
-                    height: ko.observable("300px"),
+                    height: ko.observable("230px"),
+                    width: ko.observable("200px"),
                     backgroundColor: ko.observable(backgroundColor),
                     margin: ko.observable("10px")
                 };
+
+                this.isFixedWidth = ko.observable(true);
+                this.isFlexyWidth = ko.observable(false);
             }
+            FlexItem.prototype.makeFixedWidth = function () {
+                this.isFixedWidth(true);
+                this.iPropsCurrent.flexGrow("0");
+                this.isFlexyWidth(false);
+            };
+            FlexItem.prototype.makeFlexyWidth = function () {
+                this.isFixedWidth(false);
+                this.isFlexyWidth(true);
+                this.iPropsCurrent.flexGrow("1");
+            };
+
             FlexItem.prototype.resetProps = function () {
                 var currentProps = this.iPropsCurrent;
                 var newProps = this.model.iPropsDefault;
@@ -65,7 +80,7 @@ var flexbox;
                     flexBasis: ko.observable("100px"),
                     alignSelf: ko.observable("center"),
                     width: ko.observable("300px"),
-                    height: ko.observable("200px"),
+                    height: ko.observable("30%"),
                     backgroundColor: "blue",
                     margin: "10px"
                 };
@@ -87,7 +102,7 @@ var flexbox;
                     justifyContent: "center",
                     alignItems: "center",
                     alignContent: "center",
-                    backgroundColor: "yellow"
+                    backgroundColor: "#0074d9"
                 };
 
                 this.cPropsCurrent = {
@@ -97,7 +112,7 @@ var flexbox;
                     justifyContent: ko.observable("center"),
                     alignItems: ko.observable("center"),
                     alignContent: ko.observable("center"),
-                    width: ko.observable("75%")
+                    width: ko.observable("98%")
                 };
 
                 this.flexDirectionOptions = ['row', 'column'];

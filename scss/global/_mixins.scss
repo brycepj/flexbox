@@ -17,6 +17,16 @@ line-height: ($heightValue * 16) + px;
 line-height: $heightValue + rem;
 }
 
+
+/*** CLEARFIX***/
+
+%clearfix {
+    &:after {
+        content: " ";
+        display: block;
+        clear: both;
+    }
+}
 /*** PRESET BREAKPOINTS ***/
 
 $XS: 18em; // 288px
