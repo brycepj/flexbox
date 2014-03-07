@@ -155,11 +155,11 @@ module flexbox {
                 var index = this.getItemIndex();
                 this.items([]);
                 this.items.push(
-                    new flexbox.model.FlexItem(this, index++, "0", "1", "100%", "center", "green"),
                     new flexbox.model.FlexItem(this, index++),
                     new flexbox.model.FlexItem(this, index++),
                     new flexbox.model.FlexItem(this, index++),
-                    new flexbox.model.FlexItem(this, index++, "0", "1", "100%", "center", "green")
+                    new flexbox.model.FlexItem(this, index++),
+                    new flexbox.model.FlexItem(this, index++)
                 );
 
 

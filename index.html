@@ -18,8 +18,9 @@
             var tourbox = new flexbox.model.Tour();
             ko.applyBindings(tourbox, document.getElementById('message-box'));
 
-            console.log(tourbox);
+            
             var flexboxApp = new flexbox.view.FlexContainer();
+            console.log(flexboxApp);
             ko.applyBindings(flexboxApp, document.getElementById('flexbox-app'));
 
         });
@@ -28,45 +29,11 @@
 </head>
 <body>
 
-<div id="message-box" class="message-box">
-    <span class="title">console</span>
 
-    <p data-bind="text:currentMessage"></p>
-    <nav class="tour-nav">
-        <a href="#" data-bind="click:previous"><i class="fa fa-chevron-left"></i></a>
-        <a href="#" data-bind="click:next"><i class="fa fa-chevron-right"></i></a>
-    </nav>
-</div>
 
 <div id="flexbox-app" class="playground-ui">
 
-    <div class="flex-container" data-bind="template: { name: 'flex-list', foreach: items },
-                style:{
-                display:cPropsCurrent.display,
-                flexWrap:cPropsCurrent.flexWrap,
-                flexDirection:cPropsCurrent.flexDirection,
-                justifyContent:cPropsCurrent.justifyContent,
-                alignContent:cPropsCurrent.alignContent,
-                alignItems:cPropsCurrent.alignItems,
-                backgroundColor:cPropsDefault.backgroundColor,
-                width:cPropsCurrent.width
-                }">
-    </div>
-</div>
-<aside class="sidebar">
-    <div class="masthead">
-        <h1 class="site-logo">flexbox in 5 minutes</h1>
-
-        <p class="site-desc">take an interactive tour through all the major features of the language.</p>
-
-
-
-    </div>
-
-
-
-
-    <div class="control-panel">
+<div class="control-panel">
         <div class="cs-add-remove">
             <a class="cs-add" data-bind="click:newItem"><i class="fa fa-plus"></i></a>
             <a class="cs-remove" data-bind="click:oneLessItem"><i class="fa fa-minus"></i></a>
@@ -105,6 +72,43 @@
             <button>Make Perfect Nav</button>
         </div>
     </div>
+
+
+
+    <div class="flex-container" data-bind="template: { name: 'flex-list', foreach: items },
+                style:{
+                display:cPropsCurrent.display,
+                flexWrap:cPropsCurrent.flexWrap,
+                flexDirection:cPropsCurrent.flexDirection,
+                justifyContent:cPropsCurrent.justifyContent,
+                alignContent:cPropsCurrent.alignContent,
+                alignItems:cPropsCurrent.alignItems,
+                backgroundColor:cPropsDefault.backgroundColor,
+                width:cPropsCurrent.width
+                }">
+    </div>
+</div>
+<aside class="sidebar">
+    <div class="masthead">
+        <h1 class="site-logo">flexbox in 5 minutes</h1>
+
+        <p class="site-desc">take an interactive tour through all the major features of the language.</p>
+
+
+
+    </div>
+
+<div id="message-box" class="message-box">
+    <span class="title">console</span>
+
+    <p data-bind="text:currentMessage"></p> 
+    <a class="xtra-link" href="#" target="_blank" data-bind="visible:hasButton,text:currentXText,attr: {href:currentXUrl}"></a>
+    <nav class="tour-nav">
+        <a href="#" data-bind="click:previous"><i class="fa fa-chevron-left"></i></a>
+        <a href="#" data-bind="click:next"><i class="fa fa-chevron-right"></i></a>
+    </nav>
+</div>
+
     <div class="code-box">
         <h2>code samples</h2>
         <code>
@@ -112,11 +116,11 @@
 
 .flex-container {
 	display:flex;
-	flex-direction: <span data-bind="text:cPropsCurrent.flexDirection"></span>
-	flex-wrap: <span data-bind="text:cPropsCurrent.flexWrap"></span>
-	justify-content: <span data-bind="text:cPropsCurrent.justifyContent"></span>
-	align-content: <span data-bind="text:cPropsCurrent.alignContent"></span>
-	align-items: <span data-bind="text:cPropsCurrent.alignItems"></span>
+	flex-direction:
+	flex-wrap: 
+	justify-content: 
+	align-content:
+	align-items: 
 
 }
 		</pre>
@@ -127,11 +131,11 @@
 		<pre>
 
 .flex-items-default {
-	flex-grow: <span data-bind="text:iPropsDefault.flexGrow"></span>
-	flex-shrink: <span data-bind="text:iPropsDefault.flexShrink"></span>
-	flex-basis: <span data-bind="text:iPropsDefault.flexBasis"></span>
-	order: <span data-bind="text:iPropsDefault.order"></span>
-	align-self: <span data-bind="text:iPropsDefault.alignSelf"></span>
+	flex-grow: 
+	flex-shrink: 
+	flex-basis:
+	order: 
+	align-self:
 
 }
 		</pre>
@@ -140,6 +144,8 @@
 
     </div>
 
+
+    
 </aside>
 <script type="template/knockout" id="flex-list">
     <div class="flex-item" data-bind="style:{

@@ -83,6 +83,56 @@ var flexbox;
 })(flexbox || (flexbox = {}));
 var flexbox;
 (function (flexbox) {
+    (function (model) {
+        var TourModel = (function () {
+            function TourModel() {
+                this.messages = [
+                    {
+                        "text": 'Welcome!  It is much longer than I thought it would be given the circumstances. Maybe I will try to do soemthing about it.',
+                        "hasButton": true,
+                        "xUrl": "http://www.nothing.com",
+                        "xText": "Resources"
+                    },
+                    {
+                        "text": 'Here is the first of the greetings',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null
+                    },
+                    {
+                        "text": 'Here is the second of the greetings',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null
+                    },
+                    {
+                        "text": 'Here is the third of the greetings',
+                        "hasButton": true,
+                        "xUrl": "http://www.nothing.com",
+                        "xText": "Next text"
+                    },
+                    {
+                        "text": 'Here is the fourth of the greetings',
+                        "hasButton": true,
+                        "xUrl": "http://www.nothing.com",
+                        "xText": "anoher text"
+                    },
+                    {
+                        "text": 'The End!',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null
+                    }
+                ];
+            }
+            return TourModel;
+        })();
+        model.TourModel = TourModel;
+    })(flexbox.model || (flexbox.model = {}));
+    var model = flexbox.model;
+})(flexbox || (flexbox = {}));
+var flexbox;
+(function (flexbox) {
     (function (view) {
         var FlexContainer = (function () {
             function FlexContainer() {
@@ -199,7 +249,7 @@ var flexbox;
             FlexContainer.prototype.makeHolyGrail = function () {
                 var index = this.getItemIndex();
                 this.items([]);
-                this.items.push(new flexbox.model.FlexItem(this, index++, "0", "1", "100%", "center", "green"), new flexbox.model.FlexItem(this, index++), new flexbox.model.FlexItem(this, index++), new flexbox.model.FlexItem(this, index++), new flexbox.model.FlexItem(this, index++, "0", "1", "100%", "center", "green"));
+                this.items.push(new flexbox.model.FlexItem(this, index++), new flexbox.model.FlexItem(this, index++), new flexbox.model.FlexItem(this, index++), new flexbox.model.FlexItem(this, index++), new flexbox.model.FlexItem(this, index++));
             };
             return FlexContainer;
         })();
@@ -212,17 +262,55 @@ var flexbox;
     (function (model) {
         var Tour = (function () {
             function Tour() {
+                this.tour = new flexbox.model.TourModel();
                 this.index = ko.observable(0);
-                this.tour = [
-                    'Here is the first of the greetings',
-                    'Here is the second of the greetings',
-                    'Here is the third of the greetings'];
-                this.currentMessage = ko.observable("Welcome!");
+                console.log(this.tour.messages);
+
+                this.currentMessage = ko.computed(function () {
+                    var index = this.index();
+
+                    return this.tour.messages[index].text;
+                }, this);
+
+                this.currentXUrl = ko.computed(function () {
+                    var index = this.index();
+
+                    return this.tour.messages[index].xUrl;
+                }, this);
+
+                this.currentXText = ko.computed(function () {
+                    var index = this.index();
+
+                    return this.tour.messages[index].xText;
+                }, this);
+
+                this.hasButton = ko.computed(function () {
+                    var index = this.index();
+
+                    return this.tour.messages[index].hasButton;
+                }, this);
             }
             Tour.prototype.next = function () {
+                var arrayLength = this.tour.messages.length;
+                var current = this.index();
+
+                if (current === (arrayLength - 1)) {
+                    return;
+                } else {
+                    current++;
+                    this.index(current);
+                }
             };
 
             Tour.prototype.previous = function () {
+                var arrayLength = this.tour.messages.length;
+                var current = this.index();
+                if (current === 0) {
+                    return;
+                } else {
+                    current--;
+                    this.index(current);
+                }
             };
             return Tour;
         })();

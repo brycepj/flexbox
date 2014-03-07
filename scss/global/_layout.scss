@@ -15,6 +15,7 @@ input {
 }
 
 .playground-ui {
+	position:relative;
 	width:80%; height:100%;
 	overflow:hidden;
 	float:left;
@@ -23,7 +24,11 @@ input {
 
 .sidebar {
 	float:left;
+	display:flex;
+	flex-direction:column;
 	width:20%; height:100%;
+	min-width:300px;
+	
 	padding:1em;
 	background-color:$black;
 }
@@ -39,11 +44,7 @@ input {
 		color:$white;
 	}
 }
-.control-panel {
-	width:100%;
-	
-	@extend %clearfix;
-}
+
 
 .container-settings,.item-defaults,.template-options {
 	

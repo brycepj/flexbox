@@ -53,11 +53,6 @@ table {
 /*** CUSTOM BREAKPOINTS ***/
 /*** REM FONT-SIZE AND LINE HEIGHT ***/
 /*** CLEARFIX***/
-.control-panel:after {
-  content: " ";
-  display: block;
-  clear: both; }
-
 /*** PRESET BREAKPOINTS ***/
 /*** FLEXBOX ****/
 body, html {
@@ -71,6 +66,7 @@ input {
   width: 50px; }
 
 .playground-ui {
+  position: relative;
   width: 80%;
   height: 100%;
   overflow: hidden;
@@ -79,8 +75,11 @@ input {
 
 .sidebar {
   float: left;
+  display: flex;
+  flex-direction: column;
   width: 20%;
   height: 100%;
+  min-width: 300px;
   padding: 1em;
   background-color: #111111; }
 
@@ -90,9 +89,6 @@ input {
   background-color: #111111; }
   .console p {
     color: white; }
-
-.control-panel {
-  width: 100%; }
 
 .container-settings, .item-defaults, .template-options {
   display: inline-block;
@@ -159,7 +155,8 @@ p {
 
 /******MODULES*******/
 .code-box {
-  margin-top: 1em;
+  min-width: 280px;
+  flex-grow: 1;
   padding: 1em;
   color: white;
   background-color: #aaaaaa; }
@@ -193,21 +190,24 @@ p {
   margin-left: 10px; }
 
 .control-panel {
-  display: block;
-  position: relative;
+  width: 100%;
+  height: 10%;
   padding: 1.25em;
   margin: 0 auto;
   background-color: #848484; }
 
 .flex-container {
   width: 100%;
-  height: 100%;
+  height: 90%;
   overflow: auto; }
 
 .masthead {
   padding: 1em;
   background-color: #aaaaaa;
-  color: white; }
+  color: white;
+  flex-grow: 1;
+  min-width: 280px;
+  flex-basis: 280px; }
 
 .site-logo {
   font-size: 40px;
@@ -224,8 +224,10 @@ p {
 .message-box {
   position: relative;
   margin: 1em 0;
-  height: 200px;
+  height: 300px;
   display: flex;
+  flex-grow: 3;
+  min-width: 280px;
   align-items: center;
   padding: 1em 1.5em;
   background-color: #aaaaaa;
@@ -243,6 +245,15 @@ p {
     font-size: 1.35rem;
     line-height: 25.6px;
     line-height: 1.6rem; }
+
+.xtra-link {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: inline-block;
+  padding: .5em;
+  background-color: #39cccc;
+  color: white; }
 
 .tour-nav {
   position: absolute;

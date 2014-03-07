@@ -2,7 +2,10 @@
 	padding:1em;
 	background-color:$gray;
 	color:$white;
+	flex-grow:1;
+		min-width:280px;
 	
+	flex-basis:280px;
 }
 
 .site-logo {
