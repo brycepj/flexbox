@@ -2,30 +2,34 @@ module flexbox {
 
     export module view {
         export class FlexContainer {
-            items: any;
-            cPropsDefault: any;
-            cPropsCurrent: any;
-            flexDirectionOptions: any;
-            flexWrapOptions: any;
-            justifyContentOptions: any;
-            alignItemsOptions: any;
-            alignContentOptions: any;
-            alignSelfOptions: any;
-            iPropsDefault: any;
-            defaultBtnText: any;
-            noItems: any;
-            allAreFixed: any;
-            allAreFlexy: any;
+            items:any;
+            cPropsDefault:any;
+            cPropsCurrent:any;
+            flexDirectionOptions:any;
+            flexWrapOptions:any;
+            justifyContentOptions:any;
+            alignItemsOptions:any;
+            alignContentOptions:any;
+            alignSelfOptions:any;
+            iPropsDefault:any;
+            defaultBtnText:any;
+            noItems:any;
+            allAreFixed:any;
+            allAreFlexy:any;
 
             constructor() {
 
                 this.items = ko.observableArray([]);
 
-                this.noItems = ko.computed(function() {
+                this.noItems = ko.computed(function () {
                     var array = this.items();
                     console.log(array);
-                    if (array.length) { return false; }
-                    else { return true; }
+                    if (array.length) {
+                        return false;
+                    }
+                    else {
+                        return true;
+                    }
 
                 }, this);
                 //add all of the flexbox container properties
@@ -80,7 +84,7 @@ module flexbox {
             } //end constructor
 
 
-            newItem(): void {
+            newItem():void {
                 var index = this.getItemIndex();
                 var newItem = new flexbox.model.FlexItem(this, index);
 
@@ -91,18 +95,18 @@ module flexbox {
 
             }
 
-            oneLessItem(): void {
+            oneLessItem():void {
 
                 this.items.pop();
 
             }
 
-            getItemIndex(): number {
+            getItemIndex():number {
                 var currentLength = this.items().length;
                 return currentLength + 1;
             }
 
-            makeAllFixed(): void {
+            makeAllFixed():void {
 
                 this.allAreFixed(true);
                 this.allAreFlexy(false);
@@ -114,7 +118,7 @@ module flexbox {
 
             }
 
-            makeAllFlexy(): void {
+            makeAllFlexy():void {
 
                 this.allAreFixed(false);
                 this.allAreFlexy(true);
@@ -125,17 +129,19 @@ module flexbox {
                 }
 
             }
-            resetItemProps(): void {
+
+            resetItemProps():void {
                 var array = this.items();
                 for (var i = 0; i < array.length; i++) {
                     array[i].resetProps();
 
                 }
             }
-            destroyItem(index): void {
+
+            destroyItem(index):void {
                 var self = this;
                 self.items.splice((index - 1), 1);
-                (function() {
+                (function () {
                     var array = self.items();
                     for (var i = 0; i < array.length; i++) {
                         var newIndex = i + 1;
@@ -145,7 +151,7 @@ module flexbox {
                 })();
             }
 
-            makeHolyGrail(): void {
+            makeHolyGrail():void {
                 var index = this.getItemIndex();
                 this.items([]);
                 this.items.push(
@@ -154,13 +160,12 @@ module flexbox {
                     new flexbox.model.FlexItem(this, index++),
                     new flexbox.model.FlexItem(this, index++),
                     new flexbox.model.FlexItem(this, index++, "0", "1", "100%", "center", "green")
-                    );
+                );
 
 
             }
 
         } //end class
-
 
 
     }
