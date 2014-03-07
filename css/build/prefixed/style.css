@@ -252,6 +252,18 @@ p {
     line-height: 25.6px;
     line-height: 1.6rem; }
 
+.tour-nav {
+  position: absolute;
+  bottom: 10px;
+  left: 20px; }
+  .tour-nav a {
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 32px;
+    line-height: 2rem; }
+    .tour-nav a i {
+      font-weight: bold; }
+
 .flex-item {
   position: relative;
   padding: 1em;

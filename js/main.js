@@ -52,6 +52,7 @@ var flexbox;
                 this.iPropsCurrent.flexShrink(null);
                 this.isFlexyWidth(false);
             };
+
             FlexItem.prototype.makeFlexyWidth = function () {
                 this.isFixedWidth(false);
                 this.isFlexyWidth(true);
@@ -174,12 +175,14 @@ var flexbox;
                     array[i].makeFlexyWidth();
                 }
             };
+
             FlexContainer.prototype.resetItemProps = function () {
                 var array = this.items();
                 for (var i = 0; i < array.length; i++) {
                     array[i].resetProps();
                 }
             };
+
             FlexContainer.prototype.destroyItem = function (index) {
                 var self = this;
                 self.items.splice((index - 1), 1);
@@ -210,21 +213,16 @@ var flexbox;
         var Tour = (function () {
             function Tour() {
                 this.index = ko.observable(0);
-                this.currentMessage = ko.observable("");
-                this.tour = ['Here is the first of the greetings', 'Here is the second of the greetings', 'Here is the third of the greetings'];
+                this.tour = [
+                    'Here is the first of the greetings',
+                    'Here is the second of the greetings',
+                    'Here is the third of the greetings'];
+                this.currentMessage = ko.observable("Welcome!");
             }
             Tour.prototype.next = function () {
-                var array = this.tour;
-                var index = this.index();
-                index++;
-                this.currentMessage(array[index]);
             };
 
             Tour.prototype.previous = function () {
-                var array = this.tour;
-                var index = this.index();
-                index++;
-                this.currentMessage(array[index]);
             };
             return Tour;
         })();

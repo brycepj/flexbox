@@ -15,22 +15,30 @@
     <script type="text/javascript" charset="utf-8">
         $(function () {
 
-            console.log('document ready');
+            var tourbox = new flexbox.model.Tour();
+            ko.applyBindings(tourbox, document.getElementById('message-box'));
+
+            console.log(tourbox);
             var flexboxApp = new flexbox.view.FlexContainer();
-            ko.applyBindings(flexboxApp);
+            ko.applyBindings(flexboxApp, document.getElementById('flexbox-app'));
 
-            console.log('app initialized');
-
-            var tour = new flexbox.model.Tour();
-            ko.applyBindings(tour, document.getElementbyId('message-box'));
-
-            console.log('tour initialized');
         });
 
     </script>
 </head>
 <body>
-<div class="playground-ui">
+
+<div id="message-box" class="message-box">
+    <span class="title">console</span>
+
+    <p data-bind="text:currentMessage"></p>
+    <nav class="tour-nav">
+        <a href="#" data-bind="click:previous"><i class="fa fa-chevron-left"></i></a>
+        <a href="#" data-bind="click:next"><i class="fa fa-chevron-right"></i></a>
+    </nav>
+</div>
+
+<div id="flexbox-app" class="playground-ui">
 
     <div class="flex-container" data-bind="template: { name: 'flex-list', foreach: items },
                 style:{
@@ -51,15 +59,12 @@
 
         <p class="site-desc">take an interactive tour through all the major features of the language.</p>
 
+
+
     </div>
 
 
-    <div id="message-box" class="message-box">
-        <span class="title">console</span>
 
-        <p data-bind="text:currentMessage">Hi. Would you like to take a quick, interactive tour through the one, the
-            only, the AMAAAAZING flexbox property? </p>
-    </div>
 
     <div class="control-panel">
         <div class="cs-add-remove">
@@ -67,15 +72,15 @@
             <a class="cs-remove" data-bind="click:oneLessItem"><i class="fa fa-minus"></i></a>
         </div>
         <div class="container-settings">
-            <label for="">flex-direction: <select
+            <label >flex-direction: <select
                     data-bind="options:flexDirectionOptions, value:cPropsCurrent.flexDirection"></select> </label>
-            <label for="">flex-wrap: <select data-bind="options:flexWrapOptions, value:cPropsCurrent.flexWrap"></select>
+            <label>flex-wrap: <select data-bind="options:flexWrapOptions, value:cPropsCurrent.flexWrap"></select>
             </label>
-            <label for="">justify-content: <select
+            <label>justify-content: <select
                     data-bind="options:justifyContentOptions, value:cPropsCurrent.justifyContent"></select> </label>
-            <label for="">align-content: <select
+            <label>align-content: <select
                     data-bind="options:alignContentOptions, value:cPropsCurrent.alignContent"></select> </label>
-            <label for="">align-items: <select
+            <label>align-items: <select
                     data-bind="options:alignItemsOptions, value:cPropsCurrent.alignItems"></select> </label>
         </div>
         <div data-bind="visible:true" class="item-defaults">
