@@ -43,8 +43,9 @@ module flexbox {
                     
                     return this.tour.messages[index].hasButton;
                 
-                },this); 
-                
+                },this);
+
+
             }
 
             next(): void {
@@ -70,6 +71,10 @@ module flexbox {
                 }
             }
 
+
+            test():void {
+                $('.flex-container').hide();
+            }
            
 
         }

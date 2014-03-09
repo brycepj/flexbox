@@ -13,8 +13,9 @@ module flexbox {
                     {
                         "text": 'Welcome!  It is much longer than I thought it would be given the circumstances. Maybe I will try to do soemthing about it.',
                         "hasButton": true,
-                        "xUrl": "http://www.nothing.com",
+                        "xUrl": null,
                         "xText": "Resources"
+
                     },
                     {
                         "text": 'Here is the first of the greetings',

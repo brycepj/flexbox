@@ -90,7 +90,7 @@ var flexbox;
                     {
                         "text": 'Welcome!  It is much longer than I thought it would be given the circumstances. Maybe I will try to do soemthing about it.',
                         "hasButton": true,
-                        "xUrl": "http://www.nothing.com",
+                        "xUrl": null,
                         "xText": "Resources"
                     },
                     {
@@ -311,6 +311,10 @@ var flexbox;
                     current--;
                     this.index(current);
                 }
+            };
+
+            Tour.prototype.test = function () {
+                $('.flex-container').hide();
             };
             return Tour;
         })();
