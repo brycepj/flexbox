@@ -1,6 +1,8 @@
 body,html {
 	width:100%;
+	min-width:630px;
 	height:100%;
+	display:flex;
 }
 
 
@@ -15,19 +17,23 @@ input {
 }
 
 .playground-ui {
-	position:relative;
-	width:80%; height:100%;
-	overflow:hidden;
-	float:left;
-	background-color:$gray;
+	display:flex;
+	flex-direction:column;
+	flex-grow:15;
+	flex-basis:330px;
+	
+	
+	padding:1em 0 1em 1em;
+	background-color:$black;
+	
 }
 
 .sidebar {
-	float:left;
+	flex-grow:1;
 	display:flex;
-	flex-direction:column;
-	width:20%; height:100%;
-	min-width:300px;
+	flex-flow:row wrap;
+	height:100%; width:20%;
+	flex-basis:300px;
 	
 	padding:1em;
 	background-color:$black;
@@ -56,6 +62,6 @@ input {
 
 
 .flex-item {
-	;
+	
 	
 }

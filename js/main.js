@@ -2,31 +2,92 @@ var flexbox;
 (function (flexbox) {
     (function (_model) {
         var FlexItem = (function () {
-            function FlexItem(model, index, height, width, flexGrow, flexShrink, flexBasis, alignSelf, backgroundColor) {
-                if (typeof height === "undefined") { height = "250px"; }
-                if (typeof width === "undefined") { width = "300px"; }
-                if (typeof flexGrow === "undefined") { flexGrow = null; }
-                if (typeof flexShrink === "undefined") { flexShrink = null; }
-                if (typeof flexBasis === "undefined") { flexBasis = null; }
-                if (typeof alignSelf === "undefined") { alignSelf = "center"; }
-                if (typeof backgroundColor === "undefined") { backgroundColor = "#01ff70"; }
+            function FlexItem(model, index, props) {
+                if (typeof props === "undefined") { props = {
+                    isFlexyWidth: false,
+                    isFixedWidth: true,
+                    height: "250px",
+                    width: "300px",
+                    order: null,
+                    flexGrow: null,
+                    flexShrink: null,
+                    flexBasis: null,
+                    alignSelf: null,
+                    backgroundColor: "#01ff70",
+                    margin: "10px"
+                }; }
+                if (typeof props.isFlexyWidth === "undefined") {
+                    props.isFlexyWidth = false;
+                }
+                ;
+                if (typeof props.isFixedWidth === "undefined") {
+                    props.isFixedWidth = true;
+                }
+                ;
+                if (typeof props.height === "undefined") {
+                    props.height = "250px";
+                }
+                ;
+                if (typeof props.width === "undefined") {
+                    props.width = "300px";
+                }
+                ;
+                if (typeof props.order === "undefined") {
+                    props.order = null;
+                }
+                ;
+                if (typeof props.flexGrow === "undefined") {
+                    props.flexGrow = null;
+                }
+                ;
+                if (typeof props.flexShrink === "undefined") {
+                    props.flexShrink = null;
+                }
+                ;
+                if (typeof props.flexBasis === "undefined" && props.isFixedWidth) {
+                    props.flexBasis = null;
+                }
+                ;
+                if (typeof props.backgroundColor === "undefined") {
+                    props.backgroundColor = "#01ff70";
+                }
+                ;
+                if (typeof props.margin === "undefined") {
+                    props.margin = "10px";
+                }
+                ;
+
+                if (props.isFlexyWidth) {
+                    props.isFixedWidth = false;
+                    props.width = null;
+                } else if (props.isFixedWidth) {
+                    props.isFlexyWidth = false;
+                    props.height = "250px";
+                    props.width = "300px";
+                    props.order = null;
+                    props.flexGrow = null;
+                    props.flexShrink = null;
+                    props.flexBasis = null;
+                    props.alignSelf = null;
+                }
+
                 this.index = ko.observable(index);
                 this.model = model;
                 console.log(model);
                 this.iPropsCurrent = {
-                    order: ko.observable("1"),
-                    flexGrow: ko.observable(flexGrow),
-                    flexShrink: ko.observable(flexShrink),
-                    flexBasis: ko.observable(flexBasis),
-                    alignSelf: ko.observable(alignSelf),
-                    height: ko.observable(height),
-                    width: ko.observable(width),
-                    backgroundColor: ko.observable(backgroundColor),
-                    margin: ko.observable("10px")
+                    order: ko.observable(props.order),
+                    flexGrow: ko.observable(props.flexGrow),
+                    flexShrink: ko.observable(props.flexShrink),
+                    flexBasis: ko.observable(props.flexBasis),
+                    alignSelf: ko.observable(props.alignSelf),
+                    height: ko.observable(props.height),
+                    width: ko.observable(props.width),
+                    backgroundColor: ko.observable(props.backgroundColor),
+                    margin: ko.observable(props.margin)
                 };
 
-                this.isFixedWidth = ko.observable(true);
-                this.isFlexyWidth = ko.observable(false);
+                this.isFixedWidth = ko.observable(props.isFixedWidth);
+                this.isFlexyWidth = ko.observable(props.isFlexyWidth);
 
                 this.highlightFixed = ko.computed(function () {
                     if (this.isFixedWidth()) {
@@ -249,7 +310,7 @@ var flexbox;
             FlexContainer.prototype.makeHolyGrail = function () {
                 var index = this.getItemIndex();
                 this.items([]);
-                this.items.push(new flexbox.model.FlexItem(this, index++), new flexbox.model.FlexItem(this, index++), new flexbox.model.FlexItem(this, index++), new flexbox.model.FlexItem(this, index++), new flexbox.model.FlexItem(this, index++));
+                this.items.push(new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px" }));
             };
             return FlexContainer;
         })();

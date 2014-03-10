@@ -1,10 +1,10 @@
 
 .message-box {
 	position:relative;
-	margin:1em 0; height:300px;
+	margin:1em 0;
 	display:flex;
-	flex-grow:3;
-	min-width:280px;
+	flex-grow:1; height:40%;
+	flex-basis:280px;
 	align-items:center;
 	padding:1em 1.5em;
 	background-color:$gray;

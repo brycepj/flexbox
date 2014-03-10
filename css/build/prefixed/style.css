@@ -57,7 +57,12 @@ table {
 /*** FLEXBOX ****/
 body, html {
   width: 100%;
-  height: 100%; }
+  min-width: 630px;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 label {
   display: block; }
@@ -66,15 +71,6 @@ input {
   width: 50px; }
 
 .playground-ui {
-  position: relative;
-  width: 80%;
-  height: 100%;
-  overflow: hidden;
-  float: left;
-  background-color: #aaaaaa; }
-
-.sidebar {
-  float: left;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -84,9 +80,32 @@ input {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 20%;
+  -webkit-box-flex: 15;
+  -webkit-flex-grow: 15;
+  -ms-flex: 15;
+  flex-grow: 15;
+  -webkit-flex-basis: 330px;
+  flex-basis: 330px;
+  padding: 1em 0 1em 1em;
+  background-color: #111111; }
+
+.sidebar {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
   height: 100%;
-  min-width: 300px;
+  width: 20%;
+  -webkit-flex-basis: 300px;
+  -ms-flex: 0 1 300px;
+  flex-basis: 300px;
   padding: 1em;
   background-color: #111111; }
 
@@ -163,11 +182,14 @@ p {
 
 /******MODULES*******/
 .code-box {
-  min-width: 280px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex: 1;
   flex-grow: 1;
+  height: 40%;
+  -webkit-flex-basis: 280px;
+  -ms-flex: 0 1 280px;
+  flex-basis: 280px;
   padding: 1em;
   color: white;
   background-color: #aaaaaa; }
@@ -203,12 +225,19 @@ p {
 
 .control-panel {
   width: 100%;
-  height: 10%;
-  padding: 1.25em;
+  padding: 1em;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex: 1;
+  flex-grow: 1;
   margin: 0 auto;
   background-color: #848484; }
 
 .flex-container {
+  -webkit-box-flex: 1000;
+  -webkit-flex-grow: 1000;
+  -ms-flex: 1000;
+  flex-grow: 1000;
   width: 100%;
   height: 90%;
   overflow: auto; }
@@ -221,7 +250,7 @@ p {
   -webkit-flex-grow: 1;
   -ms-flex: 1;
   flex-grow: 1;
-  min-width: 280px;
+  height: 15%;
   -webkit-flex-basis: 280px;
   -ms-flex: 0 1 280px;
   flex-basis: 280px; }
@@ -241,16 +270,18 @@ p {
 .message-box {
   position: relative;
   margin: 1em 0;
-  height: 300px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 3;
-  -webkit-flex-grow: 3;
-  -ms-flex: 3;
-  flex-grow: 3;
-  min-width: 280px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex: 1;
+  flex-grow: 1;
+  height: 40%;
+  -webkit-flex-basis: 280px;
+  -ms-flex: 0 1 280px;
+  flex-basis: 280px;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;

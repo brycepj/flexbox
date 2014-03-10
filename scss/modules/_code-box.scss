@@ -1,8 +1,9 @@
 
 
 .code-box {
-	min-width:280px;
 	flex-grow:1;
+	height:40%;
+	flex-basis:280px;
 	padding:1em;
 	color:$white;	
 	background-color:$gray;
