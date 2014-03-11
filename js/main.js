@@ -242,7 +242,7 @@ var flexbox;
                 for (var i = 0; i < this.wordCount; i++) {
                     var rando = Math.floor(Math.random() * (max - min + 1)) + min;
                     this.chosenWords.push(this.words[rando]);
-                    console.log(this.chosenWords);
+                    this.words.splice(rando, 1);
                 }
 
                 this.text = this.chosenWords.join(' ');
