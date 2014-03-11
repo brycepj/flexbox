@@ -272,13 +272,19 @@ p {
       font-weight: bold; }
 
 .flex-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  padding: 1em;
+  padding: 1.5em;
   min-width: 68px !important;
   border-radius: 5px;
   box-shadow: 1px 1px 8px 1px #777777; }
 
 .fi-index {
+  position: absolute;
+  top: 10px;
+  left: 10px;
   color: #0074d9;
   font-size: 2em;
   font-weight: bold;
@@ -286,10 +292,29 @@ p {
 
 .fi-destroy-btn {
   position: absolute;
-  top: 5px;
-  right: 5px; }
+  top: 10px;
+  right: 10px; }
   .fi-destroy-btn i {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 16px;
+    line-height: 1rem;
     color: #ff4136; }
+
+.fi-settings-btn {
+  position: absolute;
+  top: 10px;
+  right: 40px; }
+  .fi-settings-btn i {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 16px;
+    line-height: 1rem;
+    color: #aaaaaa; }
+
+.fi-content {
+  display: inline-block;
+  margin: 1em auto; }
 
 .fi-options {
   position: absolute;

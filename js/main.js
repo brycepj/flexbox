@@ -4,6 +4,9 @@ var flexbox;
         var FlexItem = (function () {
             function FlexItem(model, index, props) {
                 if (typeof props === "undefined") { props = {
+                    viewSettings: false,
+                    viewContent: true,
+                    content: null,
                     isFlexyWidth: false,
                     isFixedWidth: true,
                     height: "250px",
@@ -16,12 +19,20 @@ var flexbox;
                     backgroundColor: "#01ff70",
                     margin: "10px"
                 }; }
+                if (props.content) {
+                    props.viewSettings = false;
+                    props.viewContent = true;
+                }
                 if (typeof props.isFlexyWidth === "undefined") {
                     props.isFlexyWidth = false;
                 }
                 ;
                 if (typeof props.isFixedWidth === "undefined") {
                     props.isFixedWidth = true;
+                }
+                ;
+                if (typeof props.content === "undefined") {
+                    props.content = "Lorem ipsum for the win";
                 }
                 ;
                 if (typeof props.height === "undefined") {
@@ -85,6 +96,10 @@ var flexbox;
                     backgroundColor: ko.observable(props.backgroundColor),
                     margin: ko.observable(props.margin)
                 };
+                this.content = ko.observable(props.content);
+
+                this.viewSettings = ko.observable(props.viewSettings);
+                this.viewContent = ko.observable(props.viewContent);
 
                 this.isFixedWidth = ko.observable(props.isFixedWidth);
                 this.isFlexyWidth = ko.observable(props.isFlexyWidth);
@@ -104,6 +119,8 @@ var flexbox;
                         return "inherit";
                     }
                 }, this);
+
+                console.log(this.content);
             }
             FlexItem.prototype.makeFixedWidth = function () {
                 console.log('it fired');
@@ -130,6 +147,18 @@ var flexbox;
                 currentProps.flexShrink(newProps.flexShrink());
                 currentProps.flexBasis(newProps.flexBasis());
                 currentProps.alignSelf(newProps.alignSelf());
+            };
+
+            FlexItem.prototype.toggleSettings = function () {
+                var visible = this.viewSettings();
+                console.log(visible);
+                if (visible) {
+                    this.viewSettings(false);
+                    this.viewContent(true);
+                } else {
+                    this.viewSettings(true);
+                    this.viewContent(false);
+                }
             };
 
             FlexItem.prototype.destroySelf = function () {
@@ -308,9 +337,16 @@ var flexbox;
             };
 
             FlexContainer.prototype.makeHolyGrail = function () {
+                var text = "The main idea behind the flex layout is to give the container the ability to alter its items' width/height (and order) to best fill the available space (mostly to accomodate to all kind of display devices and screen sizes). A flex container expands items to fill available free space, or shrinks them to prevent overflow.";
                 var index = this.getItemIndex();
                 this.items([]);
-                this.items.push(new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px" }));
+                this.items.push(new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px", content: "HEADER" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", content: text }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", content: text }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", content: text }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px", content: "FOOTER" }));
+            };
+
+            FlexContainer.prototype.responsiveNav = function () {
+                var index = this.getItemIndex();
+                this.items([]);
+                this.items.push(new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "Home" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "About" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "Contact" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "Portfolio" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "Blog" }));
             };
             return FlexContainer;
         })();

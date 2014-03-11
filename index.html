@@ -70,7 +70,7 @@
         <div class="template-options">
             <h2>template options</h2>
             <button data-bind="click:makeHolyGrail">Make Holy Grail</button>
-            <button>Make Perfect Nav</button>
+            <button data-bind="click:responsiveNav">Make Responsive Nav</button>
         </div>
     </div>
 
@@ -160,10 +160,14 @@
               alignSelf:iPropsCurrent.alignSelf
               
             }">
-        <span class="fi-index" data-bind="text:index"></span>
+            
         <a href="#" class="fi-destroy-btn" data-bind="click:destroySelf"><i class="fa fa-times"></i></a>
-
-        <div class="fi-options">
+		<a href="#" class="fi-settings-btn" data-bind="click:toggleSettings"><i class="fa fa-cog"></i></a>
+		    
+        <span class="fi-index" data-bind="text:index"></span>
+        
+		<p class="fi-content" data-bind="visible:viewContent,text:content"></p>
+        <div class="fi-options" data-bind="visible:viewSettings">
             <span><a href="#" data-bind="click:makeFixedWidth, style:{fontSize:highlightFixed}">fixed</a> or <a href="#"
                                                                                                                 data-bind="click:makeFlexyWidth, style:{fontSize:highlightFlexy}">flexy</a> width?</span>
 

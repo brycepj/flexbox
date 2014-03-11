@@ -11,8 +11,14 @@ module flexbox {
             isFlexyWidth: any;
             highlightFixed: any;
             highlightFlexy: any;
+            content: any;
+            viewContent: any;
+            viewSettings: any;
 
             constructor(model: any, index: any, props: model.ItemProps = {
+                viewSettings: false,
+                viewContent: true,
+                content: null,
                 isFlexyWidth: false,
                 isFixedWidth: true,
                 height: "250px",
@@ -26,9 +32,10 @@ module flexbox {
                 margin: "10px"
 
             }) {
-
+                if (props.content) { props.viewSettings = false; props.viewContent = true; }
                 if (typeof props.isFlexyWidth === "undefined") { props.isFlexyWidth = false };
                 if (typeof props.isFixedWidth === "undefined") { props.isFixedWidth = true };
+                if (typeof props.content === "undefined") { props.content = "Lorem ipsum for the win"; };
                 if (typeof props.height === "undefined") { props.height = "250px" };
                 if (typeof props.width === "undefined") { props.width = "300px" };
                 if (typeof props.order === "undefined") { props.order = null };
@@ -68,9 +75,17 @@ module flexbox {
                     backgroundColor: ko.observable(props.backgroundColor),
                     margin: ko.observable(props.margin)
                 };
+                this.content = ko.observable(props.content);
+
+                this.viewSettings = ko.observable(props.viewSettings);
+                this.viewContent = ko.observable(props.viewContent);
 
                 this.isFixedWidth = ko.observable(props.isFixedWidth);
                 this.isFlexyWidth = ko.observable(props.isFlexyWidth);
+
+
+
+
 
                 this.highlightFixed = ko.computed(function() {
                     if (this.isFixedWidth()) {
@@ -93,6 +108,7 @@ module flexbox {
                 }, this);
 
 
+                console.log(this.content);
             }
 
 
@@ -122,6 +138,20 @@ module flexbox {
                 currentProps.flexShrink(newProps.flexShrink());
                 currentProps.flexBasis(newProps.flexBasis());
                 currentProps.alignSelf(newProps.alignSelf());
+            }
+
+
+            toggleSettings(): void {
+                var visible = this.viewSettings();
+                console.log(visible);
+                if (visible) {
+                    this.viewSettings(false);
+                    this.viewContent(true);
+                } else {
+                    this.viewSettings(true);
+                    this.viewContent(false);
+                }
+
             }
 
             destroySelf(): void {
