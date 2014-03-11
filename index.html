@@ -35,10 +35,7 @@
 <div id="flexbox-app" class="playground-ui">
 
 <div class="control-panel">
-        <div class="cs-add-remove">
-            <a class="cs-add" data-bind="click:newItem"><i class="fa fa-plus"></i></a>
-            <a class="cs-remove" data-bind="click:oneLessItem"><i class="fa fa-minus"></i></a>
-        </div>
+        
         <div class="container-settings">
             <label >flex-direction: <select
                     data-bind="options:flexDirectionOptions, value:cPropsCurrent.flexDirection"></select> </label>
@@ -51,26 +48,12 @@
             <label>align-items: <select
                     data-bind="options:alignItemsOptions, value:cPropsCurrent.alignItems"></select> </label>
         </div>
-        <div data-bind="visible:true" class="item-defaults">
-            <h2>item width:</h2>
-            <button data-bind="click:makeAllFixed">Make All Fixed</button>
-            <button data-bind="click:makeAllFlexy">Make All Flexy</button>
-            <!--
-             <label for="">flex-grow: <input type="text" data-bind="value:iPropsDefault.flexGrow"></label>
-             <label for="">flex-shrink: <input type="text" data-bind="value:iPropsDefault.flexShrink"></label>
-             <label for="">flex-basis<input type="text" data-bind="value:iPropsDefault.flexBasis"></label>
-             <label for="">align-self: <select type="text"
-                                               data-bind="options:alignSelfOptions, value:iPropsDefault.alignSelf"></select></label>
-             <label for="">width: <input type="text" data-bind="value:iPropsDefault.width"></label>
-
-                         <button data-bind="click:resetItemProps, text:defaultBtnText">reset item defaults</button>
-
- -->
-        </div>
-        <div class="template-options">
-            <h2>template options</h2>
-            <button data-bind="click:makeHolyGrail">Make Holy Grail</button>
-            <button data-bind="click:responsiveNav">Make Responsive Nav</button>
+        
+        
+    
+    <div class="cs-add-remove">
+            <a class="cs-add" data-bind="click:newItem"><i class="fa fa-plus"></i></a>
+            <a class="cs-remove" data-bind="click:oneLessItem"><i class="fa fa-minus"></i></a>
         </div>
     </div>
 
@@ -88,6 +71,8 @@
                 width:cPropsCurrent.width
                 }">
     </div>
+    
+    
 </div>
 <aside class="sidebar">
     <div class="masthead">

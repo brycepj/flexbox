@@ -14,13 +14,13 @@
 
 
 .cs-add-remove {
-	float:right;
+
 }
 .cs-add, .cs-remove {
-	display:inline-block;
+	
 	
 	& i {
-		@include font-size(3,1);
+		@include font-size(3,3.3);
 		color:$white;
 		text-shadow:1px 1px 1px darken($gray,50%);
 		transition:color .2s ease;

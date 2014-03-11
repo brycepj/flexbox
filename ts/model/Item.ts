@@ -30,13 +30,15 @@ module flexbox {
                 flexBasis: null,
                 alignSelf: null,
                 backgroundColor: "#01ff70",
-                margin: "10px"
+                margin: "10px",
+                lorem:1
 
             }) {
-                if (props.content) { props.viewSettings = false; props.viewContent = true; }
+                if (props.content) { props.viewSettings = false; props.viewContent = true; };
+                if (typeof props.lorem === "undefined") { props.lorem = 1; };
+                if (props.content) {props.lorem = null;};
                 if (typeof props.isFlexyWidth === "undefined") { props.isFlexyWidth = false };
                 if (typeof props.isFixedWidth === "undefined") { props.isFixedWidth = true };
-                if (typeof props.content === "undefined") { props.content = "Lorem ipsum for the win"; };
                 if (typeof props.height === "undefined") { props.height = "250px" };
                 if (typeof props.width === "undefined") { props.width = "300px" };
                 if (typeof props.order === "undefined") { props.order = null };
@@ -46,6 +48,8 @@ module flexbox {
                 if (typeof props.backgroundColor === "undefined") { props.backgroundColor = "#01ff70" };
                 if (typeof props.margin === "undefined") { props.margin = "10px" };
 
+                
+                
                 if (props.isFlexyWidth) {
                     props.isFixedWidth = false;
                     props.width = null;
@@ -77,22 +81,26 @@ module flexbox {
                     margin: ko.observable(props.margin)
                 };
                 
-                var lorem = new flexbox.model.devLorem(10);
                 
-                
-                this.content = ko.observable(lorem.text);
 
                 this.viewSettings = ko.observable(props.viewSettings);
                 this.viewContent = ko.observable(props.viewContent);
 
+                this.lorem = new flexbox.model.devLorem(props.lorem);
+                
+                this.content = ko.computed(function(){
+                    var index = this.index();
+                    var lorem = this.lorem.text;
+                    
+                    var content = props.content;
+                    
+                    if (content) {return content;} else {return lorem;};
+                },this);
+
+                
                 this.isFixedWidth = ko.observable(props.isFixedWidth);
                 this.isFlexyWidth = ko.observable(props.isFlexyWidth);
                 
-                
-                var input = 4;
-                this.lorem = new flexbox.model.devLorem(input);
-
-
 
                 this.highlightFixed = ko.computed(function() {
                     if (this.isFixedWidth()) {

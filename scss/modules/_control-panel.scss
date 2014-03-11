@@ -1,4 +1,9 @@
 .control-panel {
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	align-content:center;
 	width:100%; 
 	padding:1em;
 	flex-grow:1;

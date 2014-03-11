@@ -17,22 +17,28 @@ var flexbox;
                     flexBasis: null,
                     alignSelf: null,
                     backgroundColor: "#01ff70",
-                    margin: "10px"
+                    margin: "10px",
+                    lorem: 1
                 }; }
                 if (props.content) {
                     props.viewSettings = false;
                     props.viewContent = true;
                 }
+                ;
+                if (typeof props.lorem === "undefined") {
+                    props.lorem = 1;
+                }
+                ;
+                if (props.content) {
+                    props.lorem = null;
+                }
+                ;
                 if (typeof props.isFlexyWidth === "undefined") {
                     props.isFlexyWidth = false;
                 }
                 ;
                 if (typeof props.isFixedWidth === "undefined") {
                     props.isFixedWidth = true;
-                }
-                ;
-                if (typeof props.content === "undefined") {
-                    props.content = "Lorem ipsum for the win";
                 }
                 ;
                 if (typeof props.height === "undefined") {
@@ -97,18 +103,27 @@ var flexbox;
                     margin: ko.observable(props.margin)
                 };
 
-                var lorem = new flexbox.model.devLorem(10);
-
-                this.content = ko.observable(lorem.text);
-
                 this.viewSettings = ko.observable(props.viewSettings);
                 this.viewContent = ko.observable(props.viewContent);
 
+                this.lorem = new flexbox.model.devLorem(props.lorem);
+
+                this.content = ko.computed(function () {
+                    var index = this.index();
+                    var lorem = this.lorem.text;
+
+                    var content = props.content;
+
+                    if (content) {
+                        return content;
+                    } else {
+                        return lorem;
+                    }
+                    ;
+                }, this);
+
                 this.isFixedWidth = ko.observable(props.isFixedWidth);
                 this.isFlexyWidth = ko.observable(props.isFlexyWidth);
-
-                var input = 4;
-                this.lorem = new flexbox.model.devLorem(input);
 
                 this.highlightFixed = ko.computed(function () {
                     if (this.isFixedWidth()) {
@@ -233,7 +248,7 @@ var flexbox;
                 this.wordCount = wordCount;
                 this.chosenWords = [];
                 this.text = "";
-                this.words = ['flexbox', 'device agnostic', 'breaks in ie6', 'paul irish', 'web standards', 'grok', 'crufty', 'angular', 'MV*', 'addy osmani', 'custom elements', 'paralax', 'performance budget', 'offline first', 'gulp', 'node', 'ie6 countdown', 'progressive enhancement', 'the Industry'];
+                this.words = ['flexbox', 'device agnostic', 'breaks in ie6', 'paul irish', 'web standards', 'grok', 'crufty', 'angular', 'MV*', 'addy osmani', 'custom elements', 'paralax', 'performance budget', 'offline first', 'gulp', 'node', 'ie6 countdown', 'progressive enhancement', 'the Industry', 'svg', 'machine code', 'rails', 'django', 'google', 'indexDB', 'webgl', 'ux/ui', 'tim kadlec', 'retina', 'fixed header', 'minimalist', 'simplicity is not the absense of clutter', 'QR codes', 'art directed blog posts', 'masonry', 'infinite scrolling', 'lazy load', 'mobile navigation toggle', 'api', 'spa', 'ember', 'backbone', 'mvc', 'require', 'the open web', 'server farm', 'bash', 'free as in beer', 'nosql', 'how long does it take to learn javascript', 'gui', 'fortran', 'server-side', 'back-end', 'groovy on grails', 'haskell', 'erlang', 'continuous integration', 'capistrano', 'typescript', 'coffeescript', 'google dart', 'yehuda katz'];
 
                 var min = 0;
                 var max = this.words.length;
@@ -306,6 +321,21 @@ var flexbox;
                     width: ko.observable("100%")
                 };
 
+                this.cPropsCurrent.alignItems.subscribe(function () {
+                    var newValue = this.cPropsCurrent.alignItems();
+                    var array = this.items();
+                    if (newValue === "stretch") {
+                        for (var i = 0; i < array.length; i++) {
+                            array[i].iPropsCurrent.height(null);
+                        }
+                        this.cPropsCurrent.alignContent('stretch');
+                    } else {
+                        for (var i = 0; i < array.length; i++) {
+                            array[i].iPropsCurrent.height('250px');
+                        }
+                    }
+                }, this);
+
                 this.flexDirectionOptions = ['row', 'column'];
                 this.flexWrapOptions = ['wrap', 'nowrap'];
                 this.justifyContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around'];
@@ -371,11 +401,9 @@ var flexbox;
             };
 
             FlexContainer.prototype.makeHolyGrail = function () {
-                var text = "The main idea behind the flex layout is to give the container the ability to alter its items' width/height (and order) to best fill the available space (mostly to accomodate to all kind of display devices and screen sizes). A flex container expands items to fill available free space, or shrinks them to prevent overflow.";
-                var text2 = text + text + text;
                 var index = this.getItemIndex();
                 this.items([]);
-                this.items.push(new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px", content: "HEADER" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", content: text2 }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", content: text }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", content: text2 }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px", content: "FOOTER" }));
+                this.items.push(new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px", content: "HEADER" }), new flexbox.model.FlexItem(this, index++, { viewContent: true, viewSettings: false, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", lorem: 100 }), new flexbox.model.FlexItem(this, index++, { viewContent: true, viewSettings: false, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", lorem: 100 }), new flexbox.model.FlexItem(this, index++, { viewContent: true, viewSettings: false, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", lorem: 100 }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px", content: "FOOTER" }));
 
                 this.cPropsCurrent.alignItems("stretch");
             };

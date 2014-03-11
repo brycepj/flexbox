@@ -171,28 +171,28 @@ p {
   .container-settings select {
     display: block; }
 
-.cs-add-remove {
-  float: right; }
-
-.cs-add, .cs-remove {
-  display: inline-block; }
-  .cs-add i, .cs-remove i {
-    font-size: 48px;
-    font-size: 3rem;
-    line-height: 16px;
-    line-height: 1rem;
-    color: white;
-    text-shadow: 1px 1px 1px #2a2a2a;
-    transition: color .2s ease; }
-    .cs-add i:hover, .cs-remove i:hover {
-      color: #e6e6e6; }
-    .cs-add i:active, .cs-remove i:active {
-      color: #d9d9d9; }
+.cs-add i, .cs-remove i {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 52.8px;
+  line-height: 3.3rem;
+  color: white;
+  text-shadow: 1px 1px 1px #2a2a2a;
+  transition: color .2s ease; }
+  .cs-add i:hover, .cs-remove i:hover {
+    color: #e6e6e6; }
+  .cs-add i:active, .cs-remove i:active {
+    color: #d9d9d9; }
 
 .cs-remove {
   margin-left: 10px; }
 
 .control-panel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
   width: 100%;
   padding: 1em;
   flex-grow: 1;
