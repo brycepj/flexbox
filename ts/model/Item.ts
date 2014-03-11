@@ -77,7 +77,7 @@ module flexbox {
                     margin: ko.observable(props.margin)
                 };
                 
-                var lorem = new flexbox.model.devLorem(1);
+                var lorem = new flexbox.model.devLorem(10);
                 
                 
                 this.content = ko.observable(lorem.text);

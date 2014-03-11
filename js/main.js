@@ -97,7 +97,7 @@ var flexbox;
                     margin: ko.observable(props.margin)
                 };
 
-                var lorem = new flexbox.model.devLorem(1);
+                var lorem = new flexbox.model.devLorem(10);
 
                 this.content = ko.observable(lorem.text);
 
@@ -233,7 +233,7 @@ var flexbox;
                 this.wordCount = wordCount;
                 this.chosenWords = [];
                 this.text = "";
-                this.words = ['device agnostic', 'breaks in ie6', 'paul irish', 'web standards', 'grok', 'crufty', 'css4', 'html6', 'angular', 'MV*', 'addy osmani', 'only use classes', 'custom elements', 'paralax', 'performance budget', 'offline first', 'gulp', 'node', 'ie6 countdown', 'progressive enhancement', 'the Industry'];
+                this.words = ['flexbox', 'device agnostic', 'breaks in ie6', 'paul irish', 'web standards', 'grok', 'crufty', 'angular', 'MV*', 'addy osmani', 'custom elements', 'paralax', 'performance budget', 'offline first', 'gulp', 'node', 'ie6 countdown', 'progressive enhancement', 'the Industry'];
 
                 var min = 0;
                 var max = this.words.length;
@@ -376,6 +376,7 @@ var flexbox;
                 var index = this.getItemIndex();
                 this.items([]);
                 this.items.push(new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px", content: "HEADER" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", content: text2 }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", content: text }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", content: text2 }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px", content: "FOOTER" }));
+
                 this.cPropsCurrent.alignItems("stretch");
             };
 
