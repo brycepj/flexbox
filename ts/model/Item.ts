@@ -14,6 +14,7 @@ module flexbox {
             content: any;
             viewContent: any;
             viewSettings: any;
+            lorem:any;
 
             constructor(model: any, index: any, props: model.ItemProps = {
                 viewSettings: false,
@@ -75,15 +76,21 @@ module flexbox {
                     backgroundColor: ko.observable(props.backgroundColor),
                     margin: ko.observable(props.margin)
                 };
-                this.content = ko.observable(props.content);
+                
+                var lorem = new flexbox.model.devLorem(1);
+                
+                
+                this.content = ko.observable(lorem.text);
 
                 this.viewSettings = ko.observable(props.viewSettings);
                 this.viewContent = ko.observable(props.viewContent);
 
                 this.isFixedWidth = ko.observable(props.isFixedWidth);
                 this.isFlexyWidth = ko.observable(props.isFlexyWidth);
-
-
+                
+                
+                var input = 4;
+                this.lorem = new flexbox.model.devLorem(input);
 
 
 
@@ -108,7 +115,7 @@ module flexbox {
                 }, this);
 
 
-                console.log(this.content);
+                
             }
 
 

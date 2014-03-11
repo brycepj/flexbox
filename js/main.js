@@ -96,13 +96,19 @@ var flexbox;
                     backgroundColor: ko.observable(props.backgroundColor),
                     margin: ko.observable(props.margin)
                 };
-                this.content = ko.observable(props.content);
+
+                var lorem = new flexbox.model.devLorem(1);
+
+                this.content = ko.observable(lorem.text);
 
                 this.viewSettings = ko.observable(props.viewSettings);
                 this.viewContent = ko.observable(props.viewContent);
 
                 this.isFixedWidth = ko.observable(props.isFixedWidth);
                 this.isFlexyWidth = ko.observable(props.isFlexyWidth);
+
+                var input = 4;
+                this.lorem = new flexbox.model.devLorem(input);
 
                 this.highlightFixed = ko.computed(function () {
                     if (this.isFixedWidth()) {
@@ -119,8 +125,6 @@ var flexbox;
                         return "inherit";
                     }
                 }, this);
-
-                console.log(this.content);
             }
             FlexItem.prototype.makeFixedWidth = function () {
                 console.log('it fired');
@@ -218,6 +222,36 @@ var flexbox;
             return TourModel;
         })();
         model.TourModel = TourModel;
+    })(flexbox.model || (flexbox.model = {}));
+    var model = flexbox.model;
+})(flexbox || (flexbox = {}));
+var flexbox;
+(function (flexbox) {
+    (function (model) {
+        var devLorem = (function () {
+            function devLorem(wordCount) {
+                this.wordCount = wordCount;
+                this.chosenWords = [];
+                this.text = "";
+                this.words = ['device agnostic', 'breaks in ie6', 'paul irish', 'web standards', 'grok', 'crufty', 'css4', 'html6', 'angular', 'MV*', 'addy osmani', 'only use classes', 'custom elements', 'paralax', 'performance budget', 'offline first', 'gulp', 'node', 'ie6 countdown', 'progressive enhancement', 'the Industry'];
+
+                var min = 0;
+                var max = this.words.length;
+
+                var length = this.wordCount;
+                for (var i = 0; i < this.wordCount; i++) {
+                    var rando = Math.floor(Math.random() * (max - min + 1)) + min;
+                    this.chosenWords.push(this.words[rando]);
+                    console.log(this.chosenWords);
+                }
+
+                this.text = this.chosenWords.join(' ');
+
+                return this.text;
+            }
+            return devLorem;
+        })();
+        model.devLorem = devLorem;
     })(flexbox.model || (flexbox.model = {}));
     var model = flexbox.model;
 })(flexbox || (flexbox = {}));
