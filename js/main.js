@@ -336,6 +336,21 @@ var flexbox;
                     }
                 }, this);
 
+                this.cPropsCurrent.alignContent.subscribe(function () {
+                    var newValue = this.cPropsCurrent.alignContent();
+                    var array = this.items();
+                    if (newValue === "stretch") {
+                        for (var i = 0; i < array.length; i++) {
+                            array[i].iPropsCurrent.height(null);
+                        }
+                        this.cPropsCurrent.alignItems('stretch');
+                    } else {
+                        for (var i = 0; i < array.length; i++) {
+                            array[i].iPropsCurrent.height('250px');
+                        }
+                    }
+                }, this);
+
                 this.flexDirectionOptions = ['row', 'column'];
                 this.flexWrapOptions = ['wrap', 'nowrap'];
                 this.justifyContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around'];
