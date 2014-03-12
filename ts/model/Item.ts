@@ -126,6 +126,18 @@ module flexbox {
                 
             }
 
+            saveProps(): void {
+         
+               var props = this.iPropsCurrent.flexGrow();
+               
+               
+                localStorage.setItem("item",props);
+                
+               
+                
+                
+            
+            }
 
             makeFixedWidth(): void {
                 console.log('it fired');

@@ -18,6 +18,18 @@ module flexbox {
             allAreFlexy: any;
 
             constructor() {
+                console.log(localStorage["test"]);
+                console.log(localStorage["item"]);
+                //create prototypal method that sets window.onbeforeunload = save current state settings
+                //in the initiation of the object (constructor), after all properties have been set, reinitialize the many different things
+
+                //important for state 
+                //number of tiles
+                //if more than 0, update all properties
+                //all of the properties of each style
+
+                //run event handler in the end of the constructor
+
 
                 this.items = ko.observableArray([]);
 
@@ -119,7 +131,32 @@ module flexbox {
                 this.allAreFixed = ko.observable(true);
                 this.allAreFlexy = ko.observable(false);
 
+                //set listener for onbeforeunload to capture current state of flexcontainer
+                this.setSaveSession();
+
             } //end constructor
+
+
+            setSaveSession(): void {
+
+                var self = this;
+                window.onbeforeunload = function() {
+                    self.saveSession();
+                };
+
+                //run through each tile and run method in each that will save all of its properties
+
+            }
+
+            saveSession(): void {
+                
+                var array = this.items();
+                
+                localStorage.setItem("test","success");
+                
+                array[0].saveProps();
+
+            }
 
 
             newItem(): void {
@@ -127,9 +164,6 @@ module flexbox {
                 var newItem = new flexbox.model.FlexItem(this, index);
 
                 this.items.push(newItem);
-                //set up new param to be flexy or fixed
-                //figure out a better way to be passing these parameters to the new item
-                //maybe just pass the one value, maybe consolidate the props in Container too
 
             }
 

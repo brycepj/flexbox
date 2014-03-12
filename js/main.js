@@ -141,6 +141,12 @@ var flexbox;
                     }
                 }, this);
             }
+            FlexItem.prototype.saveProps = function () {
+                var props = this.iPropsCurrent.flexGrow();
+
+                localStorage.setItem("item", props);
+            };
+
             FlexItem.prototype.makeFixedWidth = function () {
                 console.log('it fired');
                 this.isFixedWidth(true);
@@ -275,6 +281,9 @@ var flexbox;
     (function (view) {
         var FlexContainer = (function () {
             function FlexContainer() {
+                console.log(localStorage["test"]);
+                console.log(localStorage["item"]);
+
                 this.items = ko.observableArray([]);
 
                 this.noItems = ko.computed(function () {
@@ -360,7 +369,24 @@ var flexbox;
 
                 this.allAreFixed = ko.observable(true);
                 this.allAreFlexy = ko.observable(false);
+
+                this.setSaveSession();
             }
+            FlexContainer.prototype.setSaveSession = function () {
+                var self = this;
+                window.onbeforeunload = function () {
+                    self.saveSession();
+                };
+            };
+
+            FlexContainer.prototype.saveSession = function () {
+                var array = this.items();
+
+                localStorage.setItem("test", "success");
+
+                array[0].saveProps();
+            };
+
             FlexContainer.prototype.newItem = function () {
                 var index = this.getItemIndex();
                 var newItem = new flexbox.model.FlexItem(this, index);
