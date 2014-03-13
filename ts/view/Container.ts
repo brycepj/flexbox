@@ -2,24 +2,25 @@ module flexbox {
 
     export module view {
         export class FlexContainer {
-            items: any;
-            cPropsDefault: any;
-            cPropsCurrent: any;
-            flexDirectionOptions: any;
-            flexWrapOptions: any;
-            justifyContentOptions: any;
-            alignItemsOptions: any;
-            alignContentOptions: any;
-            alignSelfOptions: any;
-            iPropsDefault: any;
-            defaultBtnText: any;
-            noItems: any;
-            allAreFixed: any;
-            allAreFlexy: any;
+            items:any;
+            cPropsDefault:any;
+            cPropsCurrent:any;
+            flexDirectionOptions:any;
+            flexWrapOptions:any;
+            justifyContentOptions:any;
+            alignItemsOptions:any;
+            alignContentOptions:any;
+            alignSelfOptions:any;
+            iPropsDefault:any;
+            defaultBtnText:any;
+            noItems:any;
+            allAreFixed:any;
+            allAreFlexy:any;
 
             constructor() {
-                console.log(localStorage["test"]);
-                console.log(localStorage["item"]);
+                this.printLocalStorage();
+
+
                 //create prototypal method that sets window.onbeforeunload = save current state settings
                 //in the initiation of the object (constructor), after all properties have been set, reinitialize the many different things
 
@@ -33,7 +34,7 @@ module flexbox {
 
                 this.items = ko.observableArray([]);
 
-                this.noItems = ko.computed(function() {
+                this.noItems = ko.computed(function () {
                     var array = this.items();
                     console.log(array);
                     if (array.length) {
@@ -83,7 +84,7 @@ module flexbox {
 
                 };
 
-                this.cPropsCurrent.alignItems.subscribe(function() {
+                this.cPropsCurrent.alignItems.subscribe(function () {
                     var newValue = this.cPropsCurrent.alignItems();
                     var array = this.items();
                     if (newValue === "stretch") {
@@ -101,7 +102,7 @@ module flexbox {
 
                 }, this);
 
-                this.cPropsCurrent.alignContent.subscribe(function() {
+                this.cPropsCurrent.alignContent.subscribe(function () {
                     var newValue = this.cPropsCurrent.alignContent();
                     var array = this.items();
                     if (newValue === "stretch") {
@@ -120,7 +121,6 @@ module flexbox {
                 }, this);
 
 
-
                 this.flexDirectionOptions = ['row', 'column'];
                 this.flexWrapOptions = ['wrap', 'nowrap'];
                 this.justifyContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around'];
@@ -134,13 +134,16 @@ module flexbox {
                 //set listener for onbeforeunload to capture current state of flexcontainer
                 this.setSaveSession();
 
+                this.retrieveSaved();
+
+
             } //end constructor
 
 
-            setSaveSession(): void {
+            setSaveSession():void {
 
                 var self = this;
-                window.onbeforeunload = function() {
+                window.onbeforeunload = function () {
                     self.saveSession();
                 };
 
@@ -148,18 +151,88 @@ module flexbox {
 
             }
 
-            saveSession(): void {
-                
+            saveSession():void {
+
                 var array = this.items();
-                
-                localStorage.setItem("test","success");
-                
-                array[0].saveProps();
+                var items = array.length;
+                var itemsString = items.toString();
+
+                localStorage.clear();
+                localStorage.setItem('items', itemsString);
+
+                for (var i = 0; i < items; i++) {
+                    var obj = array[i];
+                    obj.saveProps();
+
+                }
 
             }
 
+            retrieveSaved():void {
+                var itemsLengthString = localStorage['items'];
+                var itemsLengthNumber = parseInt(itemsLengthString);
+                var array = itemsLengthNumber +1;
 
-            newItem(): void {
+
+
+                for (var i = 1; i < array; i++) {
+                    var flexGrow = localStorage.getItem('item-' + i + "-flexGrow");
+                    var flexShrink = localStorage.getItem('item-' + i + "-flexShrink");
+                    var flexBasis = localStorage.getItem('item-' + i + "-flexBasis");
+                    var width = localStorage.getItem('item-' + i + "-width");
+                    var height = localStorage.getItem('item-' + i + "-height");
+                    var isFlexy = localStorage.getItem('item-' + i + "-isFlexy");
+                    var isFixed = localStorage.getItem('item-' + i + "-isFixed");
+                    var viewContent = localStorage.getItem('item-' + i + "-viewContent");
+                    var viewSettings = localStorage.getItem('item-' + i + "-viewSettings");
+                    var content = localStorage.getItem('item-' + i + "-content");
+                    var index = i.toString();
+
+                    if (isFlexy === "true") {
+                        isFlexy = true;
+                    } else if (isFlexy === "false") {
+                        isFlexy = false;
+                    }
+
+                    if (isFixed === "true") {
+                        isFixed = true;
+                    } else if (isFixed === "false") {
+                        isFixed  = false;
+                    }
+
+                    if (viewContent === "true") {
+                        viewContent = true;
+                    } else if (viewContent === "false") {
+                        viewContent = false;
+                    }
+
+                    if (viewSettings === "true") {
+                        viewSettings = true;
+                    } else if (viewSettings === "false") {
+                        viewSettings = false;
+                    }
+
+                    this.items.push(
+                        new flexbox.model.FlexItem(this,index,{
+                            flexGrow:flexGrow,
+                            flexShrink:flexShrink,
+                            flexBasis:flexBasis,
+                            width:width,
+                            height:height,
+                            isFlexyWidth:isFlexy,
+                            isFixedWidth:isFixed,
+                            viewContent:viewContent,
+                            viewSettings:viewSettings,
+                            content: content
+
+                        })
+                    );
+                }
+
+
+            }
+
+            newItem():void {
                 var index = this.getItemIndex();
                 var newItem = new flexbox.model.FlexItem(this, index);
 
@@ -167,18 +240,18 @@ module flexbox {
 
             }
 
-            oneLessItem(): void {
+            oneLessItem():void {
 
                 this.items.pop();
 
             }
 
-            getItemIndex(): number {
+            getItemIndex():number {
                 var currentLength = this.items().length;
                 return currentLength + 1;
             }
 
-            makeAllFixed(): void {
+            makeAllFixed():void {
 
                 this.allAreFixed(true);
                 this.allAreFlexy(false);
@@ -190,7 +263,7 @@ module flexbox {
 
             }
 
-            makeAllFlexy(): void {
+            makeAllFlexy():void {
 
                 this.allAreFixed(false);
                 this.allAreFlexy(true);
@@ -202,7 +275,7 @@ module flexbox {
 
             }
 
-            resetItemProps(): void {
+            resetItemProps():void {
                 var array = this.items();
                 for (var i = 0; i < array.length; i++) {
                     array[i].resetProps();
@@ -210,10 +283,10 @@ module flexbox {
                 }
             }
 
-            destroyItem(index): void {
+            destroyItem(index):void {
                 var self = this;
                 self.items.splice((index - 1), 1);
-                (function() {
+                (function () {
                     var array = self.items();
                     for (var i = 0; i < array.length; i++) {
                         var newIndex = i + 1;
@@ -223,27 +296,43 @@ module flexbox {
                 })();
             }
 
-            makeHolyGrail(): void {
+            makeHolyGrail():void {
 
                 var index = this.getItemIndex();
                 this.items([]);
                 this.items.push(
-                    new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px", content: "HEADER" }),
+                    new flexbox.model.FlexItem(this, index++,
+                        {   isFlexyWidth: true,
+                            flexGrow: "1",
+                            flexShrink: "0",
+                            flexBasis: "98%",
+                            alignSelf: "center",
+                            height: "140px",
+                            content: "HEADER"
+                        }),
 
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, viewSettings: false, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", lorem: 100 }),
+                    new flexbox.model.FlexItem(this, index++,
+                        { viewContent: true,
+                            viewSettings: false,
+                            isFlexyWidth: true,
+                            flexGrow: "1",
+                            flexShrink: "0",
+                            flexBasis: "200px",
+                            height: "auto",
+                            lorem: 100 }),
 
                     new flexbox.model.FlexItem(this, index++, { viewContent: true, viewSettings: false, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", lorem: 100 }),
 
                     new flexbox.model.FlexItem(this, index++, { viewContent: true, viewSettings: false, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", lorem: 100 }),
 
                     new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px", content: "FOOTER" })
-                    );
+                );
 
                 this.cPropsCurrent.alignItems("stretch");
 
             }
 
-            responsiveNav(): void {
+            responsiveNav():void {
                 var index = this.getItemIndex();
                 this.items([]);
                 this.items.push(
@@ -252,8 +341,14 @@ module flexbox {
                     new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "Contact" }),
                     new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "Portfolio" }),
                     new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "Blog" })
-                    );
+                );
 
+            }
+
+            printLocalStorage():void {
+                for (var i in localStorage) {
+                    console.log(localStorage[i]);
+                }
             }
 
         } //end class

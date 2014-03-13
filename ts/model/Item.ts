@@ -4,19 +4,19 @@ module flexbox {
 
         export class FlexItem {
 
-            model: any;
-            index: any;
-            iPropsCurrent: any;
-            isFixedWidth: any;
-            isFlexyWidth: any;
-            highlightFixed: any;
-            highlightFlexy: any;
-            content: any;
-            viewContent: any;
-            viewSettings: any;
+            model:any;
+            index:any;
+            iPropsCurrent:any;
+            isFixedWidth:any;
+            isFlexyWidth:any;
+            highlightFixed:any;
+            highlightFlexy:any;
+            content:any;
+            viewContent:any;
+            viewSettings:any;
             lorem:any;
 
-            constructor(model: any, index: any, props: model.ItemProps = {
+            constructor(model:any, index:any, props:model.ItemProps = {
                 viewSettings: false,
                 viewContent: true,
                 content: null,
@@ -31,25 +31,70 @@ module flexbox {
                 alignSelf: null,
                 backgroundColor: "#01ff70",
                 margin: "10px",
-                lorem:1
+                lorem: 1
 
             }) {
-                if (props.content) { props.viewSettings = false; props.viewContent = true; };
-                if (typeof props.lorem === "undefined") { props.lorem = 1; };
-                if (props.content) {props.lorem = null;};
-                if (typeof props.isFlexyWidth === "undefined") { props.isFlexyWidth = false };
-                if (typeof props.isFixedWidth === "undefined") { props.isFixedWidth = true };
-                if (typeof props.height === "undefined") { props.height = "250px" };
-                if (typeof props.width === "undefined") { props.width = "300px" };
-                if (typeof props.order === "undefined") { props.order = null };
-                if (typeof props.flexGrow === "undefined") { props.flexGrow = null };
-                if (typeof props.flexShrink === "undefined") { props.flexShrink = null };
-                if (typeof props.flexBasis === "undefined" && props.isFixedWidth) { props.flexBasis = null };
-                if (typeof props.backgroundColor === "undefined") { props.backgroundColor = "#01ff70" };
-                if (typeof props.margin === "undefined") { props.margin = "10px" };
+                if (props.content && props.viewSettings) {
+                    props.viewSettings = true;
+                    props.viewContent = false;
+                }
+                else if (props.content) {
+                    props.viewSettings = false;
+                    props.viewContent = true;
+                }
 
-                
-                
+
+                ;
+                if (typeof props.lorem === "undefined") {
+                    props.lorem = 1;
+                }
+                ;
+                if (props.content) {
+                    props.lorem = null;
+                }
+                ;
+                if (typeof props.isFlexyWidth === "undefined") {
+                    props.isFlexyWidth = false
+                }
+                ;
+                if (typeof props.isFixedWidth === "undefined") {
+                    props.isFixedWidth = true
+                }
+                ;
+                if (typeof props.height === "undefined") {
+                    props.height = "250px"
+                }
+                ;
+                if (typeof props.width === "undefined") {
+                    props.width = "300px"
+                }
+                ;
+                if (typeof props.order === "undefined") {
+                    props.order = null
+                }
+                ;
+                if (typeof props.flexGrow === "undefined") {
+                    props.flexGrow = null
+                }
+                ;
+                if (typeof props.flexShrink === "undefined") {
+                    props.flexShrink = null
+                }
+                ;
+                if (typeof props.flexBasis === "undefined" && props.isFixedWidth) {
+                    props.flexBasis = null
+                }
+                ;
+                if (typeof props.backgroundColor === "undefined") {
+                    props.backgroundColor = "#01ff70"
+                }
+                ;
+                if (typeof props.margin === "undefined") {
+                    props.margin = "10px"
+                }
+                ;
+
+
                 if (props.isFlexyWidth) {
                     props.isFixedWidth = false;
                     props.width = null;
@@ -66,6 +111,8 @@ module flexbox {
 
                 }
 
+
+
                 this.index = ko.observable(index);
                 this.model = model;
                 console.log(model);
@@ -80,29 +127,33 @@ module flexbox {
                     backgroundColor: ko.observable(props.backgroundColor),
                     margin: ko.observable(props.margin)
                 };
-                
-                
+
 
                 this.viewSettings = ko.observable(props.viewSettings);
                 this.viewContent = ko.observable(props.viewContent);
 
                 this.lorem = new flexbox.model.devLorem(props.lorem);
-                
-                this.content = ko.computed(function(){
+
+                this.content = ko.computed(function () {
                     var index = this.index();
                     var lorem = this.lorem.text;
-                    
-                    var content = props.content;
-                    
-                    if (content) {return content;} else {return lorem;};
-                },this);
 
-                
+                    var content = props.content;
+
+                    if (content) {
+                        return content;
+                    } else {
+                        return lorem;
+                    }
+                    ;
+                }, this);
+
+
                 this.isFixedWidth = ko.observable(props.isFixedWidth);
                 this.isFlexyWidth = ko.observable(props.isFlexyWidth);
-                
 
-                this.highlightFixed = ko.computed(function() {
+
+                this.highlightFixed = ko.computed(function () {
                     if (this.isFixedWidth()) {
                         return "1.6em"
                     }
@@ -112,7 +163,7 @@ module flexbox {
 
                 }, this);
 
-                this.highlightFlexy = ko.computed(function() {
+                this.highlightFlexy = ko.computed(function () {
                     if (this.isFlexyWidth()) {
                         return "1.6em";
                     }
@@ -123,23 +174,40 @@ module flexbox {
                 }, this);
 
 
-                
             }
 
-            saveProps(): void {
-         
-               var props = this.iPropsCurrent.flexGrow();
-               
-               
-                localStorage.setItem("item",props);
-                
-               
-                
-                
-            
+            saveProps():void {
+                var index = this.index();
+                var keyName = "item-" + index;
+
+                var flexGrow = this.iPropsCurrent.flexGrow();
+                var flexShrink = this.iPropsCurrent.flexShrink();
+                var flexBasis = this.iPropsCurrent.flexBasis();
+                var width = this.iPropsCurrent.width();
+                var height = this.iPropsCurrent.height();
+                var isFlexy = this.isFlexyWidth();
+                var isFixed = this.isFixedWidth();
+                var viewContent = this.viewContent();
+                var viewSettings = this.viewSettings();
+                var content = this.content();
+
+
+
+                localStorage.setItem(keyName + "-flexGrow", flexGrow);
+                localStorage.setItem(keyName + "-flexShrink", flexShrink);
+                localStorage.setItem(keyName + "-flexBasis", flexBasis);
+                localStorage.setItem(keyName + "-width", width);
+                localStorage.setItem(keyName + "-height", height);
+                localStorage.setItem(keyName + "-isFlexy", isFlexy);
+                localStorage.setItem(keyName + "-isFixed", isFixed);
+                localStorage.setItem(keyName + "-viewContent", viewContent);
+                localStorage.setItem(keyName + "-viewSettings", viewSettings);
+                localStorage.setItem(keyName + "-content", content);
+
+
             }
 
-            makeFixedWidth(): void {
+            makeFixedWidth():void {
                 console.log('it fired');
                 this.isFixedWidth(true);
                 this.iPropsCurrent.flexGrow(null);
@@ -149,7 +217,7 @@ module flexbox {
 
             }
 
-            makeFlexyWidth(): void {
+            makeFlexyWidth():void {
                 this.isFixedWidth(false);
                 this.isFlexyWidth(true);
                 this.iPropsCurrent.flexGrow("1");
@@ -157,7 +225,7 @@ module flexbox {
                 this.iPropsCurrent.flexShrink("0");
             }
 
-            resetProps(): void {
+            resetProps():void {
                 var currentProps = this.iPropsCurrent;
                 var newProps = this.model.iPropsDefault;
                 currentProps.width(newProps.width());
@@ -168,7 +236,7 @@ module flexbox {
             }
 
 
-            toggleSettings(): void {
+            toggleSettings():void {
                 var visible = this.viewSettings();
                 console.log(visible);
                 if (visible) {
@@ -181,7 +249,7 @@ module flexbox {
 
             }
 
-            destroySelf(): void {
+            destroySelf():void {
                 var index = parseInt(this.index(), 10);
                 this.model.destroyItem(index);
 

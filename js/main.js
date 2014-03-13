@@ -20,10 +20,14 @@ var flexbox;
                     margin: "10px",
                     lorem: 1
                 }; }
-                if (props.content) {
+                if (props.content && props.viewSettings) {
+                    props.viewSettings = true;
+                    props.viewContent = false;
+                } else if (props.content) {
                     props.viewSettings = false;
                     props.viewContent = true;
                 }
+
                 ;
                 if (typeof props.lorem === "undefined") {
                     props.lorem = 1;
@@ -142,9 +146,30 @@ var flexbox;
                 }, this);
             }
             FlexItem.prototype.saveProps = function () {
-                var props = this.iPropsCurrent.flexGrow();
+                var index = this.index();
+                var keyName = "item-" + index;
 
-                localStorage.setItem("item", props);
+                var flexGrow = this.iPropsCurrent.flexGrow();
+                var flexShrink = this.iPropsCurrent.flexShrink();
+                var flexBasis = this.iPropsCurrent.flexBasis();
+                var width = this.iPropsCurrent.width();
+                var height = this.iPropsCurrent.height();
+                var isFlexy = this.isFlexyWidth();
+                var isFixed = this.isFixedWidth();
+                var viewContent = this.viewContent();
+                var viewSettings = this.viewSettings();
+                var content = this.content();
+
+                localStorage.setItem(keyName + "-flexGrow", flexGrow);
+                localStorage.setItem(keyName + "-flexShrink", flexShrink);
+                localStorage.setItem(keyName + "-flexBasis", flexBasis);
+                localStorage.setItem(keyName + "-width", width);
+                localStorage.setItem(keyName + "-height", height);
+                localStorage.setItem(keyName + "-isFlexy", isFlexy);
+                localStorage.setItem(keyName + "-isFixed", isFixed);
+                localStorage.setItem(keyName + "-viewContent", viewContent);
+                localStorage.setItem(keyName + "-viewSettings", viewSettings);
+                localStorage.setItem(keyName + "-content", content);
             };
 
             FlexItem.prototype.makeFixedWidth = function () {
@@ -281,8 +306,7 @@ var flexbox;
     (function (view) {
         var FlexContainer = (function () {
             function FlexContainer() {
-                console.log(localStorage["test"]);
-                console.log(localStorage["item"]);
+                this.printLocalStorage();
 
                 this.items = ko.observableArray([]);
 
@@ -371,6 +395,8 @@ var flexbox;
                 this.allAreFlexy = ko.observable(false);
 
                 this.setSaveSession();
+
+                this.retrieveSaved();
             }
             FlexContainer.prototype.setSaveSession = function () {
                 var self = this;
@@ -381,10 +407,73 @@ var flexbox;
 
             FlexContainer.prototype.saveSession = function () {
                 var array = this.items();
+                var items = array.length;
+                var itemsString = items.toString();
 
-                localStorage.setItem("test", "success");
+                localStorage.clear();
+                localStorage.setItem('items', itemsString);
 
-                array[0].saveProps();
+                for (var i = 0; i < items; i++) {
+                    var obj = array[i];
+                    obj.saveProps();
+                }
+            };
+
+            FlexContainer.prototype.retrieveSaved = function () {
+                var itemsLengthString = localStorage['items'];
+                var itemsLengthNumber = parseInt(itemsLengthString);
+                var array = itemsLengthNumber + 1;
+
+                for (var i = 1; i < array; i++) {
+                    var flexGrow = localStorage.getItem('item-' + i + "-flexGrow");
+                    var flexShrink = localStorage.getItem('item-' + i + "-flexShrink");
+                    var flexBasis = localStorage.getItem('item-' + i + "-flexBasis");
+                    var width = localStorage.getItem('item-' + i + "-width");
+                    var height = localStorage.getItem('item-' + i + "-height");
+                    var isFlexy = localStorage.getItem('item-' + i + "-isFlexy");
+                    var isFixed = localStorage.getItem('item-' + i + "-isFixed");
+                    var viewContent = localStorage.getItem('item-' + i + "-viewContent");
+                    var viewSettings = localStorage.getItem('item-' + i + "-viewSettings");
+                    var content = localStorage.getItem('item-' + i + "-content");
+                    var index = i.toString();
+
+                    if (isFlexy === "true") {
+                        isFlexy = true;
+                    } else if (isFlexy === "false") {
+                        isFlexy = false;
+                    }
+
+                    if (isFixed === "true") {
+                        isFixed = true;
+                    } else if (isFixed === "false") {
+                        isFixed = false;
+                    }
+
+                    if (viewContent === "true") {
+                        viewContent = true;
+                    } else if (viewContent === "false") {
+                        viewContent = false;
+                    }
+
+                    if (viewSettings === "true") {
+                        viewSettings = true;
+                    } else if (viewSettings === "false") {
+                        viewSettings = false;
+                    }
+
+                    this.items.push(new flexbox.model.FlexItem(this, index, {
+                        flexGrow: flexGrow,
+                        flexShrink: flexShrink,
+                        flexBasis: flexBasis,
+                        width: width,
+                        height: height,
+                        isFlexyWidth: isFlexy,
+                        isFixedWidth: isFixed,
+                        viewContent: viewContent,
+                        viewSettings: viewSettings,
+                        content: content
+                    }));
+                }
             };
 
             FlexContainer.prototype.newItem = function () {
@@ -444,7 +533,23 @@ var flexbox;
             FlexContainer.prototype.makeHolyGrail = function () {
                 var index = this.getItemIndex();
                 this.items([]);
-                this.items.push(new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px", content: "HEADER" }), new flexbox.model.FlexItem(this, index++, { viewContent: true, viewSettings: false, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", lorem: 100 }), new flexbox.model.FlexItem(this, index++, { viewContent: true, viewSettings: false, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", lorem: 100 }), new flexbox.model.FlexItem(this, index++, { viewContent: true, viewSettings: false, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", lorem: 100 }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px", content: "FOOTER" }));
+                this.items.push(new flexbox.model.FlexItem(this, index++, {
+                    isFlexyWidth: true,
+                    flexGrow: "1",
+                    flexShrink: "0",
+                    flexBasis: "98%",
+                    alignSelf: "center",
+                    height: "140px",
+                    content: "HEADER"
+                }), new flexbox.model.FlexItem(this, index++, {
+                    viewContent: true,
+                    viewSettings: false,
+                    isFlexyWidth: true,
+                    flexGrow: "1",
+                    flexShrink: "0",
+                    flexBasis: "200px",
+                    height: "auto",
+                    lorem: 100 }), new flexbox.model.FlexItem(this, index++, { viewContent: true, viewSettings: false, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", lorem: 100 }), new flexbox.model.FlexItem(this, index++, { viewContent: true, viewSettings: false, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", lorem: 100 }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px", content: "FOOTER" }));
 
                 this.cPropsCurrent.alignItems("stretch");
             };
@@ -453,6 +558,12 @@ var flexbox;
                 var index = this.getItemIndex();
                 this.items([]);
                 this.items.push(new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "Home" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "About" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "Contact" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "Portfolio" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "Blog" }));
+            };
+
+            FlexContainer.prototype.printLocalStorage = function () {
+                for (var i in localStorage) {
+                    console.log(localStorage[i]);
+                }
             };
             return FlexContainer;
         })();
