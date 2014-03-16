@@ -18,19 +18,6 @@ module flexbox {
             allAreFlexy:any;
 
             constructor() {
-                this.printLocalStorage();
-
-
-                //create prototypal method that sets window.onbeforeunload = save current state settings
-                //in the initiation of the object (constructor), after all properties have been set, reinitialize the many different things
-
-                //important for state 
-                //number of tiles
-                //if more than 0, update all properties
-                //all of the properties of each style
-
-                //run event handler in the end of the constructor
-
 
                 this.items = ko.observableArray([]);
 
@@ -135,7 +122,7 @@ module flexbox {
                 this.setSaveSession();
 
                 this.retrieveSaved();
-
+                this.printLocalStorage();
 
             } //end constructor
 
@@ -171,8 +158,7 @@ module flexbox {
             retrieveSaved():void {
                 var itemsLengthString = localStorage['items'];
                 var itemsLengthNumber = parseInt(itemsLengthString);
-                var array = itemsLengthNumber +1;
-
+                var array = itemsLengthNumber + 1;
 
 
                 for (var i = 1; i < array; i++) {
@@ -197,7 +183,7 @@ module flexbox {
                     if (isFixed === "true") {
                         isFixed = true;
                     } else if (isFixed === "false") {
-                        isFixed  = false;
+                        isFixed = false;
                     }
 
                     if (viewContent === "true") {
@@ -213,16 +199,16 @@ module flexbox {
                     }
 
                     this.items.push(
-                        new flexbox.model.FlexItem(this,index,{
-                            flexGrow:flexGrow,
-                            flexShrink:flexShrink,
-                            flexBasis:flexBasis,
-                            width:width,
-                            height:height,
-                            isFlexyWidth:isFlexy,
-                            isFixedWidth:isFixed,
-                            viewContent:viewContent,
-                            viewSettings:viewSettings,
+                        new flexbox.model.FlexItem(this, index, {
+                            flexGrow: flexGrow,
+                            flexShrink: flexShrink,
+                            flexBasis: flexBasis,
+                            width: width,
+                            height: height,
+                            isFlexyWidth: isFlexy,
+                            isFixedWidth: isFixed,
+                            viewContent: viewContent,
+                            viewSettings: viewSettings,
                             content: content
 
                         })
@@ -321,11 +307,34 @@ module flexbox {
                             height: "auto",
                             lorem: 100 }),
 
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, viewSettings: false, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", lorem: 100 }),
+                    new flexbox.model.FlexItem(this, index++,
+                        { viewContent: true,
+                            viewSettings: false,
+                            isFlexyWidth: true,
+                            flexGrow: "1",
+                            flexShrink: "0",
+                            flexBasis: "200px",
+                            height: "auto",
+                            lorem: 100 }),
 
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, viewSettings: false, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", lorem: 100 }),
+                    new flexbox.model.FlexItem(this, index++,
+                        { viewContent: true,
+                            viewSettings: false,
+                            isFlexyWidth: true,
+                            flexGrow: "1",
+                            flexShrink: "0",
+                            flexBasis: "200px",
+                            height: "auto",
+                            lorem: 100 }),
 
-                    new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px", content: "FOOTER" })
+                    new flexbox.model.FlexItem(this, index++,
+                        { isFlexyWidth: true,
+                            flexGrow: "1",
+                            flexShrink: "0",
+                            flexBasis: "98%",
+                            alignSelf: "center",
+                            height: "140px",
+                            content: "FOOTER" })
                 );
 
                 this.cPropsCurrent.alignItems("stretch");
@@ -346,9 +355,25 @@ module flexbox {
             }
 
             printLocalStorage():void {
-                for (var i in localStorage) {
-                    console.log(localStorage[i]);
+                var booleanValue;
+                var confirm = localStorage.getItem('items');
+                if (confirm === "0") {
+                    console.log('Nothing has been stored in localStorage.')
+
+
+                } else if (confirm === "1") {
+                    console.log("localStorage has stored " + confirm + " item");
+                    for (var i in localStorage) {
+                        console.log(localStorage[i]);
+                    }
+                } else {
+                    console.log("localStorage has stored " + confirm + " items");
+                    for (var i in localStorage) {
+                        console.log(localStorage[i]);
+                    }
                 }
+
+
             }
 
         } //end class

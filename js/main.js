@@ -94,7 +94,6 @@ var flexbox;
 
                 this.index = ko.observable(index);
                 this.model = model;
-                console.log(model);
                 this.iPropsCurrent = {
                     order: ko.observable(props.order),
                     flexGrow: ko.observable(props.flexGrow),
@@ -173,7 +172,6 @@ var flexbox;
             };
 
             FlexItem.prototype.makeFixedWidth = function () {
-                console.log('it fired');
                 this.isFixedWidth(true);
                 this.iPropsCurrent.flexGrow(null);
                 this.iPropsCurrent.flexBasis(null);
@@ -201,7 +199,6 @@ var flexbox;
 
             FlexItem.prototype.toggleSettings = function () {
                 var visible = this.viewSettings();
-                console.log(visible);
                 if (visible) {
                     this.viewSettings(false);
                     this.viewContent(true);
@@ -306,8 +303,6 @@ var flexbox;
     (function (view) {
         var FlexContainer = (function () {
             function FlexContainer() {
-                this.printLocalStorage();
-
                 this.items = ko.observableArray([]);
 
                 this.noItems = ko.computed(function () {
@@ -397,6 +392,7 @@ var flexbox;
                 this.setSaveSession();
 
                 this.retrieveSaved();
+                this.printLocalStorage();
             }
             FlexContainer.prototype.setSaveSession = function () {
                 var self = this;
@@ -549,7 +545,30 @@ var flexbox;
                     flexShrink: "0",
                     flexBasis: "200px",
                     height: "auto",
-                    lorem: 100 }), new flexbox.model.FlexItem(this, index++, { viewContent: true, viewSettings: false, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", lorem: 100 }), new flexbox.model.FlexItem(this, index++, { viewContent: true, viewSettings: false, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "auto", lorem: 100 }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "98%", alignSelf: "center", height: "140px", content: "FOOTER" }));
+                    lorem: 100 }), new flexbox.model.FlexItem(this, index++, {
+                    viewContent: true,
+                    viewSettings: false,
+                    isFlexyWidth: true,
+                    flexGrow: "1",
+                    flexShrink: "0",
+                    flexBasis: "200px",
+                    height: "auto",
+                    lorem: 100 }), new flexbox.model.FlexItem(this, index++, {
+                    viewContent: true,
+                    viewSettings: false,
+                    isFlexyWidth: true,
+                    flexGrow: "1",
+                    flexShrink: "0",
+                    flexBasis: "200px",
+                    height: "auto",
+                    lorem: 100 }), new flexbox.model.FlexItem(this, index++, {
+                    isFlexyWidth: true,
+                    flexGrow: "1",
+                    flexShrink: "0",
+                    flexBasis: "98%",
+                    alignSelf: "center",
+                    height: "140px",
+                    content: "FOOTER" }));
 
                 this.cPropsCurrent.alignItems("stretch");
             };
@@ -561,8 +580,20 @@ var flexbox;
             };
 
             FlexContainer.prototype.printLocalStorage = function () {
-                for (var i in localStorage) {
-                    console.log(localStorage[i]);
+                var booleanValue;
+                var confirm = localStorage.getItem('items');
+                if (confirm === "0") {
+                    console.log('Nothing has been stored in localStorage.');
+                } else if (confirm === "1") {
+                    console.log("localStorage has stored " + confirm + " item");
+                    for (var i in localStorage) {
+                        console.log(localStorage[i]);
+                    }
+                } else {
+                    console.log("localStorage has stored " + confirm + " items");
+                    for (var i in localStorage) {
+                        console.log(localStorage[i]);
+                    }
                 }
             };
             return FlexContainer;

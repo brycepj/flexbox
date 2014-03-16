@@ -4,6 +4,7 @@
     <list default="true" id="95115037-0819-4211-a05b-a12621139f24" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/view/Container.ts" afterPath="$PROJECT_DIR$/ts/view/Container.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/model/Item.ts" afterPath="$PROJECT_DIR$/ts/model/Item.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -27,13 +28,42 @@
     <favorites_list name="flexbox" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49147728">
+    <splitter split-orientation="horizontal" split-proportion="0.4280303">
       <split-first>
         <leaf>
-          <file leaf-file-name="Item.ts" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="Item.ts" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ts/model/Item.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="40" column="21" selection-start="1172" selection-end="1172" vertical-scroll-proportion="0.45180723" vertical-offset="300" max-vertical-offset="4020">
+                <state line="9" column="29" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3945">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/index.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="96" column="0" selection-start="3578" selection-end="3578" vertical-scroll-proportion="-60.0" vertical-offset="0" max-vertical-offset="2760">
+                  <folding>
+                    <marker date="1394672582000" expanded="true" signature="4494:6182" placeholder="..." />
+                    <marker date="1394672582000" expanded="true" signature="4931:6169" placeholder="..." />
+                    <marker date="1394672582000" expanded="true" signature="4950:5254" placeholder="..." />
+                    <marker date="1394672582000" expanded="true" signature="5053:5240" placeholder="..." />
+                    <marker date="1394672582000" expanded="true" signature="5331:5666" placeholder="..." />
+                    <marker date="1394672582000" expanded="true" signature="5338:5527" placeholder="..." />
+                    <marker date="1394672582000" expanded="true" signature="5364:5519" placeholder="..." />
+                    <marker date="1394672582000" expanded="true" signature="5743:6154" placeholder="..." />
+                    <marker date="1394672582000" expanded="true" signature="5767:5908" placeholder="..." />
+                    <marker date="1394672582000" expanded="true" signature="5797:5900" placeholder="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/README.md">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="9" column="29" selection-start="339" selection-end="339" vertical-scroll-proportion="0.2112676" vertical-offset="0" max-vertical-offset="639">
                   <folding />
                 </state>
               </provider>
@@ -43,10 +73,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Container.ts" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="Container.ts" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ts/view/Container.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="177" column="41" selection-start="6282" selection-end="6282" vertical-scroll-proportion="-0.4683735" vertical-offset="2966" max-vertical-offset="5475">
+                <state line="342" column="0" selection-start="12270" selection-end="12270" vertical-scroll-proportion="0.18674698" vertical-offset="5006" max-vertical-offset="5850">
                   <folding />
                 </state>
               </provider>
@@ -75,6 +105,7 @@
         <option value="$PROJECT_DIR$/ts/model/ItemConfig.ts" />
         <option value="$PROJECT_DIR$/ts/view/Container.ts" />
         <option value="$PROJECT_DIR$/ts/model/Item.ts" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -176,70 +207,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flexbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flexbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scss" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flexbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flexbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scss" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modules" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flexbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flexbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flexbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flexbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -524,13 +491,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="0" selection-start="3578" selection-end="3578" vertical-scroll-proportion="0.0" vertical-offset="1440" max-vertical-offset="2760">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ts/model/TourModel.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050" />
@@ -548,23 +508,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ts/model/ItemConfig.ts">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="30" selection-start="75" selection-end="75" vertical-scroll-proportion="0.088626295" vertical-offset="0" max-vertical-offset="677">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="677">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ts/view/Container.ts">
+    <entry file="file://$PROJECT_DIR$/ts/model/ItemConfig.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="177" column="41" selection-start="6282" selection-end="6282" vertical-scroll-proportion="-0.4683735" vertical-offset="2966" max-vertical-offset="5475">
+        <state line="18" column="1" selection-start="441" selection-end="441" vertical-scroll-proportion="0.3988183" vertical-offset="0" max-vertical-offset="677">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/model/Item.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="21" selection-start="1172" selection-end="1172" vertical-scroll-proportion="0.45180723" vertical-offset="300" max-vertical-offset="4020">
+        <state line="9" column="29" selection-start="184" selection-end="184" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="0" selection-start="3578" selection-end="3578" vertical-scroll-proportion="-60.0" vertical-offset="0" max-vertical-offset="2760">
+          <folding>
+            <marker date="1394672582000" expanded="true" signature="4494:6182" placeholder="..." />
+            <marker date="1394672582000" expanded="true" signature="4931:6169" placeholder="..." />
+            <marker date="1394672582000" expanded="true" signature="4950:5254" placeholder="..." />
+            <marker date="1394672582000" expanded="true" signature="5053:5240" placeholder="..." />
+            <marker date="1394672582000" expanded="true" signature="5331:5666" placeholder="..." />
+            <marker date="1394672582000" expanded="true" signature="5338:5527" placeholder="..." />
+            <marker date="1394672582000" expanded="true" signature="5364:5519" placeholder="..." />
+            <marker date="1394672582000" expanded="true" signature="5743:6154" placeholder="..." />
+            <marker date="1394672582000" expanded="true" signature="5767:5908" placeholder="..." />
+            <marker date="1394672582000" expanded="true" signature="5797:5900" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="29" selection-start="339" selection-end="339" vertical-scroll-proportion="0.2112676" vertical-offset="0" max-vertical-offset="639">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/view/Container.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="342" column="0" selection-start="12270" selection-end="12270" vertical-scroll-proportion="0.18674698" vertical-offset="5006" max-vertical-offset="5850">
           <folding />
         </state>
       </provider>

@@ -112,10 +112,8 @@ module flexbox {
                 }
 
 
-
                 this.index = ko.observable(index);
                 this.model = model;
-                console.log(model);
                 this.iPropsCurrent = {
                     order: ko.observable(props.order),
                     flexGrow: ko.observable(props.flexGrow),
@@ -192,7 +190,6 @@ module flexbox {
                 var content = this.content();
 
 
-
                 localStorage.setItem(keyName + "-flexGrow", flexGrow);
                 localStorage.setItem(keyName + "-flexShrink", flexShrink);
                 localStorage.setItem(keyName + "-flexBasis", flexBasis);
@@ -208,7 +205,6 @@ module flexbox {
             }
 
             makeFixedWidth():void {
-                console.log('it fired');
                 this.isFixedWidth(true);
                 this.iPropsCurrent.flexGrow(null);
                 this.iPropsCurrent.flexBasis(null);
@@ -238,7 +234,6 @@ module flexbox {
 
             toggleSettings():void {
                 var visible = this.viewSettings();
-                console.log(visible);
                 if (visible) {
                     this.viewSettings(false);
                     this.viewContent(true);
