@@ -118,6 +118,8 @@ module flexbox {
                 this.allAreFixed = ko.observable(true);
                 this.allAreFlexy = ko.observable(false);
 
+
+
                 //set listener for onbeforeunload to capture current state of flexcontainer
                 this.setSaveSession();
 
@@ -125,6 +127,8 @@ module flexbox {
                 this.printLocalStorage();
 
             } //end constructor
+
+
 
 
             setSaveSession():void {

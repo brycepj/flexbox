@@ -143,7 +143,7 @@ module flexbox {
                     } else {
                         return lorem;
                     }
-                    ;
+
                 }, this);
 
 
@@ -249,6 +249,7 @@ module flexbox {
                 this.model.destroyItem(index);
 
             }
+
 
         }
 

@@ -122,7 +122,6 @@ var flexbox;
                     } else {
                         return lorem;
                     }
-                    ;
                 }, this);
 
                 this.isFixedWidth = ko.observable(props.isFixedWidth);
@@ -609,7 +608,6 @@ var flexbox;
             function Tour() {
                 this.tour = new flexbox.model.TourModel();
                 this.index = ko.observable(0);
-                console.log(this.tour.messages);
 
                 this.currentMessage = ko.computed(function () {
                     var index = this.index();
@@ -634,6 +632,8 @@ var flexbox;
 
                     return this.tour.messages[index].hasButton;
                 }, this);
+
+                this.resizeContainer();
             }
             Tour.prototype.next = function () {
                 var arrayLength = this.tour.messages.length;
@@ -660,6 +660,28 @@ var flexbox;
 
             Tour.prototype.test = function () {
                 $('.flex-container').hide();
+            };
+
+            Tour.prototype.resizeContainer = function () {
+                var $el = $('.flex-container');
+                var width = $el.width();
+                $el.css('width', width.toString() + "px");
+
+                $el.animate({
+                    width: "300px"
+                }, {
+                    duration: 3000,
+                    easing: "swing"
+                });
+
+                $el.animate({
+                    width: "100%"
+                }, {
+                    duration: 3000,
+                    easing: "swing"
+                });
+
+                $el.css('width', null);
             };
             return Tour;
         })();
