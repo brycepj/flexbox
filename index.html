@@ -9,13 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" charset="utf-8" src="js/lib/jquery.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/lib/knockout.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/lib/fittext.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
     <link rel="stylesheet" href="css/build/style.css">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <script type="text/javascript" charset="utf-8">
         $(function () {
 
-		
+            $("#site-logo").fitText();
 
             var tourbox = new flexbox.model.Tour();
             ko.applyBindings(tourbox, document.getElementById('message-box'));
@@ -77,7 +78,7 @@
 </div>
 <aside class="sidebar">
     <div class="masthead">
-        <h1 class="site-logo">flexbox in 5 minutes</h1>
+        <h1 id="site-logo" class="site-logo">flexbox in 5 minutes</h1>
 
         <p class="site-desc">take an interactive tour through all the major features of the language.</p>
 

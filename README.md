@@ -1,7 +1,4 @@
 ### next steps
 
-- container configuration options
-- code samples
-- tooltips and learning resources
-- multiple containers
-- styling
+- you need to add something about the axises
+- new class for the code samples
