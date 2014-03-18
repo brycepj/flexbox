@@ -86,6 +86,7 @@ module flexbox {
 
                         }
                     }
+                    
 
                 }, this);
 
@@ -105,7 +106,16 @@ module flexbox {
                         }
                     }
 
+   
+                    if (array.length > 5) {
+                        alert('your going to have some screwed up stuff happen to you!');
+                    }
+
+                    
                 }, this);
+                
+                
+                    
 
 
                 this.flexDirectionOptions = ['row', 'column'];
@@ -117,24 +127,20 @@ module flexbox {
 
                 this.allAreFixed = ko.observable(true);
                 this.allAreFlexy = ko.observable(false);
-
-
-
-                //set listener for onbeforeunload to capture current state of flexcontainer
+        
+                //localStorage setup
                 this.setSaveSession();
-
-                this.retrieveSaved();
                 this.printLocalStorage();
+                this.retrieveSaved();
 
             } //end constructor
-
 
 
 
             setSaveSession():void {
 
                 var self = this;
-                window.onbeforeunload = function () {
+                window.onunload = function () {
                     self.saveSession();
                 };
 
@@ -151,6 +157,19 @@ module flexbox {
                 localStorage.clear();
                 localStorage.setItem('items', itemsString);
 
+                var flexDirection = this.cPropsCurrent.flexDirection();
+                var flexWrap = this.cPropsCurrent.flexWrap();
+                var justifyContent = this.cPropsCurrent.justifyContent();
+                var alignItems = this.cPropsCurrent.alignItems();
+                var alignContent = this.cPropsCurrent.alignContent();
+                
+                localStorage.setItem('cProps-flexDirection',flexDirection);
+                localStorage.setItem('cProps-flexWrap',flexWrap);
+                localStorage.setItem('cProps-justifyContent',justifyContent);
+                localStorage.setItem('cProps-alignItems',alignItems);
+                localStorage.setItem('cProps-alignContent',alignContent);
+                
+                
                 for (var i = 0; i < items; i++) {
                     var obj = array[i];
                     obj.saveProps();
@@ -164,6 +183,11 @@ module flexbox {
                 var itemsLengthNumber = parseInt(itemsLengthString);
                 var array = itemsLengthNumber + 1;
 
+                this.cPropsCurrent.flexDirection(localStorage.getItem('cProps-flexDirection'));
+                this.cPropsCurrent.flexWrap(localStorage.getItem('cProps-flexWrap'));
+                this.cPropsCurrent.justifyContent(localStorage.getItem('cProps-justifyContent'));
+                this.cPropsCurrent.alignItems(localStorage.getItem('cProps-alignItems'));
+                this.cPropsCurrent.alignContent(localStorage.getItem('cProps-alignContent'));
 
                 for (var i = 1; i < array; i++) {
                     var flexGrow = localStorage.getItem('item-' + i + "-flexGrow");

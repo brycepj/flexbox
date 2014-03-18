@@ -12,7 +12,6 @@ module flexbox {
             hasButton:any;
 
             constructor() {
-
                 this.tour = new TourModel();
                 this.index = ko.observable(0);
 
@@ -43,10 +42,14 @@ module flexbox {
                     return this.tour.messages[index].hasButton;
 
                 }, this);
-
+                //temporary resizeContainer! Only for testing! Add a button that activates this 
                 this.resizeContainer();
+                
+                
             }
 
+
+            
             next():void {
                 var arrayLength = this.tour.messages.length;
                 var current = this.index();

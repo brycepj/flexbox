@@ -17,7 +17,7 @@
         $(function () {
 
             $("#site-logo").fitText();
-
+			
             var tourbox = new flexbox.model.Tour();
             ko.applyBindings(tourbox, document.getElementById('message-box'));
             
@@ -89,7 +89,7 @@
 <div id="message-box" class="message-box">
     <span class="title">console</span>
 
-    <p data-bind="text:currentMessage"></p> 
+    <p data-bind="html:currentMessage"></p> 
     <a class="xtra-link" href="#" target="_blank" data-bind="visible:hasButton,text:currentXText,attr: {href:currentXUrl}"></a>
     <nav class="tour-nav">
         <a href="#" data-bind="click:previous"><i class="fa fa-chevron-left"></i></a>
