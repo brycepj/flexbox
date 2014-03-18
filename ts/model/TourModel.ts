@@ -11,42 +11,109 @@ module flexbox {
                 this.messages = [
 
                     {
-                        "text": 'Welcome!  It is much longer than I thought it would be given the circumstances. Maybe I will try to do soemthing about it.',
-                        "hasButton": true,
+                        "text": 'Start the interactive tour! (click the right arrow)',
+                        "hasButton": false,
                         "xUrl": null,
-                        "xText": "Resources"
+
 
                     },
                     {
-                        "text": 'Here is the first of the greetings',
+                        "text": 'Flexbox is a new layout property CSS that ....',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null
                     },
                     {
-                        "text": 'Here is the second of the greetings',
+                        "text": 'In this tutorial, you will learn all the major features of the property...by doing!',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null
                     },
                     {
-                        "text": 'Here is the third of the greetings',
+                        "text": 'To get our bearings, note that in order for flexbobx to work, we apply styling to the containing element as well as its children.',
                         "hasButton": true,
                         "xUrl": "http://www.nothing.com",
                         "xText": "Next text"
                     },
                     {
-                        "text": 'Here is the fourth of the greetings',
+                        "text": 'So, the big blue box on your left is a `div` with display:flex. That is where we will start. You can watch the code sample below grow as we add more styles',
                         "hasButton": true,
                         "xUrl": "http://www.nothing.com",
                         "xText": "anoher text"
                     },
                     {
-                        "text": 'The End!',
+                        "text": 'You dont actually have to add any special flexbox styling to the flex items',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null
-                    }
+                    },
+                    {
+                        "text": 'So, the big blue box on your left is a `div` with display:flex. That is where we will start. You can watch the code sample below grow as we add more styles',
+                        "hasButton": true,
+                        "xUrl": "http://www.nothing.com",
+                        "xText": "anoher text"
+                    },
+                    {
+                        "text": 'So, the big blue box on your left is a `div` with display:flex. That is where we will start. You can watch the code sample below grow as we add more styles',
+                        "hasButton": true,
+                        "xUrl": "http://www.nothing.com",
+                        "xText": "anoher text"
+                    },
+                    {
+                        "text": 'So, the big blue box on your left is a `div` with display:flex. That is where we will start. You can watch the code sample below grow as we add more styles',
+                        "hasButton": true,
+                        "xUrl": "http://www.nothing.com",
+                        "xText": "anoher text"
+                    },
+                    {
+                        "text": 'So, the big blue box on your left is a `div` with display:flex. That is where we will start. You can watch the code sample below grow as we add more styles',
+                        "hasButton": true,
+                        "xUrl": "http://www.nothing.com",
+                        "xText": "anoher text"
+                    },
+                    {
+                        "text": 'So, the big blue box on your left is a `div` with display:flex. That is where we will start. You can watch the code sample below grow as we add more styles',
+                        "hasButton": true,
+                        "xUrl": "http://www.nothing.com",
+                        "xText": "anoher text"
+                    },
+                    {
+                        "text": 'So, the big blue box on your left is a `div` with display:flex. That is where we will start. You can watch the code sample below grow as we add more styles',
+                        "hasButton": true,
+                        "xUrl": "http://www.nothing.com",
+                        "xText": "anoher text"
+                    },
+                    {
+                        "text": 'So, the big blue box on your left is a `div` with display:flex. That is where we will start. You can watch the code sample below grow as we add more styles',
+                        "hasButton": true,
+                        "xUrl": "http://www.nothing.com",
+                        "xText": "anoher text"
+                    },
+                    {
+                        "text": 'So, the big blue box on your left is a `div` with display:flex. That is where we will start. You can watch the code sample below grow as we add more styles',
+                        "hasButton": true,
+                        "xUrl": "http://www.nothing.com",
+                        "xText": "anoher text"
+                    },
+                    {
+                        "text": 'So, the big blue box on your left is a `div` with display:flex. That is where we will start. You can watch the code sample below grow as we add more styles',
+                        "hasButton": true,
+                        "xUrl": "http://www.nothing.com",
+                        "xText": "anoher text"
+                    },
+                    {
+                        "text": 'So, the big blue box on your left is a `div` with display:flex. That is where we will start. You can watch the code sample below grow as we add more styles',
+                        "hasButton": true,
+                        "xUrl": "http://www.nothing.com",
+                        "xText": "anoher text"
+                    },
+                    {
+                        "text": 'So, the big blue box on your left is a `div` with display:flex. That is where we will start. You can watch the code sample below grow as we add more styles',
+                        "hasButton": true,
+                        "xUrl": "http://www.nothing.com",
+                        "xText": "anoher text"
+                    },
+
 
 
                 ];
