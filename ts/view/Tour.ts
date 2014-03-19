@@ -88,7 +88,7 @@ module flexbox {
                 $el.css('width', width.toString() + "px");
 
                 $el.animate({
-                    width: "300px"
+                    width: "270px"
                 }, {
                     duration: 3000,
                     easing: "swing"

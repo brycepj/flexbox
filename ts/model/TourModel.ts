@@ -3,7 +3,7 @@ module flexbox {
     export module model {
 
         export class TourModel {
-            messages: any;
+            messages:any;
 
             constructor() {
 
@@ -24,71 +24,107 @@ module flexbox {
                         "xText": null
                     },
                     {
-                        "text": 'According to <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Chris Coyier</a>:<br><br> "The main idea behind the flex layout is to give the container the ability to alter its items\' width/height (and order) to best fill the available space... A flex container expands items to fill available free space, or shrinks them to prevent overflow.',
+                        "text": 'According to Chris Coyier</a>:<br><br> "The main idea behind the flex layout is to give the container the ability to alter its items\' width/height (and order) to best fill the available space..."',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null
                     },
-                                        {
-                        "text": 'You can imagine how helpful that would be with building, device-agnostic responsive web sites and applications.',
+
+                    {
+                        "text": '"...a flex container expands items to fill available free space, or shrinks them to prevent overflow."',
+                        "hasButton": true,
+                        "xUrl": 'http://css-tricks.com/snippets/css/a-guide-to-flexbox/',
+                        "xText": 'See the full article'
+                    },
+                    {
+                        "text": 'You can imagine how helpful this would be with building device-agnostic, responsive web sites and applications.<br><br>Let\'s get started.',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null
                     },
-                    
+
                     {
-                        "text": 'To get our bearings, note that in order for flexbobx to work, we apply styling to the containing element as well as its children.',
-                        "hasButton": true,
-                        "xUrl": "http://www.nothing.com",
-                        "xText": "Next text"
-                    },
-                    {
-                        "text": 'So, the big blue box on your left is a `div` with display:flex. That is where we will start. You can watch the code sample below grow as we add more styles',
-                        "hasButton": true,
-                        "xUrl": "http://www.nothing.com",
-                        "xText": "anoher text"
-                    },
-                    {
-                        "text": 'You dont actually have to add any special flexbox styling to the flex items',
+                        "text": 'First, note that as we\'re working with flexbox, we\'ll be applying styling to the containing element as well as its children (we\'ll call them "items").',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null
                     },
                     {
-                        "text": 'So, the big blue box on your left is a `div` with display:flex. That is where we will start. You can watch the code sample below grow as we add more styles',
-                        "hasButton": true,
-                        "xUrl": "http://www.nothing.com",
-                        "xText": "anoher text"
+                        "text": 'So, if the big blue box on your left is a flexbox container (it is), its display property will be set to <code>flex</code>.',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null
                     },
                     {
-                        "text": 'You donot actually have to add any special flexbox styling to the flex items',
-                        "hasButton": true,
-                        "xUrl": "http://www.nothing.com",
-                        "xText": "anoher text"
+                        "text": 'In fact, that\'s all you have to do to create a simple flex layout. <br><br>Click the + button at the top of the page 3x to create three new flex items and your first flexbox layout!',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null
                     },
                     {
-                        "text": 'For example, lets go ahead and add your first flex item to the container, by clicking the big plus sign at the top right of the screen.',
+                        "text": 'Ready to see this baby in action?<br><br>Let\'s simulate smaller screens by resizing the container element.',
                         "hasButton": true,
-                        "xUrl": "http://www.nothing.com",
-                        "xText": "anoher text"
+                        "xUrl": "#",
+                        "xText": "resize it!"
                     },
                     {
-                        "text": 'Youll the item is fixed width, which means weve given a definitive width and height.',
+                        "text": 'Amazing! What used to require an entire suite of floats, media queries, and <a href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank">outright hacks</a>, is acheived by adding one property to a container div!',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null
+                    },
+
+
+                    {
+                        "text": 'Go ahead and click on the gear icon at the top-right of any of the flex items, to see the properties they have. Just simple, pixel-based height and width values.',
                         "hasButton": true,
-                        "xUrl": "http://www.nothing.com",
-                        "xText": "anoher text"
+                        "xUrl": null,
+                        "xText": null
+                    },
+
+                    {
+                        "text": 'While fixed-width flex items are sometimes all you need, they certainly don\'t show you all of the magic flexbox has to offer. We\'ll get to that soon enough, but first...',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null
                     },
                     {
-                        "text": 'This is the way to go in some cases if you need to give an item defined dimensions, but a few steps from now, youll see it doesnt allow you to experience all of the magic of flexbox.',
-                        "hasButton": true,
-                        "xUrl": "http://www.nothing.com",
-                        "xText": "anoher text"
+                        "text": '...while we\'ve got these three fixed-width items here, take a minute or two to explore the containers styles at the top of the page.',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null
                     },
                     {
-                        "text": 'Even so, it is something.',
-                        "hasButton": true,
-                        "xUrl": "http://www.nothing.com",
-                        "xText": "anoher text"
+                        "text": '"flex-direction" This establishes the main-axis, thus defining the direction flex items are placed in the flex container.',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null
+                    },
+                    {
+                        "text": '"flex-wrap" This defines whether the flex container is single-line or multi-line, and the direction of the cross-axis, which determines the direction new lines are stacked in.',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null
+                    },
+
+
+                    {
+                        "text": '"justify-content" sets the alignment horizontally (unless your items are in a column). It\'s how you tell the browser what to do with any free space between the flex items.',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null
+                    },
+                    {
+                        "text": '"align-items" This defines the default behaviour for how flex items are laid out along the cross axis on the current line. Think of it as the justify-content version for the cross-axis (perpendicular to the main-axis).',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null
+                    },
+                    {
+                        "text": '"align-content" This aligns a flex containers lines within when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis. Note: this property has no effect when the flexbox has only a single line.',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null
                     },
                     {
                         "text": 'So, the big blue box on your left is a `div` with display:flex. That is where we will start. You can watch the code sample below grow as we add more styles',
@@ -269,27 +305,32 @@ module flexbox {
                         "hasButton": true,
                         "xUrl": "http://www.nothing.com",
                         "xText": "anoher text"
-                    }, {
+                    },
+                    {
                         "text": 'Another benefit of flexbox that solves a common gripe is a nav menus. Click the button that says give me a perfect nav menu. Youll see that its perfectly flexible, center aligned, and responsive, all without any trickery. ',
                         "hasButton": true,
                         "xUrl": "http://www.nothing.com",
                         "xText": "anoher text"
-                    }, {
+                    },
+                    {
                         "text": 'Alrighty, believe it or not, you know just about all you need to know about flexbox to be dangerous. ',
                         "hasButton": true,
                         "xUrl": "http://www.nothing.com",
                         "xText": "anoher text"
-                    }, {
+                    },
+                    {
                         "text": 'And whats great about that is that even the flex items in this layout can act as flex boxes if you want them to. ',
                         "hasButton": true,
                         "xUrl": "http://www.nothing.com",
                         "xText": "anoher text"
-                    }, {
+                    },
+                    {
                         "text": 'A couple of important notes Its not well supported quite yet... list the browsers. So it might be a couple of years or more before this becomes standard practice for use in production websites. If youd like to learn more about each specific property, head to LINK or LINK',
                         "hasButton": true,
                         "xUrl": "http://www.nothing.com",
                         "xText": "anoher text"
-                    }, {
+                    },
+                    {
                         "text": 'I hope you found this helpful. Feedback is much appreciated: @_devbryce on twitter. ',
                         "hasButton": true,
                         "xUrl": "http://www.nothing.com",
@@ -302,9 +343,6 @@ module flexbox {
                         "xText": "anoher text"
                     },
                 ];
-
-
-
 
 
             }
