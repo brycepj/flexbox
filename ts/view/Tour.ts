@@ -67,6 +67,8 @@ module flexbox {
                 var arrayLength = this.tour.messages.length;
                 var current = this.index();
 
+
+
                 if (current === (arrayLength - 1)) {
                     return;
                 }
@@ -76,6 +78,9 @@ module flexbox {
 
                 }
                 console.log(this.tourProgress());
+
+
+
             }
 
             previous():void {

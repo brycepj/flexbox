@@ -2,9 +2,11 @@
 
 .code-box {
 	flex-grow:1;
-	height:40%;
-	flex-basis:280px;
+	flex-basis:160px;
 	padding:1em;
 	color:$white;	
 	background-color:$gray;
+    border-radius:$br;
+    overflow-y: scroll;
+    max-height:300px;
 }

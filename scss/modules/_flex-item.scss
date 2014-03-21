@@ -5,8 +5,8 @@
 	position:relative;
 	padding:1.5em;
 	min-width:68px!important;
-	border-radius:5px;
-	box-shadow:1px 1px 8px 1px darken($gray,20%);
+    border-radius:$br;
+    box-shadow:1px 1px 8px 1px darken($gray,20%);
 }
 
 .fi-index {

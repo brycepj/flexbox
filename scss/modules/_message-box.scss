@@ -3,11 +3,12 @@
 	position:relative;
 	margin:1em 0;
 	display:flex;
-	flex-grow:1; height:40%;
+	flex-grow:3;
 	flex-basis:280px;
 	align-items:center;
 	padding:1em 1.5em;
 	background-color:$gray;
+    border-radius:$br;
 	color:$white;
 	& .title {
 		@include font-size(.75,.5);
@@ -22,6 +23,7 @@
 
 
 }
+
 
 .tour-progress {
   position:absolute;

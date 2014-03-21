@@ -2,8 +2,9 @@
 	padding:1em;
 	background-color:$gray;
 	color:$white;
-	flex-grow:1; height:15%;
-	flex-basis:280px;
+	flex-grow:1;
+	flex-basis:180px;
+    border-radius:$br;
 }
 
 .site-logo {

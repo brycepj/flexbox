@@ -9,5 +9,9 @@
 	flex-grow:1;
 	margin:0 auto;
 	background-color:darken($gray,15%);
-	
+  border-top-right-radius: $br;
+  border-top-left-radius: $br;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+
 }

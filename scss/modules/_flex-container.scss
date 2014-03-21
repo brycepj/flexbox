@@ -2,4 +2,8 @@
 	flex-grow:1000;
 	width:100%; height:90%;
 	overflow:auto;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-right-radius: $br;
+  border-bottom-left-radius: $br;
 }

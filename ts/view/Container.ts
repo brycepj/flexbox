@@ -16,10 +16,12 @@ module flexbox {
             noItems:any;
             allAreFixed:any;
             allAreFlexy:any;
+            codeBox:any;
 
             constructor() {
 
                 this.items = ko.observableArray([]);
+                this.codeBox = new flexbox.model.CodeBox(this);
 
                 this.noItems = ko.computed(function () {
                     var array = this.items();

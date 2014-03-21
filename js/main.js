@@ -536,6 +536,7 @@ var flexbox;
         var FlexContainer = (function () {
             function FlexContainer() {
                 this.items = ko.observableArray([]);
+                this.codeBox = new flexbox.model.CodeBox(this);
 
                 this.noItems = ko.computed(function () {
                     var array = this.items();
@@ -950,6 +951,26 @@ var flexbox;
             return Tour;
         })();
         model.Tour = Tour;
+    })(flexbox.model || (flexbox.model = {}));
+    var model = flexbox.model;
+})(flexbox || (flexbox = {}));
+var flexbox;
+(function (flexbox) {
+    (function (_model) {
+        var CodeBox = (function () {
+            function CodeBox(model) {
+                this.cProps = {};
+                this.iPropsDefault = {
+                    flexDirection: ko.observable("row"),
+                    flexWrap: ko.observable("wrap"),
+                    justifyContent: ko.observable("center"),
+                    alignContent: ko.observable("flex-start"),
+                    alignItems: ko.observable("center")
+                };
+            }
+            return CodeBox;
+        })();
+        _model.CodeBox = CodeBox;
     })(flexbox.model || (flexbox.model = {}));
     var model = flexbox.model;
 })(flexbox || (flexbox = {}));
