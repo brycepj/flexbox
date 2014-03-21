@@ -10,6 +10,7 @@ module flexbox {
             currentXUrl:any;
             currentXText:any;
             hasButton:any;
+            tourProgress:any;
 
             constructor() {
                 this.tour = new TourModel();
@@ -42,10 +43,22 @@ module flexbox {
                     return this.tour.messages[index].hasButton;
 
                 }, this);
-                //temporary resizeContainer! Only for testing! Add a button that activates this 
+
+
+                this.tourProgress = ko.computed(function(){
+
+                    var currentIndexNum = this.index() + 1;
+                    var currentIndex = currentIndexNum.toString();
+                    var tourLength = this.tour.messages.length.toString();
+                    var progressString = currentIndex + " / " + tourLength;
+
+                    return progressString;
+
+                },this);
+
+                //temporary resizeContainer! Only for testing! Add a button that activates this
                 this.resizeContainer();
-                
-                
+
             }
 
 
@@ -62,6 +75,7 @@ module flexbox {
                     this.index(current); //increment index up one
 
                 }
+                console.log(this.tourProgress());
             }
 
             previous():void {

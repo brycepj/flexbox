@@ -251,6 +251,11 @@ p {
     line-height: 25.6px;
     line-height: 1.6rem; }
 
+.tour-progress {
+  position: absolute;
+  top: 5px;
+  right: 5px; }
+
 .xtra-link {
   position: absolute;
   bottom: 10px;
