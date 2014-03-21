@@ -537,7 +537,7 @@ var flexbox;
             function FlexContainer() {
                 this.items = ko.observableArray([]);
                 this.codeBox = new flexbox.model.CodeBox(this);
-
+                this.tourBox = new flexbox.model.Tour();
                 this.noItems = ko.computed(function () {
                     var array = this.items();
                     console.log(array);

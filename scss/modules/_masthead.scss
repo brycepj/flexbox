@@ -3,7 +3,9 @@
 	background-color:$gray;
 	color:$white;
 	flex-grow:1;
-	flex-basis:180px;
+	flex-shrink:3;
+	flex-basis:120px;
+	
     border-radius:$br;
 }
 

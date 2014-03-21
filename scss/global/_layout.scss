@@ -32,6 +32,7 @@ input {
 .sidebar {
 	flex-grow:1;
 	display:flex;
+	justify-content:space-around;
 	flex-flow:row wrap;
 	height:100%; width:20%;
 	flex-basis:300px;

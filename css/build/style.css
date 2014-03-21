@@ -79,6 +79,7 @@ input {
 .sidebar {
   flex-grow: 1;
   display: flex;
+  justify-content: space-around;
   flex-flow: row wrap;
   height: 100%;
   width: 20%;
@@ -159,13 +160,12 @@ p {
 /******MODULES*******/
 .code-box {
   flex-grow: 1;
-  flex-basis: 160px;
   padding: 1em;
   color: white;
   background-color: #aaaaaa;
   border-radius: 5px;
-  overflow-y: scroll;
-  max-height: 300px; }
+  max-height: 300px;
+  overflow-y: scroll; }
 
 .container-settings {
   position: relative; }
@@ -221,7 +221,8 @@ p {
   background-color: #aaaaaa;
   color: white;
   flex-grow: 1;
-  flex-basis: 180px;
+  flex-shrink: 3;
+  flex-basis: 120px;
   border-radius: 5px; }
 
 .site-logo {
@@ -240,8 +241,7 @@ p {
   position: relative;
   margin: 1em 0;
   display: flex;
-  flex-grow: 3;
-  flex-basis: 280px;
+  flex-grow: 5;
   align-items: center;
   padding: 1em 1.5em;
   background-color: #aaaaaa;
