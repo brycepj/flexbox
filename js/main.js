@@ -671,18 +671,19 @@ var flexbox;
                 return currentLength + 1;
             };
 
-            FlexContainer.prototype.makeAllFixed = function () {
-                var array = this.items();
-                for (var i = 0; i < array.length; i++) {
-                    array[i].makeFixedWidth();
-                }
-            };
+            FlexContainer.prototype.deleteAllItems = function () {
+                console.log('just went there');
 
-            FlexContainer.prototype.makeAllFlexy = function () {
                 var array = this.items();
+                var self = this;
+
                 for (var i = 0; i < array.length; i++) {
-                    array[i].makeFlexyWidth();
+                    $('.flex-item').eq(i).addClass('fadeOutDownBig');
                 }
+
+                setTimeout(function () {
+                    self.items([]);
+                }, 500);
             };
 
             FlexContainer.prototype.setSaveSession = function () {

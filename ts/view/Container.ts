@@ -181,25 +181,22 @@ module flexbox {
                 return currentLength + 1;
             }
 
-            makeAllFixed():void {
-
-
-                var array = this.items();
-                for (var i = 0; i < array.length; i++) {
-                    array[i].makeFixedWidth();
-
-                }
-
-            }
-
-            makeAllFlexy():void {
-
+            deleteAllItems():void {
+                console.log('just went there');
 
                 var array = this.items();
-                for (var i = 0; i < array.length; i++) {
-                    array[i].makeFlexyWidth();
+                var self = this;
 
+
+                for (var i = 0; i < array.length; i++)
+                {
+                    $('.flex-item').eq(i).addClass('fadeOutDownBig');
                 }
+
+                setTimeout(function(){
+                    self.items([]);
+                },500);
+
 
             }
 
