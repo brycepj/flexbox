@@ -17,12 +17,12 @@
         $(function () {
 
             $("#site-logo").fitText();
-			
-            
+
+
             var flexboxApp = new flexbox.view.FlexContainer();
             ko.applyBindings(flexboxApp, document.getElementById('flexbox-app'));
-            
-           
+
+
         });
 
 
@@ -33,10 +33,10 @@
 
 <div class="playground-ui">
 
-<div class="control-panel">
-        
+    <div class="control-panel">
+
         <div class="container-settings">
-            <label >flex-direction: <select
+            <label>flex-direction: <select
                     data-bind="options:flexDirectionOptions, value:cPropsCurrent.flexDirection"></select> </label>
             <label>flex-wrap: <select data-bind="options:flexWrapOptions, value:cPropsCurrent.flexWrap"></select>
             </label>
@@ -47,15 +47,13 @@
             <label>align-items: <select
                     data-bind="options:alignItemsOptions, value:cPropsCurrent.alignItems"></select> </label>
         </div>
-        
-        
-    
-    <div class="cs-add-remove">
+
+
+        <div class="cs-add-remove">
             <a class="cs-add" data-bind="click:newItem"><i class="fa fa-plus"></i></a>
             <a class="cs-remove" data-bind="click:oneLessItem"><i class="fa fa-minus"></i></a>
         </div>
     </div>
-
 
 
     <div class="flex-container" data-bind="template: { name: 'flex-list', foreach: items },
@@ -70,10 +68,8 @@
                 width:cPropsCurrent.width
                 }">
     </div>
-    
 
 
-    
 </div>
 <aside class="sidebar">
     <div class="masthead">
@@ -82,22 +78,23 @@
         <p class="site-desc">take an interactive tour through all the major features of the language.</p>
 
 
-
     </div>
 
-<div id="message-box" class="message-box">
-    <span class="title">console</span>
-    <span class="tour-progress" data-bind="text:tourBox.tourProgress"></span>
-    <p class="mb-content" data-bind="html:tourBox.currentMessage"></p>
-    <a class="xtra-link" href="#" target="_blank" data-bind="visible:tourBox.hasButton,text:tourBox.currentXText,attr: {href:tourBox.currentXUrl}"></a>
-    <nav class="tour-nav">
-        <a href="#" data-bind="click:tourBox.previous()"><i class="fa fa-chevron-left"></i></a>
-        <a href="#" data-bind="click:tourBox.next()"><i class="fa fa-chevron-right"></i></a>
-    </nav>
-</div>
+    <div id="message-box" class="message-box">
+        <span class="title">console</span>
+        <span class="tour-progress" data-bind="text:tourBox.tourProgress"></span>
+
+        <p class="mb-content" data-bind="html:tourBox.currentMessage"></p>
+        <a class="xtra-link" href="#" target="_blank"
+           data-bind="visible:tourBox.hasButton,text:tourBox.currentXText,attr: {href:tourBox.currentXUrl}"></a>
+        <nav class="tour-nav">
+            <a href="#" data-bind="click:tourBox.previous()"><i class="fa fa-chevron-left"></i></a>
+            <a href="#" data-bind="click:tourBox.next()"><i class="fa fa-chevron-right"></i></a>
+        </nav>
+    </div>
 
 
-<div class="code-box" >
+    <div class="code-box">
         <h2>code samples</h2>
         <code>
                     <pre>
@@ -129,14 +126,14 @@
 		</pre>
         </code>
 
-<div class="code-box-items" data-bind="template: { name: 'code-box-items', foreach: items, as:'item' }">
+        <div class="code-box-items" data-bind="template: { name: 'code-box-items', foreach: items, as:'item' }">
 
-</div>
+        </div>
 
 
-</div>
+    </div>
 
-    
+
 </aside>
 <script type="template/knockout" id="flex-list">
     <div class="flex-item" data-bind="style:{
@@ -150,13 +147,14 @@
               alignSelf:iPropsCurrent.alignSelf
               
             }">
-            
+
         <a href="#" class="fi-destroy-btn" data-bind="click:destroySelf"><i class="fa fa-times"></i></a>
-		<a href="#" class="fi-settings-btn" data-bind="click:toggleSettings"><i class="fa fa-cog"></i></a>
-		    
+        <a href="#" class="fi-settings-btn" data-bind="click:toggleSettings"><i class="fa fa-cog"></i></a>
+
         <span class="fi-index" data-bind="text:index"></span>
-        
-		<p class="fi-content" data-bind="visible:viewContent,text:content"></p>
+
+        <p class="fi-content" data-bind="visible:viewContent,text:content"></p>
+
         <div class="fi-options" data-bind="visible:viewSettings">
             <span><a href="#" data-bind="click:makeFixedWidth, style:{fontSize:highlightFixed}">fixed</a> or <a href="#"
                                                                                                                 data-bind="click:makeFlexyWidth, style:{fontSize:highlightFlexy}">flexy</a> width?</span>
@@ -182,22 +180,25 @@
 
 <script type="template/knockout" id="code-box-items">
 
-<code>
+    <code>
 	<pre>
 .flex-item-<span data-bind="text:item.index"></span> {
-<span data-bind="visible:item.iPropsCurrent.width">			width:<span data-bind="text:item.iPropsCurrent.width"></span>;</span>
-<span data-bind="visible:item.iPropsCurrent.height">		height:<span data-bind="text:item.iPropsCurrent.height"></span>;</span>
-<span data-bind="visible:item.iPropsCurrent.flexGrow">		flex-grow:<span data-bind="text:item.iPropsCurrent.flexGrow"></span>;</span>
-<span data-bind="visible:item.iPropsCurrent.flexShrink">	flex-shrink:<span data-bind="text:item.iPropsCurrent.flexShrink"></span>;</span>
-<span data-bind="visible:item.iPropsCurrent.flexBasis">		flex-basis:<span data-bind="text:item.iPropsCurrent.flexBasis"></span>;</span>
+<span data-bind="visible:item.iPropsCurrent.width">			width:<span
+        data-bind="text:item.iPropsCurrent.width"></span>;</span>
+<span data-bind="visible:item.iPropsCurrent.height">		height:<span
+        data-bind="text:item.iPropsCurrent.height"></span>;</span>
+<span data-bind="visible:item.iPropsCurrent.flexGrow">		flex-grow:<span
+        data-bind="text:item.iPropsCurrent.flexGrow"></span>;</span>
+<span data-bind="visible:item.iPropsCurrent.flexShrink">	flex-shrink:<span
+        data-bind="text:item.iPropsCurrent.flexShrink"></span>;</span>
+<span data-bind="visible:item.iPropsCurrent.flexBasis">		flex-basis:<span
+        data-bind="text:item.iPropsCurrent.flexBasis"></span>;</span>
 }
 	</pre>
-</code>
-
+    </code>
 
 
 </script>
-
 
 
 </body>
