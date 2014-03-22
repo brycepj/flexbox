@@ -53,7 +53,16 @@
             <a class="cs-add" data-bind="click:newItem"><i class="fa fa-plus"></i></a>
             <a class="cs-remove" data-bind="click:oneLessItem"><i class="fa fa-minus"></i></a>
         </div>
-    </div>
+        <div class="cs-width-toggle">
+
+        <label for="fixed">fixed<input data-bind="checked:flexType" type="radio" name="flexType" value="fixed"/></label>
+        <label for="flex">flexible<input data-bind="checked:flexType" type="radio" name="flexType" value="flexy"/></label>
+            <label for="">lorem? <input data-bind="value:loremCount" type="text"/></label>
+
+        </div>
+
+
+        </div>
 
 
     <div class="flex-container" data-bind="template: { name: 'flex-list', foreach: items },
@@ -88,44 +97,43 @@
         <a class="xtra-link" href="#" target="_blank"
            data-bind="visible:tourBox.hasButton,text:tourBox.currentXText,attr: {href:tourBox.currentXUrl}"></a>
         <nav class="tour-nav">
-            <a href="#" data-bind="click:tourBox.previous()"><i class="fa fa-chevron-left"></i></a>
-            <a href="#" data-bind="click:tourBox.next()"><i class="fa fa-chevron-right"></i></a>
+            <a href="#" data-bind="click:tourBox.previous"><i class="fa fa-chevron-left"></i></a>
+            <a href="#" data-bind="click:tourBox.next"><i class="fa fa-chevron-right"></i></a>
         </nav>
     </div>
 
 
     <div class="code-box">
-        <h2>code samples</h2>
-        <code>
+        <div class="cb-item">
+            <code>
                     <pre>
 
 .flex-container {
-	display:flex;
-	flex-direction:
-	flex-wrap: 
-	justify-content: 
-	align-content:
-	align-items: 
-
+    display:flex;
+    flex-direction: <span data-bind="text:cPropsCurrent.flexDirection"></span>;
+    flex-wrap: <span data-bind="text:cPropsCurrent.flexWrap"></span>;
+    justify-content: <span data-bind="text:cPropsCurrent.justifyContent"></span>;
+    align-content: <span data-bind="text:cPropsCurrent.alignContent"></span>;
+    align-items: <span data-bind="text:cPropsCurrent.alignItems"></span>;
 }
 		</pre>
 
-        </code>
-
-        <code>
+            </code>
+        </div>
+        <div class="cb-item">
+            <code>
 		<pre>
 
 .flex-items-default {
-	flex-grow: 
-	flex-shrink: 
-	flex-basis:
-	order: 
-	align-self:
-
+    width: <span data-bind="text:iPropsDefault.width">null</span>;
+    height: <span data-bind="text:iPropsDefault.height">null</span>;
+    flex-grow: <span data-bind="text:iPropsDefault.flexGrow">null</span>;
+    flex-shrink: <span data-bind="text:iPropsDefault.flexGrow">null</span>;
+    flex-basis: <span data-bind="text:iPropsDefault.flexGrow">null</span>;
 }
 		</pre>
-        </code>
-
+            </code>
+        </div>
         <div class="code-box-items" data-bind="template: { name: 'code-box-items', foreach: items, as:'item' }">
 
         </div>
@@ -179,24 +187,19 @@
 </script>
 
 <script type="template/knockout" id="code-box-items">
-
-    <code>
+    <div class="cb-item">
+        <code>
 	<pre>
 .flex-item-<span data-bind="text:item.index"></span> {
-<span data-bind="visible:item.iPropsCurrent.width">			width:<span
-        data-bind="text:item.iPropsCurrent.width"></span>;</span>
-<span data-bind="visible:item.iPropsCurrent.height">		height:<span
-        data-bind="text:item.iPropsCurrent.height"></span>;</span>
-<span data-bind="visible:item.iPropsCurrent.flexGrow">		flex-grow:<span
-        data-bind="text:item.iPropsCurrent.flexGrow"></span>;</span>
-<span data-bind="visible:item.iPropsCurrent.flexShrink">	flex-shrink:<span
-        data-bind="text:item.iPropsCurrent.flexShrink"></span>;</span>
-<span data-bind="visible:item.iPropsCurrent.flexBasis">		flex-basis:<span
-        data-bind="text:item.iPropsCurrent.flexBasis"></span>;</span>
+    width: <span data-bind="text:item.iPropsCurrent.width"></span>;
+    height: <span data-bind="text:item.iPropsCurrent.height"></span>;
+    flex-grow: <span data-bind="text:item.iPropsCurrent.flexGrow"></span>;
+    flex-shrink: <span data-bind="text:item.iPropsCurrent.flexShrink"></span>;
+    flex-basis: <span data-bind="text:item.iPropsCurrent.flexBasis"></span>;
 }
 	</pre>
-    </code>
-
+        </code>
+    </div>
 
 </script>
 

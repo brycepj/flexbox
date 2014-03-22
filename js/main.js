@@ -507,8 +507,8 @@ var flexbox;
             function devLorem(wordCount) {
                 this.wordCount = wordCount;
                 this.chosenWords = [];
-                this.text = "";
-                this.words = ['flexbox', 'device agnostic', 'breaks in ie6', 'paul irish', 'web standards', 'grok', 'crufty', 'angular', 'MV*', 'addy osmani', 'custom elements', 'paralax', 'performance budget', 'offline first', 'gulp', 'node', 'ie6 countdown', 'progressive enhancement', 'the Industry', 'svg', 'machine code', 'rails', 'django', 'google', 'indexDB', 'webgl', 'ux/ui', 'tim kadlec', 'retina', 'fixed header', 'minimalist', 'simplicity is not the absense of clutter', 'QR codes', 'art directed blog posts', 'masonry', 'infinite scrolling', 'lazy load', 'mobile navigation toggle', 'api', 'spa', 'ember', 'backbone', 'mvc', 'require', 'the open web', 'server farm', 'bash', 'free as in beer', 'nosql', 'how long does it take to learn javascript', 'gui', 'fortran', 'server-side', 'back-end', 'groovy on grails', 'haskell', 'erlang', 'continuous integration', 'capistrano', 'typescript', 'coffeescript', 'google dart', 'yehuda katz'];
+                this.text = "devLorem ipsum";
+                this.words = ['promise', 'shoptalkshow', 'yayQuery', 'javascript jabber', 'vagrant', 'chris coyier', 'flexbox', 'device agnostic', 'breaks in ie6', 'paul irish', 'web standards', 'grok', 'crufty', 'angular', 'MV*', 'addy osmani', 'custom elements', 'paralax', 'performance budget', 'offline first', 'gulp', 'node', 'ie6 countdown', 'progressive enhancement', 'the Industry', 'svg', 'machine code', 'rails', 'django', 'google', 'indexDB', 'webgl', 'ux/ui', 'tim kadlec', 'retina', 'fixed header', 'minimalist', 'QR codes', 'art direction', 'masonry', 'infinite scrolling', 'lazy load', 'mobile navigation toggle', 'api', 'spa', 'ember', 'backbone', 'mvc', 'require', 'the open web', 'server farm', 'bash', 'free as in beer', 'nosql', 'how long does it take to learn javascript', 'gui', 'fortran', 'server-side', 'back-end', 'groovy on grails', 'haskell', 'erlang', 'continuous integration', 'capistrano', 'typescript', 'coffeescript', 'google dart', 'yehuda katz'];
 
                 var min = 0;
                 var max = this.words.length;
@@ -538,6 +538,7 @@ var flexbox;
                 this.items = ko.observableArray([]);
                 this.codeBox = new flexbox.model.CodeBox(this);
                 this.tourBox = new flexbox.model.Tour();
+
                 this.noItems = ko.computed(function () {
                     var array = this.items();
                     console.log(array);
@@ -577,8 +578,8 @@ var flexbox;
                     flexDirection: ko.observable("row"),
                     flexWrap: ko.observable("wrap"),
                     justifyContent: ko.observable("center"),
-                    alignItems: ko.observable("center"),
-                    alignContent: ko.observable("center"),
+                    alignItems: ko.observable("stretch"),
+                    alignContent: ko.observable("stretch"),
                     width: ko.observable("100%")
                 };
 
@@ -623,13 +624,67 @@ var flexbox;
                 this.alignContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch'];
                 this.alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch', 'inherit'];
 
-                this.allAreFixed = ko.observable(true);
-                this.allAreFlexy = ko.observable(false);
+                this.flexType = ko.observable("fixed");
+                this.loremCount = ko.observable(1);
 
-                this.setSaveSession();
-                this.printLocalStorage();
-                this.retrieveSaved();
+                localStorage.clear();
             }
+            FlexContainer.prototype.newItem = function () {
+                var index = this.getItemIndex();
+                var flexType = this.flexType();
+                var newItem = new flexbox.model.FlexItem(this, index);
+                var loremCount = this.loremCount();
+
+                if (flexType === "fixed") {
+                    var newItem = new flexbox.model.FlexItem(this, index, {
+                        viewContent: true,
+                        viewSettings: false,
+                        isFixedWidth: true,
+                        width: "300px",
+                        height: "250px",
+                        lorem: loremCount
+                    });
+                    this.items.push(newItem);
+                } else if (flexType === "flexy") {
+                    var newItem = new flexbox.model.FlexItem(this, index, {
+                        viewContent: true,
+                        viewSettings: false,
+                        isFlexyWidth: true,
+                        flexGrow: "1",
+                        flexShrink: "0",
+                        flexBasis: "200px",
+                        height: "250px",
+                        lorem: loremCount
+                    });
+                    this.items.push(newItem);
+                }
+
+                console.log('new item created as: ' + flexType);
+            };
+
+            FlexContainer.prototype.oneLessItem = function () {
+                this.items.pop();
+            };
+
+            FlexContainer.prototype.getItemIndex = function () {
+                var currentLength = this.items().length;
+                return currentLength + 1;
+            };
+
+            FlexContainer.prototype.makeAllFixed = function () {
+                var array = this.items();
+                for (var i = 0; i < array.length; i++) {
+                    array[i].makeFixedWidth();
+                }
+            };
+
+            FlexContainer.prototype.makeAllFlexy = function () {
+                var array = this.items();
+                for (var i = 0; i < array.length; i++) {
+                    array[i].makeFlexyWidth();
+                }
+            };
+
             FlexContainer.prototype.setSaveSession = function () {
                 var self = this;
                 window.onunload = function () {
@@ -650,12 +705,13 @@ var flexbox;
                 var justifyContent = this.cPropsCurrent.justifyContent();
                 var alignItems = this.cPropsCurrent.alignItems();
                 var alignContent = this.cPropsCurrent.alignContent();
-
+                var flexType = this.flexType();
                 localStorage.setItem('cProps-flexDirection', flexDirection);
                 localStorage.setItem('cProps-flexWrap', flexWrap);
                 localStorage.setItem('cProps-justifyContent', justifyContent);
                 localStorage.setItem('cProps-alignItems', alignItems);
                 localStorage.setItem('cProps-alignContent', alignContent);
+                localStorage.setItem('flexType', flexType);
 
                 for (var i = 0; i < items; i++) {
                     var obj = array[i];
@@ -673,6 +729,7 @@ var flexbox;
                 this.cPropsCurrent.justifyContent(localStorage.getItem('cProps-justifyContent'));
                 this.cPropsCurrent.alignItems(localStorage.getItem('cProps-alignItems'));
                 this.cPropsCurrent.alignContent(localStorage.getItem('cProps-alignContent'));
+                this.flexType(localStorage.getItem('flexType'));
 
                 for (var i = 1; i < array; i++) {
                     var flexGrow = localStorage.getItem('item-' + i + "-flexGrow");
@@ -723,40 +780,6 @@ var flexbox;
                         viewSettings: viewSettings,
                         content: content
                     }));
-                }
-            };
-
-            FlexContainer.prototype.newItem = function () {
-                var index = this.getItemIndex();
-                var newItem = new flexbox.model.FlexItem(this, index);
-
-                this.items.push(newItem);
-            };
-
-            FlexContainer.prototype.oneLessItem = function () {
-                this.items.pop();
-            };
-
-            FlexContainer.prototype.getItemIndex = function () {
-                var currentLength = this.items().length;
-                return currentLength + 1;
-            };
-
-            FlexContainer.prototype.makeAllFixed = function () {
-                this.allAreFixed(true);
-                this.allAreFlexy(false);
-                var array = this.items();
-                for (var i = 0; i < array.length; i++) {
-                    array[i].makeFixedWidth();
-                }
-            };
-
-            FlexContainer.prototype.makeAllFlexy = function () {
-                this.allAreFixed(false);
-                this.allAreFlexy(true);
-                var array = this.items();
-                for (var i = 0; i < array.length; i++) {
-                    array[i].makeFlexyWidth();
                 }
             };
 
@@ -890,6 +913,8 @@ var flexbox;
 
                 this.tourProgress = ko.computed(function () {
                     var currentIndexNum = this.index() + 1;
+
+                    console.log(currentIndexNum);
                     var currentIndex = currentIndexNum.toString();
                     var tourLength = this.tour.messages.length.toString();
                     var progressString = currentIndex + " / " + tourLength;
@@ -897,7 +922,7 @@ var flexbox;
                     return progressString;
                 }, this);
 
-                this.resizeContainer();
+                console.log("the constructor is completed, and the index is equal to: " + this.index());
             }
             Tour.prototype.next = function () {
                 var arrayLength = this.tour.messages.length;
@@ -909,7 +934,6 @@ var flexbox;
                     current++;
                     this.index(current);
                 }
-                console.log(this.tourProgress());
             };
 
             Tour.prototype.previous = function () {

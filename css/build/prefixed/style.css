@@ -56,14 +56,14 @@ table {
 /*** PRESET BREAKPOINTS ***/
 /*** FLEXBOX ****/
 body, html {
-  width: 100%;
-  min-width: 630px;
-  height: 100%;
-  min-height: 700px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  width: 100%;
+  min-width: 630px;
+  height: 100%;
+  min-height: 600px; }
 
 label {
   display: block; }
@@ -88,29 +88,6 @@ input {
   -webkit-flex-basis: 330px;
   flex-basis: 330px;
   padding: 1em 0 1em 1em;
-  background-color: #111111; }
-
-.sidebar {
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex: 1;
-  flex-grow: 1;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-around;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
-  flex-flow: row wrap;
-  height: 100%;
-  width: 20%;
-  -webkit-flex-basis: 300px;
-  -ms-flex: 0 1 300px;
-  flex-basis: 300px;
-  padding: 1em;
   background-color: #111111; }
 
 .console {
@@ -185,17 +162,75 @@ p {
   color: black; }
 
 /******MODULES*******/
-.code-box {
+.sidebar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 100%;
+  width: 20%;
+  -webkit-flex-basis: 300px;
+  -ms-flex: 0 1 300px;
+  flex-basis: 300px;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  padding: 1em;
+  background-color: #111111; }
+
+.masthead {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
   -ms-flex: 1;
   flex-grow: 1;
-  padding: 1em;
+  -webkit-flex-shrink: 3;
+  flex-shrink: 3;
+  -webkit-flex-basis: 120px;
+  flex-basis: 120px; }
+
+.message-box {
+  -webkit-box-flex: 3;
+  -webkit-flex-grow: 3;
+  -ms-flex: 3;
+  flex-grow: 3;
+  -webkit-flex-basis: 350px;
+  flex-basis: 350px; }
+
+.code-box {
+  -webkit-box-flex: 2;
+  -webkit-flex-grow: 2;
+  -ms-flex: 2;
+  flex-grow: 2;
+  -webkit-flex-basis: 220px;
+  flex-basis: 220px;
+  overflow-y: scroll; }
+
+.code-box {
+  padding: 0 1em;
   color: white;
   background-color: #aaaaaa;
-  border-radius: 5px;
-  max-height: 300px;
-  overflow-y: scroll; }
+  border-radius: 5px; }
+  .code-box pre {
+    font-family: Courier;
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 13.6px;
+    line-height: 0.85rem; }
+
+.cb-item {
+  margin-top: .15em; }
 
 .container-settings {
   position: relative; }
@@ -220,6 +255,9 @@ p {
 
 .cs-remove {
   margin-left: 10px; }
+
+.cs-width-toggle {
+  text-align: left; }
 
 .control-panel {
   display: -webkit-box;
@@ -268,24 +306,30 @@ p {
   border-bottom-left-radius: 5px; }
 
 .masthead {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 1em;
   background-color: #aaaaaa;
   color: white;
-  -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
-  -ms-flex: 1;
-  flex-grow: 1;
-  -webkit-flex-shrink: 3;
-  flex-shrink: 3;
-  -webkit-flex-basis: 120px;
-  flex-basis: 120px;
   border-radius: 5px; }
 
 .site-logo {
+  margin: .35em 0;
   font-size: 40px;
   font-size: 2.5rem;
-  line-height: 48px;
-  line-height: 3rem; }
+  line-height: 32px;
+  line-height: 2rem; }
 
 .site-des {
   font-size: 20px;
@@ -320,11 +364,12 @@ p {
     position: absolute;
     top: 10px;
     left: 10px; }
-  .message-box p {
-    font-size: 21.6px;
-    font-size: 1.35rem;
-    line-height: 25.6px;
-    line-height: 1.6rem; }
+
+.mb-content {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
 
 .tour-progress {
   position: absolute;

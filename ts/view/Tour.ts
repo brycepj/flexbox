@@ -13,6 +13,8 @@ module flexbox {
             tourProgress:any;
 
             constructor() {
+
+
                 this.tour = new TourModel();
                 this.index = ko.observable(0);
 
@@ -48,6 +50,8 @@ module flexbox {
                 this.tourProgress = ko.computed(function(){
 
                     var currentIndexNum = this.index() + 1;
+
+                    console.log(currentIndexNum);
                     var currentIndex = currentIndexNum.toString();
                     var tourLength = this.tour.messages.length.toString();
                     var progressString = currentIndex + " / " + tourLength;
@@ -56,8 +60,7 @@ module flexbox {
 
                 },this);
 
-                //temporary resizeContainer! Only for testing! Add a button that activates this
-                this.resizeContainer();
+                console.log("the constructor is completed, and the index is equal to: " + this.index());
 
             }
 
@@ -77,7 +80,6 @@ module flexbox {
                     this.index(current); //increment index up one
 
                 }
-                console.log(this.tourProgress());
 
 
 

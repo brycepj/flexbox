@@ -56,11 +56,11 @@ table {
 /*** PRESET BREAKPOINTS ***/
 /*** FLEXBOX ****/
 body, html {
+  display: flex;
   width: 100%;
   min-width: 630px;
   height: 100%;
-  min-height: 700px;
-  display: flex; }
+  min-height: 600px; }
 
 label {
   display: block; }
@@ -74,17 +74,6 @@ input {
   flex-grow: 15;
   flex-basis: 330px;
   padding: 1em 0 1em 1em;
-  background-color: #111111; }
-
-.sidebar {
-  flex-grow: 1;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
-  height: 100%;
-  width: 20%;
-  flex-basis: 300px;
-  padding: 1em;
   background-color: #111111; }
 
 .console {
@@ -158,14 +147,46 @@ p {
   color: black; }
 
 /******MODULES*******/
-.code-box {
+.sidebar {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  height: 100%;
+  width: 20%;
+  flex-basis: 300px;
   flex-grow: 1;
   padding: 1em;
+  background-color: #111111; }
+
+.masthead {
+  flex-grow: 1;
+  flex-shrink: 3;
+  flex-basis: 120px; }
+
+.message-box {
+  flex-grow: 3;
+  flex-basis: 350px; }
+
+.code-box {
+  flex-grow: 2;
+  flex-basis: 220px;
+  overflow-y: scroll; }
+
+.code-box {
+  padding: 0 1em;
   color: white;
   background-color: #aaaaaa;
-  border-radius: 5px;
-  max-height: 300px;
-  overflow-y: scroll; }
+  border-radius: 5px; }
+  .code-box pre {
+    font-family: Courier;
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 13.6px;
+    line-height: 0.85rem; }
+
+.cb-item {
+  margin-top: .15em; }
 
 .container-settings {
   position: relative; }
@@ -189,6 +210,9 @@ p {
 
 .cs-remove {
   margin-left: 10px; }
+
+.cs-width-toggle {
+  text-align: left; }
 
 .control-panel {
   display: flex;
@@ -217,19 +241,20 @@ p {
   border-bottom-left-radius: 5px; }
 
 .masthead {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 1em;
   background-color: #aaaaaa;
   color: white;
-  flex-grow: 1;
-  flex-shrink: 3;
-  flex-basis: 120px;
   border-radius: 5px; }
 
 .site-logo {
+  margin: .35em 0;
   font-size: 40px;
   font-size: 2.5rem;
-  line-height: 48px;
-  line-height: 3rem; }
+  line-height: 32px;
+  line-height: 2rem; }
 
 .site-des {
   font-size: 20px;
@@ -255,11 +280,12 @@ p {
     position: absolute;
     top: 10px;
     left: 10px; }
-  .message-box p {
-    font-size: 21.6px;
-    font-size: 1.35rem;
-    line-height: 25.6px;
-    line-height: 1.6rem; }
+
+.mb-content {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 24px;
+  line-height: 1.5rem; }
 
 .tour-progress {
   position: absolute;

@@ -1,9 +1,13 @@
 body,html {
-	width:100%;
+
+    display:flex;
+
+
+    width:100%;
 	min-width:630px;
 	height:100%;
-	min-height:700px;
-	display:flex;
+	min-height:600px;
+
 }
 
 
@@ -29,17 +33,6 @@ input {
 	
 }
 
-.sidebar {
-	flex-grow:1;
-	display:flex;
-	justify-content:space-around;
-	flex-flow:row wrap;
-	height:100%; width:20%;
-	flex-basis:300px;
-	
-	padding:1em;
-	background-color:$black;
-}
 
 
 

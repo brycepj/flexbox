@@ -14,15 +14,17 @@ module flexbox {
             iPropsDefault:any;
             defaultBtnText:any;
             noItems:any;
-            allAreFixed:any;
-            allAreFlexy:any;
+            flexType:any;
+            loremCount:any;
             codeBox:any;
+            tourBox:any;
 
             constructor() {
-
                 this.items = ko.observableArray([]);
                 this.codeBox = new flexbox.model.CodeBox(this);
                 this.tourBox = new flexbox.model.Tour();
+
+
                 this.noItems = ko.computed(function () {
                     var array = this.items();
                     console.log(array);
@@ -67,8 +69,8 @@ module flexbox {
                     flexDirection: ko.observable("row"),
                     flexWrap: ko.observable("wrap"),
                     justifyContent: ko.observable("center"),
-                    alignItems: ko.observable("center"),
-                    alignContent: ko.observable("center"),
+                    alignItems: ko.observable("stretch"),
+                    alignContent: ko.observable("stretch"),
                     width: ko.observable("100%")
 
                 };
@@ -88,7 +90,7 @@ module flexbox {
 
                         }
                     }
-                    
+
 
                 }, this);
 
@@ -108,16 +110,13 @@ module flexbox {
                         }
                     }
 
-   
+
                     if (array.length > 5) {
                         alert('your going to have some screwed up stuff happen to you!');
                     }
 
-                    
+
                 }, this);
-                
-                
-                    
 
 
                 this.flexDirectionOptions = ['row', 'column'];
@@ -127,17 +126,82 @@ module flexbox {
                 this.alignContentOptions = ['flex-start', 'flex-end', 'center', 'space-between', 'space-around', 'stretch'];
                 this.alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch', 'inherit'];
 
-                this.allAreFixed = ko.observable(true);
-                this.allAreFlexy = ko.observable(false);
-        
+                this.flexType = ko.observable("fixed");
+                this.loremCount = ko.observable(1);
                 //localStorage setup
-                this.setSaveSession();
-                this.printLocalStorage();
-                this.retrieveSaved();
+                //this.setSaveSession();
+                //this.printLocalStorage();
+                //this.retrieveSaved();
+                localStorage.clear();
 
             } //end constructor
 
 
+            newItem():void {
+                var index = this.getItemIndex();
+                var flexType = this.flexType();
+                var newItem = new flexbox.model.FlexItem(this, index);
+                var loremCount = this.loremCount();
+
+                if (flexType === "fixed") {
+                    var newItem = new flexbox.model.FlexItem(this, index, {
+                        viewContent: true,
+                        viewSettings: false,
+                        isFixedWidth: true,
+                        width: "300px",
+                        height: "250px",
+                        lorem: loremCount
+                    });
+                    this.items.push(newItem);
+                } else if (flexType === "flexy") {
+                    var newItem = new flexbox.model.FlexItem(this, index, {
+                        viewContent: true,
+                        viewSettings: false,
+                        isFlexyWidth: true,
+                        flexGrow: "1",
+                        flexShrink: "0",
+                        flexBasis: "200px",
+                        height: "250px",
+                        lorem: loremCount
+                    });
+                    this.items.push(newItem);
+                }
+
+                console.log('new item created as: ' + flexType);
+            }
+
+            oneLessItem():void {
+
+                this.items.pop();
+
+            }
+
+            getItemIndex():number {
+                var currentLength = this.items().length;
+                return currentLength + 1;
+            }
+
+            makeAllFixed():void {
+
+
+                var array = this.items();
+                for (var i = 0; i < array.length; i++) {
+                    array[i].makeFixedWidth();
+
+                }
+
+            }
+
+            makeAllFlexy():void {
+
+
+                var array = this.items();
+                for (var i = 0; i < array.length; i++) {
+                    array[i].makeFlexyWidth();
+
+                }
+
+            }
 
             setSaveSession():void {
 
@@ -164,14 +228,14 @@ module flexbox {
                 var justifyContent = this.cPropsCurrent.justifyContent();
                 var alignItems = this.cPropsCurrent.alignItems();
                 var alignContent = this.cPropsCurrent.alignContent();
-                
-                localStorage.setItem('cProps-flexDirection',flexDirection);
-                localStorage.setItem('cProps-flexWrap',flexWrap);
-                localStorage.setItem('cProps-justifyContent',justifyContent);
-                localStorage.setItem('cProps-alignItems',alignItems);
-                localStorage.setItem('cProps-alignContent',alignContent);
-                
-                
+                var flexType = this.flexType();
+                localStorage.setItem('cProps-flexDirection', flexDirection);
+                localStorage.setItem('cProps-flexWrap', flexWrap);
+                localStorage.setItem('cProps-justifyContent', justifyContent);
+                localStorage.setItem('cProps-alignItems', alignItems);
+                localStorage.setItem('cProps-alignContent', alignContent);
+                localStorage.setItem('flexType', flexType);
+
                 for (var i = 0; i < items; i++) {
                     var obj = array[i];
                     obj.saveProps();
@@ -185,11 +249,13 @@ module flexbox {
                 var itemsLengthNumber = parseInt(itemsLengthString);
                 var array = itemsLengthNumber + 1;
 
+
                 this.cPropsCurrent.flexDirection(localStorage.getItem('cProps-flexDirection'));
                 this.cPropsCurrent.flexWrap(localStorage.getItem('cProps-flexWrap'));
                 this.cPropsCurrent.justifyContent(localStorage.getItem('cProps-justifyContent'));
                 this.cPropsCurrent.alignItems(localStorage.getItem('cProps-alignItems'));
                 this.cPropsCurrent.alignContent(localStorage.getItem('cProps-alignContent'));
+                this.flexType(localStorage.getItem('flexType'));
 
                 for (var i = 1; i < array; i++) {
                     var flexGrow = localStorage.getItem('item-' + i + "-flexGrow");
@@ -203,6 +269,7 @@ module flexbox {
                     var viewSettings = localStorage.getItem('item-' + i + "-viewSettings");
                     var content = localStorage.getItem('item-' + i + "-content");
                     var index = i.toString();
+
 
                     if (isFlexy === "true") {
                         isFlexy = true;
@@ -248,48 +315,6 @@ module flexbox {
 
             }
 
-            newItem():void {
-                var index = this.getItemIndex();
-                var newItem = new flexbox.model.FlexItem(this, index);
-
-                this.items.push(newItem);
-
-            }
-
-            oneLessItem():void {
-
-                this.items.pop();
-
-            }
-
-            getItemIndex():number {
-                var currentLength = this.items().length;
-                return currentLength + 1;
-            }
-
-            makeAllFixed():void {
-
-                this.allAreFixed(true);
-                this.allAreFlexy(false);
-                var array = this.items();
-                for (var i = 0; i < array.length; i++) {
-                    array[i].makeFixedWidth();
-
-                }
-
-            }
-
-            makeAllFlexy():void {
-
-                this.allAreFixed(false);
-                this.allAreFlexy(true);
-                var array = this.items();
-                for (var i = 0; i < array.length; i++) {
-                    array[i].makeFlexyWidth();
-
-                }
-
-            }
 
             resetItemProps():void {
                 var array = this.items();
@@ -328,7 +353,7 @@ module flexbox {
                         }),
 
                     new flexbox.model.FlexItem(this, index++,
-                        { viewContent: true,
+                        {   viewContent: true,
                             viewSettings: false,
                             isFlexyWidth: true,
                             flexGrow: "1",
@@ -348,7 +373,7 @@ module flexbox {
                             lorem: 100 }),
 
                     new flexbox.model.FlexItem(this, index++,
-                        { viewContent: true,
+                        {   viewContent: true,
                             viewSettings: false,
                             isFlexyWidth: true,
                             flexGrow: "1",

@@ -1,13 +1,20 @@
 
 
 .code-box {
-	flex-grow:1;
 
-	padding:1em;
+	padding:0 1em;
 	color:$white;	
 	background-color:$gray;
     border-radius:$br;
-    max-height:300px;
-    overflow-y: scroll;
+
+  & pre {
+    font-family:Courier;
+    @include font-size(.75,.85);
+  }
  
 }
+
+.cb-item {
+  margin-top:.15em;
+}
+
