@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95115037-0819-4211-a05b-a12621139f24" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/view/CodeBox.ts" afterPath="$PROJECT_DIR$/ts/view/CodeBox.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/view/Container.ts" afterPath="$PROJECT_DIR$/ts/view/Container.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/view/Tour.ts" afterPath="$PROJECT_DIR$/ts/view/Tour.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/model/TourModel.ts" afterPath="$PROJECT_DIR$/ts/model/TourModel.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/vendors/_modernizr.scss" afterPath="$PROJECT_DIR$/scss/vendors/_modernizr.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/build/style.css" afterPath="$PROJECT_DIR$/css/build/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/build/prefixed/style.css" afterPath="$PROJECT_DIR$/css/build/prefixed/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="95115037-0819-4211-a05b-a12621139f24" name="Default" comment="" />
     <ignored path="flexbox.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,22 +32,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider editor-type-id="MarkdownPreviewEditor">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="34" selection-start="116" selection-end="116" vertical-scroll-proportion="0.115384616" vertical-offset="0" max-vertical-offset="650">
+            <state line="5" column="34" selection-start="116" selection-end="116" vertical-scroll-proportion="-2.7777777" vertical-offset="0" max-vertical-offset="165">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="118" selection-start="2455" selection-end="2455" vertical-scroll-proportion="10.0" vertical-offset="1125" max-vertical-offset="3270">
+            <state line="59" column="118" selection-start="2455" selection-end="2455" vertical-scroll-proportion="-2.7265625" vertical-offset="2630" max-vertical-offset="3270">
               <folding>
                 <marker date="1395592287000" expanded="true" signature="6070:7745" placeholder="..." />
                 <marker date="1395592287000" expanded="true" signature="6494:7732" placeholder="..." />
@@ -406,7 +394,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3716312" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22380953" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22380953" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32907802" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
@@ -809,9 +797,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ts/view/Container.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="251" column="0" selection-start="8525" selection-end="8525" vertical-scroll-proportion="0.0" vertical-offset="3746" max-vertical-offset="7065">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="34" selection-start="116" selection-end="116" vertical-scroll-proportion="-2.7777777" vertical-offset="0" max-vertical-offset="165">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="118" selection-start="2455" selection-end="2455" vertical-scroll-proportion="10.0" vertical-offset="1125" max-vertical-offset="3270">
+        <state line="59" column="118" selection-start="2455" selection-end="2455" vertical-scroll-proportion="-2.7265625" vertical-offset="2630" max-vertical-offset="3270">
           <folding>
             <marker date="1395592287000" expanded="true" signature="6070:7745" placeholder="..." />
             <marker date="1395592287000" expanded="true" signature="6494:7732" placeholder="..." />
@@ -827,23 +832,6 @@
             <marker date="1395592287000" expanded="true" signature="7851:8893" placeholder="..." />
             <marker date="1395592287000" expanded="true" signature="7858:8877" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/view/Container.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="251" column="0" selection-start="8525" selection-end="8525" vertical-scroll-proportion="0.0" vertical-offset="3746" max-vertical-offset="7065">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="34" selection-start="116" selection-end="116" vertical-scroll-proportion="0.115384616" vertical-offset="0" max-vertical-offset="650">
-          <folding />
         </state>
       </provider>
     </entry>
