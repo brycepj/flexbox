@@ -7,22 +7,17 @@
     <title>Flexbox Dev</title>
     <meta name="description" content="meta description is this">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/build/style.css">
+    <link rel="stylesheet" href="scss/vendors/_animate.scss"/>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <script type="text/javascript" charset="utf-8" src="js/lib/jquery.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/lib/knockout.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/lib/fittext.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
-    <link rel="stylesheet" href="css/build/style.css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <script type="text/javascript" charset="utf-8">
         $(function () {
-
-            $("#site-logo").fitText();
-
-
             var flexboxApp = new flexbox.view.FlexContainer();
             ko.applyBindings(flexboxApp, document.getElementById('flexbox-app'));
-
-
         });
 
 
@@ -47,7 +42,9 @@
             <label>align-items: <select
                     data-bind="options:alignItemsOptions, value:cPropsCurrent.alignItems"></select> </label>
 
+
         <button data-bind="click:destroyAll">delete all items</button>
+
         </div>
 
 
@@ -57,9 +54,11 @@
         </div>
         <div class="cs-width-toggle">
 
+
         <label for="fixed">fixed<input data-bind="checked:flexType" type="radio" name="flexType" value="fixed" checked/></label>
         <label for="flexy">flexible<input data-bind="checked:flexType" type="radio" name="flexType" value="flexy"/></label>
             <label for="">lorem? <input data-bind="value:loremCount" type="text"/></label>
+
 
         </div>
 
@@ -148,6 +147,7 @@
 
 </aside>
 <script type="template/knockout" id="flex-list">
+
     <div class="flex-item animated" data-bind="style:{
               backgroundColor:iPropsCurrent.backgroundColor,
               height:iPropsCurrent.height,
