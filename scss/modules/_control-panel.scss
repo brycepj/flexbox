@@ -8,10 +8,14 @@
 	padding:1em;
 	flex-grow:1;
 	margin:0 auto;
-	background-color:darken($gray,15%);
+	background-color:$cs-bg;
   border-top-right-radius: $br;
   border-top-left-radius: $br;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+
+  & label {
+    color:$cs-text;
+  }
 
 }

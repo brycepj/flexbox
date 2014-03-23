@@ -29,7 +29,6 @@ module flexbox {
                 flexShrink: null,
                 flexBasis: null,
                 alignSelf: null,
-                backgroundColor: "#01ff70",
                 margin: "10px",
                 lorem: 1
 
@@ -85,10 +84,6 @@ module flexbox {
                     props.flexBasis = null
                 }
                 ;
-                if (typeof props.backgroundColor === "undefined") {
-                    props.backgroundColor = "#01ff70"
-                }
-                ;
                 if (typeof props.margin === "undefined") {
                     props.margin = "10px"
                 }
@@ -122,7 +117,6 @@ module flexbox {
                     alignSelf: ko.observable(props.alignSelf),
                     height: ko.observable(props.height),
                     width: ko.observable(props.width),
-                    backgroundColor: ko.observable(props.backgroundColor),
                     margin: ko.observable(props.margin)
                 };
 

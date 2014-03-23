@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="css/build/style.css">
     <link rel="stylesheet" href="scss/vendors/_animate.scss"/>
+    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700|PT+Sans' rel='stylesheet' type='text/css'>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <script type="text/javascript" charset="utf-8" src="js/lib/jquery.js"></script>
     <script type="text/javascript" charset="utf-8" src="js/lib/knockout.js"></script>
@@ -91,7 +92,7 @@
     </div>
 
     <div id="message-box" class="message-box">
-        <span class="title">console</span>
+        <span class="title">tour</span>
         <span class="tour-progress" data-bind="text:tourBox.tourProgress"></span>
 
         <p class="mb-content" data-bind="html:tourBox.currentMessage"></p>
@@ -149,7 +150,6 @@
 <script type="template/knockout" id="flex-list">
 
     <div class="flex-item animated" data-bind="style:{
-              backgroundColor:iPropsCurrent.backgroundColor,
               height:iPropsCurrent.height,
               width:iPropsCurrent.width,
               margin:iPropsCurrent.margin,

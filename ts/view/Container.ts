@@ -47,7 +47,6 @@ module flexbox {
                     alignSelf: ko.observable("center"),
                     width: ko.observable("300px"),
                     height: ko.observable("250px"),
-                    backgroundColor: "blue",
                     margin: "10px"
                 };
 
@@ -62,7 +61,6 @@ module flexbox {
                     justifyContent: "center",
                     alignItems: "center",
                     alignContent: "center",
-                    backgroundColor: "#0074d9"
                 };
 
                 this.cPropsCurrent = {
@@ -254,6 +252,7 @@ module flexbox {
                 }
 
             }
+
 
             retrieveSaved():void {
                 var itemsLengthString = localStorage['items'];

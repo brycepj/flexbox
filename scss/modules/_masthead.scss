@@ -1,19 +1,22 @@
 .masthead {
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-  
-	padding:.5em;
-	background-color:$gray;
-	color:$white;
-    border-radius:$br;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: .5em;
+  background-color: $aside-module-bg;
+  color: $white;
+  border-radius: $br;
 }
 
 .site-logo {
-    margin:.35em 0;
-	@include font-size(1.5,2);
-	
+  margin: .35em 0;
+  @include font-size(1.5, 2);
+  color: $masthead-title;
+
 }
+
 .site-des {
-	@include font-size(1.25,1.6);
+  @include font-size(1.25, 1.6);
+  color: $masthead-desc;
 }

@@ -1,7 +1,8 @@
 .container-settings {
 	position:relative;
-
+    background-color:$cs-bg;
 	& label {
+        color:$cs-text;
 		display:inline-block;
 	}
 	& select {

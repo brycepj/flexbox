@@ -16,7 +16,6 @@ var flexbox;
                     flexShrink: null,
                     flexBasis: null,
                     alignSelf: null,
-                    backgroundColor: "#01ff70",
                     margin: "10px",
                     lorem: 1
                 }; }
@@ -69,10 +68,6 @@ var flexbox;
                     props.flexBasis = null;
                 }
                 ;
-                if (typeof props.backgroundColor === "undefined") {
-                    props.backgroundColor = "#01ff70";
-                }
-                ;
                 if (typeof props.margin === "undefined") {
                     props.margin = "10px";
                 }
@@ -102,7 +97,6 @@ var flexbox;
                     alignSelf: ko.observable(props.alignSelf),
                     height: ko.observable(props.height),
                     width: ko.observable(props.width),
-                    backgroundColor: ko.observable(props.backgroundColor),
                     margin: ko.observable(props.margin)
                 };
 
@@ -602,7 +596,6 @@ var flexbox;
                     alignSelf: ko.observable("center"),
                     width: ko.observable("300px"),
                     height: ko.observable("250px"),
-                    backgroundColor: "blue",
                     margin: "10px"
                 };
 
@@ -614,8 +607,7 @@ var flexbox;
                     flexWrap: "wrap",
                     justifyContent: "center",
                     alignItems: "center",
-                    alignContent: "center",
-                    backgroundColor: "#0074d9"
+                    alignContent: "center"
                 };
 
                 this.cPropsCurrent = {

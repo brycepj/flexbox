@@ -9,8 +9,14 @@
   flex-basis:300px;
   flex-grow:1;
   padding:1em;
-  background-color:$black;
+  background-color:$app-bg;
 }
+
+.masthead,.message-box,.code-box {
+ @include module-shadow();
+}
+
+
 
 
 .masthead { //layout styles
