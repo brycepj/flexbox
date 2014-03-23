@@ -18,6 +18,7 @@ module flexbox {
             loremCount:any;
             codeBox:any;
             tourBox:any;
+            iPropsFlags:any;
 
             constructor() {
                 this.items = ko.observableArray([]);
@@ -111,12 +112,13 @@ module flexbox {
                     }
 
 
-                    if (array.length > 5) {
-                        alert('your going to have some screwed up stuff happen to you!');
-                    }
+
 
 
                 }, this);
+
+
+
 
 
                 this.flexDirectionOptions = ['row', 'column'];
@@ -128,14 +130,27 @@ module flexbox {
 
                 this.flexType = ko.observable("fixed");
                 this.loremCount = ko.observable(1);
+
                 //localStorage setup
-                //this.setSaveSession();
-                //this.printLocalStorage();
-                //this.retrieveSaved();
-                localStorage.clear();
+                this.setSaveSession();
+                this.printLocalStorage();
+                this.retrieveSaved();
+
 
             } //end constructor
 
+
+            tourNext():void {
+                this.tourBox.next();
+            }
+
+            tourPrevious():void {
+                this.tourBox.previous();
+            }
+
+            tourResize():void {
+                this.tourBox.resizeContainer();
+            }
 
             newItem():void {
                 var index = this.getItemIndex();
@@ -234,7 +249,6 @@ module flexbox {
                 localStorage.setItem('cProps-justifyContent', justifyContent);
                 localStorage.setItem('cProps-alignItems', alignItems);
                 localStorage.setItem('cProps-alignContent', alignContent);
-                localStorage.setItem('flexType', flexType);
 
                 for (var i = 0; i < items; i++) {
                     var obj = array[i];
@@ -255,7 +269,7 @@ module flexbox {
                 this.cPropsCurrent.justifyContent(localStorage.getItem('cProps-justifyContent'));
                 this.cPropsCurrent.alignItems(localStorage.getItem('cProps-alignItems'));
                 this.cPropsCurrent.alignContent(localStorage.getItem('cProps-alignContent'));
-                this.flexType(localStorage.getItem('flexType'));
+
 
                 for (var i = 1; i < array; i++) {
                     var flexGrow = localStorage.getItem('item-' + i + "-flexGrow");
@@ -326,6 +340,7 @@ module flexbox {
 
             destroyItem(index):void {
                 var self = this;
+
                 self.items.splice((index - 1), 1);
                 (function () {
                     var array = self.items();
@@ -336,6 +351,17 @@ module flexbox {
                     }
                 })();
             }
+
+            destroyAll():void {
+                $('.flex-item').addClass('bounceOut');
+                var self = this;
+
+                setTimeout(function(){
+                    self.items([]);
+                },800);
+            }
+
+
 
             makeHolyGrail():void {
 

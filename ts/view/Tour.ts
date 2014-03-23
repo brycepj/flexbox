@@ -11,7 +11,8 @@ module flexbox {
             currentXText:any;
             hasButton:any;
             tourProgress:any;
-
+            currentAction:any;
+            clickAction:any;
             constructor() {
 
 
@@ -46,6 +47,16 @@ module flexbox {
 
                 }, this);
 
+                this.currentAction = ko.computed(function(){
+
+
+                    var index = this.index();
+                    var action = this.tour.messages[index].action;
+
+                    if (action) {return true;}
+
+                },this);
+
 
                 this.tourProgress = ko.computed(function(){
 
@@ -60,7 +71,6 @@ module flexbox {
 
                 },this);
 
-                console.log("the constructor is completed, and the index is equal to: " + this.index());
 
             }
 
