@@ -1,7 +1,9 @@
 .container-settings {
 	position:relative;
     background-color:$cs-bg;
+  float:left;
 	& label {
+      margin-left:.2em;
         color:$cs-text;
 		display:inline-block;
 	}

@@ -88,7 +88,7 @@ input {
   -webkit-flex-basis: 330px;
   flex-basis: 330px;
   padding: 1em 0 1em 1em;
-  background-color: #f18d05; }
+  background-color: #ffa601; }
 
 .console {
   height: 300px;
@@ -189,10 +189,10 @@ p {
   -webkit-flex-grow: 1;
   flex-grow: 1;
   padding: 1em;
-  background-color: #f18d05; }
+  background-color: #ffa601; }
 
 .masthead, .message-box, .code-box {
-  box-shadow: 0px 0px 8px 1px #aaaaaa; }
+  box-shadow: 0px 0px 10px 3px #909090; }
 
 .masthead {
   -webkit-box-flex: 1;
@@ -238,8 +238,10 @@ p {
 
 .container-settings {
   position: relative;
-  background-color: #484848; }
+  background-color: #484848;
+  float: left; }
   .container-settings label {
+    margin-left: .2em;
     color: white;
     display: inline-block; }
   .container-settings select {
@@ -296,11 +298,13 @@ p {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0; }
+  border-bottom-left-radius: 0;
+  border-bottom: 1px solid white; }
   .control-panel label {
     color: white; }
 
 .flex-container {
+  padding: 1em;
   -webkit-box-flex: 1000;
   -webkit-flex-grow: 1000;
   -ms-flex: 1000;
@@ -312,8 +316,8 @@ p {
   border-top-left-radius: 0;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
-  background-color: white;
-  box-shadow: 0px 0px 8px 1px #aaaaaa; }
+  background-color: #484848;
+  box-shadow: 0px 0px 10px 3px #909090; }
 
 .masthead {
   display: -webkit-box;
@@ -330,7 +334,7 @@ p {
   -ms-flex-pack: center;
   justify-content: center;
   padding: .5em;
-  background-color: white;
+  background-color: #484848;
   color: white;
   border-radius: 5px; }
 
@@ -340,14 +344,14 @@ p {
   font-size: 1.5rem;
   line-height: 32px;
   line-height: 2rem;
-  color: #616161; }
+  color: white; }
 
-.site-des {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 25.6px;
-  line-height: 1.6rem;
-  color: #616161; }
+.site-desc {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 19.2px;
+  line-height: 1.2rem;
+  color: white; }
 
 .message-box {
   position: relative;
@@ -365,7 +369,7 @@ p {
   -ms-flex-align: center;
   align-items: center;
   padding: 1em 1.5em;
-  background-color: white;
+  background-color: #484848;
   border-radius: 5px;
   color: white; }
   .message-box .title {
@@ -376,20 +380,20 @@ p {
     position: absolute;
     top: 10px;
     left: 10px;
-    color: #091d42; }
+    color: white; }
 
 .mb-content {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 24px;
   line-height: 1.5rem;
-  color: #091d42; }
+  color: white; }
 
 .tour-progress {
   position: absolute;
   top: 5px;
   right: 5px;
-  color: #091d42; }
+  color: white; }
 
 .xtra-link {
   position: absolute;
@@ -397,7 +401,7 @@ p {
   right: 10px;
   display: inline-block;
   padding: .5em;
-  background-color: #fd971f;
+  background-color: #f18d05;
   color: white; }
 
 .tour-nav {
@@ -410,12 +414,12 @@ p {
     line-height: 32px;
     line-height: 2rem; }
     .tour-nav a i {
-      color: #f18d05;
+      color: #ffa601;
       font-weight: bold;
       -webkit-transition: .1s color ease;
       transition: .1s color ease; }
       .tour-nav a i:hover {
-        color: #a66103; }
+        color: #b37500; }
 
 .flex-item {
   display: -webkit-box;
@@ -434,8 +438,8 @@ p {
   padding: 1.5em;
   min-width: 68px !important;
   border-radius: 5px;
-  box-shadow: 0px 0px 8px 1px #aaaaaa;
-  background-color: #182945;
+  box-shadow: -2px 2px 1px 1px #777777;
+  background-color: #0a84c1;
   overflow: hidden; }
 
 .fi-index {
@@ -477,7 +481,8 @@ p {
   line-height: 20.8px;
   line-height: 1.3rem;
   color: white;
-  font-weight: bold; }
+  font-weight: bold;
+  text-align: center; }
 
 .fi-options {
   position: absolute;
@@ -492,7 +497,7 @@ p {
   .fi-options label {
     display: inline-block;
     width: 55px;
-    font-size: .75em;
+    font-size: .65em;
     margin-top: .5em;
     color: white; }
     .fi-options label input {

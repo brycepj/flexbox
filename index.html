@@ -44,24 +44,26 @@
                     data-bind="options:alignItemsOptions, value:cPropsCurrent.alignItems"></select> </label>
 
 
-        <button data-bind="click:destroyAll">delete all items</button>
+
 
         </div>
 
+
+        <button data-bind="click:destroyAll">delete all items</button>
+
+        <div class="new-item-settings">
+            <label for="fixed">fixed<input data-bind="checked:flexType" type="radio" name="flexType" value="fixed" checked/></label>
+            <label for="flexy">flexible<input data-bind="checked:flexType" type="radio" name="flexType" value="flexy"/></label>
+            <label for="">lorem? <input data-bind="value:loremCount" type="text"/></label>
+        </div>
 
         <div class="cs-add-remove">
             <a class="cs-add" data-bind="click:newItem"><i class="fa fa-plus"></i></a>
             <a class="cs-remove" data-bind="click:oneLessItem"><i class="fa fa-minus"></i></a>
         </div>
-        <div class="cs-width-toggle">
 
 
-        <label for="fixed">fixed<input data-bind="checked:flexType" type="radio" name="flexType" value="fixed" checked/></label>
-        <label for="flexy">flexible<input data-bind="checked:flexType" type="radio" name="flexType" value="flexy"/></label>
-            <label for="">lorem? <input data-bind="value:loremCount" type="text"/></label>
 
-
-        </div>
 
 
         </div>

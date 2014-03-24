@@ -2,23 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95115037-0819-4211-a05b-a12621139f24" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/view/Container.ts" afterPath="$PROJECT_DIR$/ts/view/Container.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/model/Item.ts" afterPath="$PROJECT_DIR$/ts/model/Item.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_aside.scss" afterPath="$PROJECT_DIR$/scss/modules/_aside.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/global/_base.scss" afterPath="$PROJECT_DIR$/scss/global/_base.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_code-box.scss" afterPath="$PROJECT_DIR$/scss/modules/_code-box.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_container-settings.scss" afterPath="$PROJECT_DIR$/scss/modules/_container-settings.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_control-panel.scss" afterPath="$PROJECT_DIR$/scss/modules/_control-panel.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_flex-container.scss" afterPath="$PROJECT_DIR$/scss/modules/_flex-container.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_flex-item.scss" afterPath="$PROJECT_DIR$/scss/modules/_flex-item.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/global/_layout.scss" afterPath="$PROJECT_DIR$/scss/global/_layout.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_masthead.scss" afterPath="$PROJECT_DIR$/scss/modules/_masthead.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_message-box.scss" afterPath="$PROJECT_DIR$/scss/modules/_message-box.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/global/_mixins.scss" afterPath="$PROJECT_DIR$/scss/global/_mixins.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/global/_swatch.scss" afterPath="$PROJECT_DIR$/scss/global/_swatch.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/build/style.css" afterPath="$PROJECT_DIR$/css/build/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/build/prefixed/style.css" afterPath="$PROJECT_DIR$/css/build/prefixed/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -47,38 +39,49 @@
       <file leaf-file-name="_control-panel.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/modules/_control-panel.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="370" selection-end="370" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="390">
+            <state line="15" column="17" selection-start="354" selection-end="354" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="405">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
+      <file leaf-file-name="_container-settings.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/modules/_container-settings.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="0" selection-start="149" selection-end="149" vertical-scroll-proportion="-3.8888888" vertical-offset="0" max-vertical-offset="210">
+            <state line="5" column="20" selection-start="116" selection-end="116" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="780">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_message-box.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/modules/_message-box.scss">
+      <file leaf-file-name="_flex-container.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/modules/_flex-container.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="32" selection-start="831" selection-end="831" vertical-scroll-proportion="-31.25" vertical-offset="0" max-vertical-offset="930">
+            <state line="1" column="14" selection-start="32" selection-end="32" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="255">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_flex-item.scss" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/scss/modules/_flex-item.scss">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="3" selection-start="949" selection-end="949" vertical-scroll-proportion="0.3338438" vertical-offset="742" max-vertical-offset="1455">
-              <folding />
+            <state line="51" column="70" selection-start="2113" selection-end="2113" vertical-scroll-proportion="-16.666666" vertical-offset="365" max-vertical-offset="3300">
+              <folding>
+                <marker date="1395619999000" expanded="true" signature="6069:7744" placeholder="..." />
+                <marker date="1395619999000" expanded="true" signature="6493:7731" placeholder="..." />
+                <marker date="1395619999000" expanded="true" signature="6512:6816" placeholder="..." />
+                <marker date="1395619999000" expanded="true" signature="6615:6802" placeholder="..." />
+                <marker date="1395619999000" expanded="true" signature="6893:7228" placeholder="..." />
+                <marker date="1395619999000" expanded="true" signature="6900:7089" placeholder="..." />
+                <marker date="1395619999000" expanded="true" signature="6926:7081" placeholder="..." />
+                <marker date="1395619999000" expanded="true" signature="7305:7716" placeholder="..." />
+                <marker date="1395619999000" expanded="true" signature="7329:7470" placeholder="..." />
+                <marker date="1395619999000" expanded="true" signature="7359:7462" placeholder="..." />
+                <marker date="1395619999000" expanded="true" signature="7835:8903" placeholder="..." />
+                <marker date="1395619999000" expanded="true" signature="7850:8892" placeholder="..." />
+                <marker date="1395619999000" expanded="true" signature="7857:8876" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,16 +89,16 @@
       <file leaf-file-name="_mixins.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/global/_mixins.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="2" selection-start="37" selection-end="37" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="3360">
+            <state line="3" column="23" selection-start="58" selection-end="58" vertical-scroll-proportion="-0.625" vertical-offset="30" max-vertical-offset="3360">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_swatch.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_swatch.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scss/global/_swatch.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="7" selection-start="348" selection-end="348" vertical-scroll-proportion="-14.375" vertical-offset="45" max-vertical-offset="1065">
+            <state line="11" column="16" selection-start="119" selection-end="119" vertical-scroll-proportion="0.25267994" vertical-offset="0" max-vertical-offset="1080">
               <folding />
             </state>
           </provider>
@@ -127,19 +130,19 @@
         <option value="$PROJECT_DIR$/ts/model/Item.ts" />
         <option value="$PROJECT_DIR$/scss/global/_layout.scss" />
         <option value="$PROJECT_DIR$/ts/view/Container.ts" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/scss/global/_base.scss" />
-        <option value="$PROJECT_DIR$/scss/modules/_container-settings.scss" />
         <option value="$PROJECT_DIR$/scss/modules/_code-box.scss" />
-        <option value="$PROJECT_DIR$/scss/modules/_masthead.scss" />
-        <option value="$PROJECT_DIR$/scss/global/_mixins.scss" />
         <option value="$PROJECT_DIR$/scss/modules/_aside.scss" />
-        <option value="$PROJECT_DIR$/scss/modules/_flex-container.scss" />
-        <option value="$PROJECT_DIR$/scss/modules/_control-panel.scss" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/scss/modules/_message-box.scss" />
-        <option value="$PROJECT_DIR$/scss/global/_swatch.scss" />
+        <option value="$PROJECT_DIR$/scss/modules/_flex-container.scss" />
+        <option value="$PROJECT_DIR$/scss/modules/_masthead.scss" />
         <option value="$PROJECT_DIR$/scss/modules/_flex-item.scss" />
+        <option value="$PROJECT_DIR$/scss/modules/_message-box.scss" />
+        <option value="$PROJECT_DIR$/scss/modules/_control-panel.scss" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/scss/global/_mixins.scss" />
+        <option value="$PROJECT_DIR$/scss/modules/_container-settings.scss" />
+        <option value="$PROJECT_DIR$/scss/global/_swatch.scss" />
       </list>
     </option>
   </component>
@@ -465,19 +468,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="110" column="0" selection-start="4804" selection-end="4804" vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="2910">
           <folding>
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6069:7744" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6493:7731" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6512:6816" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6615:6802" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6893:7228" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6900:7089" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6926:7081" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7305:7716" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7329:7470" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7359:7462" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7835:8903" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7850:8892" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7857:8876" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -505,19 +508,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="110" column="0" selection-start="4804" selection-end="4804" vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="2910">
           <folding>
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6069:7744" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6493:7731" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6512:6816" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6615:6802" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6893:7228" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6900:7089" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6926:7081" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7305:7716" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7329:7470" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7359:7462" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7835:8903" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7850:8892" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7857:8876" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -552,19 +555,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="10" selection-start="1468" selection-end="1468" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="2820">
           <folding>
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6069:7744" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6493:7731" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6512:6816" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6615:6802" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6893:7228" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6900:7089" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6926:7081" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7305:7716" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7329:7470" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7359:7462" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7835:8903" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7850:8892" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7857:8876" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -618,19 +621,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="55" column="0" selection-start="2950" selection-end="2950" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2430">
           <folding>
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6069:7744" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6493:7731" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6512:6816" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6615:6802" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6893:7228" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6900:7089" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6926:7081" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7305:7716" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7329:7470" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7359:7462" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7835:8903" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7850:8892" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7857:8876" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -750,58 +753,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/modules/_flex-container.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="27" selection-start="265" selection-end="265" vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="240">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="110" selection-start="528" selection-end="528" vertical-scroll-proportion="87.416664" vertical-offset="2278" max-vertical-offset="3270">
-          <folding>
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395604631000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/modules/_masthead.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="8" selection-start="325" selection-end="325" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="405">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/modules/_container-settings.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="4" selection-start="72" selection-end="132" vertical-scroll-proportion="0.071428575" vertical-offset="0" max-vertical-offset="750">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/modules/_aside.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="26" selection-start="272" selection-end="272" vertical-scroll-proportion="0.34456354" vertical-offset="0" max-vertical-offset="675">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/modules/_control-panel.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="370" selection-end="370" vertical-scroll-proportion="-11.25" vertical-offset="0" max-vertical-offset="390">
           <folding />
         </state>
       </provider>
@@ -816,30 +770,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/modules/_message-box.scss">
+    <entry file="file://$PROJECT_DIR$/scss/modules/_masthead.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="32" selection-start="831" selection-end="831" vertical-scroll-proportion="-31.25" vertical-offset="0" max-vertical-offset="930">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/global/_mixins.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="2" selection-start="37" selection-end="37" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="3360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/global/_swatch.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="7" selection-start="348" selection-end="348" vertical-scroll-proportion="-14.375" vertical-offset="45" max-vertical-offset="1065">
+        <state line="19" column="27" selection-start="308" selection-end="308" vertical-scroll-proportion="-11.875" vertical-offset="0" max-vertical-offset="405">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/modules/_flex-item.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="3" selection-start="949" selection-end="949" vertical-scroll-proportion="0.3338438" vertical-offset="742" max-vertical-offset="1455">
+        <state line="50" column="21" selection-start="814" selection-end="814" vertical-scroll-proportion="-16.25" vertical-offset="360" max-vertical-offset="1470">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/modules/_message-box.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="13" selection-start="334" selection-end="334" vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/modules/_flex-container.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="14" selection-start="32" selection-end="32" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/modules/_control-panel.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="17" selection-start="354" selection-end="354" vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="405">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="51" column="70" selection-start="2113" selection-end="2113" vertical-scroll-proportion="-16.666666" vertical-offset="365" max-vertical-offset="3300">
+          <folding>
+            <marker date="1395619999000" expanded="true" signature="6069:7744" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6493:7731" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6512:6816" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6615:6802" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6893:7228" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6900:7089" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="6926:7081" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7305:7716" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7329:7470" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7359:7462" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7835:8903" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7850:8892" placeholder="..." />
+            <marker date="1395619999000" expanded="true" signature="7857:8876" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/global/_mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="23" selection-start="58" selection-end="58" vertical-scroll-proportion="-0.625" vertical-offset="30" max-vertical-offset="3360">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/modules/_container-settings.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="20" selection-start="116" selection-end="116" vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/global/_swatch.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="16" selection-start="119" selection-end="119" vertical-scroll-proportion="0.25267994" vertical-offset="0" max-vertical-offset="1080">
           <folding />
         </state>
       </provider>
