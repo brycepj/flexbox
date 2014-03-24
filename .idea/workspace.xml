@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95115037-0819-4211-a05b-a12621139f24" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_container-settings.scss" afterPath="$PROJECT_DIR$/scss/modules/_container-settings.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_control-panel.scss" afterPath="$PROJECT_DIR$/scss/modules/_control-panel.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_flex-container.scss" afterPath="$PROJECT_DIR$/scss/modules/_flex-container.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_flex-item.scss" afterPath="$PROJECT_DIR$/scss/modules/_flex-item.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_masthead.scss" afterPath="$PROJECT_DIR$/scss/modules/_masthead.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_message-box.scss" afterPath="$PROJECT_DIR$/scss/modules/_message-box.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/global/_mixins.scss" afterPath="$PROJECT_DIR$/scss/global/_mixins.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/global/_swatch.scss" afterPath="$PROJECT_DIR$/scss/global/_swatch.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/build/style.css" afterPath="$PROJECT_DIR$/css/build/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/build/prefixed/style.css" afterPath="$PROJECT_DIR$/css/build/prefixed/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/model/Lorem.ts" afterPath="$PROJECT_DIR$/ts/model/Lorem.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="flexbox.iws" />
@@ -95,10 +85,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_swatch.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_swatch.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/global/_swatch.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="16" selection-start="119" selection-end="119" vertical-scroll-proportion="0.25267994" vertical-offset="0" max-vertical-offset="1080">
+            <state line="11" column="16" selection-start="119" selection-end="119" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="1080">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Lorem.ts" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ts/model/Lorem.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="34" selection-start="385" selection-end="385" vertical-scroll-proportion="0.2996988" vertical-offset="41" max-vertical-offset="705">
               <folding />
             </state>
           </provider>
@@ -122,7 +121,6 @@
         <option value="$PROJECT_DIR$/js/lib/fittext.js" />
         <option value="$PROJECT_DIR$/ts/view/pkg.ts" />
         <option value="$PROJECT_DIR$/scss/modules/_modules.scss" />
-        <option value="$PROJECT_DIR$/ts/model/Lorem.ts" />
         <option value="$PROJECT_DIR$/ts/view/Tour.ts" />
         <option value="$PROJECT_DIR$/ts/model/TourModel.ts" />
         <option value="$PROJECT_DIR$/scss/vendors/_modernizr.scss" />
@@ -143,6 +141,7 @@
         <option value="$PROJECT_DIR$/scss/global/_mixins.scss" />
         <option value="$PROJECT_DIR$/scss/modules/_container-settings.scss" />
         <option value="$PROJECT_DIR$/scss/global/_swatch.scss" />
+        <option value="$PROJECT_DIR$/ts/model/Lorem.ts" />
       </list>
     </option>
   </component>
@@ -690,13 +689,6 @@
         <state line="0" column="16" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ts/model/Lorem.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="1286" selection-end="1286" vertical-scroll-proportion="0.3448795" vertical-offset="41" max-vertical-offset="705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ts/view/CodeBox.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state line="22" column="0" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
@@ -842,7 +834,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/global/_swatch.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="16" selection-start="119" selection-end="119" vertical-scroll-proportion="0.25267994" vertical-offset="0" max-vertical-offset="1080">
+        <state line="11" column="16" selection-start="119" selection-end="119" vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="1080">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/model/Lorem.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="34" selection-start="385" selection-end="385" vertical-scroll-proportion="0.2996988" vertical-offset="41" max-vertical-offset="705">
           <folding />
         </state>
       </provider>
