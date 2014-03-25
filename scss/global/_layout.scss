@@ -27,7 +27,7 @@ input {
 	flex-grow:15;
 	flex-basis:330px;
 	
-	
+	@include module-shadow();
 	padding:1em 0 1em 1em;
 	background-color:$app-bg;
 	
@@ -47,12 +47,7 @@ input {
 }
 
 
-.container-settings,.item-defaults,.template-options {
-	
-	display:inline-block;
-	margin:0 3em 0 0;
-	
-}
+
 
 
 

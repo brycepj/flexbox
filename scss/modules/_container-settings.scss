@@ -1,23 +1,70 @@
 .container-settings {
-	position:relative;
-    background-color:$cs-bg;
-  float:left;
+	display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    flex-basis:550px;
+
 	& label {
-      margin-left:.2em;
+        flex-grow:1;
+        padding:.25em;
         color:$cs-text;
-		display:inline-block;
+        text-align: center;
 	}
 	& select {
+      margin:.85em .35em;
 		display:block;
 }
 
 }
 
+.cp-items {
+    flex-basis:130px;
+}
+.cp-new-settings {
+display:block;
+
+  & label {
+    display:block;
+  }
 
 
+}
 
+.cp-fixed-flex {
+  margin:.25em 0;
+  & label {
+    widows: 30px;
+    display:inline-block;
+    & input {
+      width:auto;
+    }
+  }
+
+
+}
+
+.cs-actions {
+  flex-basis:130px;
+  text-align: left;
+
+  & a {
+    display:inline-block;
+    padding:.5em;
+    margin:.25em 0;
+    background-color:$tour-action-btn;
+    color:$white;
+    transition:.1s color ease;
+
+    @include module-shadow();
+    &:hover {
+      background-color:darken($tour-action-btn,5%);
+    }
+  }
+}
 .cs-add-remove {
-
+  width:115px;
+  float:left;
 }
 .cs-add, .cs-remove {
 	

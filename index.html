@@ -31,6 +31,24 @@
 
     <div class="control-panel">
 
+        <div class="cp-items">
+            <div class="cs-add-remove">
+                <a class="cs-add" data-bind="click:newItem"><i class="fa fa-plus"></i></a>
+                <a class="cs-remove" data-bind="click:oneLessItem"><i class="fa fa-minus"></i></a>
+            </div>
+        <div class="cp-new-settings">
+            <div class="cp-fixed-flex">
+                <label for="fixed">fixed<input data-bind="checked:flexType" type="radio" name="flexType" value="fixed" checked/></label>
+                <label for="flexy">flexible<input data-bind="checked:flexType" type="radio" name="flexType" value="flexy"/></label>
+            </div>
+            <label for="">lorem? <input data-bind="value:loremCount" type="text"/></label>
+        </div>
+
+        </div>
+
+
+
+
         <div class="container-settings">
             <label>flex-direction: <select
                     data-bind="options:flexDirectionOptions, value:cPropsCurrent.flexDirection"></select> </label>
@@ -45,22 +63,14 @@
 
 
 
-
         </div>
 
 
-        <button data-bind="click:destroyAll">delete all items</button>
-
-        <div class="new-item-settings">
-            <label for="fixed">fixed<input data-bind="checked:flexType" type="radio" name="flexType" value="fixed" checked/></label>
-            <label for="flexy">flexible<input data-bind="checked:flexType" type="radio" name="flexType" value="flexy"/></label>
-            <label for="">lorem? <input data-bind="value:loremCount" type="text"/></label>
+        <div class="cs-actions">
+            <a href="#" data-bind="click:destroyAll">delete all</a>
+            <a href="#" data-bind="click:tourResize">resize flexbox</a>
         </div>
 
-        <div class="cs-add-remove">
-            <a class="cs-add" data-bind="click:newItem"><i class="fa fa-plus"></i></a>
-            <a class="cs-remove" data-bind="click:oneLessItem"><i class="fa fa-minus"></i></a>
-        </div>
 
 
 
