@@ -1,7 +1,7 @@
 $br:5px;
 
 @mixin module-shadow() {
-  box-shadow:0px 0px 10px 3px darken($gray,10%);
+  box-shadow:0px 0px 5px 0px lighten($black,20%);
 }
 
 /*** CUSTOM BREAKPOINTS ***/

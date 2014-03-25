@@ -518,14 +518,21 @@ var flexbox;
                         "action": null
                     },
                     {
-                        "text": 'Wondering about vendor prefixes? There are all sorts of quirky issues actually, since flexbox is officially on its third syntax version. But none of that matters if you use <a href="#">autoprefixer</a>. Seriously, if you\'re still worrying about vendor prefixes(at all), you should not be.',
+                        "text": 'Wondering about vendor prefixes? There are all sorts of quirky issues actually, since flexbox is officially on its third syntax version. But none of that matters if you use <a href="#">autoprefixer</a>. Seriously, stop worrying about vendor prefixes (at all).',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
                         "action": null
                     },
                     {
-                        "text": 'Okay, I hope that helped you wrap your head around flexbox. I am very open to feedback of all kinds. El Fin!',
+                        "text": 'Well, I hope that helped you wrap your head around flexbox. It\'s a very useful property and almost certainly the future of CSS layouts. If it seems tricky at first, don\'t worry. Just keep tinkering and you\'ll get the hang of it.',
+                        "hasButton": true,
+                        "xUrl": null,
+                        "xText": null,
+                        "action": null
+                    },
+                    {
+                        "text": 'Have feedback? I want it. <br> <br> Email me <a href="mailto:brycepj@gmail.com">here</a> or get at me <a href="https://twitter.com/_devbryce"> on twitter</a>.',
                         "hasButton": true,
                         "xUrl": null,
                         "xText": null,
@@ -547,7 +554,7 @@ var flexbox;
                 this.wordCount = wordCount;
                 this.chosenWords = [];
                 this.text = "devLorem ipsum";
-                this.words = ['ftp', 'deployment strategy', 'python vs ruby', 'jeff atwood', 'stack overflow', 'just build websites', 'wordpress', 'java', 'pycharm', 'web storm', 'foreach', 'addClass', 'slice', 'alex sexton', '80/20 rule', 'float drop', 'bacon ipsum', 'dogmatic', 'promise', 'atomic design', 'shoptalkshow', 'yayQuery', 'javascript jabber', 'vagrant', 'chris coyier', 'flexbox', 'device agnostic', 'breaks in ie6', 'paul irish', 'web standards', 'grok', 'crufty', 'angular', 'MV*', 'addy osmani', 'custom elements', 'paralax', 'performance budget', 'offline first', 'gulp', 'node', 'ie6 countdown', 'progressive enhancement', 'the Industry', 'svg', 'machine code', 'rails', 'django', 'google', 'indexDB', 'webgl', 'ux/ui', 'tim kadlec', 'retina', 'fixed header', 'minimalist', 'QR codes', 'art direction', 'masonry', 'infinite scrolling', 'lazy load', 'mobile navigation toggle', 'api', 'spa', 'ember', 'backbone', 'mvc', 'require', 'the open web', 'server farm', 'bash', 'free as in beer', 'nosql', 'how long does it take to learn javascript', 'gui', 'fortran', 'server-side', 'back-end', 'groovy on grails', 'haskell', 'erlang', 'continuous integration', 'capistrano', 'typescript', 'coffeescript', 'google dart', 'yehuda katz'];
+                this.words = ['apple\'s website', 'unobtrusive javascript', 'static', 'brad frost', 'organic', 'mockup', 'whitespace', 'above the fold', 'skeuomorphism', 'always be shipping', 'steve jobs', 'flat design', 'grid', 'net neutrality', 'SOPA', 'code', 'ICANN', 'content strategy', 'content', 'f.lux', 'blue beanie', 'rollover', 'table', 'css zen garden', 'preload', 'gif', 'sprite', 'laura kalbag', 'dev bootcamp', 'cs degree', 'hacker school', 'the picture element', 'W3 Fools', 'W3C', 'ftp', 'deployment strategy', 'python vs ruby', 'jeff atwood', 'stack overflow', 'just build websites', 'wordpress', 'java', 'pycharm', 'web storm', 'foreach', 'addClass', 'slice', 'alex sexton', '80/20 rule', 'float drop', 'bacon ipsum', 'dogmatic', 'promise', 'atomic design', 'shoptalkshow', 'yayQuery', 'javascript jabber', 'vagrant', 'chris coyier', 'flexbox', 'device agnostic', 'breaks in ie6', 'paul irish', 'web standards', 'grok', 'crufty', 'angular', 'MV*', 'addy osmani', 'custom elements', 'paralax', 'performance budget', 'offline first', 'gulp', 'node', 'ie6 countdown', 'progressive enhancement', 'the Industry', 'svg', 'machine code', 'rails', 'django', 'google', 'indexDB', 'webgl', 'ux/ui', 'tim kadlec', 'retina', 'fixed header', 'minimalist', 'QR codes', 'art direction', 'masonry', 'infinite scrolling', 'lazy load', 'mobile navigation toggle', 'api', 'spa', 'ember', 'backbone', 'mvc', 'require', 'the open web', 'server farm', 'bash', 'free as in beer', 'nosql', 'how long does it take to learn javascript', 'gui', 'fortran', 'server-side', 'back-end', 'groovy on grails', 'haskell', 'erlang', 'continuous integration', 'capistrano', 'typescript', 'coffeescript', 'google dart', 'yehuda katz'];
 
                 var min = 0;
                 var max = this.words.length;
@@ -658,7 +665,7 @@ var flexbox;
                 this.alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch', 'inherit'];
 
                 this.flexType = ko.observable("fixed");
-                this.loremCount = ko.observable(1);
+                this.loremCount = ko.observable(5);
 
                 this.setSaveSession();
                 this.printLocalStorage();

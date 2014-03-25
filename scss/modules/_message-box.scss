@@ -25,8 +25,8 @@
 
 .tour-progress {
   position:absolute;
-  top:5px;
-  right:5px;
+  top:10px;
+  right:10px;
   color:$aside-module-text;
 }
 .xtra-link {
@@ -35,6 +35,10 @@
 	padding:.5em;
 	background-color:$tour-action-btn;
 	color:$white;
+  transition:.1s color ease;
+  &:hover {
+    background-color:darken($tour-action-btn,5%);
+  }
 	
 }
 

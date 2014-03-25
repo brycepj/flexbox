@@ -127,7 +127,7 @@ module flexbox {
                 this.alignSelfOptions = ['auto', 'flex-start', 'flex-end', 'center', 'baseline', 'stretch', 'inherit'];
 
                 this.flexType = ko.observable("fixed");
-                this.loremCount = ko.observable(1);
+                this.loremCount = ko.observable(5);
 
                 //localStorage setup
                 this.setSaveSession();

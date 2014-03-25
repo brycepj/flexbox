@@ -2,15 +2,15 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  padding: .5em;
+  padding: .15em 1.5em;
   background-color: $masthead-bg;
   color: $white;
   border-radius: $br;
+  flex-basis:120px;
 }
 
 .site-logo {
-  margin: .35em 0;
+  margin: .15em 0 .35em 0;
   @include font-size(1.5, 2);
   color: $masthead-title;
 

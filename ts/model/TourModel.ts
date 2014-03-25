@@ -322,14 +322,21 @@ module flexbox {
                         "action":null
                     },
                     {
-                        "text": 'Wondering about vendor prefixes? There are all sorts of quirky issues actually, since flexbox is officially on its third syntax version. But none of that matters if you use <a href="#">autoprefixer</a>. Seriously, if you\'re still worrying about vendor prefixes(at all), you should not be.',
+                        "text": 'Wondering about vendor prefixes? There are all sorts of quirky issues actually, since flexbox is officially on its third syntax version. But none of that matters if you use <a href="#">autoprefixer</a>. Seriously, stop worrying about vendor prefixes (at all).',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
                         "action":null
                     },
                     {
-                        "text": 'Okay, I hope that helped you wrap your head around flexbox. I am very open to feedback of all kinds. El Fin!',
+                        "text": 'Well, I hope that helped you wrap your head around flexbox. It\'s a very useful property and almost certainly the future of CSS layouts. If it seems tricky at first, don\'t worry. Just keep tinkering and you\'ll get the hang of it.',
+                        "hasButton": true,
+                        "xUrl": null,
+                        "xText": null,
+                        "action":null
+                    },
+                    {
+                        "text":'Have feedback? I want it. <br> <br> Email me <a href="mailto:brycepj@gmail.com">here</a> or get at me <a href="https://twitter.com/_devbryce"> on twitter</a>.',
                         "hasButton": true,
                         "xUrl": null,
                         "xText": null,

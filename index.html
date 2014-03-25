@@ -9,20 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="css/build/style.css">
-    <link rel="stylesheet" href="scss/vendors/_animate.scss"/>
-    <link href='http://fonts.googleapis.com/css?family=Arvo:400,700|PT+Sans' rel='stylesheet' type='text/css'>
+    <link href="//fonts.googleapis.com/css?family=Arvo:400,700|PT+Sans" rel='stylesheet' type='text/css'>
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <script type="text/javascript" charset="utf-8" src="js/lib/jquery.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/lib/knockout.js"></script>
-    <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
-    <script type="text/javascript" charset="utf-8">
-        $(function () {
-            var flexboxApp = new flexbox.view.FlexContainer();
-            ko.applyBindings(flexboxApp, document.getElementById('flexbox-app'));
-        });
 
-
-    </script>
 </head>
 <body id="flexbox-app">
 
@@ -30,6 +19,24 @@
 <div class="playground-ui">
 
     <div class="control-panel">
+
+        <div class="cp-items">
+            <div class="cs-add-remove">
+                <a class="cs-add" data-bind="click:newItem"><i class="fa fa-plus"></i></a>
+                <a class="cs-remove" data-bind="click:oneLessItem"><i class="fa fa-minus"></i></a>
+            </div>
+        <div class="cp-new-settings">
+            <div class="cp-fixed-flex">
+                <label for="fixed">fixed<input data-bind="checked:flexType" type="radio" name="flexType" value="fixed" checked/></label>
+                <label for="flexy">flexible<input data-bind="checked:flexType" type="radio" name="flexType" value="flexy"/></label>
+            </div>
+            <label for="">lorem? <input data-bind="value:loremCount" type="text"/></label>
+        </div>
+
+        </div>
+
+
+
 
         <div class="container-settings">
             <label>flex-direction: <select
@@ -45,22 +52,14 @@
 
 
 
-
         </div>
 
 
-        <button data-bind="click:destroyAll">delete all items</button>
-
-        <div class="new-item-settings">
-            <label for="fixed">fixed<input data-bind="checked:flexType" type="radio" name="flexType" value="fixed" checked/></label>
-            <label for="flexy">flexible<input data-bind="checked:flexType" type="radio" name="flexType" value="flexy"/></label>
-            <label for="">lorem? <input data-bind="value:loremCount" type="text"/></label>
+        <div class="cs-actions">
+            <a href="#" data-bind="click:destroyAll">delete all</a>
+            <a href="#" data-bind="click:tourResize">resize flexbox</a>
         </div>
 
-        <div class="cs-add-remove">
-            <a class="cs-add" data-bind="click:newItem"><i class="fa fa-plus"></i></a>
-            <a class="cs-remove" data-bind="click:oneLessItem"><i class="fa fa-minus"></i></a>
-        </div>
 
 
 
@@ -209,6 +208,17 @@
 
 </script>
 
+<script type="text/javascript" charset="utf-8" src="js/lib/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/lib/knockout.js"></script>
+<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
+<script type="text/javascript" charset="utf-8">
+    $(function () {
+        var flexboxApp = new flexbox.view.FlexContainer();
+        ko.applyBindings(flexboxApp, document.getElementById('flexbox-app'));
+    });
 
+
+</script>
+<link rel="stylesheet" href="scss/vendors/_animate.scss"/>
 </body>
 </html>
