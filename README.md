@@ -1,8 +1,8 @@
 ### next steps
 
 
-- styling of container controls
-- add a resize on command button
-- overall styling (colors really);
 - integrate templates into tour
-
+- add resources to the tour
+- mention properties you left out at the end
+- play with it till you break it
+- edit the tour and break up long paragraphs as often as possible

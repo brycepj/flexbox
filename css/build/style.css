@@ -134,7 +134,8 @@ img {
   display: block; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #3299bb; }
 
 body {
   font-size: 100%;
