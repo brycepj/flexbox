@@ -138,6 +138,10 @@ module flexbox {
             } //end constructor
 
 
+            actionChecker():void {
+            
+            }
+            
             tourNext():void {
                 this.tourBox.next();
             }
