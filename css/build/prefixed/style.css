@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Vendor Dependencies */
 /* GLOBAL STYLES */
 /* base rules are the defaults. They are almost exclusively single element selectors, but could include attribute selectors, pseudo-class-selectors, child selectors or sibling selectors. Be sure to specify a body background. */
@@ -103,9 +104,6 @@ body {
   flex-basis: 330px;
   width: 330px; }
 
-.control-panel, .message-box, .code-box {
-  overflow: scroll; }
-
 .control-panel {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -203,7 +201,8 @@ body {
 
 .code-box {
   position: relative;
-  margin-top: 1em; }
+  margin-top: 1em;
+  overflow-y: scroll; }
 
 .cb-title {
   position: absolute;
@@ -215,8 +214,9 @@ body {
   margin-top: 1em; }
 
 .cp-container {
-  width: 60%;
-  float: left; }
+  width: 55%;
+  float: left;
+  text-align: right; }
   .cp-container label {
     display: block;
     font-size: 12px;
@@ -235,8 +235,18 @@ body {
   line-height: 16px;
   line-height: 1rem; }
 
+.cp-actions {
+  margin-top: .5em; }
+  .cp-actions a {
+    display: inline-block;
+    width: 90%;
+    padding: .5em;
+    margin: .35em auto;
+    background-color: #ffa601;
+    color: white; }
+
 .cp-items {
-  width: 40%;
+  width: 45%;
   float: left;
   padding: 0 0 .5em 0; }
 
@@ -248,6 +258,9 @@ body {
   font-size: 0.75rem;
   line-height: 16px;
   line-height: 1rem; }
+
+.cp-i-add-remove {
+  margin: .5em 0; }
 
 .cp-i-add i {
   font-size: 36px;
@@ -269,7 +282,11 @@ body {
 .cp-i-settings label {
   display: inline-block; }
 .cp-i-settings input[type="text"] {
-  width: 25px; }
+  width: 25px;
+  border: none;
+  background-color: #6e6e6e;
+  color: white;
+  text-align: center; }
 
 .cp-i-s-width {
   display: inline-block; }
@@ -279,7 +296,7 @@ body {
 .flex-container {
   position: relative;
   padding: .5em;
-  overflow: scroll;
+  overflow: scroll-y;
   border-radius: 5px;
   background-color: #484848; }
 

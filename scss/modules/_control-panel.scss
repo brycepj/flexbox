@@ -5,8 +5,9 @@
 }
 
 .cp-container {
-  width:60%;
+  width:55%;
   float:left;
+  text-align: right;
   & label {
     display:block;
     @include font-size(.75,1);
@@ -24,15 +25,22 @@
 }
 
 .cp-actions {
-
+	
+	margin-top:.5em;
+	
+	& a {
+		display:inline-block;
+		width:90%;
+		padding:.5em;
+		margin:.35em auto;
+		background-color:$app-bg;
+		color:$white;
+	}
 }
 
-.cp-a-title {
-
-}
 
 .cp-items {
-  width:40%;
+  width:45%;
   float:left;
   padding:0 0 .5em 0;
 }
@@ -45,7 +53,7 @@ $dist:.75em;
   @include font-size(.75,1);
 }
 .cp-i-add-remove {
-
+	margin:.5em 0;
 }
 
 .cp-i-add {
@@ -71,7 +79,13 @@ $dist:.75em;
   }
   & input[type="text"] {
     width:25px;
+    border:none;
+    background-color:lighten($gray,15%);
+    color:$white;
+    text-align: center;
+    
   }
+  
 }
 
 .cp-i-s-width {
