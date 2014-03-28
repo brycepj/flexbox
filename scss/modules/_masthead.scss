@@ -1,22 +1,23 @@
 .masthead {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: .15em 1.5em;
-  background-color: $masthead-bg;
-  color: $white;
-  border-radius: $br;
-  flex-basis:120px;
-}
-
-.site-logo {
-  margin: .15em 0 .35em 0;
-  @include font-size(1.5, 2);
-  color: $masthead-title;
+  position:fixed;
+  top:0;left:0;
+  z-index:100;
+  background-color:$blue;
 
 }
 
-.site-desc {
-  @include font-size(1, 1.2);
-  color: $masthead-desc;
+.mh-logo {
+
+}
+
+.mh-desc {
+
+}
+
+#mh-slide-btn {
+
+  & i {
+
+  }
+
 }

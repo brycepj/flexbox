@@ -15,59 +15,14 @@
 </head>
 <body id="flexbox-app">
 
+<div class="masthead">
+    <h1 id="mh-logo" class="site-logo">flexbox in 5 minutes</h1>
 
-<div class="playground-ui">
+    <p class="mh-desc">take an interactive tour through all the major features of the language.</p>
 
-    <div class="control-panel">
+    <span id="mh-slide-btn"><i class="fa fa-arrow-down"></i></span>
 
-        <div class="cp-items">
-            <div class="cs-add-remove">
-                <a class="cs-add" data-bind="click:newItem"><i class="fa fa-plus"></i></a>
-                <a class="cs-remove" data-bind="click:oneLessItem"><i class="fa fa-minus"></i></a>
-            </div>
-        <div class="cp-new-settings">
-            <div class="cp-fixed-flex">
-                <label for="fixed">fixed<input data-bind="checked:flexType" type="radio" name="flexType" value="fixed" checked/></label>
-                <label for="flexy">flexible<input data-bind="checked:flexType" type="radio" name="flexType" value="flexy"/></label>
-            </div>
-            <label for="">lorem? <input data-bind="value:loremCount" type="text"/></label>
-        </div>
-
-        </div>
-
-
-
-
-        <div class="container-settings">
-            <label>flex-direction: <select
-                    data-bind="options:flexDirectionOptions, value:cPropsCurrent.flexDirection"></select> </label>
-            <label>flex-wrap: <select data-bind="options:flexWrapOptions, value:cPropsCurrent.flexWrap"></select>
-            </label>
-            <label>justify-content: <select
-                    data-bind="options:justifyContentOptions, value:cPropsCurrent.justifyContent"></select> </label>
-            <label>align-content: <select
-                    data-bind="options:alignContentOptions, value:cPropsCurrent.alignContent"></select> </label>
-            <label>align-items: <select
-                    data-bind="options:alignItemsOptions, value:cPropsCurrent.alignItems"></select> </label>
-
-
-
-        </div>
-
-
-        <div class="cs-actions">
-            <a href="#" data-bind="click:destroyAll">delete all</a>
-            <a href="#" data-bind="click:tourResize">resize flexbox</a>
-        </div>
-
-
-
-
-
-
-        </div>
-
-
+</div>
     <div class="flex-container" data-bind="template: { name: 'flex-list', foreach: items },
                 style:{
                 display:cPropsCurrent.display,
@@ -79,36 +34,83 @@
                 backgroundColor:cPropsDefault.backgroundColor,
                 width:cPropsCurrent.width
                 }">
+
+
     </div>
 
 
-</div>
 <aside class="sidebar">
-    <div class="masthead">
-        <h1 id="site-logo" class="site-logo">flexbox in 5 minutes</h1>
-
-        <p class="site-desc">take an interactive tour through all the major features of the language.</p>
-
-
-    </div>
 
     <div id="message-box" class="message-box">
-        <span class="title">tour</span>
-        <span class="tour-progress" data-bind="text:tourBox.tourProgress"></span>
+        <span class="mb-title">tour</span>
+        <span class="mb-progress" data-bind="text:tourBox.tourProgress"></span>
 
         <p class="mb-content" data-bind="html:tourBox.currentMessage"></p>
-        <a class="xtra-link" href="#" target="_blank"
+        <a class="mb-action" href="#" target="_blank"
            data-bind="visible:tourBox.hasButton,text:tourBox.currentXText,attr: {href:tourBox.currentXUrl}"></a>
-        <a class="xtra-link" href="#" target="_blank"
+        <a class="mb-action" href="#" target="_blank"
            data-bind="visible:tourBox.currentAction,click:tourResize">resize it!</a>
-        <nav class="tour-nav">
+        <nav class="mb-nav">
             <a href="#" data-bind="click:tourPrevious"><i class="fa fa-chevron-left"></i></a>
             <a href="#" data-bind="click:tourNext"><i class="fa fa-chevron-right"></i></a>
         </nav>
     </div>
 
+    <div class="control-panel">
+
+        <div class="cp-items">
+            <span class="cp-c-title">new item</span>
+            <div class="cp-i-add-remove">
+                <a class="cp-i-add" data-bind="click:newItem"><i class="fa fa-plus"></i></a>
+                <a class="cp-i-remove" data-bind="click:oneLessItem"><i class="fa fa-minus"></i></a>
+            </div>
+            <div class="cp-i-settings">
+                <div class="cp-i-s-width">
+                    <label for="fixed">fixed<input data-bind="checked:flexType" type="radio" name="flexType" value="fixed" checked/></label>
+                    <label for="flexy">flexible<input data-bind="checked:flexType" type="radio" name="flexType" value="flexy"/></label>
+                </div>
+                <label for="">lorem? <input data-bind="value:loremCount" type="text"/></label>
+            </div>
+
+            <div class="cp-actions">
+                <span class="cp-a-title">actions</span>
+                <a href="#" data-bind="click:destroyAll">delete all</a>
+                <a href="#" data-bind="click:tourResize">resize flexbox</a>
+            </div>
+        </div>
+
+
+
+
+        <div class="cp-container">
+            <span class="cp-c-title">container properties</span>
+            <label>flex-direction: <select
+                    data-bind="options:flexDirectionOptions, value:cPropsCurrent.flexDirection"></select> </label>
+            <label>flex-wrap: <select data-bind="options:flexWrapOptions, value:cPropsCurrent.flexWrap"></select>
+            </label>
+            <label>justify-content: <select
+                    data-bind="options:justifyContentOptions, value:cPropsCurrent.justifyContent"></select> </label>
+            <label>align-items: <select
+                    data-bind="options:alignItemsOptions, value:cPropsCurrent.alignItems"></select> </label>
+            <label>align-content: <select
+                    data-bind="options:alignContentOptions, value:cPropsCurrent.alignContent"></select> </label>
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
 
     <div class="code-box">
+        <span class="cb-title">code-box</span>
         <div class="cb-item">
             <code>
                     <pre>
@@ -169,7 +171,7 @@
         <p class="fi-content" data-bind="visible:viewContent,text:content"></p>
 
         <div class="fi-options" data-bind="visible:viewSettings">
-            <span><a href="#" data-bind="click:makeFixedWidth, style:{fontSize:highlightFixed}">fixed</a> or <a href="#"
+            <span class="fi-o-title"><a href="#" data-bind="click:makeFixedWidth, style:{fontSize:highlightFixed}">fixed</a> or <a href="#"
                                                                                                                 data-bind="click:makeFlexyWidth, style:{fontSize:highlightFlexy}">flexy</a> width?</span>
 
             <div class="fi-options-fixed" data-bind="visible:isFixedWidth"><label>width: <input type="text"
@@ -213,8 +215,7 @@
 <script type="text/javascript" charset="utf-8" src="js/main.js"></script>
 <script type="text/javascript" charset="utf-8">
     $(function () {
-        var flexboxApp = new flexbox.view.FlexContainer();
-        ko.applyBindings(flexboxApp, document.getElementById('flexbox-app'));
+
     });
 
 

@@ -1,24 +1,84 @@
 .control-panel {
-	display:flex;
-	flex-direction:row;
-	flex-wrap:wrap;
-	justify-content:space-between;
-    align-items:center;
-	align-content:center;
-	width:100%;
-    min-width:850px;
-	padding:1em;
-	flex-grow:1;
-	margin:0 auto;
-	background-color:$cs-bg;
-  border-top-right-radius: $br;
-  border-top-left-radius: $br;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-bottom:1px solid $white;
-
-  & label {
-    color:$cs-text;
-  }
+  position:relative;
+  margin-top:1em;
 
 }
+
+.cp-container {
+  width:60%;
+  float:left;
+  & label {
+    display:block;
+    @include font-size(.75,1);
+    & select {
+      display:block;
+    }
+  }
+}
+
+.cp-c-title {
+  display:none;
+  position:absolute;
+  top:0;
+  @include font-size(.75,1);
+}
+
+.cp-actions {
+
+}
+
+.cp-a-title {
+
+}
+
+.cp-items {
+  width:40%;
+  float:left;
+  padding:0 0 .5em 0;
+}
+$dist:.75em;
+
+.cp-i-title {
+  display:none;
+  position:absolute;
+  top:0;
+  @include font-size(.75,1);
+}
+.cp-i-add-remove {
+
+}
+
+.cp-i-add {
+
+  & i {
+    @include font-size(2.25,2.5);
+    color:$white;
+  }
+}
+
+.cp-i-remove {
+  display:inline-block;
+  margin-left:.25em;
+  & i {
+    @include font-size(2.25,2.5);
+    color:$white;
+  }
+}
+
+.cp-i-settings {
+  & label {
+    display:inline-block;
+  }
+  & input[type="text"] {
+    width:25px;
+  }
+}
+
+.cp-i-s-width {
+  display:inline-block;
+  & label {
+    display:block;
+  }
+}
+
+

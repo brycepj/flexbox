@@ -1,61 +1,37 @@
-
 .message-box {
-	position:relative;
-	margin:1em 0;
-	display:flex;
-	flex-grow:5;
-	align-items:center;
-	padding:1em 1.5em;
-	background-color:$aside-module-bg;
-    border-radius:$br;
-	color:$white;
-	& .title {
-		@include font-size(.75,.5);
-		position:absolute;
-		top:10px;
-		left:10px;
-      color:$aside-module-text;
-	}
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items:center;
+
+  position:relative;
+
+
+
+}
+
+$dist:.75em;
+.mb-title {
+  position:absolute;
+  top:$dist; left:$dist;
+}
+
+.mb-progress {
+  position:absolute;
+  top:$dist; right:$dist;
 }
 
 .mb-content {
-  @include font-size(1.25,1.5);
-  color:$tour-text;
+
 }
 
-.tour-progress {
+.mb-action {
   position:absolute;
-  top:10px;
-  right:10px;
-  color:$aside-module-text;
-}
-.xtra-link {
-	position:absolute;bottom:10px;right:10px;
-	display:inline-block;
-	padding:.5em;
-	background-color:$tour-action-btn;
-	color:$white;
-  transition:.1s color ease;
-  &:hover {
-    background-color:darken($tour-action-btn,5%);
-  }
-	
+  bottom:$dist; right:$dist;
 }
 
-.tour-nav {
-
-  position:absolute; bottom:10px; left: 20px;
-
-  & a {
-    @include font-size(2,2);
-
-    & i {
-      color:$nextprev-btn;
-      font-weight:bold;
-      transition:.1s color ease;
-      &:hover {
-        color:darken($nextprev-btn,15%);
-      }
-    }
-  }
+.mb-nav {
+  position:absolute;
+  bottom:$dist; left:$dist;
 }

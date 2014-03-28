@@ -1,93 +1,90 @@
 .flex-item {
-	display:flex;
-	align-items:center;
-	justify-content:center;
-	position:relative;
-	padding:1.5em;
-	min-width:68px!important;
-    border-radius:$br;
-  box-shadow:-2px 2px 1px 1px darken($gray,20%);
-  background-color:$item-bg;
-  overflow:hidden;
+  display:flex;
+  justify-content: center;
+  align-items:center;
+
+  position:relative;
+  padding:1em;
+  border-radius:$br;
+  background-color:$flex-item-bg;
+
+  text-align: center;
 }
+$dist:.75em; $dist2:2em;
 
 .fi-index {
-	position:absolute;top:10px;left:10px;
-	color:$item-text;
-	font-size:1.25em;
-	font-weight:bold;
-	text-shadow:0 0 2px 0 $gray;
-	
+  position:absolute;
+  top:$dist; left:$dist;
 }
 
 .fi-destroy-btn {
-	position:absolute;
-	top:10px; right:10px;
-	
-	
-	& i {
-		@include font-size(1.5,1);
-		color:$destroy-btn;
-	
-	}
+  position:absolute;
+  top:$dist; right:$dist;
+  & i {
+    color:$red;
+  }
 }
 
 .fi-settings-btn {
-	position:absolute;
-	top:10px; right:40px;
-	
-	& i {
-		@include font-size(1.5,1);
-		color:$settings-btn;
-	}
+  position:absolute;
+  top:$dist; right:$dist2;
+  & i {
+    color:$white;
+  }
 }
 
 .fi-content {
-	display:inline-block;
-	margin:1em auto;
-    @include font-size(1.1,1.3);
-    color:$item-text;
-  font-weight:bold;
-  text-align: center;
+
 }
+
 .fi-options {
-	position:absolute;bottom:15px;left:15px;
+  position:absolute;
+  bottom:1em; left:$dist;
 
-  & span {
-    color:$item-text;
+  text-align: left;
+}
 
-    & a {
-    color:$item-text;
-
-    &:visited {
-      color:$item-text;
-    }
+.fi-o-title {
+  display:block;
+  margin-bottom:.25em;
+  & a {
+    display:inline-block;
+    margin:0 .1em;
+    color:$gray;
   }
-  }
-	& label {
-		display:inline-block;
-		width:55px;
-		font-size:.65em;
-		margin-top:.5em;
-        color:$item-text;
-		& input {
-			width:50px;
-			display:block;
-			border:0;
-			background-color:fade($gray,25%);
-			padding:.25em;
-			&:focus {
-				outline:3px;
-			}
 
-          }
-		}
-
-	
 }
 
 .fi-options-fixed {
+
   & label {
-    color:$item-text;
+    display:inline-block;
+    width:45px;
+
+    margin-right:.25em;
+
+
+    @include font-size(.65,.7);
+    padding-top:.45em;
+    & input {
+      display:block;
+      width:45px;
+    }
   }
 }
+
+.fi-options-flexy {
+
+  & label {
+    display:inline-block;
+    width:53px;
+    @include font-size(.65,.7);
+    padding-top:.45em;
+    & input {
+      display:block;
+      width:45px;
+    }
+  }
+}
+
+

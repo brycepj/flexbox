@@ -16,13 +16,12 @@ module flexbox {
             noItems:any;
             flexType:any;
             loremCount:any;
-            codeBox:any;
             tourBox:any;
             iPropsFlags:any;
 
             constructor() {
                 this.items = ko.observableArray([]);
-                this.codeBox = new flexbox.model.CodeBox(this);
+
                 this.tourBox = new flexbox.model.Tour();
 
 

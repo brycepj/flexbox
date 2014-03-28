@@ -1,20 +1,23 @@
 
 
 .code-box {
+  position:relative;
 
-    padding: .5em 1.5em;
-    color:$white;
-	background-color:$cb-bg;
-    border-radius:$br;
+  margin-top:1em;
 
-  & pre {
-    font-family:Courier;
-    @include font-size(.75,.85);
-  }
+
+
  
 }
 
+$dist:.75em;
+
+.cb-title {
+  position:absolute;
+  top:$dist;left:$dist;
+}
+
 .cb-item {
-  margin-top:.15em;
+
 }
 

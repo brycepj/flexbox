@@ -1,39 +1,15 @@
 
 .sidebar {
-  display:flex;
-  justify-content:flex-start;
-  flex-wrap:nowrap;
-  flex-direction:column;
 
-  height:100%; width:20%;
-  flex-basis:300px;
-  flex-grow:1;
+  background-color:transparent;
+}
+
+.control-panel,.message-box,.code-box {
   padding:1em;
-  background-color:$app-bg;
-}
-
-.masthead,.message-box,.code-box {
- @include module-shadow();
-}
-
-
-
-
-.masthead { //layout styles
-  flex-grow:1;
-  flex-shrink:3;
-  flex-basis:120px;
-}
-
-.message-box { //layout styles
-  flex-grow:3;
-  flex-basis:310px;
+  border-radius:$br;
+  background-color:$gray;
+  box-shadow:1px 1px 1px 1px $gray;
 }
 
 
-.code-box { //layout styles
-  flex-grow:2;
-  flex-basis:220px;
-  overflow-y: scroll;
-}
 

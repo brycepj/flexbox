@@ -11,7 +11,7 @@ module flexbox {
                 this.messages = [
 
                     {
-                        "text": 'Welcome! <br><br>Click the right arrow at the bottom of this box to start an interactive tour of flexbox.',
+                        "text": 'Step right up! <br><br>Click the right arrow at the bottom of this box to start an interactive tour of flexbox.',
                         "hasButton": true,
                         "xUrl": "#",
                         "xText":"resize it!",

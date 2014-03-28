@@ -1,5 +1,24 @@
 var flexbox;
 (function (flexbox) {
+    (function () {
+        $(document).ready(function () {
+            var flexboxApp = new flexbox.view.FlexContainer();
+            ko.applyBindings(flexboxApp, document.getElementById('flexbox-app'));
+
+            var slideBtn = document.getElementById('mh-slide-btn');
+
+            slideBtn.addEventListener('click', function () {
+                sayHi();
+            });
+
+            function sayHi() {
+                console.log('hi');
+            }
+        });
+    })();
+})(flexbox || (flexbox = {}));
+var flexbox;
+(function (flexbox) {
     (function (_model) {
         var FlexItem = (function () {
             function FlexItem(model, index, props) {
@@ -218,7 +237,7 @@ var flexbox;
             function TourModel() {
                 this.messages = [
                     {
-                        "text": 'Welcome! <br><br>Click the right arrow at the bottom of this box to start an interactive tour of flexbox.',
+                        "text": 'Step right up! <br><br>Click the right arrow at the bottom of this box to start an interactive tour of flexbox.',
                         "hasButton": true,
                         "xUrl": "#",
                         "xText": "resize it!",
@@ -582,7 +601,7 @@ var flexbox;
         var FlexContainer = (function () {
             function FlexContainer() {
                 this.items = ko.observableArray([]);
-                this.codeBox = new flexbox.model.CodeBox(this);
+
                 this.tourBox = new flexbox.model.Tour();
 
                 this.noItems = ko.computed(function () {
@@ -1045,26 +1064,6 @@ var flexbox;
             return Tour;
         })();
         model.Tour = Tour;
-    })(flexbox.model || (flexbox.model = {}));
-    var model = flexbox.model;
-})(flexbox || (flexbox = {}));
-var flexbox;
-(function (flexbox) {
-    (function (_model) {
-        var CodeBox = (function () {
-            function CodeBox(model) {
-                this.cProps = {};
-                this.iPropsDefault = {
-                    flexDirection: ko.observable("row"),
-                    flexWrap: ko.observable("wrap"),
-                    justifyContent: ko.observable("center"),
-                    alignContent: ko.observable("flex-start"),
-                    alignItems: ko.observable("center")
-                };
-            }
-            return CodeBox;
-        })();
-        _model.CodeBox = CodeBox;
     })(flexbox.model || (flexbox.model = {}));
     var model = flexbox.model;
 })(flexbox || (flexbox = {}));

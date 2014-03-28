@@ -2,11 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="95115037-0819-4211-a05b-a12621139f24" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/scss/modules/_template-options.scss" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/ts/view/CodeBox.ts" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/view/Container.ts" afterPath="$PROJECT_DIR$/ts/view/Container.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/model/TourModel.ts" afterPath="$PROJECT_DIR$/ts/model/TourModel.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_aside.scss" afterPath="$PROJECT_DIR$/scss/modules/_aside.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/global/_base.scss" afterPath="$PROJECT_DIR$/scss/global/_base.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_code-box.scss" afterPath="$PROJECT_DIR$/scss/modules/_code-box.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_container-settings.scss" afterPath="$PROJECT_DIR$/scss/modules/_container-settings.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_control-panel.scss" afterPath="$PROJECT_DIR$/scss/modules/_control-panel.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_flex-container.scss" afterPath="$PROJECT_DIR$/scss/modules/_flex-container.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_flex-item.scss" afterPath="$PROJECT_DIR$/scss/modules/_flex-item.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/global/_layout.scss" afterPath="$PROJECT_DIR$/scss/global/_layout.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_masthead.scss" afterPath="$PROJECT_DIR$/scss/modules/_masthead.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_message-box.scss" afterPath="$PROJECT_DIR$/scss/modules/_message-box.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/global/_mixins.scss" afterPath="$PROJECT_DIR$/scss/global/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_modules.scss" afterPath="$PROJECT_DIR$/scss/modules/_modules.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/global/_swatch.scss" afterPath="$PROJECT_DIR$/scss/global/_swatch.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/flexbox.iml" afterPath="$PROJECT_DIR$/.idea/flexbox.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main.js" afterPath="$PROJECT_DIR$/js/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/pkg.ts" afterPath="$PROJECT_DIR$/ts/pkg.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/view/pkg.ts" afterPath="$PROJECT_DIR$/ts/view/pkg.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/build/style.css" afterPath="$PROJECT_DIR$/css/build/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/build/prefixed/style.css" afterPath="$PROJECT_DIR$/css/build/prefixed/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -35,26 +53,51 @@
       <file leaf-file-name="_masthead.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/modules/_masthead.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="13" selection-start="95" selection-end="95" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="405">
+            <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="420">
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_code-box.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/modules/_code-box.scss">
+      <file leaf-file-name="init.ts" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ts/init.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="15" selection-start="30" selection-end="30" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="390">
+            <state vertical-scroll-proportion="0.2658789" vertical-offset="0" max-vertical-offset="677">
+              <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_container-settings.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/modules/_container-settings.scss">
+      <file leaf-file-name="Container.ts" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ts/view/Container.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="29" selection-start="804" selection-end="804" vertical-scroll-proportion="-11.25" vertical-offset="600" max-vertical-offset="1485">
+            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="6990">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tour.ts" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ts/view/Tour.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2235">
+              <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pkg.ts" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ts/view/pkg.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,64 +105,28 @@
       <file leaf-file-name="_layout.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/global/_layout.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="29" selection-start="275" selection-end="275" vertical-scroll-proportion="-8.125" vertical-offset="240" max-vertical-offset="930">
+            <state vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="645">
+              <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
+      <file leaf-file-name="_control-panel.scss" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scss/modules/_control-panel.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="65" selection-start="220" selection-end="220" vertical-scroll-proportion="0.16746412" vertical-offset="0" max-vertical-offset="627">
+            <state vertical-scroll-proportion="-25.625" vertical-offset="0" max-vertical-offset="1350">
+              <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Lorem.ts" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ts/model/Lorem.ts">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="30" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="64" max-vertical-offset="705">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_aside.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/modules/_aside.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="15" selection-start="423" selection-end="423" vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="675">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_mixins.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/global/_mixins.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="22" selection-start="57" selection-end="57" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="3360">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_swatch.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/global/_swatch.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="19" selection-start="464" selection-end="464" vertical-scroll-proportion="-16.25" vertical-offset="105" max-vertical-offset="1140">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_base.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scss/global/_base.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="19" selection-start="559" selection-end="559" vertical-scroll-proportion="-16.083334" vertical-offset="79" max-vertical-offset="735">
+            <state vertical-scroll-proportion="-13.125" vertical-offset="15" max-vertical-offset="3465">
+              <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -141,31 +148,41 @@
         <option value="$PROJECT_DIR$/ts/model/ItemParams.ts" />
         <option value="$PROJECT_DIR$/ts/model/ItemConfig.ts" />
         <option value="$PROJECT_DIR$/js/lib/fittext.js" />
-        <option value="$PROJECT_DIR$/ts/view/pkg.ts" />
-        <option value="$PROJECT_DIR$/scss/modules/_modules.scss" />
         <option value="$PROJECT_DIR$/ts/view/Tour.ts" />
         <option value="$PROJECT_DIR$/scss/vendors/_modernizr.scss" />
         <option value="$PROJECT_DIR$/ts/view/CodeBox.ts" />
         <option value="$PROJECT_DIR$/ts/model/Item.ts" />
-        <option value="$PROJECT_DIR$/scss/modules/_flex-container.scss" />
-        <option value="$PROJECT_DIR$/scss/modules/_flex-item.scss" />
-        <option value="$PROJECT_DIR$/ts/view/Container.ts" />
-        <option value="$PROJECT_DIR$/scss/modules/_control-panel.scss" />
-        <option value="$PROJECT_DIR$/scss/modules/_code-box.scss" />
-        <option value="$PROJECT_DIR$/scss/modules/_aside.scss" />
-        <option value="$PROJECT_DIR$/scss/modules/_masthead.scss" />
-        <option value="$PROJECT_DIR$/scss/global/_mixins.scss" />
-        <option value="$PROJECT_DIR$/scss/global/_layout.scss" />
         <option value="$PROJECT_DIR$/ts/model/Lorem.ts" />
-        <option value="$PROJECT_DIR$/scss/modules/_message-box.scss" />
-        <option value="$PROJECT_DIR$/scss/modules/_container-settings.scss" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/scss/global/_swatch.scss" />
-        <option value="$PROJECT_DIR$/scss/global/_base.scss" />
-        <option value="$PROJECT_DIR$/ts/model/TourModel.ts" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/scss/modules/_container-settings.scss" />
+        <option value="$PROJECT_DIR$/scss/modules/_modules.scss" />
+        <option value="$PROJECT_DIR$/scss/global/_base.scss" />
+        <option value="$PROJECT_DIR$/scss/global/_mixins.scss" />
+        <option value="$PROJECT_DIR$/scss/modules/_aside.scss" />
+        <option value="$PROJECT_DIR$/scss/modules/_code-box.scss" />
+        <option value="$PROJECT_DIR$/scss/global/_swatch.scss" />
+        <option value="$PROJECT_DIR$/scss/modules/_flex-container.scss" />
+        <option value="$PROJECT_DIR$/scss/modules/_message-box.scss" />
+        <option value="$PROJECT_DIR$/scss/modules/_flex-item.scss" />
+        <option value="$PROJECT_DIR$/ts/model/TourModel.ts" />
+        <option value="$PROJECT_DIR$/scss/global/_layout.scss" />
+        <option value="$PROJECT_DIR$/scss/modules/_control-panel.scss" />
+        <option value="$PROJECT_DIR$/ts/view/pkg.ts" />
+        <option value="$PROJECT_DIR$/ts/view/Container.ts" />
+        <option value="$PROJECT_DIR$/ts/pkg.ts" />
+        <option value="$PROJECT_DIR$/ts/init.ts" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/scss/modules/_masthead.scss" />
       </list>
     </option>
+  </component>
+  <component name="JsGruntFileManager">
+    <gruntfiles>
+      <GruntfileState>
+        <gruntfile-path>$PROJECT_DIR$/gruntfile.js</gruntfile-path>
+      </GruntfileState>
+    </gruntfiles>
+    <initial>false</initial>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="9" />
@@ -187,7 +204,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -199,7 +216,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -260,24 +276,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flexbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="flexbox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="scss" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -297,6 +295,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scss" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -338,6 +340,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -348,6 +351,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
     <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../devbryce" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -373,22 +377,27 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="CucumberJavaScriptRunConfigurationType" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="CHROME" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
-      <browser start="false" url="" with-js-debugger="false" />
       <method />
     </configuration>
     <list size="0" />
@@ -423,6 +432,7 @@
     <frame x="9" y="22" width="1260" height="774" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.3716312" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -443,7 +453,10 @@
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USERS">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
   </component>
@@ -461,409 +474,381 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ts/model/Item.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="0" selection-start="5022" selection-end="5022" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3015" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/view/Container.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="28" selection-start="450" selection-end="450" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="4050">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/model/Item.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1545" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ts/model/TourModel.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1050">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1050">
+          <caret line="17" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="0" selection-start="4804" selection-end="4804" vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="2910">
-          <folding>
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="2910">
+          <caret line="110" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/modules/_message-box.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="18" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="765">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/model/Item.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="1575" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/model/TourModel.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1050">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="0" selection-start="4804" selection-end="4804" vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="2910">
-          <folding>
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/modules/_message-box.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="18" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="765">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="765">
+          <caret line="15" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/view/Tour.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="11" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
+          <caret line="37" column="11" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/view/Container.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="148" column="21" selection-start="5054" selection-end="5054" vertical-scroll-proportion="0.0" vertical-offset="1991" max-vertical-offset="2685">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1991" max-vertical-offset="2685">
+          <caret line="148" column="21" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/model/Item.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="28" selection-start="2294" selection-end="2294" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1515" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1515">
+          <caret line="67" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="10" selection-start="1468" selection-end="1468" vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="2820">
-          <folding>
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="2820">
+          <caret line="37" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/modules/_message-box.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="532" selection-end="532" vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="765">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="765">
+          <caret line="37" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/view/Tour.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="1275">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="960" max-vertical-offset="1275">
+          <caret line="64" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/view/Container.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="28" selection-start="526" selection-end="526" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2685">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2685">
+          <caret line="17" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/view/Container.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="0" selection-start="3507" selection-end="3507" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2295">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2295">
+          <caret line="92" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/model/Item.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="34" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1095" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1095">
+          <caret line="57" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/view/Container.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="0" selection-start="3507" selection-end="3507" vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="2295">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1380" max-vertical-offset="2295">
+          <caret line="92" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/model/Item.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="34" selection-start="2137" selection-end="2137" vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1095" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="855" max-vertical-offset="1095">
+          <caret line="57" column="34" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="0" selection-start="2950" selection-end="2950" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2430">
-          <folding>
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2430">
+          <caret line="55" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/lib/knockout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1500">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="677" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="677">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/model/ItemConfig.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="1" selection-start="441" selection-end="441" vertical-scroll-proportion="0.3988183" vertical-offset="0" max-vertical-offset="677">
-          <folding />
+        <state vertical-scroll-proportion="0.3988183" vertical-offset="0" max-vertical-offset="677">
+          <caret line="18" column="1" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="18" selection-start="31" selection-end="31" vertical-scroll-proportion="-4.427711" vertical-offset="2955" max-vertical-offset="10125">
-          <folding />
+        <state vertical-scroll-proportion="-4.427711" vertical-offset="2955" max-vertical-offset="10125">
+          <caret line="1" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/lib/fittext.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="13" selection-start="1183" selection-end="1183" vertical-scroll-proportion="0.9828393" vertical-offset="0" max-vertical-offset="720" />
+        <state vertical-scroll-proportion="0.9828393" vertical-offset="0" max-vertical-offset="720">
+          <caret line="42" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/messages.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="650" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="650">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/model/pkg.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="654" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/view/pkg.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="34" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/modules/_modules.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="16" selection-start="16" selection-end="16" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/view/CodeBox.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="0" selection-start="552" selection-end="552" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/view/Tour.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="45" selection-start="1460" selection-end="1460" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="2235">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="654">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/model/Item.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="0" selection-start="3908" selection-end="3908" vertical-scroll-proportion="0.0" vertical-offset="3120" max-vertical-offset="3870">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/modules/_flex-item.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="21" selection-start="814" selection-end="814" vertical-scroll-proportion="-16.25" vertical-offset="360" max-vertical-offset="1470">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/modules/_flex-container.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="14" selection-start="32" selection-end="32" vertical-scroll-proportion="-0.625" vertical-offset="0" max-vertical-offset="255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ts/view/Container.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="49" selection-start="4647" selection-end="4647" vertical-scroll-proportion="0.60842437" vertical-offset="1545" max-vertical-offset="7005">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/modules/_control-panel.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="16" selection-start="178" selection-end="178" vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="435">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/modules/_code-box.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="15" selection-start="30" selection-end="30" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="390">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/modules/_masthead.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="13" selection-start="95" selection-end="95" vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="405">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/modules/_aside.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="15" selection-start="423" selection-end="423" vertical-scroll-proportion="-18.125" vertical-offset="0" max-vertical-offset="675">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/global/_mixins.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="22" selection-start="57" selection-end="57" vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="3360">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/global/_layout.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="29" selection-start="275" selection-end="275" vertical-scroll-proportion="-8.125" vertical-offset="240" max-vertical-offset="930">
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3120" max-vertical-offset="3870">
+          <caret line="119" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/model/Lorem.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="30" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="64" max-vertical-offset="705">
+        <state vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="705">
+          <caret line="16" column="30" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/modules/_message-box.scss">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="46" selection-start="716" selection-end="716" vertical-scroll-proportion="-11.875" vertical-offset="300" max-vertical-offset="990">
+        <state vertical-scroll-proportion="0.16055046" vertical-offset="0" max-vertical-offset="654">
+          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/global/_fonts.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/global/_reset.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/global/_states.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="664">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/modules/_container-settings.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="29" selection-start="804" selection-end="804" vertical-scroll-proportion="-11.25" vertical-offset="600" max-vertical-offset="1485">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="653">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/scss/modules/_item-defaults.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="221" column="58" selection-start="9119" selection-end="9119" vertical-scroll-proportion="-20.083334" vertical-offset="2833" max-vertical-offset="3450">
-          <folding>
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1395715799000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="654">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/global/_swatch.scss">
+    <entry file="file://$PROJECT_DIR$/scss/modules/_modules.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="19" selection-start="464" selection-end="464" vertical-scroll-proportion="-16.25" vertical-offset="105" max-vertical-offset="1140">
+        <state vertical-scroll-proportion="0.16666667" vertical-offset="0" max-vertical-offset="630">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/vendors/_animate.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="42780">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/global/_base.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="19" selection-start="559" selection-end="559" vertical-scroll-proportion="-16.083334" vertical-offset="79" max-vertical-offset="735">
+        <state vertical-scroll-proportion="-19.375" vertical-offset="135" max-vertical-offset="765">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/modules/_aside.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="315">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/modules/_code-box.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="435">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/global/_swatch.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.3333335" vertical-offset="37" max-vertical-offset="1095">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/modules/_flex-container.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="240">
+          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/modules/_flex-item.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.25" vertical-offset="135" max-vertical-offset="1440">
+          <caret line="43" column="18" selection-start-line="43" selection-start-column="18" selection-end-line="43" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/model/TourModel.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="324" column="291" selection-start="19362" selection-end="19362" vertical-scroll-proportion="0.3447738" vertical-offset="4639" max-vertical-offset="5400">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5400">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/scss/modules/_message-box.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="65" selection-start="220" selection-end="220" vertical-scroll-proportion="0.16746412" vertical-offset="0" max-vertical-offset="627">
+        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="630">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/global/_mixins.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3300">
+          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/global/_layout.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="645">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/modules/_control-panel.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-25.625" vertical-offset="0" max-vertical-offset="1350">
+          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/view/Tour.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2235">
+          <caret line="55" column="45" selection-start-line="55" selection-start-column="45" selection-end-line="55" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/view/pkg.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/view/Container.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="6990">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/pkg.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.125" vertical-offset="15" max-vertical-offset="3465">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/modules/_masthead.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0" vertical-offset="0" max-vertical-offset="420">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/init.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2658789" vertical-offset="0" max-vertical-offset="677">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
           <folding />
         </state>
       </provider>
