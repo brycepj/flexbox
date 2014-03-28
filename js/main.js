@@ -237,19 +237,11 @@ var flexbox;
             function TourModel() {
                 this.messages = [
                     {
-<<<<<<< HEAD
                         "text": 'Step right up! <br><br>Click the right arrow at the bottom of this box to start an interactive tour of flexbox.',
                         "hasButton": true,
                         "xUrl": "#",
                         "xText": "resize it!",
                         "action": true
-=======
-                        "text": 'Welcome! <br><br>Click the right ( > ) arrow at the bottom of this box to start an interactive tour of flexbox.',
-                        "hasButton": false,
-                        "xUrl": null,
-                        "xText": null,
-                        "action": null
->>>>>>> 7ca5a580c4a89b33dd0168b1299d619d10dd6769
                     },
                     {
                         "text": 'The Flexbox Layout (Flexible Box) module is meant to help us lay out elements and modules within websites and applications.',
