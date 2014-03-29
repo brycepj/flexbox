@@ -19,12 +19,15 @@
     <h1 class="mh-logo">flexbox in 5 minutes</h1>
 
     <p class="mh-desc">an interactive tour of all the major features of the new flexbox CSS property.</p>
+
+    <div class="mh-cond-content">
     <h2 class="mh-desc">What can you do here?</p>
     <ul>
         <li>Take a friendly tour through the properties of flexbox</li>
         <li>Play to your heart's content, changing properties of the flex container and individual flex items</li>
         <li>Copy and paste live code samples from whatever you create</li>
     </ul>
+    </div>
     <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://devbryce.com/site/flexbox"
        data-text="flexbox in 5 minutes">Tweet</a>
 
@@ -37,7 +40,9 @@
             fjs.parentNode.insertBefore(js, fjs);
         }
     }(document, 'script', 'twitter-wjs');</script>
-</div>
+
+    </div>
+
 <div class="flex-container-wrap">
     <div class="flex-container" data-bind="template: { name: 'flex-list', foreach: items },
                     style:{
@@ -65,12 +70,13 @@
         <a class="mb-action" href="#" target="_blank"
            data-bind="visible:tourBox.hasButton,text:tourBox.currentXText,attr: {href:tourBox.currentXUrl}"></a>
         <a class="mb-action" href="#" target="_blank"
-           data-bind="visible:tourBox.currentAction,click:tourResize">resize it!</a>
+           data-bind="visible:tourBox.currentAction,click:tourAction,text:tourBox.currentXText">do it!</a>
         <nav class="mb-nav">
             <a href="#" data-bind="click:tourPrevious"><i class="fa fa-chevron-left"></i></a>
             <a href="#" data-bind="click:tourNext"><i class="fa fa-chevron-right"></i></a>
         </nav>
     </div>
+
 
     <div class="control-panel">
         <span class="cp-title">control panel</span>

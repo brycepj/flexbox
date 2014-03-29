@@ -4,27 +4,29 @@ module flexbox {
 
         export class TourModel {
             messages:any;
+            actionOptions:any;
 
             constructor() {
 
+                this.actionOptions = ['resize','holyGrail','perfectNav','picScroll'];
 
                 this.messages = [
 
                     {
 
                         "text": 'Step right up! <br><br>Click the right arrow at the bottom of this box to start an interactive tour of flexbox.',
-                        "hasButton": true,
-                        "xUrl": "#",
+                        "hasButton": false,
+                        "xUrl": null,
                         "xText": "resize it!",
-                        "action": true
+                        "action": 'resize'
 
                     },
                     {
                         "text": 'The Flexbox Layout (Flexible Box) module is meant to help us lay out elements and modules within websites and applications.',
                         "hasButton": false,
                         "xUrl": null,
-                        "xText": null,
-                        "action": null
+                        "xText": 'make holy grail',
+                        "action": 'holyGrail'
                     },
                     {
                         "text": 'According to Chris Coyier</a>:<br><br> "The main idea behind the flex layout is to give the container the ability to alter its items\' width/height (and order) to best fill the available space..."',
@@ -72,10 +74,10 @@ module flexbox {
                     },
                     {
                         "text": 'Ready to see this baby in action?<br><br>Let\'s simulate smaller screens by resizing the container element.',
-                        "hasButton": true,
-                        "xUrl": "#",
-                        "xText": "resize it!",
-                        "action": true
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": 'resize it!',
+                        "action": 'resize'
                     },
                     {
                         "text": 'Amazing! What used to require an entire suite of floats, media queries, and <a href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank">outright hacks</a>, is acheived by adding one property to a container div!',

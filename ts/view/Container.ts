@@ -105,19 +105,14 @@ module flexbox {
                         this.cPropsCurrent.alignItems('stretch');
                     } else {
                         for (var i = 0; i < array.length; i++) {
-                            array[i].iPropsCurrent.height('250px');
+                            var oldHeight = array[i].iPropsCurrent.height();
+                            array[i].iPropsCurrent.height(oldHeight);
 
                         }
                     }
 
 
-
-
-
                 }, this);
-
-
-
 
 
                 this.flexDirectionOptions = ['row', 'column'];
@@ -140,9 +135,9 @@ module flexbox {
 
 
             actionChecker():void {
-            
+
             }
-            
+
             tourNext():void {
                 this.tourBox.next();
             }
@@ -153,6 +148,27 @@ module flexbox {
 
             tourResize():void {
                 this.tourBox.resizeContainer();
+            }
+
+            tourAction():void {
+                var index = this.tourBox.index();
+                var action = this.tourBox.tour.messages[index].action;
+
+                console.log('made it this far');
+
+                switch (action) {
+                    case "resize":
+                        this.tourBox.resizeContainer();
+                        break;
+                    case "holyGrail":
+                        this.makeHolyGrail();
+                        break;
+                    default:
+                        console.log('action has not been registered');
+                }
+
+
+                //this is where we do the thing
             }
 
             newItem():void {
@@ -206,14 +222,13 @@ module flexbox {
                 var self = this;
 
 
-                for (var i = 0; i < array.length; i++)
-                {
+                for (var i = 0; i < array.length; i++) {
                     $('.flex-item').eq(i).addClass('fadeOutDownBig');
                 }
 
-                setTimeout(function(){
+                setTimeout(function () {
                     self.items([]);
-                },500);
+                }, 500);
 
 
             }
@@ -357,17 +372,17 @@ module flexbox {
                 $('.flex-item').addClass('bounceOut');
                 var self = this;
 
-                setTimeout(function(){
+                setTimeout(function () {
                     self.items([]);
-                },800);
+                }, 800);
             }
 
 
-
             makeHolyGrail():void {
-
-                var index = this.getItemIndex();
                 this.items([]);
+                var index = this.getItemIndex();
+
+
                 this.items.push(
                     new flexbox.model.FlexItem(this, index++,
                         {   isFlexyWidth: true,
@@ -375,7 +390,7 @@ module flexbox {
                             flexShrink: "0",
                             flexBasis: "98%",
                             alignSelf: "center",
-                            height: "140px",
+                            height:null,
                             content: "HEADER"
                         }),
 
@@ -386,8 +401,8 @@ module flexbox {
                             flexGrow: "1",
                             flexShrink: "0",
                             flexBasis: "200px",
-                            height: "auto",
-                            lorem: 100 }),
+                            height:  null,
+                            lorem: 50 }),
 
                     new flexbox.model.FlexItem(this, index++,
                         { viewContent: true,
@@ -396,8 +411,8 @@ module flexbox {
                             flexGrow: "1",
                             flexShrink: "0",
                             flexBasis: "200px",
-                            height: "auto",
-                            lorem: 100 }),
+                            height:  null,
+                            lorem: 50 }),
 
                     new flexbox.model.FlexItem(this, index++,
                         {   viewContent: true,
@@ -406,8 +421,8 @@ module flexbox {
                             flexGrow: "1",
                             flexShrink: "0",
                             flexBasis: "200px",
-                            height: "auto",
-                            lorem: 100 }),
+                            height: null,
+                            lorem: 50 }),
 
                     new flexbox.model.FlexItem(this, index++,
                         { isFlexyWidth: true,
@@ -415,11 +430,15 @@ module flexbox {
                             flexShrink: "0",
                             flexBasis: "98%",
                             alignSelf: "center",
-                            height: "140px",
+                            height: null,
                             content: "FOOTER" })
                 );
 
+                this.cPropsCurrent.flexDirection('row');
+                this.cPropsCurrent.flexWrap('wrap');
                 this.cPropsCurrent.alignItems("stretch");
+                this.cPropsCurrent.justifyContent('center');
+                this.cPropsCurrent.alignContent('flex-start');
 
             }
 

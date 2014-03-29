@@ -114,6 +114,7 @@ module flexbox {
             }
 
             resizeContainer():void {
+
                 var $el = $('.flex-container');
                 var width = $el.width();
 

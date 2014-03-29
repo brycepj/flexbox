@@ -226,20 +226,22 @@ var flexbox;
     (function (model) {
         var TourModel = (function () {
             function TourModel() {
+                this.actionOptions = ['resize', 'holyGrail', 'perfectNav', 'picScroll'];
+
                 this.messages = [
                     {
                         "text": 'Step right up! <br><br>Click the right arrow at the bottom of this box to start an interactive tour of flexbox.',
-                        "hasButton": true,
-                        "xUrl": "#",
+                        "hasButton": false,
+                        "xUrl": null,
                         "xText": "resize it!",
-                        "action": true
+                        "action": 'resize'
                     },
                     {
                         "text": 'The Flexbox Layout (Flexible Box) module is meant to help us lay out elements and modules within websites and applications.',
                         "hasButton": false,
                         "xUrl": null,
-                        "xText": null,
-                        "action": null
+                        "xText": 'make holy grail',
+                        "action": 'holyGrail'
                     },
                     {
                         "text": 'According to Chris Coyier</a>:<br><br> "The main idea behind the flex layout is to give the container the ability to alter its items\' width/height (and order) to best fill the available space..."',
@@ -285,10 +287,10 @@ var flexbox;
                     },
                     {
                         "text": 'Ready to see this baby in action?<br><br>Let\'s simulate smaller screens by resizing the container element.',
-                        "hasButton": true,
-                        "xUrl": "#",
-                        "xText": "resize it!",
-                        "action": true
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": 'resize it!',
+                        "action": 'resize'
                     },
                     {
                         "text": 'Amazing! What used to require an entire suite of floats, media queries, and <a href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank">outright hacks</a>, is acheived by adding one property to a container div!',
@@ -685,7 +687,8 @@ var flexbox;
                         this.cPropsCurrent.alignItems('stretch');
                     } else {
                         for (var i = 0; i < array.length; i++) {
-                            array[i].iPropsCurrent.height('250px');
+                            var oldHeight = array[i].iPropsCurrent.height();
+                            array[i].iPropsCurrent.height(oldHeight);
                         }
                     }
                 }, this);
@@ -717,6 +720,24 @@ var flexbox;
 
             FlexContainer.prototype.tourResize = function () {
                 this.tourBox.resizeContainer();
+            };
+
+            FlexContainer.prototype.tourAction = function () {
+                var index = this.tourBox.index();
+                var action = this.tourBox.tour.messages[index].action;
+
+                console.log('made it this far');
+
+                switch (action) {
+                    case "resize":
+                        this.tourBox.resizeContainer();
+                        break;
+                    case "holyGrail":
+                        this.makeHolyGrail();
+                        break;
+                    default:
+                        console.log('action has not been registered');
+                }
             };
 
             FlexContainer.prototype.newItem = function () {
@@ -903,15 +924,16 @@ var flexbox;
             };
 
             FlexContainer.prototype.makeHolyGrail = function () {
-                var index = this.getItemIndex();
                 this.items([]);
+                var index = this.getItemIndex();
+
                 this.items.push(new flexbox.model.FlexItem(this, index++, {
                     isFlexyWidth: true,
                     flexGrow: "1",
                     flexShrink: "0",
                     flexBasis: "98%",
                     alignSelf: "center",
-                    height: "140px",
+                    height: null,
                     content: "HEADER"
                 }), new flexbox.model.FlexItem(this, index++, {
                     viewContent: true,
@@ -920,33 +942,37 @@ var flexbox;
                     flexGrow: "1",
                     flexShrink: "0",
                     flexBasis: "200px",
-                    height: "auto",
-                    lorem: 100 }), new flexbox.model.FlexItem(this, index++, {
+                    height: null,
+                    lorem: 50 }), new flexbox.model.FlexItem(this, index++, {
                     viewContent: true,
                     viewSettings: false,
                     isFlexyWidth: true,
                     flexGrow: "1",
                     flexShrink: "0",
                     flexBasis: "200px",
-                    height: "auto",
-                    lorem: 100 }), new flexbox.model.FlexItem(this, index++, {
+                    height: null,
+                    lorem: 50 }), new flexbox.model.FlexItem(this, index++, {
                     viewContent: true,
                     viewSettings: false,
                     isFlexyWidth: true,
                     flexGrow: "1",
                     flexShrink: "0",
                     flexBasis: "200px",
-                    height: "auto",
-                    lorem: 100 }), new flexbox.model.FlexItem(this, index++, {
+                    height: null,
+                    lorem: 50 }), new flexbox.model.FlexItem(this, index++, {
                     isFlexyWidth: true,
                     flexGrow: "1",
                     flexShrink: "0",
                     flexBasis: "98%",
                     alignSelf: "center",
-                    height: "140px",
+                    height: null,
                     content: "FOOTER" }));
 
+                this.cPropsCurrent.flexDirection('row');
+                this.cPropsCurrent.flexWrap('wrap');
                 this.cPropsCurrent.alignItems("stretch");
+                this.cPropsCurrent.justifyContent('center');
+                this.cPropsCurrent.alignContent('flex-start');
             };
 
             FlexContainer.prototype.responsiveNav = function () {
@@ -1111,6 +1137,33 @@ var flexbox;
 
                 if (confirm === "0") {
                     this.$el.fadeIn();
+                }
+
+                resetContent();
+                setResizeListener();
+
+                function resetContent(content) {
+                    var $contentWrap = $('.mh-cond-content');
+                    var wHeight = $(window).innerWidth();
+                    var newContent = '<p class="mh-desc">User beware! This layout is responsive, but the app is far less useful on mobile browsers. I\'d recommend you stop by next time you\'re on a desktop instead :) </p>';
+                    var oldContent = content ? content : $contentWrap.html();
+
+                    if (wHeight > 730) {
+                        console.log('door number 1');
+                        $contentWrap.html(oldContent);
+                    }
+
+                    if (wHeight < 730) {
+                        console.log('door number 2');
+                        $contentWrap.html(newContent);
+                    }
+                }
+
+                function setResizeListener() {
+                    var content = $('.mh-cond-content').html();
+                    $(window).resize(function () {
+                        resetContent(content);
+                    });
                 }
             }
             return Masthead;
