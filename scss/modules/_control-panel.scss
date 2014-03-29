@@ -1,18 +1,25 @@
 .control-panel {
   position:relative;
   margin-top:1em;
+  overflow-y:scroll;
+}
 
+.cp-title {
+  position:absolute;
+  top:1em; left:1em;
+  @include font-size(.75,.85);
 }
 
 .cp-container {
   width:55%;
   float:left;
-  text-align: right;
+  text-align: left;
   & label {
     display:block;
     @include font-size(.75,1);
     & select {
-      display:block;
+      display:inline-block;
+      padding-right:0;
     }
   }
 }
@@ -30,16 +37,17 @@
 	
 	& a {
 		display:inline-block;
-		width:90%;
-		padding:.5em;
 		margin:.35em auto;
-		background-color:$app-bg;
-		color:$white;
+        transition:.1s color ease;
+      &:hover {
+        color:$white;
+      }
 	}
 }
 
 
 .cp-items {
+  margin-top:.75em;
   width:45%;
   float:left;
   padding:0 0 .5em 0;

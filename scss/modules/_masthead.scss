@@ -6,7 +6,21 @@
   height:auto;
   width:65%;
 
+  & h2 {
+    @include font-size(1,1.4);
+  }
+  & ul {
+    margin-left:1em;
 
+  }
+
+  & li {
+    @include font-size(1,1.25);
+
+    &:before {
+      content:"-";
+    }
+  }
 
 
 }
@@ -14,13 +28,13 @@
 .mh-logo {
   @include font-size(2,2);
   font-family:"Arvo";
-  color:lighten($black,10%);
+  color:lighten($black,1%);
 }
 
 .mh-desc {
   margin:.75em 0;
   @include font-size(1.5,1.75);
-  color:lighten($black,10%);
+  color:lighten($black,1%);
 
 
   }

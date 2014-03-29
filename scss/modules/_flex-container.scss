@@ -10,4 +10,12 @@
   border-radius:$br;
 
   background-color:$flex-container-bg;
+
+  @include bp-max(875px) {
+    height:100%;
+  }
 }
+//at
+//app needs to be a column
+//aside needs to be a row
+

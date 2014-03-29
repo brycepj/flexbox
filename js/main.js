@@ -549,6 +549,13 @@ var flexbox;
                         "action": null
                     },
                     {
+                        "text": 'Oh, a few resources I found very helpful:<br><br><a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">Chris Coyier\'s Complete Guide</a><br> <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes" target="_blank">MDN on Flexible Boxes</a><br><a href="http://www.w3.org/TR/css-flexbox-1/" target="_blank">The official W3C Spec</a><br><a href="http://caniuse.com/flexbox" target="_blank">CanIUse Flexbox</a>',
+                        "hasButton": true,
+                        "xUrl": null,
+                        "xText": null,
+                        "action": null
+                    },
+                    {
                         "text": 'Have feedback? I want it. <br> <br> Email me <a href="mailto:brycepj@gmail.com">here</a> or get at me <a href="https://twitter.com/_devbryce"> on twitter</a>.',
                         "hasButton": true,
                         "xUrl": null,

@@ -4,7 +4,7 @@
   flex-wrap:wrap;
   justify-content: center;
   align-items:center;
-
+  overflow-y:scroll;
   position:relative;
 
 
@@ -14,7 +14,8 @@
 $dist:.75em;
 .mb-title {
   position:absolute;
-  top:$dist; left:$dist;
+  top:1em; left:1em;
+  @include font-size(.75,.85);
 }
 
 .mb-progress {
