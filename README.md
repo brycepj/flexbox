@@ -1,5 +1,6 @@
 ### next steps
 
+JS
 
 - integrate templates into tour
 
@@ -12,3 +13,10 @@
 - play with it till you break it
 - edit the tour and break up long paragraphs as often as possible
 
+CSS
+
+- reduce font-size of codebox
+- make buttons in control panel unstyled
+- reduce font size of aside module titles
+- give the control panel a module title
+- make all responsive

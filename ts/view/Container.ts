@@ -18,12 +18,14 @@ module flexbox {
             loremCount:any;
             tourBox:any;
             iPropsFlags:any;
+            masthead:any
 
             constructor() {
                 this.items = ko.observableArray([]);
 
                 this.tourBox = new flexbox.model.Tour();
 
+                this.masthead = new flexbox.view.Masthead(this);
 
                 this.noItems = ko.computed(function () {
                     var array = this.items();

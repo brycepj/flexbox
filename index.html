@@ -16,28 +16,38 @@
 <body id="flexbox-app">
 
 <div class="masthead">
-    <h1 id="mh-logo" class="site-logo">flexbox in 5 minutes</h1>
+    <h1 class="mh-logo">flexbox in 5 minutes</h1>
 
     <p class="mh-desc">take an interactive tour through all the major features of the language.</p>
+    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://devbryce.com/site/flexbox"
+       data-text="flexbox in 5 minutes">Tweet</a>
 
-    <span id="mh-slide-btn"><i class="fa fa-arrow-down"></i></span>
-
+    <script>!function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+        if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = p + '://platform.twitter.com/widgets.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+    }(document, 'script', 'twitter-wjs');</script>
 </div>
+<div class="flex-container-wrap">
     <div class="flex-container" data-bind="template: { name: 'flex-list', foreach: items },
-                style:{
-                display:cPropsCurrent.display,
-                flexWrap:cPropsCurrent.flexWrap,
-                flexDirection:cPropsCurrent.flexDirection,
-                justifyContent:cPropsCurrent.justifyContent,
-                alignContent:cPropsCurrent.alignContent,
-                alignItems:cPropsCurrent.alignItems,
-                backgroundColor:cPropsDefault.backgroundColor,
-                width:cPropsCurrent.width
-                }">
+                    style:{
+                    display:cPropsCurrent.display,
+                    flexWrap:cPropsCurrent.flexWrap,
+                    flexDirection:cPropsCurrent.flexDirection,
+                    justifyContent:cPropsCurrent.justifyContent,
+                    alignContent:cPropsCurrent.alignContent,
+                    alignItems:cPropsCurrent.alignItems,
+                    backgroundColor:cPropsDefault.backgroundColor,
+                    width:cPropsCurrent.width
+                    }">
 
 
     </div>
-
+</div>
 
 <aside class="sidebar">
 
@@ -60,14 +70,17 @@
 
         <div class="cp-items">
             <span class="cp-c-title">new item</span>
+
             <div class="cp-i-add-remove">
                 <a class="cp-i-add" data-bind="click:newItem"><i class="fa fa-plus"></i></a>
                 <a class="cp-i-remove" data-bind="click:oneLessItem"><i class="fa fa-minus"></i></a>
             </div>
             <div class="cp-i-settings">
                 <div class="cp-i-s-width">
-                    <label for="fixed">fixed<input data-bind="checked:flexType" type="radio" name="flexType" value="fixed" checked/></label>
-                    <label for="flexy">flexible<input data-bind="checked:flexType" type="radio" name="flexType" value="flexy"/></label>
+                    <label for="fixed">fixed<input data-bind="checked:flexType" type="radio" name="flexType"
+                                                   value="fixed" checked/></label>
+                    <label for="flexy">flexible<input data-bind="checked:flexType" type="radio" name="flexType"
+                                                      value="flexy"/></label>
                 </div>
                 <label for="">lorem? <input data-bind="value:loremCount" type="text"/></label>
             </div>
@@ -77,8 +90,6 @@
                 <a href="#" data-bind="click:tourResize">resize box</a>
             </div>
         </div>
-
-
 
 
         <div class="cp-container">
@@ -95,21 +106,15 @@
                     data-bind="options:alignContentOptions, value:cPropsCurrent.alignContent"></select> </label>
 
 
-
-
         </div>
-
-
 
 
     </div>
 
 
-
-
-
     <div class="code-box">
         <span class="cb-title">code-box</span>
+
         <div class="cb-item">
             <code>
                     <pre>
@@ -170,8 +175,10 @@
         <p class="fi-content" data-bind="visible:viewContent,text:content"></p>
 
         <div class="fi-options" data-bind="visible:viewSettings">
-            <span class="fi-o-title"><a href="#" data-bind="click:makeFixedWidth, style:{fontSize:highlightFixed}">fixed</a> or <a href="#"
-                                                                                                                data-bind="click:makeFlexyWidth, style:{fontSize:highlightFlexy}">flexy</a> width?</span>
+            <span class="fi-o-title"><a href="#"
+                                        data-bind="click:makeFixedWidth, style:{fontSize:highlightFixed}">fixed</a> or <a
+                    href="#"
+                    data-bind="click:makeFlexyWidth, style:{fontSize:highlightFlexy}">flexy</a> width?</span>
 
             <div class="fi-options-fixed" data-bind="visible:isFixedWidth"><label>width: <input type="text"
                                                                                                 data-bind="enable:isFixedWidth, value:iPropsCurrent.width"></label>
@@ -197,11 +204,21 @@
         <code>
 	<pre>
 .flex-item-<span data-bind="text:item.index"></span> {
-    width: <span data-bind="text:item.iPropsCurrent.width() ? item.iPropsCurrent.width() : '<property unused>'"></span><span data-bind="visible:item.iPropsCurrent.width">;</span>
-    height: <span data-bind="text:item.iPropsCurrent.height() ? item.iPropsCurrent.height() : '<property unused>'"></span><span data-bind="visible:item.iPropsCurrent.height">;</span>
-    flex-grow: <span data-bind="text:item.iPropsCurrent.flexGrow() ? item.iPropsCurrent.flexGrow() : '<property unused>'">null</span><span data-bind="visible:item.iPropsCurrent.flexGrow">;</span>
-    flex-shrink: <span data-bind="text:item.iPropsCurrent.flexShrink() ? item.iPropsCurrent.flexShrink() : '<property unused>'"></span><span data-bind="visible:item.iPropsCurrent.flexShrink">;</span>
-    flex-basis: <span data-bind="text:item.iPropsCurrent.flexBasis() ? item.iPropsCurrent.flexBasis() : '<property unused>'"></span><span data-bind="visible:item.iPropsCurrent.flexBasis">;</span>
+    width: <span
+            data-bind="text:item.iPropsCurrent.width() ? item.iPropsCurrent.width() : '<property unused>'"></span><span
+            data-bind="visible:item.iPropsCurrent.width">;</span>
+    height: <span
+            data-bind="text:item.iPropsCurrent.height() ? item.iPropsCurrent.height() : '<property unused>'"></span><span
+            data-bind="visible:item.iPropsCurrent.height">;</span>
+    flex-grow: <span
+            data-bind="text:item.iPropsCurrent.flexGrow() ? item.iPropsCurrent.flexGrow() : '<property unused>'">null</span><span
+            data-bind="visible:item.iPropsCurrent.flexGrow">;</span>
+    flex-shrink: <span
+            data-bind="text:item.iPropsCurrent.flexShrink() ? item.iPropsCurrent.flexShrink() : '<property unused>'"></span><span
+            data-bind="visible:item.iPropsCurrent.flexShrink">;</span>
+    flex-basis: <span
+            data-bind="text:item.iPropsCurrent.flexBasis() ? item.iPropsCurrent.flexBasis() : '<property unused>'"></span><span
+            data-bind="visible:item.iPropsCurrent.flexBasis">;</span>
 }
 	</pre>
         </code>

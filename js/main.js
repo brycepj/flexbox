@@ -4,16 +4,6 @@ var flexbox;
         $(document).ready(function () {
             var flexboxApp = new flexbox.view.FlexContainer();
             ko.applyBindings(flexboxApp, document.getElementById('flexbox-app'));
-
-            var slideBtn = document.getElementById('mh-slide-btn');
-
-            slideBtn.addEventListener('click', function () {
-                sayHi();
-            });
-
-            function sayHi() {
-                console.log('hi');
-            }
         });
     })();
 })(flexbox || (flexbox = {}));
@@ -188,6 +178,7 @@ var flexbox;
                 this.iPropsCurrent.flexGrow(null);
                 this.iPropsCurrent.flexBasis(null);
                 this.iPropsCurrent.flexShrink(null);
+                this.iPropsCurrent.width("300px");
                 this.isFlexyWidth(false);
             };
 
@@ -617,6 +608,8 @@ var flexbox;
                 this.items = ko.observableArray([]);
 
                 this.tourBox = new flexbox.model.Tour();
+
+                this.masthead = new flexbox.view.Masthead(this);
 
                 this.noItems = ko.computed(function () {
                     var array = this.items();
@@ -1060,27 +1053,62 @@ var flexbox;
             Tour.prototype.resizeContainer = function () {
                 var $el = $('.flex-container');
                 var width = $el.width();
-                $el.css('width', width.toString() + "px");
 
-                $el.animate({
-                    width: "270px"
-                }, {
-                    duration: 3000,
-                    easing: "swing"
-                });
+                if ($('.flex-item').length > 0) {
+                    $el.css('width', width.toString() + "px");
 
-                $el.animate({
-                    width: "100%"
-                }, {
-                    duration: 3000,
-                    easing: "swing"
-                });
+                    $el.animate({
+                        width: "250px"
+                    }, {
+                        duration: 3000,
+                        easing: "swing"
+                    });
 
-                $el.css('width', null);
+                    $el.animate({
+                        width: "100%"
+                    }, {
+                        duration: 3000,
+                        easing: "swing"
+                    });
+
+                    $el.css('width', null);
+                } else {
+                    console.log('nope, not happenin today sir.');
+                }
             };
             return Tour;
         })();
         model.Tour = Tour;
     })(flexbox.model || (flexbox.model = {}));
     var model = flexbox.model;
+})(flexbox || (flexbox = {}));
+var flexbox;
+(function (flexbox) {
+    (function (view) {
+        var Masthead = (function () {
+            function Masthead(model) {
+                var self = this;
+
+                this.$el = $('.masthead');
+                this.model = model;
+
+                this.monitor = model.items.subscribe(function (items) {
+                    if (items.length === 0) {
+                        self.$el.fadeIn();
+                    } else {
+                        self.$el.hide();
+                    }
+                });
+
+                var confirm = localStorage.getItem('items');
+
+                if (confirm === "0") {
+                    this.$el.fadeIn();
+                }
+            }
+            return Masthead;
+        })();
+        view.Masthead = Masthead;
+    })(flexbox.view || (flexbox.view = {}));
+    var view = flexbox.view;
 })(flexbox || (flexbox = {}));

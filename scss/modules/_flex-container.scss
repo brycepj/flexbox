@@ -1,9 +1,11 @@
+
+
 .flex-container {
   position:relative;
-
+  height:100%;
 
   padding:.5em;
-  overflow:scroll-y;
+  overflow:scroll;
 
   border-radius:$br;
 

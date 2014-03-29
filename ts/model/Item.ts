@@ -203,7 +203,9 @@ module flexbox {
                 this.iPropsCurrent.flexGrow(null);
                 this.iPropsCurrent.flexBasis(null);
                 this.iPropsCurrent.flexShrink(null);
+                this.iPropsCurrent.width("300px");
                 this.isFlexyWidth(false);
+
 
             }
 

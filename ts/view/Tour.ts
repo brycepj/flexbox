@@ -116,24 +116,31 @@ module flexbox {
             resizeContainer():void {
                 var $el = $('.flex-container');
                 var width = $el.width();
-                $el.css('width', width.toString() + "px");
 
-                $el.animate({
-                    width: "270px"
-                }, {
-                    duration: 3000,
-                    easing: "swing"
+                if ($('.flex-item').length > 0) {
 
-                });
 
-                $el.animate({
-                    width: "100%"
-                }, {
-                    duration: 3000,
-                    easing: "swing"
-                });
+                    $el.css('width', width.toString() + "px");
 
-                $el.css('width', null);
+                    $el.animate({
+                        width: "250px"
+                    }, {
+                        duration: 3000,
+                        easing: "swing"
+
+                    });
+
+                    $el.animate({
+                        width: "100%"
+                    }, {
+                        duration: 3000,
+                        easing: "swing"
+                    });
+
+                    $el.css('width', null);
+                } else {
+                    console.log('nope, not happenin today sir.');
+                }
             }
 
         }

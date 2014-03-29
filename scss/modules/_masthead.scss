@@ -1,23 +1,37 @@
 .masthead {
-  position:fixed;
-  top:0;left:0;
+  display:none;
+  position:absolute;
+  top:3em;left:3em;
   z-index:100;
-  background-color:$blue;
+  height:auto;
+  width:65%;
+
+
+
 
 }
 
 .mh-logo {
-
+  @include font-size(2,2);
+  font-family:"Arvo";
+  color:lighten($black,10%);
 }
 
 .mh-desc {
+  margin:.75em 0;
+  @include font-size(1.5,1.75);
+  color:lighten($black,10%);
 
-}
-
-#mh-slide-btn {
-
-  & i {
 
   }
+
+
+
+
+
+
+.masthead iframe {
+  position:absolute;
+  bottom:-1.5em; left:0;
 
 }

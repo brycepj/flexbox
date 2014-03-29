@@ -6,16 +6,21 @@ body {
   padding:1em;
 }
 
-.flex-container {
+.flex-container-wrap {
   flex-grow:1;
   margin-right:1em;
+  height:100%; width:100%;
+}
+
+.flex-container {
+
 }
 
 .sidebar {
   display:flex; flex-direction:column; align-content:stretch;
 
-  flex-basis:330px;
   width:330px;
+
 }
 
 .control-panel,.message-box,.code-box {
