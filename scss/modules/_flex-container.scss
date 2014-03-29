@@ -2,7 +2,6 @@
 
 .flex-container {
   position:relative;
-  height:100%;
 
   padding:.5em;
   overflow:scroll;
@@ -11,9 +10,7 @@
 
   background-color:$flex-container-bg;
 
-  @include bp-max(875px) {
-    height:100%;
-  }
+
 }
 //at
 //app needs to be a column

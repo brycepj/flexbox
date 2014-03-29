@@ -58,6 +58,9 @@ table {
 body, html {
   width: 100%;
   height: 100%; }
+  @media only screen and (max-width: 550px) {
+    body, html {
+      height: auto; } }
 
 body {
   display: flex;
@@ -69,7 +72,11 @@ body {
     body {
       flex-direction: column;
       flex-wrap: nowrap;
+      align-content: flex-start;
       align-items: default; } }
+  @media only screen and (max-width: 550px) {
+    body {
+      flex-wrap: wrap; } }
 
 .flex-container-wrap {
   flex-grow: 1;
@@ -78,7 +85,16 @@ body {
   width: 100%; }
   @media only screen and (max-width: 875px) {
     .flex-container-wrap {
-      height: 70%; } }
+      height: 68%; } }
+  @media only screen and (max-width: 550px) {
+    .flex-container-wrap {
+      height: 400px; } }
+
+.flex-container {
+  height: 100%; }
+  @media only screen and (max-width: 875px) {
+    .flex-container {
+      height: 100%; } }
 
 .sidebar {
   display: flex;
@@ -90,19 +106,25 @@ body {
       flex-direction: row;
       flex-wrap: wrap;
       width: 100%;
-      height: 30%; } }
+      height: 30%;
+      margin-bottom: 1em; } }
+  @media only screen and (max-width: 550px) {
+    .sidebar {
+      height: 300px; } }
 
 @media only screen and (max-width: 875px) {
   .control-panel, .message-box, .code-box {
     flex-grow: 1;
     flex-basis: 200px;
     height: 100%;
-    margin-right: 1em;
-    margin-bottom: 1em; } }
+    margin-right: 1em; } }
 
 .control-panel {
   flex-grow: 1;
   flex-basis: 225px; }
+  @media only screen and (max-width: 733px) {
+    .control-panel {
+      margin-right: 0; } }
 
 .message-box {
   flex-grow: 2.5;
@@ -110,6 +132,9 @@ body {
   @media only screen and (max-width: 875px) {
     .message-box {
       margin-top: 1em; } }
+  @media only screen and (max-width: 517px) {
+    .message-box {
+      margin-right: 0; } }
 
 .code-box {
   flex-grow: 2;
@@ -306,14 +331,10 @@ body {
 
 .flex-container {
   position: relative;
-  height: 100%;
   padding: .5em;
   overflow: scroll;
   border-radius: 5px;
   background-color: #484848; }
-  @media only screen and (max-width: 875px) {
-    .flex-container {
-      height: 100%; } }
 
 .masthead {
   display: none;

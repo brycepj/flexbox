@@ -58,6 +58,9 @@ table {
 body, html {
   width: 100%;
   height: 100%; }
+  @media only screen and (max-width: 550px) {
+    body, html {
+      height: auto; } }
 
 body {
   display: -webkit-box;
@@ -87,10 +90,18 @@ body {
       -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+      -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+      align-content: flex-start;
       -webkit-box-align: default;
       -webkit-align-items: default;
       -ms-flex-align: default;
       align-items: default; } }
+  @media only screen and (max-width: 550px) {
+    body {
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
 
 .flex-container-wrap {
   -webkit-box-flex: 1;
@@ -102,7 +113,16 @@ body {
   width: 100%; }
   @media only screen and (max-width: 875px) {
     .flex-container-wrap {
-      height: 70%; } }
+      height: 68%; } }
+  @media only screen and (max-width: 550px) {
+    .flex-container-wrap {
+      height: 400px; } }
+
+.flex-container {
+  height: 100%; }
+  @media only screen and (max-width: 875px) {
+    .flex-container {
+      height: 100%; } }
 
 .sidebar {
   display: -webkit-box;
@@ -129,7 +149,11 @@ body {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap;
       width: 100%;
-      height: 30%; } }
+      height: 30%;
+      margin-bottom: 1em; } }
+  @media only screen and (max-width: 550px) {
+    .sidebar {
+      height: 300px; } }
 
 @media only screen and (max-width: 875px) {
   .control-panel, .message-box, .code-box {
@@ -140,8 +164,7 @@ body {
     -webkit-flex-basis: 200px;
     flex-basis: 200px;
     height: 100%;
-    margin-right: 1em;
-    margin-bottom: 1em; } }
+    margin-right: 1em; } }
 
 .control-panel {
   -webkit-box-flex: 1;
@@ -150,6 +173,9 @@ body {
   flex-grow: 1;
   -webkit-flex-basis: 225px;
   flex-basis: 225px; }
+  @media only screen and (max-width: 733px) {
+    .control-panel {
+      margin-right: 0; } }
 
 .message-box {
   -webkit-box-flex: 2.5;
@@ -161,6 +187,9 @@ body {
   @media only screen and (max-width: 875px) {
     .message-box {
       margin-top: 1em; } }
+  @media only screen and (max-width: 517px) {
+    .message-box {
+      margin-right: 0; } }
 
 .code-box {
   -webkit-box-flex: 2;
@@ -363,14 +392,10 @@ body {
 
 .flex-container {
   position: relative;
-  height: 100%;
   padding: .5em;
   overflow: scroll;
   border-radius: 5px;
   background-color: #484848; }
-  @media only screen and (max-width: 875px) {
-    .flex-container {
-      height: 100%; } }
 
 .masthead {
   display: none;
