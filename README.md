@@ -17,4 +17,3 @@ CSS
 - make all responsive
 - make template for scrolling picture bar (nowrap)
 - make template for perfect nav
-- make template for suck my dick
