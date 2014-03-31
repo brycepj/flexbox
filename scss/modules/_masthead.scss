@@ -5,9 +5,11 @@
   z-index:100;
   height:auto;
   width:65%;
+  padding-bottom:1em;
 
   & h2 {
     @include font-size(1,1.4);
+    color:$white;
   }
   & ul {
     margin-left:1em;
@@ -16,7 +18,7 @@
 
   & li {
     @include font-size(1,1.25);
-
+	color:$white;
     &:before {
       content:"-";
     }
@@ -28,21 +30,29 @@
 .mh-logo {
   @include font-size(2,2);
   font-family:"Arvo";
-  color:lighten($black,1%);
+  color:$white;
+  
+  @include bp-max(730px) {
+  	@include font-size(1.5,1.5);
+  }
 }
 
 .mh-desc {
   margin:.75em 0;
   @include font-size(1.5,1.75);
-  color:lighten($black,1%);
+  color:$white;
 
 
+ @include bp-max(730px) {
+  	@include font-size(1,1);
   }
 
 
-
-
-
+  }
+  
+ .mh-warning {
+ 	color:red;
+ }
 
 .masthead iframe {
   position:absolute;

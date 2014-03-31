@@ -1145,7 +1145,7 @@ var flexbox;
                 function resetContent(content) {
                     var $contentWrap = $('.mh-cond-content');
                     var wHeight = $(window).innerWidth();
-                    var newContent = '<p class="mh-desc">User beware! This layout is responsive, but the app is far less useful on mobile browsers. I\'d recommend you stop by next time you\'re on a desktop instead :) </p>';
+                    var newContent = '<p class="mh-warning">User beware! This layout is usable on small screens, but not nearly as useful. I\'d recommend checking back when you\'re on a larger device :) </p>';
                     var oldContent = content ? content : $contentWrap.html();
 
                     if (wHeight > 730) {

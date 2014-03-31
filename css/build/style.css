@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Vendor Dependencies */
 /* GLOBAL STYLES */
 /* base rules are the defaults. They are almost exclusively single element selectors, but could include attribute selectors, pseudo-class-selectors, child selectors or sibling selectors. Be sure to specify a body background. */
@@ -217,7 +218,7 @@ body {
 .code-box {
   position: relative;
   margin-top: 1em;
-  overflow-y: scroll; }
+  overflow: auto; }
 
 .cb-title {
   position: absolute;
@@ -237,7 +238,7 @@ body {
 .control-panel {
   position: relative;
   margin-top: 1em;
-  overflow-y: scroll; }
+  overflow: auto; }
 
 .cp-title {
   position: absolute;
@@ -332,7 +333,7 @@ body {
 .flex-container {
   position: relative;
   padding: .5em;
-  overflow: scroll;
+  overflow: auto;
   border-radius: 5px;
   background-color: #484848; }
 
@@ -343,19 +344,22 @@ body {
   left: 3em;
   z-index: 100;
   height: auto;
-  width: 65%; }
+  width: 65%;
+  padding-bottom: 1em; }
   .masthead h2 {
     font-size: 16px;
     font-size: 1rem;
     line-height: 22.4px;
-    line-height: 1.4rem; }
+    line-height: 1.4rem;
+    color: white; }
   .masthead ul {
     margin-left: 1em; }
   .masthead li {
     font-size: 16px;
     font-size: 1rem;
     line-height: 20px;
-    line-height: 1.25rem; }
+    line-height: 1.25rem;
+    color: white; }
     .masthead li:before {
       content: "-"; }
 
@@ -365,7 +369,13 @@ body {
   line-height: 32px;
   line-height: 2rem;
   font-family: "Arvo";
-  color: #141414; }
+  color: white; }
+  @media only screen and (max-width: 730px) {
+    .mh-logo {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 24px;
+      line-height: 1.5rem; } }
 
 .mh-desc {
   margin: .75em 0;
@@ -373,7 +383,16 @@ body {
   font-size: 1.5rem;
   line-height: 28px;
   line-height: 1.75rem;
-  color: #141414; }
+  color: white; }
+  @media only screen and (max-width: 730px) {
+    .mh-desc {
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 16px;
+      line-height: 1rem; } }
+
+.mh-warning {
+  color: red; }
 
 .masthead iframe {
   position: absolute;
@@ -386,7 +405,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  overflow-y: scroll;
+  overflow: auto;
   position: relative; }
 
 .mb-title {
