@@ -31,6 +31,7 @@
   @include font-size(2,2);
   font-family:"Arvo";
   color:$white;
+  text-shadow:0 0 3px darken($white,35%);
   
   @include bp-max(730px) {
   	@include font-size(1.5,1.5);

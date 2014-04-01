@@ -17,8 +17,8 @@ module flexbox {
                         "text": 'Step right up! <br><br>Click the right arrow at the bottom of this box to start an interactive tour of flexbox.',
                         "hasButton": false,
                         "xUrl": null,
-                        "xText": "make pic scroll!",
-                        "action": 'picScroll'
+                        "xText": null,
+                        "action": null
 
                     },
                     {
@@ -66,7 +66,7 @@ module flexbox {
                         "action": null
                     },
                     {
-                        "text": 'In fact, that\'s all the code you need to create a simple flexbox container. <br><br>Click the + button at the top-left of this page three times to create three new flex items and your first flexbox layout!',
+                        "text": 'In fact, that\'s all the code you need to create a simple flexbox container. <br><br>Click the + button below three times to create three new flex items and your first flexbox layout!',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
@@ -111,7 +111,7 @@ module flexbox {
                         "action": null
                     },
                     {
-                        "text": 'You can start with "flex-direction", which is responsible for setting the direction of the axis along which your flex items will be displayed.',
+                        "text": 'You can start with "flex-direction", which is responsible for setting the direction of the axis along which your flex items will be displayed.<br><br> Go ahead and switch it to "column", and then back to row to see the difference.',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null
@@ -133,7 +133,21 @@ module flexbox {
                         "action": null
                     },
                     {
+                        "text": 'Go ahead and play around with the options for justify-content, and remember you can click the "resize box" button at anytime to see what would happen on smaller screens.',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null,
+                        "action": null
+                    },
+                    {
                         "text": 'Another powerful property is "align-items", which determines how flex items are going to be laid out along the other axis (vertically, if your items are in a row). Pretend you\'re setting the "justify-content" property for the other direction. Go ahead, take it for a spin.',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null,
+                        "action": null
+                    },
+                    {
+                        "text":'For best results, make sure your items are all on one row, either by reducing the number of items in the box or setting flex-wrap to nowrap.',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
@@ -154,7 +168,7 @@ module flexbox {
                         "action": null
                     },
                     {
-                        "text": 'By the way, you may have noticed the "resize flexbox" button at the top of the page. Any time you want to see what a layout would do on a smaller screen, click it. You can clear all of the items and start fresh with the "delete all" button. (big surprise)',
+                        "text": 'By the way, you may have noticed the "delete all" button in the control panel. Any time you want to clear all of the items, give it a nice, furtive click.',
                         "hasButton": true,
                         "xUrl": null,
                         "xText": null,
@@ -162,28 +176,28 @@ module flexbox {
                     },
 
                     {
-                        "text": 'At this point, you\'ve seen a lot of what flexbox can do. But you may have noticed that not all of the properties you\'ve changed so far have had an effect on the items in the flexbox. That\'s because some of the properties are really designed for flexible width items...',
+                        "text": 'At this point, you\'ve seen a lot of what flexbox can do. But you may have noticed that not all of the properties you\'ve adjusted so far have had an effect on the items in the flexbox. That\'s because some of the properties are really designed for flexible width items...',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
                         "action": null
                     },
                     {
-                        "text": 'That being said, to experience the real magic of flexbox we need items with flexible widths. Co ahead and clear your flex container (click "delete all") and add six new items to your container. Just be sure the "flexible" option is selected before you do.',
+                        "text": 'That being said, to experience the real magic of flexbox we need items with flexible widths. Go ahead and clear your flex container (click "delete all") and add six new items to your container. Just be sure the "flexible" option is selected before you do.',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
                         "action": null
                     },
                     {
-                        "text": 'Your flexbox should immediately look different than they did with fixed width items. What you\'re witnessing is perhaps the premiere feature of flexbox: your items grow (or shrink) to fill the space they\'ve been given.',
+                        "text": 'Your flex items should immediately look different than they did with fixed width items. What you\'re witnessing is perhaps the premiere feature of flexbox: your items grow (or shrink) to fill the space they\'ve been given.',
                         "hasButton": true,
                         "xUrl": "http://www.nothing.com",
                         "xText": "anoher text",
                         "action": null
                     },
                     {
-                        "text": 'It\'d be a good to click the little gear icon on one of your items. It will show the properties we\'ve applied to these items, which the fixed ones didn\'t have. You should see "flex-grow", "flex-shrink," and/or "flex-basis" properties and values.',
+                        "text": 'It\'s a good to click the little gear icon on one of your items. It will show the properties we\'ve applied to these items, which the fixed ones didn\'t have. You should see "flex-grow", "flex-shrink," and/or "flex-basis" properties and values.',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
@@ -204,11 +218,11 @@ module flexbox {
                         "action": null
                     },
                     {
-                        "text": 'Try adding a several new flexible items to see them squish together all onto one row.',
+                        "text": 'In fact, let\'s make one!',
                         "hasButton": false,
                         "xUrl": null,
-                        "xText": null,
-                        "action": null
+                        "xText": 'make a menu',
+                        "action": 'nav'
                     },
                     {
                         "text": 'Compared to flex-grow, "flex-shrink" may be a little trickier, but still very useful. Basically it specifies how much the flex item will shrink relative to other flex items in the flex container when the space on a row has been filled.',
@@ -218,7 +232,7 @@ module flexbox {
                         "action": null
                     },
                     {
-                        "text": 'To see how it works, remove all of your items. Make sure your default setting for new items is flexible, and add three. Now set the flex-shrink value of one to 2 and click "resize flexbox". It shrinks at twice the pace of the other flex items in the container.',
+                        "text": 'To see how it works, remove all of your items. Make sure your default setting for new items is flexible, and add three. Now set the flex-shrink value of one to 2, and all of their flex-basis properties to "100px" and click "resize flexbox". It shrinks at twice the pace of the other flex items.',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
@@ -275,10 +289,10 @@ module flexbox {
                     },
                     {
                         "text": 'Another practical use would be creating a flexible layout for a basic website. Click the button, and see a perfectly flexible website layout automatically generated.',
-                        "hasButton": true,
-                        "xUrl": "#",
-                        "xText": "Make Holy Grail",
-                        "action": true
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": "layout a website",
+                        "action": 'holyGrail'
                     },
                     {
                         "text": 'Another big plus is that your flex items can act as flexbox containers simultaneously, if you want them to.',
@@ -301,9 +315,16 @@ module flexbox {
                         "xText": null,
                         "action": null
                     },
+                    {
+                        "text": 'How about another use case. What about a horizontal photo gallery for someone to scroll through? The nowrap setting makes this easy.',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": 'make it!',
+                        "action": 'picScroll'
+                    },
 
                     {
-                        "text": 'Alright, believe it or not, you know just about all you need to know about flexbox to be dangerous.',
+                        "text": 'Alright, I could go on... but believe it or not, you know just about all you need to know about flexbox to be dangerous.',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
@@ -362,7 +383,7 @@ module flexbox {
                         "action": null
                     },
                     {
-                        "text": 'El Fin!',
+                        "text": 'The End!',
                         "hasButton": true,
                         "xUrl": null,
                         "xText": null,
