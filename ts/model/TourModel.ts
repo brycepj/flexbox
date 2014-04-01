@@ -25,8 +25,8 @@ module flexbox {
                         "text": 'The Flexbox Layout (Flexible Box) module is meant to help us lay out elements and modules within websites and applications.',
                         "hasButton": false,
                         "xUrl": null,
-                        "xText": 'make holy grail',
-                        "action": 'holyGrail'
+                        "xText": null,
+                        "action": null
                     },
                     {
                         "text": 'According to Chris Coyier</a>:<br><br> "The main idea behind the flex layout is to give the container the ability to alter its items\' width/height (and order) to best fill the available space..."',
@@ -191,9 +191,9 @@ module flexbox {
                     },
                     {
                         "text": 'Your flex items should immediately look different than they did with fixed width items. What you\'re witnessing is perhaps the premiere feature of flexbox: your items grow (or shrink) to fill the space they\'ve been given.',
-                        "hasButton": true,
-                        "xUrl": "http://www.nothing.com",
-                        "xText": "anoher text",
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null,
                         "action": null
                     },
                     {
@@ -218,7 +218,7 @@ module flexbox {
                         "action": null
                     },
                     {
-                        "text": 'In fact, let\'s make one!',
+                        "text": 'In fact, let\'s make one! <br><br>(Remember to resize the container!)',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": 'make a menu',
@@ -267,7 +267,7 @@ module flexbox {
                         "action": null
                     },
                     {
-                        "text": 'Now, how about some practical uses for flexbox?',
+                        "text": 'Now, how about some other practical uses for flexbox?',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
@@ -309,22 +309,15 @@ module flexbox {
                         "action": null
                     },
                     {
-                        "text": 'In fact, most of the layout elements on this page are flexbox. It made for very simple layout code, so I could focus on the harder and more fun work (like writing the javascript to make an interactive app!).',
+                        "text": 'In fact, almost all of the layout elements on this page are flexbox. It made for very simple layout code, so I could focus on the harder and more fun work (like writing the javascript to make an interactive app!).',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
                         "action": null
                     },
-                    {
-                        "text": 'How about another use case. What about a horizontal photo gallery for someone to scroll through? The nowrap setting makes this easy.',
-                        "hasButton": false,
-                        "xUrl": null,
-                        "xText": 'make it!',
-                        "action": 'picScroll'
-                    },
 
-                    {
-                        "text": 'Alright, I could go on... but believe it or not, you know just about all you need to know about flexbox to be dangerous.',
+                   {
+                        "text": 'Alright, I could go on and on with examples... but believe it or not, you know just about all you need to know about flexbox to be dangerous.',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,

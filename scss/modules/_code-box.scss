@@ -16,10 +16,12 @@ $dist:.75em;
   top:$dist;left:$dist;
   @include font-size(.75,.85);
 
+
 }
 
 .cb-item {
-  @include font-size(.75,.85);
+  padding-top:1em;
+  @include font-size(.85,1);
 }
 
 

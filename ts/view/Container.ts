@@ -451,6 +451,13 @@ module flexbox {
             makeResponsiveNav():void {
                 this.items([]);
                 var index = this.getItemIndex();
+
+                this.cPropsCurrent.flexDirection('row');
+                this.cPropsCurrent.flexWrap('wrap');
+                this.cPropsCurrent.alignItems("flex-start");
+                this.cPropsCurrent.justifyContent('center');
+                this.cPropsCurrent.alignContent('flex-start');
+
                 this.items.push(
                     new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", height: "70px", margin: "2px", content: "Home" }),
                     new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", height: "70px", margin: "2px", content: "About" }),
@@ -459,41 +466,40 @@ module flexbox {
                     new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", height: "70px", margin: "2px", content: "Blog" })
                 );
 
-                this.cPropsCurrent.flexDirection('row');
-                this.cPropsCurrent.flexWrap('wrap');
-                this.cPropsCurrent.alignItems("flex-start");
-                this.cPropsCurrent.justifyContent('center');
-                this.cPropsCurrent.alignContent('');
+
 
             }
 
             makePicScroll():void {
                 this.items([]);
                 var index = this.getItemIndex();
-                this.items.push(
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "10px" }),
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "10px" }),
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "10px" }),
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "10px" }),
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "10px" }),
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "10px" }),
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "10px" }),
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "10px" }),
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "10px" }),
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "10px" }),
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "10px" }),
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "10px" }),
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "10px" }),
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "10px" }),
-                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "10px" })
-
-            );
 
                 this.cPropsCurrent.flexDirection('row');
                 this.cPropsCurrent.flexWrap('nowrap');
                 this.cPropsCurrent.alignItems("center");
                 this.cPropsCurrent.justifyContent('flex-start');
                 this.cPropsCurrent.alignContent('center');
+
+                this.items.push(
+                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "80px" }),
+                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "80px" }),
+                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "80px" }),
+                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "80px" }),
+                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "80px" }),
+                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "80px" }),
+                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "80px" }),
+                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "80px" }),
+                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "80px" }),
+                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "80px" }),
+                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "80px" }),
+                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "80px" }),
+                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "80px" }),
+                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "80px" }),
+                    new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem:0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px",  height: "80px" })
+
+            );
+
+
             }
 
 

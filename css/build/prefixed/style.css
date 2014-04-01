@@ -289,10 +289,11 @@ body {
   line-height: 0.85rem; }
 
 .cb-item {
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 13.6px;
-  line-height: 0.85rem; }
+  padding-top: 1em;
+  font-size: 13.6px;
+  font-size: 0.85rem;
+  line-height: 16px;
+  line-height: 1rem; }
 
 .control-panel {
   position: relative;
@@ -309,9 +310,11 @@ body {
   line-height: 0.85rem; }
 
 .cp-container {
-  width: 55%;
+  width: 52%;
   float: left;
-  text-align: left; }
+  text-align: left;
+  border-left: 1px solid #626262;
+  padding-left: 20px; }
   .cp-container label {
     display: block;
     font-size: 12px;
@@ -343,7 +346,7 @@ body {
 
 .cp-items {
   margin-top: .75em;
-  width: 45%;
+  width: 40%;
   float: left;
   padding: 0 0 .5em 0; }
 
