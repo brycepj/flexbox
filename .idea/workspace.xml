@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="95115037-0819-4211-a05b-a12621139f24" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/view/Container.ts" afterPath="$PROJECT_DIR$/ts/view/Container.ts" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/model/Item.ts" afterPath="$PROJECT_DIR$/ts/model/Item.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/view/Tour.ts" afterPath="$PROJECT_DIR$/ts/view/Tour.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ts/model/TourModel.ts" afterPath="$PROJECT_DIR$/ts/model/TourModel.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scss/modules/_flex-item.scss" afterPath="$PROJECT_DIR$/scss/modules/_flex-item.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
@@ -33,14 +33,14 @@
     <favorites_list name="flexbox" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4547619">
+    <splitter split-orientation="horizontal" split-proportion="0.4427403">
       <split-first>
         <leaf>
           <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.6875" vertical-offset="0" max-vertical-offset="3885">
-                  <caret line="72" column="94" selection-start-line="72" selection-start-column="94" selection-end-line="72" selection-end-column="94" />
+                <state vertical-scroll-proportion="0.296875" vertical-offset="2540" max-vertical-offset="3885">
+                  <caret line="182" column="85" selection-start-line="182" selection-start-column="85" selection-end-line="182" selection-end-column="85" />
                   <folding />
                 </state>
               </provider>
@@ -49,8 +49,8 @@
           <file leaf-file-name="TourModel.ts" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ts/model/TourModel.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="5790">
-                  <caret line="78" column="44" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
+                <state vertical-scroll-proportion="-21.923077" vertical-offset="0" max-vertical-offset="5790">
+                  <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
@@ -73,8 +73,18 @@
           <file leaf-file-name="Container.ts" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/ts/view/Container.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="5876" max-vertical-offset="7365">
-                  <caret line="404" column="36" selection-start-line="404" selection-start-column="36" selection-end-line="404" selection-end-column="36" />
+                <state vertical-scroll-proportion="-61.153847" vertical-offset="5760" max-vertical-offset="7995">
+                  <caret line="490" column="0" selection-start-line="490" selection-start-column="0" selection-end-line="490" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Item.ts" pinned="false" current="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/ts/model/Item.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3990">
+                  <caret line="170" column="40" selection-start-line="170" selection-start-column="40" selection-end-line="170" selection-end-column="40" />
                   <folding />
                 </state>
               </provider>
@@ -84,7 +94,7 @@
             <entry file="file://$PROJECT_DIR$/scss/modules/_flex-item.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="1440">
-                  <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+                  <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
                   <folding />
                 </state>
               </provider>
@@ -100,14 +110,24 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/README.md">
               <provider editor-type-id="MarkdownPreviewEditor">
                 <state />
               </provider>
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.46416938" vertical-offset="0" max-vertical-offset="614">
-                  <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+                <state vertical-scroll-proportion="-11.666667" vertical-offset="0" max-vertical-offset="405">
+                  <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_masthead.scss" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/scss/modules/_masthead.scss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.6904762" vertical-offset="45" max-vertical-offset="840">
+                  <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -143,7 +163,6 @@
         <option value="$PROJECT_DIR$/ts/pkg.ts" />
         <option value="$PROJECT_DIR$/ts/view/pkg.ts" />
         <option value="$PROJECT_DIR$/ts/init.ts" />
-        <option value="$PROJECT_DIR$/ts/model/Item.ts" />
         <option value="$PROJECT_DIR$/scss/modules/_masthead.scss" />
         <option value="$PROJECT_DIR$/scss/modules/_control-panel.scss" />
         <option value="$PROJECT_DIR$/scss/modules/_message-box.scss" />
@@ -153,10 +172,11 @@
         <option value="$PROJECT_DIR$/ts/view/Masthead.ts" />
         <option value="$PROJECT_DIR$/ts/view/Tour.ts" />
         <option value="$PROJECT_DIR$/ts/model/TourModel.ts" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/ts/view/Container.ts" />
         <option value="$PROJECT_DIR$/scss/modules/_flex-item.scss" />
+        <option value="$PROJECT_DIR$/ts/view/Container.ts" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/ts/model/Item.ts" />
       </list>
     </option>
   </component>
@@ -792,14 +812,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ts/model/Item.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1740" max-vertical-offset="3900">
-          <caret line="205" column="50" selection-start-line="205" selection-start-column="50" selection-end-line="205" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/modules/_aside.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="315">
@@ -840,14 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/modules/_masthead.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10566615" vertical-offset="186" max-vertical-offset="840">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/modules/_flex-container.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="360">
@@ -872,26 +876,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ts/model/TourModel.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="195" max-vertical-offset="5790">
-          <caret line="78" column="44" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6875" vertical-offset="0" max-vertical-offset="3885">
-          <caret line="72" column="94" selection-start-line="72" selection-start-column="94" selection-end-line="72" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ts/view/Container.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5876" max-vertical-offset="7365">
-          <caret line="404" column="36" selection-start-line="404" selection-start-column="36" selection-end-line="404" selection-end-column="36" />
+        <state vertical-scroll-proportion="-61.153847" vertical-offset="5760" max-vertical-offset="7995">
+          <caret line="490" column="0" selection-start-line="490" selection-start-column="0" selection-end-line="490" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/model/TourModel.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.923077" vertical-offset="0" max-vertical-offset="5790">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -899,7 +895,23 @@
     <entry file="file://$PROJECT_DIR$/scss/modules/_flex-item.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.75" vertical-offset="0" max-vertical-offset="1440">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.296875" vertical-offset="2540" max-vertical-offset="3885">
+          <caret line="182" column="85" selection-start-line="182" selection-start-column="85" selection-end-line="182" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/model/Item.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3990">
+          <caret line="170" column="40" selection-start-line="170" selection-start-column="40" selection-end-line="170" selection-end-column="40" />
           <folding />
         </state>
       </provider>
@@ -909,8 +921,16 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46416938" vertical-offset="0" max-vertical-offset="614">
-          <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
+        <state vertical-scroll-proportion="-11.666667" vertical-offset="0" max-vertical-offset="405">
+          <caret line="21" column="63" selection-start-line="21" selection-start-column="63" selection-end-line="21" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/modules/_masthead.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6904762" vertical-offset="45" max-vertical-offset="840">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>

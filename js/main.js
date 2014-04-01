@@ -145,6 +145,16 @@ var flexbox;
                         return "inherit";
                     }
                 }, this);
+
+                this.tallEnough = function () {
+                    var height = this.iPropsCurrent.height();
+                    console.log(height);
+                    if (height > 60) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                };
             }
             FlexItem.prototype.saveProps = function () {
                 var index = this.index();
@@ -233,8 +243,8 @@ var flexbox;
                         "text": 'Step right up! <br><br>Click the right arrow at the bottom of this box to start an interactive tour of flexbox.',
                         "hasButton": false,
                         "xUrl": null,
-                        "xText": "resize it!",
-                        "action": 'resize'
+                        "xText": "make pic scroll!",
+                        "action": 'picScroll'
                     },
                     {
                         "text": 'The Flexbox Layout (Flexible Box) module is meant to help us lay out elements and modules within websites and applications.',
@@ -735,6 +745,12 @@ var flexbox;
                     case "holyGrail":
                         this.makeHolyGrail();
                         break;
+                    case "nav":
+                        this.makeResponsiveNav();
+                        break;
+                    case "picScroll":
+                        this.makePicScroll();
+                        break;
                     default:
                         console.log('action has not been registered');
                 }
@@ -975,10 +991,28 @@ var flexbox;
                 this.cPropsCurrent.alignContent('flex-start');
             };
 
-            FlexContainer.prototype.responsiveNav = function () {
-                var index = this.getItemIndex();
+            FlexContainer.prototype.makeResponsiveNav = function () {
                 this.items([]);
-                this.items.push(new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "Home" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "About" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "Contact" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "Portfolio" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "200px", height: "50px", margin: "2px", content: "Blog" }));
+                var index = this.getItemIndex();
+                this.items.push(new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", height: "70px", margin: "2px", content: "Home" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", height: "70px", margin: "2px", content: "About" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", height: "70px", margin: "2px", content: "Contact" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", height: "70px", margin: "2px", content: "Portfolio" }), new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", height: "70px", margin: "2px", content: "Blog" }));
+
+                this.cPropsCurrent.flexDirection('row');
+                this.cPropsCurrent.flexWrap('wrap');
+                this.cPropsCurrent.alignItems("flex-start");
+                this.cPropsCurrent.justifyContent('center');
+                this.cPropsCurrent.alignContent('');
+            };
+
+            FlexContainer.prototype.makePicScroll = function () {
+                this.items([]);
+                var index = this.getItemIndex();
+                this.items.push(new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem: 0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px", height: "10px" }), new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem: 0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px", height: "10px" }), new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem: 0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px", height: "10px" }), new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem: 0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px", height: "10px" }), new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem: 0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px", height: "10px" }), new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem: 0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px", height: "10px" }), new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem: 0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px", height: "10px" }), new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem: 0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px", height: "10px" }), new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem: 0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px", height: "10px" }), new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem: 0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px", height: "10px" }), new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem: 0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px", height: "10px" }), new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem: 0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px", height: "10px" }), new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem: 0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px", height: "10px" }), new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem: 0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px", height: "10px" }), new flexbox.model.FlexItem(this, index++, { viewContent: true, lorem: 0, isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", margin: "2px", height: "10px" }));
+
+                this.cPropsCurrent.flexDirection('row');
+                this.cPropsCurrent.flexWrap('nowrap');
+                this.cPropsCurrent.alignItems("center");
+                this.cPropsCurrent.justifyContent('flex-start');
+                this.cPropsCurrent.alignContent('center');
             };
 
             FlexContainer.prototype.printLocalStorage = function () {

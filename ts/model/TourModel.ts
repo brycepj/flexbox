@@ -17,8 +17,8 @@ module flexbox {
                         "text": 'Step right up! <br><br>Click the right arrow at the bottom of this box to start an interactive tour of flexbox.',
                         "hasButton": false,
                         "xUrl": null,
-                        "xText": "resize it!",
-                        "action": 'resize'
+                        "xText": "make pic scroll!",
+                        "action": 'picScroll'
 
                     },
                     {

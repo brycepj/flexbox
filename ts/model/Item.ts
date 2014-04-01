@@ -15,6 +15,7 @@ module flexbox {
             viewContent:any;
             viewSettings:any;
             lorem:any;
+            tallEnough:any;
 
             constructor(model:any, index:any, props:model.ItemProps = {
                 viewSettings: false,
@@ -165,7 +166,12 @@ module flexbox {
 
                 }, this);
 
-
+                this.tallEnough = function(){
+                    var height = this.iPropsCurrent.height();
+                    console.log(height);
+                    if (height > 60) {return true;}
+                    else {return false;}
+                };
             }
 
             saveProps():void {

@@ -17,4 +17,6 @@ CSS
 - make all responsive
 - make template for scrolling picture bar (nowrap)
 - make template for perfect nav
-- make template for suck my dick
+- add margin to local storage for items
+
+-if item height is less than 10, remove ability to view content
