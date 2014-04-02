@@ -125,6 +125,7 @@ module flexbox {
                 this.flexType = ko.observable("fixed");
                 this.loremCount = ko.observable(5);
 
+
                 //localStorage setup
                 this.setSaveSession();
                 this.printLocalStorage();
