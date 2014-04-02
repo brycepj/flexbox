@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Vendor Dependencies */
 /* GLOBAL STYLES */
 /* base rules are the defaults. They are almost exclusively single element selectors, but could include attribute selectors, pseudo-class-selectors, child selectors or sibling selectors. Be sure to specify a body background. */
@@ -264,6 +265,14 @@ body {
   background-color: #ffa601;
   color: white; }
 
+i {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
 /******MODULES*******/
 .sidebar {
   background-color: transparent; }
@@ -398,7 +407,13 @@ body {
   padding: .5em;
   overflow: auto;
   border-radius: 5px;
-  background-color: #484848; }
+  background-color: #484848;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
 
 .masthead {
   display: none;

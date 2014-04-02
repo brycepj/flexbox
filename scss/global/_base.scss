@@ -44,3 +44,8 @@ body {
 p {
 
 }
+
+
+i {
+	@include no-select();
+}

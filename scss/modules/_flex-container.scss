@@ -8,10 +8,8 @@
   border-radius:$br;
 
   background-color:$flex-container-bg;
-
-
+  @include no-select();
+	
 }
-//at
-//app needs to be a column
-//aside needs to be a row
+
 
