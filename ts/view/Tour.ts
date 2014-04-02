@@ -13,6 +13,7 @@ module flexbox {
             tourProgress:any;
             currentAction:any;
             clickAction:any;
+
             constructor() {
 
 
@@ -47,18 +48,20 @@ module flexbox {
 
                 }, this);
 
-                this.currentAction = ko.computed(function(){
+                this.currentAction = ko.computed(function () {
 
 
                     var index = this.index();
                     var action = this.tour.messages[index].action;
 
-                    if (action) {return true;}
+                    if (action) {
+                        return true;
+                    }
 
-                },this);
+                }, this);
 
 
-                this.tourProgress = ko.computed(function(){
+                this.tourProgress = ko.computed(function () {
 
                     var currentIndexNum = this.index() + 1;
 
@@ -69,28 +72,30 @@ module flexbox {
 
                     return progressString;
 
-                },this);
+                }, this);
 
 
             }
 
 
-            
             next():void {
                 var arrayLength = this.tour.messages.length;
                 var current = this.index();
+                var self = this;
+
+                $('.mb-content').fadeOut('fast', function () {
+
+                    if (current === (arrayLength - 1)) {
+                        return;
+                    }
+                    else {
+                        current++;
+                        self.index(current); //increment index up one
+
+                    }
 
 
-
-                if (current === (arrayLength - 1)) {
-                    return;
-                }
-                else {
-                    current++;
-                    this.index(current); //increment index up one
-
-                }
-
+                }).fadeIn('fast');
 
 
             }
@@ -98,14 +103,19 @@ module flexbox {
             previous():void {
                 var arrayLength = this.tour.messages.length;
                 var current = this.index();
-                if (current === 0) {
-                    return;
-                }
-                else {
-                    current--;
-                    this.index(current); //increment index up one
+                var self = this;
 
-                }
+                $('.mb-content').fadeOut('fast', function () {
+                    if (current === 0) {
+                        return;
+                    }
+                    else {
+                        current--;
+                        self.index(current); //increment index up one
+
+                    }
+
+                }).fadeIn('fast');
             }
 
 

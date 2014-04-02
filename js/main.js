@@ -1109,24 +1109,31 @@ var flexbox;
             Tour.prototype.next = function () {
                 var arrayLength = this.tour.messages.length;
                 var current = this.index();
+                var self = this;
 
-                if (current === (arrayLength - 1)) {
-                    return;
-                } else {
-                    current++;
-                    this.index(current);
-                }
+                $('.mb-content').fadeOut('fast', function () {
+                    if (current === (arrayLength - 1)) {
+                        return;
+                    } else {
+                        current++;
+                        self.index(current);
+                    }
+                }).fadeIn('fast');
             };
 
             Tour.prototype.previous = function () {
                 var arrayLength = this.tour.messages.length;
                 var current = this.index();
-                if (current === 0) {
-                    return;
-                } else {
-                    current--;
-                    this.index(current);
-                }
+                var self = this;
+
+                $('.mb-content').fadeOut('fast', function () {
+                    if (current === 0) {
+                        return;
+                    } else {
+                        current--;
+                        self.index(current);
+                    }
+                }).fadeIn('fast');
             };
 
             Tour.prototype.test = function () {
