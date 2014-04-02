@@ -246,6 +246,9 @@ i {
 
 .control-panel {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin-top: 1em;
   overflow: auto; }
 
