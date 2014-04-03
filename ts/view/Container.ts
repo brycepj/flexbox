@@ -408,8 +408,8 @@ module flexbox {
                             flexGrow: "1",
                             flexShrink: "0",
                             flexBasis: "200px",
-                            height:  null,
-                            lorem: 50 }),
+                            height: null,
+                            lorem: 70 }),
 
                     new flexbox.model.FlexItem(this, index++,
                         { viewContent: true,
@@ -419,7 +419,7 @@ module flexbox {
                             flexShrink: "0",
                             flexBasis: "200px",
                             height:  null,
-                            lorem: 50 }),
+                            lorem: 70 }),
 
                     new flexbox.model.FlexItem(this, index++,
                         {   viewContent: true,
@@ -429,7 +429,7 @@ module flexbox {
                             flexShrink: "0",
                             flexBasis: "200px",
                             height: null,
-                            lorem: 50 }),
+                            lorem: 70 }),
 
                     new flexbox.model.FlexItem(this, index++,
                         { isFlexyWidth: true,

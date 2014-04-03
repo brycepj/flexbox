@@ -979,7 +979,7 @@ var flexbox;
                     flexShrink: "0",
                     flexBasis: "200px",
                     height: null,
-                    lorem: 50 }), new flexbox.model.FlexItem(this, index++, {
+                    lorem: 70 }), new flexbox.model.FlexItem(this, index++, {
                     viewContent: true,
                     viewSettings: false,
                     isFlexyWidth: true,
@@ -987,7 +987,7 @@ var flexbox;
                     flexShrink: "0",
                     flexBasis: "200px",
                     height: null,
-                    lorem: 50 }), new flexbox.model.FlexItem(this, index++, {
+                    lorem: 70 }), new flexbox.model.FlexItem(this, index++, {
                     viewContent: true,
                     viewSettings: false,
                     isFlexyWidth: true,
@@ -995,7 +995,7 @@ var flexbox;
                     flexShrink: "0",
                     flexBasis: "200px",
                     height: null,
-                    lorem: 50 }), new flexbox.model.FlexItem(this, index++, {
+                    lorem: 70 }), new flexbox.model.FlexItem(this, index++, {
                     isFlexyWidth: true,
                     flexGrow: "1",
                     flexShrink: "0",
