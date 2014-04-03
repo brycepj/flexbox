@@ -261,7 +261,7 @@ var flexbox;
                         "action": null
                     },
                     {
-                        "text": '...he continues "a flex container expands items to fill available free space, or shrinks them to prevent overflow."',
+                        "text": 'He continues, "A flex container expands items to fill available free space, or shrinks them to prevent overflow."',
                         "hasButton": true,
                         "xUrl": 'http://css-tricks.com/snippets/css/a-guide-to-flexbox/',
                         "xText": 'See the full article',
@@ -310,14 +310,14 @@ var flexbox;
                         "action": null
                     },
                     {
-                        "text": 'Go ahead and click on the gear icon at the top-right of any of the flex items, to see the properties they have. Just simple, pixel-based height and width values. That\'s it.',
+                        "text": 'Go ahead and click on the gear icon at the top-right of any of the flex items, to see the properties they have. Just simple, pixel-based height and width values. That\'s it.<br><br>(You could use em or percent values too.)',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
                         "action": null
                     },
                     {
-                        "text": 'Keep in mind, while fixed-width flex items are sometimes all you need, they certainly don\'t show you all of the magic flexbox has to offer. <br><br>We\'ll get to that soon enough, but first...',
+                        "text": 'Keep in mind, while fixed-width flex items are sometimes all you need, they certainly don\'t show you all the magic flexbox has to offer. <br><br>We\'ll get to that soon enough, but first...',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
@@ -332,6 +332,12 @@ var flexbox;
                     },
                     {
                         "text": 'You can start with "flex-direction", which is responsible for setting the direction of the axis along which your flex items will be displayed.<br><br> Go ahead and switch it to "column", and then back to row to see the difference.',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null
+                    },
+                    {
+                        "text": 'By the way, for the next several slides, it\'d be a good idea to keep flex-direction set to "row", since many of the properties we\'ll look at work slightly differently in column layouts.',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null
@@ -372,7 +378,7 @@ var flexbox;
                         "action": null
                     },
                     {
-                        "text": 'Finally we come to the "align-content" propety. Its job is to align a flex container\'s lines when there is extra space between rows (if your items are in a row). It\'s important to note that this property only works when a flex container has more than one row/column of items.',
+                        "text": 'Finally we come to the "align-content" property. Its job is to align a flex container\'s lines when there is extra space between rows (if your items are in a row). It\'s important to note that this property only works when a flex container has more than one row/column of items.',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
@@ -561,7 +567,7 @@ var flexbox;
                         "action": null
                     },
                     {
-                        "text": 'Wondering about vendor prefixes? There are all sorts of quirky issues actually, since flexbox is on its third syntax. But none of that matters if you use <a href="http://css-tricks.com/autoprefixer/" target="_blank">autoprefixer</a>. Seriously, stop worrying about vendor prefixes (at all) and use autoprefixer.',
+                        "text": 'Wondering about vendor prefixes? There are some quirky issues actually, since flexbox is on its third syntax. But none of that matters if you use <a href="http://css-tricks.com/autoprefixer/" target="_blank">autoprefixer</a> to handle vendor prefixes for you. Seriously, stop worrying about vendor prefixes (at all, forever) and use autoprefixer.',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
