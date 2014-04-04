@@ -280,7 +280,7 @@ module flexbox {
                         "action": null
                     },
                     {
-                        "text": 'One of the most useful right out-of-the-box is vertical centering. Clear your screen of flex items and add just one. Make sure "justify-content" and "align-content" have been set to "center".',
+                        "text": 'One of the most useful right out-of-the-box is vertical centering. Clear your screen of flex items and add just one. Make sure "justify-content" and "align-items" have been set to "center".',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
