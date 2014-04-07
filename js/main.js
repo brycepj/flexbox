@@ -4,6 +4,9 @@ var flexbox;
         $(document).ready(function () {
             var flexboxApp = new flexbox.view.FlexContainer();
             ko.applyBindings(flexboxApp, document.getElementById('flexbox-app'));
+
+            flexboxApp.masthead.resetContent();
+            flexboxApp.masthead.setResizeListener();
         });
     })();
 })(flexbox || (flexbox = {}));
@@ -1188,6 +1191,8 @@ var flexbox;
                 this.$el = $('.masthead');
                 this.model = model;
 
+                self.$el.fadeIn();
+
                 this.monitor = model.items.subscribe(function (items) {
                     if (items.length === 0) {
                         self.$el.fadeIn();
@@ -1201,45 +1206,41 @@ var flexbox;
                 if (confirm === "0") {
                     this.$el.fadeIn();
                 }
-
-                resetContent();
-                setResizeListener();
-
-                function resetContent(content) {
-                    var $contentWrap = $('.mh-cond-content');
-                    var wHeight = $(window).innerWidth();
-                    var noFlexbox = "Heads up! Your browser doesn't fully support flexbox. So it\'s likely this flexbox demo isn't going to look very good. Sorry about that!";
-                    var smallScreen = "User beware! This layout is usable on small screens, but not nearly as useful. I\'d recommend checking back when you\'re on a larger device :)";
-                    var warning = "";
-
-                    var oldContent = content ? content : $contentWrap.html();
-
-                    if (Modernizr.flexbox) {
-                        warning = smallScreen;
-                    } else {
-                        warning = noFlexbox;
-                    }
-
-                    if (wHeight > 730) {
-                        var newContent = '<p class="mh-warning">' + warning + '</p>';
-                        console.log('door number 1');
-                        $contentWrap.html(oldContent);
-                    }
-
-                    if (wHeight < 730) {
-                        var newContent = '<p class="mh-warning">' + warning + '</p>';
-                        console.log('door number 2');
-                        $contentWrap.html(newContent);
-                    }
-                }
-
-                function setResizeListener() {
-                    var content = $('.mh-cond-content').html();
-                    $(window).resize(function () {
-                        resetContent(content);
-                    });
-                }
             }
+            Masthead.prototype.resetContent = function (content) {
+                var $contentWrap = $('.mh-cond-content');
+                var wHeight = $(window).innerWidth();
+                var noFlexbox = "Heads up! Your browser doesn't fully support flexbox. So it\'s likely this flexbox demo isn't going to look very good. Sorry about that!";
+                var smallScreen = "User beware! This layout is usable on small screens, but not nearly as useful. I\'d recommend checking back when you\'re on a larger device :)";
+                var warning = "";
+
+                var oldContent = content ? content : $contentWrap.html();
+
+                if (Modernizr.flexbox) {
+                    warning = smallScreen;
+                } else {
+                    warning = noFlexbox;
+                }
+
+                if (wHeight > 730) {
+                    var newContent = '<p class="mh-warning">' + warning + '</p>';
+                    console.log('door number 1');
+                    $contentWrap.html(oldContent);
+                }
+
+                if (wHeight < 730) {
+                    var newContent = '<p class="mh-warning">' + warning + '</p>';
+                    console.log('door number 2');
+                    $contentWrap.html(newContent);
+                }
+            };
+
+            Masthead.prototype.setResizeListener = function () {
+                var content = $('.mh-cond-content').html();
+                $(window).resize(function () {
+                    this.resetContent(content);
+                });
+            };
             return Masthead;
         })();
         view.Masthead = Masthead;

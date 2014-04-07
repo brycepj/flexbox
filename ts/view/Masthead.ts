@@ -15,6 +15,11 @@ module flexbox {
                 this.$el = $('.masthead');
                 this.model = model;
 
+                self.$el.fadeIn();
+                
+                
+                
+                
                 this.monitor = model.items.subscribe(function(items){
                     if (items.length === 0) {
                         self.$el.fadeIn();
@@ -38,11 +43,9 @@ module flexbox {
                 //resizing the page
 
 
+                }//end constructor
 
-                resetContent();
-                setResizeListener();
-
-                function resetContent(content?:any){
+                resetContent(content?:any){
 
                         var $contentWrap = $('.mh-cond-content');
                         var wHeight = $(window).innerWidth();
@@ -69,22 +72,14 @@ module flexbox {
                             console.log('door number 2');
                                 $contentWrap.html(newContent);
                         }
-
                 }
 
-                function setResizeListener() {
+                setResizeListener() {
                     var content = $('.mh-cond-content').html();
                     $(window).resize(function(){
-                        resetContent(content);
+                        this.resetContent(content);
                     });
                 }
-                
-
-            }//end constructor
-
-
-
-
         }
 
     }
