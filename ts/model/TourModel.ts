@@ -344,7 +344,7 @@ module flexbox {
                         "action": null
                     },
                     {
-                        "text": 'Finally, browser support. Long story short, flexbox is now supported in all of the latest browser versions (Firefox 28 has finally shipped), but if you need to support older browsers check out <a href="http://caniuse.com/flexbox" target="_blank">caniuse</a>to see what your options are.',
+                        "text": 'Finally, browser support. Long story short, flexbox is now supported in all of the latest browser versions (Firefox 28 has finally shipped), but if you need to support older browsers check out <a href="http://caniuse.com/flexbox" target="_blank">caniuse</a> to see what your options are.',
                         "hasButton": true,
                         "xUrl": null,
                         "xText": null,
@@ -352,6 +352,13 @@ module flexbox {
                     },
                     {
                         "text": 'Wondering about vendor prefixes? There are some quirky issues actually, since flexbox is on its third syntax. But none of that matters if you use <a href="http://css-tricks.com/autoprefixer/" target="_blank">autoprefixer</a> to handle vendor prefixes for you. Seriously, stop worrying about vendor prefixes (at all, forever) and use autoprefixer.',
+                        "hasButton": false,
+                        "xUrl": null,
+                        "xText": null,
+                        "action": null
+                    },
+                    {
+                        "text": 'UPDATE: In making stylistic changes to this app, I\'ve discovered various differences in how browsers render flexbox layouts (particularly Safari), some more significant than others. Long story short, with flexbox, tread lightly and test all the devices you can.',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,

@@ -8,10 +8,11 @@ module flexbox {
             model:flexbox.view.FlexContainer;
             monitor:any;
 
+
             constructor(model:flexbox.view.FlexContainer) {
 
                 var self = this;
-
+                var window = $(window);
                 this.$el = $('.masthead');
                 this.model = model;
 
@@ -35,7 +36,10 @@ module flexbox {
                     this.$el.fadeIn();
                 }
 
-               
+
+
+
+
 
                 //coming on small screen for first time
 
@@ -75,9 +79,10 @@ module flexbox {
                 }
 
                 setResizeListener() {
+                    var self = this;
                     var content = $('.mh-cond-content').html();
                     $(window).resize(function(){
-                        this.resetContent(content);
+                        self.resetContent(content);
                     });
                 }
         }
