@@ -49,3 +49,7 @@ p {
 i {
 	@include no-select();
 }
+
+em {
+	font-style:italic;
+}

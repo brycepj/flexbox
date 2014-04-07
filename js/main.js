@@ -1208,15 +1208,26 @@ var flexbox;
                 function resetContent(content) {
                     var $contentWrap = $('.mh-cond-content');
                     var wHeight = $(window).innerWidth();
-                    var newContent = '<p class="mh-warning">User beware! This layout is usable on small screens, but not nearly as useful. I\'d recommend checking back when you\'re on a larger device :) </p>';
+                    var noFlexbox = "Heads up! Your browser doesn't fully support flexbox. So it\'s likely this flexbox demo isn't going to look very good. Sorry about that!";
+                    var smallScreen = "User beware! This layout is usable on small screens, but not nearly as useful. I\'d recommend checking back when you\'re on a larger device :)";
+                    var warning = "";
+
                     var oldContent = content ? content : $contentWrap.html();
 
+                    if (Modernizr.flexbox) {
+                        warning = smallScreen;
+                    } else {
+                        warning = noFlexbox;
+                    }
+
                     if (wHeight > 730) {
+                        var newContent = '<p class="mh-warning">' + warning + '</p>';
                         console.log('door number 1');
                         $contentWrap.html(oldContent);
                     }
 
                     if (wHeight < 730) {
+                        var newContent = '<p class="mh-warning">' + warning + '</p>';
                         console.log('door number 2');
                         $contentWrap.html(newContent);
                     }

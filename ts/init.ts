@@ -6,9 +6,6 @@ module flexbox {
             ko.applyBindings(flexboxApp, document.getElementById('flexbox-app'));
 
 
-        //make height on
-        //make this sucker responsive once and for all
-        //integrate jasmine and karma so it's testable
         });
     })()
 
