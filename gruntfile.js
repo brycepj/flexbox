@@ -15,8 +15,8 @@ module.exports = function(grunt) {
 
 		watch : {
 			scripts : {
-				files : [ 'ts/**/*.ts' ],
-				tasks : [ 'typescript' ],
+				files : [ 'ts/**/*.ts','gruntfile.js' ],
+				tasks : [ 'typescript','copy' ],
 				options : {
 					livereload : true,
 					spawn : false,
@@ -63,6 +63,12 @@ module.exports = function(grunt) {
 				dest : 'js/main.js'
 			}
 		},
+		copy: {
+			  test: {
+			      src: 'js/main.js', 
+			      dest: 'tests/src/test.js'
+			  }
+			}
 
 	});
 
@@ -76,14 +82,12 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-typescript');
 	grunt.loadNpmTasks('grunt-shell');
-	grunt.loadNpmTasks('grunt-karma');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 
 	// 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-	grunt
-			.registerTask('dev', [ 'typescript', 'sass', 'autoprefixer',
-					'watch' ]);
-
-	grunt.registerTask('build',
-			[ 'typescript', 'sass', 'autoprefixer', 'shell' ]);
+	grunt.registerTask('dev', [ 'typescript', 'copy','sass', 'autoprefixer','watch' ]);
+	grunt.registerTask('dev-css',['sass','autoprefixer','watch']);
+	grunt.registerTask('dev-ts',['typescript','copy','watch']);
+	grunt.registerTask('build',[ 'typescript', 'sass', 'autoprefixer', 'shell' ]);
 
 };
