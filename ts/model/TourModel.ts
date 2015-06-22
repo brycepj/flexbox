@@ -203,7 +203,7 @@ module flexbox {
                         "action": null
                     },
                     {
-                        "text": 'It\'s a good to click the little gear icon on one of your items. It will show the properties we\'ve applied to these items, which the fixed ones didn\'t have. You should see "flex-grow", "flex-shrink," and/or "flex-basis" properties and values.',
+                        "text": 'It\'s good to click the little gear icon on one of your items. It will show the properties we\'ve applied to these items, which the fixed ones didn\'t have. You should see "flex-grow", "flex-shrink," and/or "flex-basis" properties and values.',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
