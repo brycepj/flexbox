@@ -252,7 +252,7 @@ module flexbox {
                         "action": null
                     },
                     {
-                        "text": 'To see it in action, just resize the flex container. You\'ll see that when the item reaches its flex basis, it stops flexing and something else has to flex or pushed to the next line.',
+                        "text": 'To see it in action, just resize the flex container. You\'ll see that when the item reaches its flex basis, it stops flexing and something else has to flex or be pushed to the next line.',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
