@@ -287,7 +287,7 @@ module flexbox {
                         "action": null
                     },
                     {
-                        "text": 'Notice how the item automatically goes to the center of the container. Without flexbox this would take some seriously awkward fanagling, using height and padding properties and probably a little javascript to be sure. This way, on the other hand, is dead simple.',
+                        "text": 'Notice how the item automatically goes to the center of the container. Without flexbox this would take some seriously awkward fanagling, using height and padding properties and probably a little JavaScript to be sure. This way, on the other hand, is dead simple.',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
@@ -315,7 +315,7 @@ module flexbox {
                         "action": null
                     },
                     {
-                        "text": 'In fact, almost all of the layout elements on this page are flexbox. It made for very simple layout code, so I could focus on the harder and more fun work (like writing the javascript to make an interactive app!).',
+                        "text": 'In fact, almost all of the layout elements on this page are flexbox. It made for very simple layout code, so I could focus on the harder and more fun work (like writing the JavaScript to make an interactive app!).',
                         "hasButton": false,
                         "xUrl": null,
                         "xText": null,
