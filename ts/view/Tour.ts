@@ -65,7 +65,6 @@ module flexbox {
 
                     var currentIndexNum = this.index() + 1;
 
-                    console.log(currentIndexNum);
                     var currentIndex = currentIndexNum.toString();
                     var tourLength = this.tour.messages.length.toString();
                     var progressString = currentIndex + " / " + tourLength;
@@ -150,7 +149,6 @@ module flexbox {
 
                     $el.css('width', null);
                 } else {
-                    console.log('nope, not happenin today sir.');
                 }
             }
 

@@ -29,7 +29,6 @@ module flexbox {
 
                 this.noItems = ko.computed(function () {
                     var array = this.items();
-                    console.log(array);
                     if (array.length) {
                         return false;
                     }
@@ -53,7 +52,7 @@ module flexbox {
 
                 this.defaultBtnText = "Sync Items with Defaults"
 
-                //UI edits default props in 
+                //UI edits default props in
 
                 this.cPropsDefault = {
                     display: "flex",
@@ -154,9 +153,6 @@ module flexbox {
             tourAction():void {
                 var index = this.tourBox.index();
                 var action = this.tourBox.tour.messages[index].action;
-
-                console.log('made it this far');
-
                 switch (action) {
                     case "resize":
                         this.tourBox.resizeContainer();
@@ -171,11 +167,8 @@ module flexbox {
                         this.makePicScroll();
                         break;
                     default:
-                        console.log('action has not been registered');
                 }
 
-
-                //this is where we do the thing
             }
 
             newItem():void {
@@ -207,8 +200,6 @@ module flexbox {
                     });
                     this.items.push(newItem);
                 }
-
-                console.log('new item created as: ' + flexType);
             }
 
             oneLessItem():void {
@@ -223,8 +214,6 @@ module flexbox {
             }
 
             deleteAllItems():void {
-                console.log('just went there');
-
                 var array = this.items();
                 var self = this;
 
@@ -466,9 +455,6 @@ module flexbox {
                     new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", height: "70px", margin: "2px", content: "Portfolio" }),
                     new flexbox.model.FlexItem(this, index++, { isFlexyWidth: true, flexGrow: "1", flexShrink: "0", flexBasis: "100px", height: "70px", margin: "2px", content: "Blog" })
                 );
-
-
-
             }
 
             makePicScroll():void {
@@ -500,31 +486,10 @@ module flexbox {
 
             );
 
-
             }
 
 
-            printLocalStorage():void {
-                var booleanValue;
-                var confirm = localStorage.getItem('items');
-                if (confirm === "0") {
-                    console.log('Nothing has been stored in localStorage.')
 
-
-                } else if (confirm === "1") {
-                    console.log("localStorage has stored " + confirm + " item");
-                    for (var i in localStorage) {
-                        console.log(localStorage[i]);
-                    }
-                } else {
-                    console.log("localStorage has stored " + confirm + " items");
-                    for (var i in localStorage) {
-                        console.log(localStorage[i]);
-                    }
-                }
-
-
-            }
 
         } //end class
 

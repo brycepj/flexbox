@@ -67,13 +67,11 @@ module flexbox {
                     
                         if (wHeight > 730) {
                             var newContent = '<p class="mh-warning">' + warning + '</p>';
-                            console.log('door number 1');
                             $contentWrap.html(oldContent);
                         }
 
                         if (wHeight < 730) {
                             var newContent = '<p class="mh-warning">' + warning + '</p>';
-                            console.log('door number 2');
                                 $contentWrap.html(newContent);
                         }
                 }

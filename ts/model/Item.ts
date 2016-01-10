@@ -168,7 +168,6 @@ module flexbox {
 
                 this.tallEnough = function(){
                     var height = this.iPropsCurrent.height();
-                    console.log(height);
                     if (height > 60) {return true;}
                     else {return false;}
                 };
