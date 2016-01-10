@@ -10,3 +10,9 @@ What can you do here?
 - Copy and paste live code samples from whatever you create
 
 [Take the tour!](http://devbryce.com/site/flexbox/)
+
+### TODO:
+- Get it live/hosted
+- Implement an actual build with Gulp
+- Update Typescript
+- Convert to Angular 2
