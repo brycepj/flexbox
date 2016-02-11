@@ -3,7 +3,7 @@ var ts = require('gulp-typescript');
 
 // TODO: Factor this and paths out into gulp/ dir
 var tsProject = ts.createProject({
-	declaration: true,
+	declaration: false,
 	noExternalResolve: true,
 	target: "ES5",
 	module: "system",
@@ -13,7 +13,7 @@ var tsProject = ts.createProject({
 	experimentalDecorators: true,
 	removeComments: false,
 	noImplicitAny: false,
-	exclude: [ "node_modules"]
+	//exclude: [ "node_modules"]
 });
 
 var paths = {
