@@ -1,0 +1,695 @@
+/* Sample asset */
+
+/* Vendor Dependencies */
+/* GLOBAL STYLES */
+/* base rules are the defaults. They are almost exclusively single element selectors, but could include attribute selectors, pseudo-class-selectors, child selectors or sibling selectors. Be sure to specify a body background. */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block; }
+
+body {
+    line-height: 1; }
+
+ol, ul {
+    list-style: none; }
+
+blockquote, q {
+    quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none; }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+/* SWATCH */
+/* Defaults */
+/*** CUSTOM BREAKPOINTS ***/
+/*** REM FONT-SIZE AND LINE HEIGHT ***/
+/*** CLEARFIX***/
+/*** PRESET BREAKPOINTS ***/
+/*** FLEXBOX ****/
+flexboxapp {
+    width:100%;
+}
+
+flex-container {
+    width:100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.lorem {
+    width: 55px;
+}
+
+html {
+    width: 100%; }
+
+body, html {
+    height: 100%; }
+@media only screen and (max-width: 550px) {
+    body, html {
+        height: auto; } }
+
+body {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    padding: 1em; }
+@media only screen and (max-width: 875px) {
+    body {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+        -webkit-box-align: default;
+        -webkit-align-items: default;
+        -ms-flex-align: default;
+        align-items: default; } }
+@media only screen and (max-width: 550px) {
+    body {
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+
+.flex-container-wrap {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex: 1;
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 5px; }
+@media only screen and (max-width: 875px) {
+    .flex-container-wrap {
+        height: 68%; } }
+@media only screen and (max-width: 550px) {
+    .flex-container-wrap {
+        height: 400px; } }
+
+.flex-container {
+    height: 100%;
+    width: 100%; }
+@media only screen and (max-width: 875px) {
+    .flex-container {
+        height: 100%; } }
+
+.sidebar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    width: 330px;
+    height: 100%; }
+@media only screen and (max-width: 875px) {
+    .sidebar {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 30%;
+        margin-bottom: 1em; } }
+@media only screen and (max-width: 550px) {
+    .sidebar {
+        height: 300px; } }
+
+@media only screen and (max-width: 875px) {
+    .control-panel, .message-box, .code-box {
+        -webkit-box-flex: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex: 1;
+        flex-grow: 1;
+        -webkit-flex-basis: 200px;
+        flex-basis: 200px;
+        height: 100%;
+        margin-right: 1em; } }
+
+.control-panel {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex: 1;
+    flex-grow: 1;
+    -webkit-flex-basis: 225px;
+    flex-basis: 225px; }
+@media only screen and (max-width: 733px) {
+    .control-panel {
+        margin-right: 0; } }
+
+.message-box {
+    -webkit-box-flex: 2.5;
+    -webkit-flex-grow: 2.5;
+    -ms-flex: 2.5;
+    flex-grow: 2.5;
+    -webkit-flex-basis: 250px;
+    flex-basis: 250px; }
+@media only screen and (max-width: 875px) {
+    .message-box {
+        margin-top: 1em; } }
+@media only screen and (max-width: 517px) {
+    .message-box {
+        margin-right: 0; } }
+
+.code-box {
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -ms-flex: 2;
+    flex-grow: 2;
+    -webkit-flex-basis: 200px;
+    flex-basis: 200px; }
+@media only screen and (max-width: 875px) {
+    .code-box {
+        margin-top: 1em;
+        margin-right: 0; } }
+
+/*
+
+%font1 {
+	@include font-size($sizeValue,$heightValue);
+	font-family:;
+	font-weight:;
+	color:inherit;
+}
+
+%font2 {
+	@include font-size($sizeValue,$heightValue);
+	font-family:;
+	font-weight:;
+	color:inherit;
+}
+
+%font3 {
+	@include font-size($sizeValue,$heightValue);
+	font-family:;
+	font-weight:;
+	color:inherit;
+}
+
+%font4 {
+	@include font-size($sizeValue,$heightValue);
+	font-family:;
+	font-weight:;
+	color:inherit;
+}
+
+%font5 {
+	@include font-size($sizeValue,$heightValue);
+	font-family:;
+	font-weight:;
+	color:inherit;
+}
+
+*/
+/* State rules are ways to describe how our modules or layouts will look when in a particlar state. Hidden or expanded? Active or inactive? State styles indicate a JavaScript dependency */
+/* BASE STYLES */
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+/*make images responsive by default*/
+img {
+    max-width: 100% !important;
+    height: auto;
+    display: block; }
+
+a {
+    text-decoration: none;
+    color: #3299bb; }
+
+body {
+    font-size: 100%;
+    line-height: 100%;
+    font-family: 'PT Sans',sans-serif;
+    background-color: #ffa601;
+    color: white; }
+
+i {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+
+em {
+    font-style: italic; }
+
+/******MODULES*******/
+.sidebar {
+    background-color: transparent; }
+
+.control-panel, .message-box, .code-box {
+    padding: 1em;
+    border-radius: 5px;
+    background-color: #484848;
+    box-shadow: 1px 1px 1px 1px #484848; }
+
+.code-box {
+    position: relative;
+    margin-top: 1em;
+    overflow: auto; }
+
+.cb-title {
+    position: absolute;
+    top: 0.75em;
+    left: 0.75em;
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 13.6px;
+    line-height: 0.85rem; }
+
+.cb-item {
+    padding-top: 1em;
+    font-size: 13.6px;
+    font-size: 0.85rem;
+    line-height: 16px;
+    line-height: 1rem; }
+
+.control-panel {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 1em;
+    overflow: auto; }
+
+.cp-title {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 13.6px;
+    line-height: 0.85rem; }
+
+.cp-container {
+    width: 45%;
+    float: left;
+    text-align: left;
+    border-left: 1px solid #626262;
+    padding-left: 20px; }
+.cp-container label {
+    display: block;
+    font-size: 11px;
+    line-height: 16px;
+    line-height: 1rem; }
+.cp-container label select {
+    display: inline-block;
+    padding-right: 0; }
+
+.cp-c-title {
+    display: none;
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 16px;
+    line-height: 1rem; }
+
+.cp-actions {
+    margin-top: .5em; }
+.cp-actions a {
+    display: inline-block;
+    margin: .35em auto;
+    -webkit-transition: .1s color ease;
+    transition: .1s color ease; }
+.cp-actions a:hover {
+    color: white; }
+
+.cp-items {
+    overflow: hidden;
+    margin-top: .75em;
+    width: 40%;
+    float: left;
+    padding: 0 0 .5em 0; }
+
+.cp-i-title {
+    display: none;
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 16px;
+    line-height: 1rem; }
+
+.cp-i-add-remove {
+    margin: .5em 0; }
+
+.cp-i-add i {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 40px;
+    line-height: 2.5rem;
+    color: white; }
+
+.cp-i-remove {
+    display: inline-block;
+    margin-left: .25em; }
+.cp-i-remove i {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 40px;
+    line-height: 2.5rem;
+    color: white; }
+
+.cp-i-settings label {
+    display: inline-block;
+    margin: 5px 0;
+}
+.cp-i-settings input[type="text"] {
+    width: 55px;
+    border: none;
+    background-color: #6e6e6e;
+    color: white;
+    text-align: center; }
+
+.cp-i-s-width {
+    display: inline-block; }
+.cp-i-s-width label {
+    display: block; }
+
+.flex-container {
+    margin-right: 15px;
+    position: relative;
+    padding: .5em;
+    overflow: auto;
+    border-radius: 5px;
+    background-color: #484848;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+
+.masthead {
+    position: absolute;
+    top: 3em;
+    left: 3em;
+    z-index: 100;
+    height: auto;
+    width: 65%;
+    padding-bottom: 1em; }
+.masthead h2 {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 22.4px;
+    line-height: 1.4rem;
+    color: white; }
+.masthead ul {
+    margin-left: 1em; }
+.masthead li {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 20px;
+    line-height: 1.25rem;
+    color: white; }
+.masthead li:before {
+    content: "-"; }
+
+.mh-logo {
+    font-size: 32px;
+    font-size: 2rem;
+    line-height: 32px;
+    line-height: 2rem;
+    font-family: "Arvo";
+    color: white;
+    text-shadow: 0 0 3px #a6a6a6; }
+@media only screen and (max-width: 730px) {
+    .mh-logo {
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 24px;
+        line-height: 1.5rem; } }
+
+.mh-desc {
+    margin: .75em 0;
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 28px;
+    line-height: 1.75rem;
+    color: white; }
+@media only screen and (max-width: 730px) {
+    .mh-desc {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 16px;
+        line-height: 1rem; } }
+
+.mh-warning {
+    margin-top: 1em;
+    color: red; }
+
+.masthead iframe {
+    position: absolute;
+    bottom: -1.5em;
+    left: 0; }
+
+.message-box {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    overflow: auto;
+    position: relative; }
+
+.mb-title {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 13.6px;
+    line-height: 0.85rem; }
+
+.mb-progress {
+    position: absolute;
+    top: 0.75em;
+    right: 0.75em; }
+
+.mb-actions {
+    width: 85%;
+    position: absolute;
+    bottom: 0.75em;
+    right: 0.75em;
+    padding: 0 .75em 0 0;
+}
+
+.mb-action {
+    display: block;
+    text-align: right;
+    font-size: .85em;
+    margin: 0;
+    padding: 0 15px 0 0;
+}
+
+/*.mb-action:after {*/
+    /*content:'|';*/
+/*}*/
+/*.mb-action:before {*/
+    /*content: '|';*/
+/*}*/
+
+.mb-nav {
+    position: absolute;
+    bottom: 0.75em;
+    left: 0.75em; }
+
+.flex-item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    padding: 1.5em 1em;
+    border-radius: 5px;
+    background-color: #3299bb;
+    text-align: center;
+    margin:10px;
+}
+
+.fi-index {
+    position: absolute;
+    top: 0.75em;
+    left: 0.75em; }
+
+.fi-destroy-btn {
+    position: absolute;
+    top: 0.75em;
+    right: 0.75em; }
+.fi-destroy-btn i {
+    color: #a9071e; }
+
+.fi-settings-btn {
+    position: absolute;
+    top: 0.75em;
+    right: 2em; }
+.fi-settings-btn i {
+    color: white; }
+
+.fi-content {
+    font-size: 18.4px;
+    font-size: 1.15rem;
+    line-height: 20.8px;
+    line-height: 1.3rem; }
+
+.fi-options {
+    position: absolute;
+    bottom: 1em;
+    left: 0.75em;
+    text-align: left; }
+
+.fi-o-title {
+    display: block;
+    margin-bottom: .25em; }
+.fi-o-title a {
+    display: inline-block;
+    margin: 0 .1em;
+    color: #484848; }
+
+.fi-options-fixed label {
+    display: inline-block;
+    width: 45px;
+    margin-right: .25em;
+    font-size: 10.4px;
+    font-size: 0.65rem;
+    line-height: 11.2px;
+    line-height: 0.7rem;
+    padding-top: .45em; }
+.fi-options-fixed label input {
+    display: block;
+    width: 45px; }
+
+.fi-options-flexy label {
+    display: inline-block;
+    width: 53px;
+    font-size: 10.4px;
+    font-size: 0.65rem;
+    line-height: 11.2px;
+    line-height: 0.7rem;
+    padding-top: .45em; }
+.fi-options-flexy label input {
+    display: block;
+    width: 45px; }
+
+
+/* get rid of these styles you don't need (animate)*/
+a .fa {
+    cursor: pointer;
+}
+
+
+input {
+    color: black!important;
+}
+
+.form-control {
+    height: 30px;
+}
+
+option, select {
+    color: black;
+}
+
+.lorem {
+    margin: 5px 0;
+}
