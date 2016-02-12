@@ -1,0 +1,1 @@
+- Use a build folder, rather than 1:1 static setup.
