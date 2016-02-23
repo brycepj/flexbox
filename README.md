@@ -10,5 +10,3 @@ What can you do here?
 - Copy and paste live code samples from whatever you create
 
 [Take the tour!](http://devbryce.com/site/flexbox/)
-
-
