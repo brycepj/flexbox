@@ -11,7 +11,4 @@ What can you do here?
 
 [Take the tour!](http://devbryce.com/site/flexbox/)
 
-### TODO:
-- Implement an actual build with Gulp
-- Update Typescript
-- Convert to Angular 2
+
