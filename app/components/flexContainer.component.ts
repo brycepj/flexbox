@@ -3,9 +3,7 @@ import {NgFor, NgStyle} from 'angular2/common';
 import {FlexContainer} from '../services/FlexContainer';
 import {FlexItemCmp} from './flexItem.component';
 import {TourPanelCmp, AdminPanelCmp, CodePanelCmp} from './SidebarCmps';
-import {FlexItem} from '../models/FlexItem';
 import {CSSDefaults} from '../services/CSSDefaults';
-import {Local} from '../services/LocalStorage';
 import {PropsToSelectors} from '../utils/pipes';
 
 @Component({
@@ -24,6 +22,11 @@ import {PropsToSelectors} from '../utils/pipes';
 				'align-items': flexContainer.styles.alignItems,
 				'align-content': flexContainer.styles.alignContent
 	    }" class="flex-container">
+				<div class="container-wide-actions">
+					<span (click)='flexContainer.removeAll()' title='Remove all flex items'><i class="fa fa-trash"></i></span>
+					<span (click)='flexContainer.resizeContainer()' title='Resize flex container'><i class="fa fa-exchange"></i></span>
+					<span (click)='flexContainer.showCode()' title='View CSS'><i class="fa fa-code"></i></span>
+				</div>
 				<flex-item class="flex-item" *ngFor="#item of flexContainer.list" [item]="item" [ngStyle]="{
 		    'width': item.styles.width,
 		    'height': item.styles.height,
@@ -37,8 +40,10 @@ import {PropsToSelectors} from '../utils/pipes';
     <aside class="sidebar">
 			<tour-panel id="message-box" class="message-box"></tour-panel>
 			<admin-panel class="control-panel"></admin-panel>
-			<!--<code-panel class="code-box" list="flexContainer.list"></code-panel>-->
 		</aside>
+		<div class='modal'>
+			<code-panel class="code-box" list="flexContainer.list"></code-panel>
+		</div>
 	`,
 	directives: [NgFor, FlexItemCmp, NgStyle,
 		TourPanelCmp, AdminPanelCmp, CodePanelCmp],
@@ -63,3 +68,4 @@ export class FlexContainerCmp {
 //	}, 5);
 //}
 //}
+

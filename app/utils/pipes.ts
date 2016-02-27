@@ -1,3 +1,5 @@
+declare var _:any;
+
 import {Pipe, PipeTransform} from 'angular2/core';
 import {CssStyleFlexGenericStyles} from './interfaces';
 
@@ -27,9 +29,3 @@ export class IndexDisplay {
 	}
 }
 
-//@Pipe({name: 'escapeHtml', pure: false})
-//export class EscapeHtmlPipe implements PipeTransform {
-//	transform(value: any, args: any[] = []) {
-//		// Escape 'value' and return it
-//	}
-//}

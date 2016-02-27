@@ -1,4 +1,4 @@
-declare var store:StoreJSStatic;
+declare var store:any;
 declare var _:any;
 import {Injectable} from 'angular2/core';
 

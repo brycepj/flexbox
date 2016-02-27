@@ -1,8 +1,3 @@
-import {FlexItem} from './../models/FlexItem';
-import {CSSDefaults} from './CSSDefaults';
-import {CssStylePairContainer} from '../utils/interfaces';
-import {Local} from './LocalStorage';
-import {Inject} from 'angular2/core';
 import {Injectable} from 'angular2/core';
 import {containerOptions, containerDefaults} from '../utils/data';
 import {FlexItemFactory} from '../services/FlexItemFactory';
@@ -39,14 +34,14 @@ export class FlexContainer {
 		this.list = [];
 	}
 
-	resizeContainer(){
+	resizeContainer() {
 		// waiting on ng2 animation APIs
 		let notEmpty = this.list.length > 0;
 		if (notEmpty) {
 			this.collapseContainer();
 		}
 	}
-	private collapseContainer() {
+	collapseContainer() {
 		var self = this;
 		setTimeout(function () {
 			let width = self.styles.width;
@@ -56,12 +51,12 @@ export class FlexContainer {
 				self.styles.width = cur - .25 + '%';
 				self.collapseContainer();
 			} else {
-				self.expandContainer()
+				self.expandContainer();
 			}
 
 		}, 5);
 	}
-	private expandContainer() {
+	expandContainer() {
 		var self = this;
 		setTimeout(function () {
 			let width = self.styles.width;
@@ -74,7 +69,7 @@ export class FlexContainer {
 		}, 5);
 	}
 	// gross hack!!
-	hideMasthead(){
+	hideMasthead() {
 		document.querySelector('.masthead').className += ' hidden';
 	}
 

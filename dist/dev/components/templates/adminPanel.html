@@ -18,8 +18,12 @@
 								 (click)="updateDefaultState('flexy')" type="radio" name="flexType" value="flexy" />
 				</label>
 			</div>
-			<label>lorem?
-				<input class="lorem" [(ngModel)]="itemDefaults.displayDefaults.lorem" type="text"/></label>
+			<label>text?
+				<input class="lorem" [(ngModel)]="itemDefaults.displayDefaults.lorem" type="text"/>
+			</label>
+			<div class="cp-actions">
+				<a (click)="removeAllItems()">delete all</a>
+			</div>
 		</div>
 	</div>
 	<div class="cp-container">
@@ -50,7 +54,6 @@
 			</select>
 		</label>
 		<div class="cp-actions">
-			<a (click)="removeAllItems()">delete all</a>
 			<a (click)="resizeBox()">resize box</a>
 		</div>
 	</div>

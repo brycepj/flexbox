@@ -7,6 +7,8 @@ import {Local} from './services/LocalStorage';
 import {FlexContainer} from './services/FlexContainer';
 import {FlexItemFactory} from './services/FlexItemFactory';
 
+declare var _:any;
+
 bootstrap(AppCmp, [
   ROUTER_PROVIDERS,
   Local,

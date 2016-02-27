@@ -1,3 +1,5 @@
+declare var _:any;
+
 import { CSSDefaults } from '../services/CSSDefaults';
 
 export class StylePropSet {

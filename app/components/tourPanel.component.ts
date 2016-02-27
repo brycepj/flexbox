@@ -1,9 +1,9 @@
 import {Component} from 'angular2/core';
 import {NgFor, NgIf} from 'angular2/common';
-import {TourData, TourMessage} from '../services/tourData';
+import {TourData, TourMessage, Buttons} from '../services/tourData';
 import {IndexDisplay} from '../utils/pipes';
 import {FlexContainer} from '../services/FlexContainer';
-import {PatternBuilder} from "../services/PatternBuilder";
+import {PatternBuilder} from '../services/PatternBuilder';
 
 @Component({
 	selector: 'tour-panel',
@@ -55,8 +55,8 @@ export class TourPanelCmp {
 		}
 	}
 
-	takeAction(action, index){
-		let buttons = this.currentMessage.buttons;
+	takeAction(action, index) {
+		let buttons:Buttons = this.currentMessage.buttons;
 		switch (action) {
 			case 'url':
 				this.openInNewTab(buttons[index].url);
@@ -70,10 +70,10 @@ export class TourPanelCmp {
 
 	}
 
-	private openInNewTab(url) {
-	var win = window.open(url, '_blank');
-	win.focus();
-}
+	openInNewTab(url) {
+		var win = window.open(url, '_blank');
+		win.focus();
+	}
 
 	buildPattern(pattern) {
 		this.flexContainer.list = [];

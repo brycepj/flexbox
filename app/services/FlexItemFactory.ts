@@ -1,6 +1,8 @@
+declare var _:any;
+
 import {FlexItem} from '../models/FlexItem';
-import {CSSDefaults} from "./CSSDefaults";
-import {Injectable} from "angular2/core";
+import {CSSDefaults} from './CSSDefaults';
+import {Injectable} from 'angular2/core';
 
 var displayDefaults = {
 	view: 'settings',
@@ -16,13 +18,13 @@ export class FlexItemFactory {
 		this.displayDefaults = displayDefaults;
 	}
 
-	create(styles, display) {
+	create(styles?, display?) {
 		let styleDefaults = styles || this._cssDefaults.getitem();
 		let displayDefaults = display || this.displayDefaults;
 		return new FlexItem(styleDefaults, displayDefaults);
 	}
 
-	setDefault(cfg){
+	setDefault(cfg) {
 		_.assign(this.displayDefaults, cfg);
 	}
 }

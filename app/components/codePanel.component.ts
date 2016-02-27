@@ -7,8 +7,5 @@ import {FlexContainer} from '../services/FlexContainer';
 })
 export class CodePanelCmp {
 	@Input() list: any;
-	constructor(private flexContainer: FlexContainer) {
-	console.log('hello world')
-	}
-
+	constructor(private flexContainer: FlexContainer) {};
 }

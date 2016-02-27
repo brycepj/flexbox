@@ -2,7 +2,6 @@
 import {NgIf} from 'angular2/common';
 import {Input, Component} from 'angular2/core';
 import {FlexItem} from '../models/FlexItem';
-import {CSSDefaults} from '../services/CSSDefaults';
 import {PropsToSelectors} from '../utils/pipes';
 import {NgStyle, NgModel} from 'angular2/common';
 import {FlexContainer} from '../services/FlexContainer';
@@ -61,12 +60,12 @@ export class FlexItemCmp {
 		this.flexContainer.list.pop(this.idx);
 	}
 
-	toggleViewMode(){
+	toggleViewMode() {
 		this.viewMode = !this.viewMode;
 		this.editMode = !this.editMode;
 	}
 
-	toggleState(){
+	toggleState() {
 		this.item.settings.state = this.item.settings.state === 'fixed' ?  'flexy' : 'fixed';
 	}
 
@@ -78,7 +77,7 @@ export class FlexItemCmp {
 		this.toggleState();
 		this.item.makeMeFlexy();
 	}
-	getItemIndex(){
+	getItemIndex() {
 		// this should probably be handled by the flexContainer class
 		let idx = this.idx = this.flexContainer.list.indexOf(this.item) + 1;
 		return idx;

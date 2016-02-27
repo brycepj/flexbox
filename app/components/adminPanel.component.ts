@@ -1,4 +1,4 @@
-import {Component, Input} from 'angular2/core';
+import {Component} from 'angular2/core';
 import {FORM_DIRECTIVES} from 'angular2/common';
 import {FlexContainer} from '../services/FlexContainer';
 import {CSSDefaults} from '../services/CSSDefaults';
@@ -15,7 +15,7 @@ import {FlexItemFactory} from '../services/FlexItemFactory';
 
 export class AdminPanelCmp {
 	public options: any;
-	public itemDefaults: any;
+
 	constructor(private flexContainer: FlexContainer,
 	            private _cssDefaults: CSSDefaults,
 	            public itemDefaults: FlexItemFactory) {
@@ -27,38 +27,32 @@ export class AdminPanelCmp {
 		var newVal = srcElem.value;
 		this.flexContainer.styles[prop] = newVal;
 	}
-
 	changeItemTypeDefault(type, event) {
 		this.itemDefaults[type] = event.target.checked;
-
-
 	}
-	private toggleLocalValues(){
-
-	}
-	updateDefaultState(val){
+	updateDefaultState(val) {
 		this.itemDefaults.setDefault({
 			state: val
 		});
 	}
-	addItem() {
+	addItem():void {
 		this.flexContainer.createFlexItem();
 	}
 
-	removeItem() {
+	removeItem():void {
 		this.flexContainer.removeItem();
 	}
 
-	removeAllItems(){
-		this.flexContainer.removeAll()
+	removeAllItems():void {
+		this.flexContainer.removeAll();
 	}
 
-	setItemDefault(styleObj) {
+	setItemDefault(styleObj):void {
 		this._cssDefaults.setitem(styleObj);
 	}
 
 
-	resizeBox() {
+	resizeBox():void {
 		this.flexContainer.resizeContainer();
 	}
 

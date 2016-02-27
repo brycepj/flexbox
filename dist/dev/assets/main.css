@@ -68,7 +68,21 @@ flex-container {
 }
 
 .lorem {
-    width: 55px;
+    width: 30px!important;
+		color: white!important;
+}
+
+.container-wide-actions {
+	position:absolute;
+	top: 10px;
+	right: 10px;
+	width: 100px;
+	height: 50px;
+}
+
+.container-wide-actions span {
+	margin: 0 7px;
+	cursor: pointer;
 }
 
 html {
