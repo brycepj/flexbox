@@ -9,8 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('angular2/core');
 var common_1 = require('angular2/common');
-var router_1 = require('angular2/router');
-var home_1 = require('../home/home');
 var flexContainer_component_1 = require('../flexContainer.component');
 var FlexContainer_1 = require('../../services/FlexContainer');
 var Info_1 = require('../../services/Info');

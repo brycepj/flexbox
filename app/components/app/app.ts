@@ -31,14 +31,10 @@ import {Info} from '../../services/Info';
       </div>
     </div>
     <flex-container id="flexbox-app" class="flex-container-wrap"></flex-container>
-    <!--<router-outlet></router-outlet>-->
   `,
-  styleUrls: ['./components/app/app.css'],
-  directives: [ROUTER_DIRECTIVES, FlexContainerCmp, NgIf]
+  directives: [FlexContainerCmp, NgIf]
 })
-@RouteConfig([
-  { path: '/', component: HomeCmp, as: 'Home' },
-])
+
 export class AppCmp {
   public siteTitle: string;
   public siteDesc: string;
