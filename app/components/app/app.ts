@@ -1,10 +1,8 @@
 import {Component} from 'angular2/core';
-import { NgIf } from 'angular2/common';
-import { RouteConfig, ROUTER_DIRECTIVES } from 'angular2/router';
-import {HomeCmp} from '../home/home';
+import {NgIf} from 'angular2/common';
 import {FlexContainerCmp} from '../flexContainer.component';
-import { FlexContainer } from '../../services/FlexContainer';
-import { Info } from '../../services/Info';
+import {FlexContainer } from '../../services/FlexContainer';
+import {Info} from '../../services/Info';
 
 @Component({
   selector: 'flexboxapp',
