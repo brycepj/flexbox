@@ -2,9 +2,9 @@ import {Component} from 'angular2/core';
 import {FORM_DIRECTIVES} from 'angular2/common';
 import {FlexContainer} from '../services/FlexContainer';
 import {CSSDefaults} from '../services/CSSDefaults';
+import {FlexItemFactory} from '../services/FlexItemFactory';
 import {DerpPipe} from '../utils/pipes';
 import {containerOptions} from '../utils/data';
-import {FlexItemFactory} from '../services/FlexItemFactory';
 
 @Component({
 	selector: 'admin-panel',

@@ -1,6 +1,6 @@
 import {Injectable} from 'angular2/core';
-import {containerOptions, containerDefaults} from '../utils/data';
 import {FlexItemFactory} from '../services/FlexItemFactory';
+import {containerOptions, containerDefaults} from '../utils/data';
 
 @Injectable()
 export class FlexContainer {

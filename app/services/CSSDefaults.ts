@@ -1,8 +1,8 @@
 declare var _:any;
 
+import {Inject, Injectable} from 'angular2/core';
 import {Local} from '../services/LocalStorage';
 import {CssStylePairItem, CssStylePairContainer} from '../utils/interfaces';
-import {Inject, Injectable} from 'angular2/core';
 
 const itemDefaults = {
 	'display': 'block',

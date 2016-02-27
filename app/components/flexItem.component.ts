@@ -1,10 +1,8 @@
-// this is where you write UI logic and methods for FlexItem
-import {NgIf} from 'angular2/common';
+import {NgStyle, NgModel, NgIf} from 'angular2/common';
 import {Input, Component} from 'angular2/core';
+import {FlexContainer} from '../services/FlexContainer';
 import {FlexItem} from '../models/FlexItem';
 import {PropsToSelectors} from '../utils/pipes';
-import {NgStyle, NgModel} from 'angular2/common';
-import {FlexContainer} from '../services/FlexContainer';
 
 @Component({
 	selector: 'flex-item',

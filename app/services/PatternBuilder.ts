@@ -1,7 +1,8 @@
 declare var _:any;
 
-import {FlexContainer} from '../services/FlexContainer';
+
 import {Injectable} from 'angular2/core';
+import {FlexContainer} from './FlexContainer';
 import {FlexItem} from '../models/FlexItem';
 
 var menuStylesCfg = {

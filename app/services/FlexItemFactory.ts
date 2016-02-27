@@ -1,8 +1,8 @@
 declare var _:any;
 
-import {FlexItem} from '../models/FlexItem';
-import {CSSDefaults} from './CSSDefaults';
 import {Injectable} from 'angular2/core';
+import {CSSDefaults} from './CSSDefaults';
+import {FlexItem} from '../models/FlexItem';
 
 var displayDefaults = {
 	view: 'settings',

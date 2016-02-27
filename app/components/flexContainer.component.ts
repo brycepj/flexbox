@@ -1,16 +1,13 @@
 import {Component} from 'angular2/core';
 import {NgFor, NgStyle} from 'angular2/common';
-import {FlexContainer} from '../services/FlexContainer';
 import {FlexItemCmp} from './flexItem.component';
 import {TourPanelCmp, AdminPanelCmp, CodePanelCmp} from './SidebarCmps';
+import {FlexContainer} from '../services/FlexContainer';
 import {CSSDefaults} from '../services/CSSDefaults';
 import {PropsToSelectors} from '../utils/pipes';
 
 @Component({
 	selector: 'flex-container',
-	styles: [`
-
-  `],
 	template: `
 			<div id="flex-container"  [ngStyle]="{
 		    'width': flexContainer.styles.width,
@@ -53,19 +50,6 @@ import {PropsToSelectors} from '../utils/pipes';
 
 export class FlexContainerCmp {
 	constructor(private flexContainer: FlexContainer) {}
-
 }
 
-//
-//	function goRight () {
-//	var cur = parseInt(getComputedStyle(el).left);
-//
-//	setTimeout(function () {
-//		if (cur < end) {
-//			el.style.left = cur + 4 + 'px';
-//			goRight();
-//		}
-//	}, 5);
-//}
-//}
 

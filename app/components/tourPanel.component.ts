@@ -1,9 +1,9 @@
 import {Component} from 'angular2/core';
 import {NgFor, NgIf} from 'angular2/common';
 import {TourData, TourMessage, Buttons} from '../services/tourData';
-import {IndexDisplay} from '../utils/pipes';
 import {FlexContainer} from '../services/FlexContainer';
 import {PatternBuilder} from '../services/PatternBuilder';
+import {IndexDisplay} from '../utils/pipes';
 
 @Component({
 	selector: 'tour-panel',
