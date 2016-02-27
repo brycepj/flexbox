@@ -8,13 +8,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('angular2/core');
-var router_1 = require('angular2/router');
-var FlexContainer_1 = require('../../services/FlexContainer');
-var flexContainer_component_1 = require('../flexContainer.component');
-var Info_1 = require('../../services/Info');
 var common_1 = require('angular2/common');
+var router_1 = require('angular2/router');
 var home_1 = require('../home/home');
-var about_1 = require('../about/about');
+var flexContainer_component_1 = require('../flexContainer.component');
+var FlexContainer_1 = require('../../services/FlexContainer');
+var Info_1 = require('../../services/Info');
 var AppCmp = (function () {
     function AppCmp(flexContainer) {
         this.flexContainer = flexContainer;

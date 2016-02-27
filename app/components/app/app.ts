@@ -1,14 +1,10 @@
 import {Component} from 'angular2/core';
-import { RouteConfig, ROUTER_DIRECTIVES } from 'angular2/router';
-import { FlexContainer } from '../../services/FlexContainer';
-import {FlexContainerCmp} from '../flexContainer.component';
-import { Info } from '../../services/Info';
 import { NgIf } from 'angular2/common';
-
-// import {HTTP_PROVIDERS} from 'angular2/http';
-
+import { RouteConfig, ROUTER_DIRECTIVES } from 'angular2/router';
 import {HomeCmp} from '../home/home';
-import {AboutCmp} from '../about/about';
+import {FlexContainerCmp} from '../flexContainer.component';
+import { FlexContainer } from '../../services/FlexContainer';
+import { Info } from '../../services/Info';
 
 @Component({
   selector: 'flexboxapp',
@@ -36,10 +32,6 @@ import {AboutCmp} from '../about/about';
 				</script>
       </div>
     </div>
-    <!--<nav>-->
-      <!--<a [routerLink]="['/Home']">Home</a>-->
-      <!--<a [routerLink]="['/About']">About</a>-->
-    <!--</nav>-->
     <flex-container id="flexbox-app" class="flex-container-wrap"></flex-container>
     <!--<router-outlet></router-outlet>-->
   `,
@@ -48,7 +40,6 @@ import {AboutCmp} from '../about/about';
 })
 @RouteConfig([
   { path: '/', component: HomeCmp, as: 'Home' },
-  { path: '/about', component: AboutCmp, as: 'About' }
 ])
 export class AppCmp {
   public siteTitle: string;
