@@ -59,6 +59,7 @@ export const NPM_DEPENDENCIES = [
   { src: 'store/store.js', inject: 'libs', dest: LIB_DEST }
 ];
 
+
 // Declare itemDefaults files that needs to be injected
 export const APP_ASSETS = [
   { src: `${ASSETS_SRC}/main.css`, inject: true, dest: CSS_DEST }
