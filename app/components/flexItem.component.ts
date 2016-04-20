@@ -5,8 +5,8 @@ import {FlexItem} from '../models/FlexItem';
 import {PropsToSelectors} from '../utils/pipes';
 
 @Component({
-	selector: 'flex-item',
-	template: `
+  selector: 'flex-item',
+  template: `
       <a href="#" class="fi-destroy-btn" (click)="removeSelf()"><i class="fa fa-times"></i></a>
       <a href="#" class="fi-settings-btn" (click)="toggleViewMode()"><!--, visible:tallEnough-->
         <i class="fa fa-cog"></i>
@@ -18,7 +18,7 @@ import {PropsToSelectors} from '../utils/pipes';
       <div class="fi-options" *ngIf="editMode">
         <span class="fi-o-title">
           <a (click)="makeFixedWidth()" [style.font-size]="typeSwitcherFontSize('fixed')">fixed</a> or
-          <a (click)="makeFlexyWidth()" [style.font-size]="typeSwitcherFontSize('flexy')">flexy</a> width?
+          <a (click)="makeFlexyWiIdth()" [style.font-size]="typeSwitcherFontSize('flexy')">flexy</a> width?
         </span>
         <div *ngIf="item.settings.state == 'fixed'" class="fi-options-fixed">
           <label>width:
@@ -41,53 +41,53 @@ import {PropsToSelectors} from '../utils/pipes';
         </div>
       </div>
 	`,
-	directives: [NgIf, NgStyle, NgModel],
-	pipes: [PropsToSelectors]
+  directives: [NgIf, NgStyle, NgModel],
+  pipes: [PropsToSelectors]
 })
 
 export class FlexItemCmp {
-	@Input() item: FlexItem;
-	public idx: number;
-	public viewMode: Boolean = true;
-	public editMode: Boolean = false;
-	public isFixed: Boolean = true;
-	public isFlexy: Boolean = false;
-	constructor(private flexContainer: FlexContainer) {}
+  @Input() item: FlexItem;
+  public idx: number;
+  public viewMode: Boolean = true;
+  public editMode: Boolean = false;
+  public isFixed: Boolean = true;
+  public isFlexy: Boolean = false;
+  constructor(private flexContainer: FlexContainer) { }
 
-	removeSelf() {
-		this.flexContainer.list.pop(this.idx);
-	}
+  removeSelf() {
+    this.flexContainer.list.pop(this.idx);
+  }
 
-	toggleViewMode() {
-		this.viewMode = !this.viewMode;
-		this.editMode = !this.editMode;
-	}
+  toggleViewMode() {
+    this.viewMode = !this.viewMode;
+    this.editMode = !this.editMode;
+  }
 
-	toggleState() {
-		this.item.settings.state = this.item.settings.state === 'fixed' ?  'flexy' : 'fixed';
-	}
+  toggleState() {
+    this.item.settings.state = this.item.settings.state === 'fixed' ? 'flexy' : 'fixed';
+  }
 
-	makeFixedWidth() {
-		this.toggleState();
-		this.item.makeMeFixed();
-	}
-	makeFlexyWidth() {
-		this.toggleState();
-		this.item.makeMeFlexy();
-	}
-	getItemIndex() {
-		// this should probably be handled by the flexContainer class
-		let idx = this.idx = this.flexContainer.list.indexOf(this.item) + 1;
-		return idx;
-	}
+  makeFixedWidth() {
+    this.toggleState();
+    this.item.makeMeFixed();
+  }
+  makeFlexyWidth() {
+    this.toggleState();
+    this.item.makeMeFlexy();
+  }
+  getItemIndex() {
+    // this should probably be handled by the flexContainer class
+    let idx = this.idx = this.flexContainer.list.indexOf(this.item) + 1;
+    return idx;
+  }
 
-	typeSwitcherFontSize(type) {
-		var base = 12;
-		if (type !== this.item.settings.state) {
-			base *=2 ;
-		}
-		return base + 'px';
-	}
+  typeSwitcherFontSize(type) {
+    var base = 12;
+    if (type !== this.item.settings.state) {
+      base *= 2;
+    }
+    return base + 'px';
+  }
 
 }
 

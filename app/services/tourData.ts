@@ -1,21 +1,21 @@
 import {TourJSON} from '../data/TourJSON';
 
 export class TourData {
-	public data : TourMessage[];
+  public data: TourMessage[];
 
-	constructor() {
-		this.data = TourJSON;
-	}
+  constructor() {
+    this.data = TourJSON;
+  }
 }
 
 export interface TourMessage {
-	text: string;
-	buttons?: any;
+  text: string;
+  buttons?: any;
 }
 
 export interface Buttons {
-	url?: string;
-	text: string;
-	action?: string;
+  url?: string;
+  text: string;
+  action?: string;
 }
 

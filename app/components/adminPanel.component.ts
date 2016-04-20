@@ -7,53 +7,53 @@ import {DerpPipe} from '../utils/pipes';
 import {containerOptions} from '../utils/data';
 
 @Component({
-	selector: 'admin-panel',
-	templateUrl: './components/templates/adminPanel.html',
-	directives: [FORM_DIRECTIVES],
-	pipes: [DerpPipe]
+  selector: 'admin-panel',
+  templateUrl: './components/templates/adminPanel.html',
+  directives: [FORM_DIRECTIVES],
+  pipes: [DerpPipe]
 })
 
 export class AdminPanelCmp {
-	public options: any;
+  public options: any;
 
-	constructor(private flexContainer: FlexContainer,
-	            private _cssDefaults: CSSDefaults,
-	            public itemDefaults: FlexItemFactory) {
-		this.options = containerOptions;
-	}
+  constructor(private flexContainer: FlexContainer,
+    private _cssDefaults: CSSDefaults,
+    public itemDefaults: FlexItemFactory) {
+    this.options = containerOptions;
+  }
 
-	updateContainerStyles(prop, evt) {
-		var srcElem = evt.srcElement;
-		var newVal = srcElem.value;
-		this.flexContainer.styles[prop] = newVal;
-	}
-	changeItemTypeDefault(type, event) {
-		this.itemDefaults[type] = event.target.checked;
-	}
-	updateDefaultState(val) {
-		this.itemDefaults.setDefault({
-			state: val
-		});
-	}
-	addItem():void {
-		this.flexContainer.createFlexItem();
-	}
+  updateContainerStyles(prop, evt) {
+    var srcElem = evt.srcElement;
+    var newVal = srcElem.value;
+    this.flexContainer.styles[prop] = newVal;
+  }
+  changeItemTypeDefault(type, event) {
+    this.itemDefaults[type] = event.target.checked;
+  }
+  updateDefaultState(val) {
+    this.itemDefaults.setDefault({
+      state: val
+    });
+  }
+  addItem(): void {
+    this.flexContainer.createFlexItem();
+  }
 
-	removeItem():void {
-		this.flexContainer.removeItem();
-	}
+  removeItem(): void {
+    this.flexContainer.removeItem();
+  }
 
-	removeAllItems():void {
-		this.flexContainer.removeAll();
-	}
+  removeAllItems(): void {
+    this.flexContainer.removeAll();
+  }
 
-	setItemDefault(styleObj):void {
-		this._cssDefaults.setitem(styleObj);
-	}
+  setItemDefault(styleObj): void {
+    this._cssDefaults.setitem(styleObj);
+  }
 
 
-	resizeBox():void {
-		this.flexContainer.resizeContainer();
-	}
+  resizeBox(): void {
+    this.flexContainer.resizeContainer();
+  }
 
 }

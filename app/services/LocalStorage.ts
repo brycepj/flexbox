@@ -1,39 +1,39 @@
-declare var store:any;
-declare var _:any;
+declare var store: any;
+declare var _: any;
 import {Injectable} from 'angular2/core';
 
 @Injectable()
 export class Local {
-	private _exists:Boolean;
-	constructor() {
-		this._exists = _.keys(store.getAll()).length > 0;
-	}
+  private _exists: Boolean;
+  constructor() {
+    this._exists = _.keys(store.getAll()).length > 0;
+  }
 
-	get exists():Boolean {
-		return this._exists;
-	}
+  get exists(): Boolean {
+    return this._exists;
+  }
 
-	getitemsList():any {
-		return store.get('itemsList');
-	}
+  getitemsList(): any {
+    return store.get('itemsList');
+  }
 
-	setitemsList(items:any) {
-		store.set('itemsList', items);
-	}
+  setitemsList(items: any) {
+    store.set('itemsList', items);
+  }
 
-	getitemDefaults():any {
-		return store.get('itemDefaults');
-	}
+  getitemDefaults(): any {
+    return store.get('itemDefaults');
+  }
 
-	setitemDefaults(itemObj:any) {
-		store.set('itemDefaults', itemObj);
-	}
+  setitemDefaults(itemObj: any) {
+    store.set('itemDefaults', itemObj);
+  }
 
-	getcontainerDefaults():any {
-		return store.get('containerDefaults');
-	}
+  getcontainerDefaults(): any {
+    return store.get('containerDefaults');
+  }
 
-	setcontainerDefaults(containerObj:any) {
-		store.set('containerDefaults', containerObj);
-	}
+  setcontainerDefaults(containerObj: any) {
+    store.set('containerDefaults', containerObj);
+  }
 }

@@ -7,8 +7,8 @@ import {CSSDefaults} from '../services/CSSDefaults';
 import {PropsToSelectors} from '../utils/pipes';
 
 @Component({
-	selector: 'flex-container',
-	template: `
+  selector: 'flex-container',
+  template: `
 			<div id="flex-container"  [ngStyle]="{
 		    'width': flexContainer.styles.width,
 		    'height': flexContainer.styles.height,
@@ -42,14 +42,14 @@ import {PropsToSelectors} from '../utils/pipes';
 			<code-panel class="code-box" list="flexContainer.list"></code-panel>
 		</div>
 	`,
-	directives: [NgFor, FlexItemCmp, NgStyle,
-		TourPanelCmp, AdminPanelCmp, CodePanelCmp],
-	providers: [CSSDefaults, FlexContainer],
-	pipes: [PropsToSelectors]
+  directives: [NgFor, FlexItemCmp, NgStyle,
+    TourPanelCmp, AdminPanelCmp, CodePanelCmp],
+  providers: [CSSDefaults, FlexContainer],
+  pipes: [PropsToSelectors]
 })
 
 export class FlexContainerCmp {
-	constructor(private flexContainer: FlexContainer) {}
+  constructor(private flexContainer: FlexContainer) { }
 }
 
 

@@ -11,10 +11,10 @@ bootstrap(AppCmp, [
   ROUTER_PROVIDERS,
   Local,
   provide(LocationStrategy, { useClass: HashLocationStrategy }),
-  provide(Local, { useClass:Local }),
-  provide(FlexContainer, {useClass:FlexContainer}),
-  provide(CSSDefaults, {useClass:CSSDefaults}),
-  provide(FlexItemFactory, {useClass:FlexItemFactory})
+  provide(Local, { useClass: Local }),
+  provide(FlexContainer, { useClass: FlexContainer }),
+  provide(CSSDefaults, { useClass: CSSDefaults }),
+  provide(FlexItemFactory, { useClass: FlexItemFactory })
 ]);
 
 

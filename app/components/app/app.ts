@@ -6,7 +6,7 @@ import {Info} from '../../services/Info';
 
 @Component({
   selector: 'flexboxapp',
-  template:`
+  template: `
     <div *ngIf='!flexContainer.list.length' class="masthead">
       <h1 class="mh-logo">{{siteTitle}}</h1>
       <p class="mh-desc">{{siteDesc}}</p>
@@ -52,7 +52,7 @@ export class AppCmp {
     this.setupSiteInfo();
   }
 
-  setupSiteInfo () {
+  setupSiteInfo() {
     var info = new Info().site;
     this.siteDesc = info.desc;
     this.siteTitle = info.title;

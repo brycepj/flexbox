@@ -1,11 +1,3 @@
-export interface ItemStyles {
-
-}
-
-export interface ItemCfg {
-
-}
-
 export interface CssStylePairItem {
 	'display': string;
 	'width': string;

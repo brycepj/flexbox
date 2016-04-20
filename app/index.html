@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title><%= APP_TITLE %></title>
+  <title>
+    <%= APP_TITLE %>
+  </title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="//fonts.googleapis.com/css?family=Arvo:400,700|PT+Sans" rel='stylesheet' type='text/css'>
@@ -11,13 +14,16 @@
   <!-- inject:css -->
   <!-- endinject -->
 </head>
+
 <body id="flexbox-app">
   <flexboxapp id="flex-container-wrap" class="flex-container-wrap">Loading...</flexboxapp>
 
   <!-- shims:js -->
   <!-- endinject -->
 
-  <script>System.config(<%= JSON.stringify(SYSTEM_CONFIG) %>)</script>
+  <script>
+    System.config(<%= JSON.stringify(SYSTEM_CONFIG) %>)
+  </script>
 
   <!-- libs:js -->
   <!-- endinject -->
@@ -34,4 +40,5 @@
   <!-- endinject -->
 
 </body>
+
 </html>
