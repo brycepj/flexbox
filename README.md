@@ -1,7 +1,7 @@
 =======
-##flexbox in 5 minutes
+## flexbox in 5 minutes
 
-###an interactive tour of all the major features of the new CSS property: flexbox.
+### an interactive tour of all the major features of the new CSS property: flexbox.
 
 What can you do here?
 
